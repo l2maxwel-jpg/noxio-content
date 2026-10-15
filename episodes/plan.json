@@ -16,11 +16,15 @@
     "instagram",
     "facebook"
    ],
-   "status": "scheduled",
+   "status": "published",
    "cover": "assets/covers/e01.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e01.jpg",
    "aiGenerated": true,
-   "autoPublish": true
+   "autoPublish": true,
+   "published": {
+    "instagram": "https://www.instagram.com/reel/DegfbedEjjr/",
+    "facebook": "https://facebook.com/reel/1072585055603279"
+   }
   },
   {
    "id": "e02",
