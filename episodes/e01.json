@@ -1,0 +1,30 @@
+{
+ "id": "e01",
+ "lang": "ru",
+ "scenes": [
+  {
+   "type": "hook"
+  },
+  {
+   "type": "pain"
+  },
+  {
+   "type": "solution"
+  },
+  {
+   "type": "ai"
+  },
+  {
+   "type": "connect"
+  },
+  {
+   "type": "messenger"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta"
+  }
+ ]
+}

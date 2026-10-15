@@ -1,0 +1,30 @@
+{
+ "id": "e08",
+ "lang": "ru",
+ "scenes": [
+  {
+   "type": "hook",
+   "setup": [
+    "Проверьте Noxio",
+    "на своём эфире —"
+   ],
+   "p1": "бесплатно",
+   "p2": ""
+  },
+  {
+   "type": "solution"
+  },
+  {
+   "type": "ai"
+  },
+  {
+   "type": "messenger"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta"
+  }
+ ]
+}

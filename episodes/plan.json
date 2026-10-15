@@ -1,0 +1,135 @@
+{
+ "brand": "Noxio",
+ "timezone": "Europe/Warsaw",
+ "publishMode": "manual-approval (autoPublish=false)",
+ "episodes": [
+  {
+   "id": "e01",
+   "lang": "ru",
+   "date": "2026-10-16T10:00:00",
+   "offset": "+02:00",
+   "title": "Сотни заказов в комментариях",
+   "coverMs": 3000,
+   "caption": "Эфир закончился, а в комментариях — сотни заказов? 😅\nNoxio сам собирает заказы из комментариев под вашими эфирами в Facebook: кто, что, какой размер, сколько. ИИ понимает заказы даже без кодов товаров.\n✅ Подключите страницу или просто вставьте ссылку на эфир\n✅ Готовый список заказов\n✅ Сообщения покупателям в Messenger\n14 дней бесплатно, до 3 эфиров, без карты 👉 noxio.pl\n#livecommerce #продаживэфире #facebooklive #noxio",
+   "file": "videos/e01.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e01.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "e02",
+   "lang": "ru",
+   "date": "2026-10-19T10:00:00",
+   "offset": "+02:00",
+   "title": "Без кодов товаров",
+   "coverMs": 3000,
+   "caption": "Покупатели пишут «беру синее платье, M», а не артикулы. И это нормально 🙂\nNoxio понимает такие комментарии с помощью ИИ и сам собирает их в таблицу заказов: кто, что, размер, количество.\n14 дней бесплатно, до 3 эфиров, без карты 👉 noxio.pl\n#livecommerce #продаживэфире #facebooklive #noxio",
+   "file": "videos/e02.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e02.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "e03",
+   "lang": "ru",
+   "date": "2026-10-22T10:00:00",
+   "offset": "+02:00",
+   "title": "Сообщения покупателям",
+   "coverMs": 3000,
+   "caption": "Заказы собраны — а дальше написать каждому покупателю…\nС Noxio сообщения с составом заказа уходят покупателям в Messenger в пару кликов, прямо из списка заказов (нужна подключённая страница Facebook).\n14 дней бесплатно 👉 noxio.pl\n#livecommerce #продаживэфире #messenger #noxio",
+   "file": "videos/e03.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e03.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "e04",
+   "lang": "ru",
+   "date": "2026-10-26T10:00:00",
+   "offset": "+01:00",
+   "title": "Без входа через Facebook",
+   "coverMs": 3000,
+   "caption": "Не хотите подключать свою страницу? Не нужно.\nВ Noxio можно просто вставить ссылку на эфир — без входа через Facebook. Заказы из комментариев соберутся автоматически.\n14 дней бесплатно, без карты 👉 noxio.pl\n#livecommerce #продаживэфире #facebooklive #noxio",
+   "file": "videos/e04.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e04.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "e05",
+   "lang": "lv",
+   "date": "2026-10-29T10:00:00",
+   "offset": "+01:00",
+   "title": "Simtiem pasūtījumu (LV)",
+   "coverMs": 3000,
+   "caption": "Tiešraide beigusies, bet komentāros — simtiem pasūtījumu? 😅\nNoxio pats savāc pasūtījumus no komentāriem jūsu Facebook tiešraidēs: kas, ko, kādu izmēru, cik. MI saprot pasūtījumus pat bez preču kodiem.\n✅ Pievienojiet lapu vai vienkārši ielīmējiet saiti uz tiešraidi\n✅ Gatavs pasūtījumu saraksts\n✅ Ziņas pircējiem Messenger\n14 dienas bez maksas, līdz 3 tiešraidēm, bez kartes 👉 noxio.pl\n#livecommerce #tiešraide #facebooklive #noxio",
+   "file": "videos/e05.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e05.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "e06",
+   "lang": "ru",
+   "date": "2026-11-02T10:00:00",
+   "offset": "+01:00",
+   "title": "Как это работает: 3 шага",
+   "coverMs": 3000,
+   "caption": "Как эфир превращается в список заказов — за 3 шага:\n1️⃣ Подключите страницу Facebook или вставьте ссылку на эфир\n2️⃣ Noxio разбирает комментарии в заказы\n3️⃣ Отправьте покупателям подтверждения в Messenger\nПопробуйте 14 дней бесплатно 👉 noxio.pl\n#livecommerce #продаживэфире #noxio",
+   "file": "videos/e06.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e06.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "e07",
+   "lang": "pl",
+   "date": "2026-11-05T10:00:00",
+   "offset": "+01:00",
+   "title": "Setki zamówień (PL)",
+   "coverMs": 3000,
+   "caption": "Live się skończył, a w komentarzach — setki zamówień? 😅\nNoxio sam zbiera zamówienia z komentarzy pod Twoimi transmisjami na Facebooku: kto, co, jaki rozmiar, ile sztuk. AI rozumie zamówienia nawet bez kodów produktów.\n✅ Podłącz stronę lub po prostu wklej link do live’a\n✅ Gotowa lista zamówień\n✅ Wiadomości do kupujących w Messengerze\n14 dni za darmo, do 3 transmisji, bez karty 👉 noxio.pl\n#livecommerce #sprzedażnalive #facebooklive #noxio",
+   "file": "videos/e07.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e07.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned"
+  },
+  {
+   "id": "e08",
+   "lang": "ru",
+   "date": "2026-11-09T10:00:00",
+   "offset": "+01:00",
+   "title": "Пробный период",
+   "coverMs": 3000,
+   "caption": "Проверьте Noxio на своём следующем эфире — бесплатно.\n14 дней, до 3 эфиров, без карты. Noxio сам соберёт заказы из комментариев, а вам останется проверить готовый список.\n👉 noxio.pl\n#livecommerce #продаживэфире #facebooklive #noxio",
+   "file": "videos/e08.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e08.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned"
+  }
+ ]
+}
