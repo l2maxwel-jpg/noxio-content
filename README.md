@@ -8,13 +8,14 @@ soundtrack is timed to the cuts.
 
 | Path | What it is |
 | --- | --- |
-| `template/` | HTML/CSS/GSAP template: `template.js` (scenes + timeline), `l10n.js` (RU/LV/PL strings and default copy), `style.css` (Noxio light theme: #11B981, #0098B7, Inter) |
+| `template/` | HTML/CSS/GSAP template: `template.js` (scenes + timeline), `l10n.js` (RU/LV/PL/EN strings and default copy), `niches.js` (product sets: cosmetics, shoes, kids, accessories, home), `style.css` (Noxio light and dark themes: #11B981, #0098B7, Inter) |
 | `episodes/eNN.json` | One episode: `lang` and an ordered list of `scenes` with optional text overrides |
 | `episodes/plan.json` | Publishing plan: date, caption, cover frame, video URL and status per episode |
 | `scripts/make_episode.sh` | Render one episode end to end into `videos/<id>.mp4` |
 | `scripts/preview_all.sh` | Key-frame contact sheets in `build/` for checking layouts before a full render |
 | `videos/` | Finished MP4s, served publicly via raw.githubusercontent.com for scheduling |
 | `assets/logo.png` | Noxio logo |
+| `assets/covers/` | Cover images (one per episode), also used as Reel thumbnails |
 
 ## Scene types
 
@@ -24,6 +25,10 @@ use it instead of `hook` when a cover exists. Covers are designed in Moda (photo
 file is used as the Reel thumbnail.
 Any scene accepts `kicker` (small label, e.g. "Шаг 1"). Heads are arrays of lines; `[text]` highlights in emerald,
 `{text}` in teal. `connect` accepts `"only": "link"` to show only the paste-a-link option.
+
+Episode options: `"lang"` (`ru`, `pl`, `lv`, `en`), `"theme": "dark"` (default light), `"niche"` (one of the sets in
+`niches.js`; default is clothing) and `"data"` for one-off overrides of any l10n field (`feed`, `table`, `ai`, `chat`…).
+The soundtrack's tempo, key and chord progression are picked from the episode id, so every video sounds different.
 
 ```json
 { "id": "e02", "lang": "ru", "scenes": [

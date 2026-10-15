@@ -3,6 +3,114 @@
  "lang": "pl",
  "theme": "dark",
  "niche": "home",
+ "data": {
+  "feed": [
+   [
+    "Teresa",
+    "Biorę kubek, zielony"
+   ],
+   [
+    "Wiesia",
+    "2 talerze, 27 cm"
+   ],
+   [
+    "Hanna",
+    "Można do zmywarki?"
+   ],
+   [
+    "Beata",
+    "Odłóżcie dzbanek, biały!"
+   ],
+   [
+    "Lena",
+    "+ miska 15 cm"
+   ],
+   [
+    "Ala",
+    "Jest komplet 6 szt.?"
+   ],
+   [
+    "Kinga",
+    "Biorę wazon!"
+   ],
+   [
+    "Mirka",
+    "Poproszę szary"
+   ],
+   [
+    "Ewa",
+    "Jaka pojemność kubka?"
+   ],
+   [
+    "Ola",
+    "Biorę! 27 cm"
+   ],
+   [
+    "Zuzia",
+    "Podkładki ×4"
+   ],
+   [
+    "Gosia",
+    "Odłóżcie mi kubek"
+   ],
+   [
+    "Dorota",
+    "Dobrze zapakujecie?"
+   ],
+   [
+    "Jola",
+    "Biorę 2 szt."
+   ]
+  ],
+  "table": {
+   "rows": [
+    [
+     "Teresa",
+     "Kubek",
+     "zielony",
+     "1",
+     0
+    ],
+    [
+     "Wiesia",
+     "Talerz",
+     "27 cm",
+     "2",
+     1
+    ],
+    [
+     "Beata",
+     "Dzbanek",
+     "biały",
+     "1",
+     3
+    ],
+    [
+     "Lena",
+     "Miska",
+     "15 cm",
+     "1",
+     4
+    ]
+   ]
+  },
+  "ai": {
+   "name": "Wiesia",
+   "html": "2 <span class=\"hl l h1\">talerze</span>, <span class=\"hl v h2\">27 cm</span>",
+   "chips": [
+    "Talerz",
+    "27 cm",
+    "2 szt."
+   ]
+  },
+  "chat": {
+   "msgs": [
+    "Teresa, Twoje zamówienie:<br><b>kubek, zielony&nbsp;—&nbsp;1&nbsp;szt.</b>",
+    "Wiesia, Twoje zamówienie:<br><b>talerz, 27&nbsp;cm&nbsp;—&nbsp;2&nbsp;szt.</b>",
+    "Beata, Twoje zamówienie:<br><b>dzbanek, biały&nbsp;—&nbsp;1&nbsp;szt.</b>"
+   ]
+  }
+ },
  "scenes": [
   {
    "type": "cover",

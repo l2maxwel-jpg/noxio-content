@@ -39,7 +39,7 @@
     "instagram",
     "facebook"
    ],
-   "status": "planned",
+   "status": "scheduled",
    "cover": "assets/covers/e09.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e09.jpg",
    "aiGenerated": false,
@@ -61,7 +61,8 @@
    "status": "scheduled",
    "cover": "assets/covers/e02.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e02.jpg",
-   "aiGenerated": true
+   "aiGenerated": true,
+   "autoPublish": true
   },
   {
    "id": "e10",
@@ -117,7 +118,8 @@
    "status": "scheduled",
    "cover": "assets/covers/e03.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e03.jpg",
-   "aiGenerated": true
+   "aiGenerated": true,
+   "autoPublish": true
   },
   {
    "id": "e12",
@@ -173,7 +175,8 @@
    "status": "scheduled",
    "cover": "assets/covers/e04.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e04.jpg",
-   "aiGenerated": true
+   "aiGenerated": true,
+   "autoPublish": true
   },
   {
    "id": "e14",
@@ -305,7 +308,8 @@
    "status": "scheduled",
    "cover": "assets/covers/e06.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e06.jpg",
-   "aiGenerated": true
+   "aiGenerated": true,
+   "autoPublish": true
   },
   {
    "id": "e19",
@@ -437,7 +441,8 @@
    "status": "scheduled",
    "cover": "assets/covers/e08.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e08.jpg",
-   "aiGenerated": true
+   "aiGenerated": true,
+   "autoPublish": true
   },
   {
    "id": "e24",

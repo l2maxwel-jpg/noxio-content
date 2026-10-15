@@ -18,20 +18,27 @@ payments, courier labels, invoices, a warehouse. If a roadmap item must be menti
 
 ## Making a batch
 
-1. Continue the schedule in `episodes/plan.json`: Mondays and Thursdays, 10:00 Europe/Warsaw (check the UTC offset for DST).
-2. Write new `episodes/eNN.json` files with fresh angles; mostly Russian, about one Latvian and one Polish per eight.
+1. Continue the schedule in `episodes/plan.json` (Europe/Warsaw, check the UTC offset for DST):
+   Mondays and Thursdays — RU at 10:00 **and** PL at 14:00; Wednesdays — LV at 10:00; Fridays — EN at 10:00.
+2. Every language gets its own episode: a different angle, product niche (`niche`), theme (`theme`), scene order and cover.
+   Never translate another episode — videos must not look like copies of each other. The RU and PL episodes of the same
+   day must differ in niche and theme. Retired copies stay in `plan.json` with `status: retired`.
    Keep heads to the line counts the template expects (pain ≤ 3, solution ≤ 4, ai ≤ 3, connect ≤ 4, messenger ≤ 3).
 3. `scripts/preview_all.sh` each new episode and look at the contact sheets before rendering.
 4. `scripts/make_episode.sh` each episode, then check duration with ffprobe and look at a few frames.
-5. Add the episodes to `plan.json` (caption, date, offset, url, `status: planned`, plus `cover`/`thumbnail`/`aiGenerated`
-   when the episode has a cover, otherwise `coverMs: 3000`), commit and push.
-6. Schedule each as an Instagram REEL + Facebook REEL with manual approval (`autoPublish: false`), then set `status: scheduled`.
+5. Add the episodes to `plan.json` (caption in the episode's language, date, offset, url, `status: planned`, plus
+   `cover`/`thumbnail`/`aiGenerated` when the episode has a cover, otherwise `coverMs: 3000`), commit and push.
+6. Schedule each as an Instagram REEL + Facebook REEL with `autoPublish: true` (Maxim's decision, 2026-10-15),
+   then set `status: scheduled`.
 
 ## Covers
 
 Episodes with a file in `assets/covers/eNN.jpg` start with a `cover` scene and use that file as `videoThumbnailUrl`
-(raw.githubusercontent.com URL); set `instagramData.isAiGenerated: true` when the cover photo is AI-generated.
-New covers are designed in Moda (Noxio brand kit, 1080×1920, photo + headline + logo, essentials inside y 250–1670).
-Moda exports cannot be downloaded from the build sandbox: if a cover exists only in Moda, pass its per-page JPEG export URL
-as `videoThumbnailUrl` and start the episode with a `hook` scene instead of `cover`. Never crop or hide the moda.app badge
-that free-plan exports carry.
+(raw.githubusercontent.com URL). Covers are designed in Moda (canvas "Noxio — обложки Reels", Noxio light brand kit,
+1080×1920): a stock photo from Unsplash (`file_search` with `source: "stock"`), logo, headline in the episode's language,
+a one-line sub, and a small photo credit ("Fot./Foto/Photo/Фото: <author> / Unsplash"). Dark-theme episodes put the
+headline at the bottom over a dark gradient; light ones at the top over a light gradient.
+Export the page as JPEG and download it straight into `assets/covers/` (assets-cdn.moda.app is reachable).
+Set `instagramData.isAiGenerated: true` only when the photo is AI-generated; stock photos are `false`.
+If a Moda export cannot be downloaded, pass its JPEG export URL as `videoThumbnailUrl` and start the episode with a
+`hook` scene instead of `cover`. Never crop or hide the moda.app badge that free-plan exports carry.

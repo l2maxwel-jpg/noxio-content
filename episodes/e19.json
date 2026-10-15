@@ -3,6 +3,114 @@
  "lang": "pl",
  "theme": "dark",
  "niche": "cosmetics",
+ "data": {
+  "feed": [
+   [
+    "Natalia",
+    "Biorę perfumy 50 ml"
+   ],
+   [
+    "Ilona",
+    "2 lakiery, nr 12"
+   ],
+   [
+    "Basia",
+    "Jaki to zapach?"
+   ],
+   [
+    "Kamila",
+    "Odłóżcie szampon, 400 ml!"
+   ],
+   [
+    "Joanna",
+    "+ balsam 200 ml"
+   ],
+   [
+    "Ewa",
+    "Jest tester?"
+   ],
+   [
+    "Marta",
+    "Biorę zestaw!"
+   ],
+   [
+    "Ola",
+    "Poproszę nr 07"
+   ],
+   [
+    "Agnieszka",
+    "Na jak długo starcza?"
+   ],
+   [
+    "Ula",
+    "Biorę! 50 ml"
+   ],
+   [
+    "Monika",
+    "Lakier 21 proszę"
+   ],
+   [
+    "Iga",
+    "Odłóżcie mi perfumy"
+   ],
+   [
+    "Kasia",
+    "Jest wysyłka?"
+   ],
+   [
+    "Sabina",
+    "Biorę 2 szt."
+   ]
+  ],
+  "table": {
+   "rows": [
+    [
+     "Natalia",
+     "Perfumy",
+     "50 ml",
+     "1",
+     0
+    ],
+    [
+     "Ilona",
+     "Lakier",
+     "nr 12",
+     "2",
+     1
+    ],
+    [
+     "Kamila",
+     "Szampon",
+     "400 ml",
+     "1",
+     3
+    ],
+    [
+     "Joanna",
+     "Balsam",
+     "200 ml",
+     "1",
+     4
+    ]
+   ]
+  },
+  "ai": {
+   "name": "Ilona",
+   "html": "2 <span class=\"hl l h1\">lakiery</span>, <span class=\"hl v h2\">nr 12</span>",
+   "chips": [
+    "Lakier",
+    "Nr 12",
+    "2 szt."
+   ]
+  },
+  "chat": {
+   "msgs": [
+    "Natalia, Twoje zamówienie:<br><b>perfumy, 50&nbsp;ml&nbsp;—&nbsp;1&nbsp;szt.</b>",
+    "Ilona, Twoje zamówienie:<br><b>lakier, nr&nbsp;12&nbsp;—&nbsp;2&nbsp;szt.</b>",
+    "Kamila, Twoje zamówienie:<br><b>szampon, 400&nbsp;ml&nbsp;—&nbsp;1&nbsp;szt.</b>"
+   ]
+  }
+ },
  "scenes": [
   {
    "type": "cover",
