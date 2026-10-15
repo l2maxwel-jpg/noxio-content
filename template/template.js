@@ -25,6 +25,10 @@
     pain: [580, 40, 605], solution: [690, 40, 910], ai: [790, 60, 945], connect: [690, 40, 870], messenger: [470, 20, 590],
     codes: [560, 40, 620], price: [560, 50, 700], sendlink: [600, 40, 720],
     group: [560, 40, 600], excel: [580, 40, 660], merge: [580, 40, 660], review: [580, 40, 680], setup: [560, 40, 620] };
+  // Feed-safe band. Facebook and Instagram show Reels in the feed cropped to 4:5 (y 285..1635 of 1920) and the Reels
+  // player covers the bottom quarter with the caption, so everything readable must sit inside y 330..1440.
+  // Scenes are laid out in the band 255..1450 and then scaled into it (style.css: .framed .frame).
+  const SAFE = { top: 330, bottom: 1440 };
   const GLOW = { cover: 'none', hook: 'red', codes: 'red', pain: 'red', price: 'teal', offer: 'teal', cta: 'teal' };
   const E = 'power3.out';
 
@@ -148,8 +152,10 @@
   const scenes = EP.scenes.map((s, i) => {
     const d = Object.assign({}, L.defaults[s.type] || {}, s);
     const el = document.createElement('section');
-    el.className = `scene sc-${s.type}`;
-    el.innerHTML = emojify((d.kicker ? `<div class="kicker">${d.kicker}</div>` : '') + HTML[s.type](d));
+    el.className = `scene sc-${s.type}` + (d.kicker ? ' kicked' : '');
+    // Everything but the full-bleed cover sits in a .frame that is scaled into the feed-safe band after layout (see SAFE).
+    const inner = emojify((d.kicker ? `<div class="kicker">${d.kicker}</div>` : '') + HTML[s.type](d));
+    el.innerHTML = s.type === 'cover' ? inner : `<div class="frame">${inner}</div>`;
     if (i === 0) el.style.opacity = 1;
     root.appendChild(el);
     return { type: s.type, d, el, dur: s.dur || DUR[s.type] };
@@ -179,8 +185,8 @@
         const h = $(el, '.covhead'), sub = $(el, '.covsub');
         fitWidth(h, 936);
         if ($(el, '.cov.light')) { if (sub) sub.style.top = (bottomOf(h) + 28) + 'px'; }
-        else if (sub) { sub.style.top = '1404px'; h.style.top = (1376 - h.getBoundingClientRect().height) + 'px'; }
-        else h.style.top = (1420 - h.getBoundingClientRect().height) + 'px';
+        else if (sub) { const st = SAFE.bottom - sub.getBoundingClientRect().height; sub.style.top = st + 'px'; h.style.top = (st - 28 - h.getBoundingClientRect().height) + 'px'; }
+        else h.style.top = (SAFE.bottom - 10 - h.getBoundingClientRect().height) + 'px';
       }
       if (s.type === 'hook') {
         const setup = $(el, '.setup'), p1 = $(el, '.p1'), p2 = $(el, '.p2');
@@ -508,6 +514,7 @@
     await Promise.all([...document.images].map(im => im.decode().catch(() => {})));
     layout();
     measureFlights();
+    document.body.classList.add('framed');   // scale frames into the safe band only now: layout and flights are measured unscaled
     window.tl = build();
     window.tl.seek(0);
     window.cues = cues;

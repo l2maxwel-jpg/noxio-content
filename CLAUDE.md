@@ -40,8 +40,10 @@ test data. Brand: emerald #11B981, teal #0098B7, Inter, plenty of white; don't b
   skipped), `group` (one buyer's comments → one order), `review` (an unclear comment flagged for a check and fixed by hand),
   `merge` (several lives → one list — lives only; don't show videos or posts merged), `excel` (one-click XLSX export).
 Show "without codes" on comments instead of just claiming it. Every video ends with the logo and the offer
-"14 days free, up to 3 streams, no card". Keep text inside the middle of the frame: about 14% free at the top and
-25–35% at the bottom.
+"14 days free, up to 3 streams, no card". Everything readable must stay inside y 330–1440 of the 1920 frame:
+Facebook and Instagram show Reels in the feed cropped to 4:5 (y 285–1635) and the Reels player covers the bottom
+quarter with the caption. The template scales every scene into that band (`SAFE` in template.js) and
+`render.mjs preview` flags anything outside it — never move text closer to the edges.
 
 ## Every video is one of a kind (Maxim's rule)
 

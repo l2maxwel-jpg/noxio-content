@@ -31,7 +31,7 @@ const cues = await page.evaluate(() => window.cues);
 writeFileSync(path.join(build, `${ep.id}.cues.json`), JSON.stringify(cues, null, 1));
 console.log(`${ep.id}: duration ${duration}s, scenes ${cues.scenes.map(s => s.type).join(' > ')}`);
 
-// Text that leaves the frame or the platform-safe zone (y > 1560) while its scene is visible.
+// Text that leaves the frame or the feed-safe band (y 320..1450: 4:5 feed crop, Reels caption) while its scene is visible.
 async function layoutReport() {
   return page.evaluate(() => {
     const out = [];
@@ -41,7 +41,7 @@ async function layoutReport() {
         if (el.closest('.fly,.feed,.bgwrap')) return;
         const r = el.getBoundingClientRect();
         if (!r.width) return;
-        if (r.right > 1040 || r.left < 36 || r.bottom > 1560)
+        if (r.right > 1040 || r.left < 36 || r.bottom > 1450 || r.top < 320)   // feed-safe band, see SAFE in template.js
           out.push(`${s.className} .${el.className} "${el.textContent.trim().slice(0, 28)}" L${Math.round(r.left)} R${Math.round(r.right)} B${Math.round(r.bottom)}`);
       });
     });
