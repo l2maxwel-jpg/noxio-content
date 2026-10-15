@@ -23,7 +23,8 @@ payments, courier labels, invoices, a warehouse. If a roadmap item must be menti
    Keep heads to the line counts the template expects (pain ≤ 3, solution ≤ 4, ai ≤ 3, connect ≤ 4, messenger ≤ 3).
 3. `scripts/preview_all.sh` each new episode and look at the contact sheets before rendering.
 4. `scripts/make_episode.sh` each episode, then check duration with ffprobe and look at a few frames.
-5. Add the episodes to `plan.json` (caption, date, offset, coverMs, url, `status: planned`), commit and push.
+5. Add the episodes to `plan.json` (caption, date, offset, url, `status: planned`, plus `cover`/`thumbnail`/`aiGenerated`
+   when the episode has a cover, otherwise `coverMs: 3000`), commit and push.
 6. Schedule each as an Instagram REEL + Facebook REEL with manual approval (`autoPublish: false`), then set `status: scheduled`.
 
 ## Covers
