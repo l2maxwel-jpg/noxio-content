@@ -6,7 +6,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e09.jpg"
+   "photo": "../assets/photos/e09.jpg",
+   "head": [
+    "Ile zamówień",
+    "[ginie] w",
+    "komentarzach?"
+   ],
+   "sub": "Noxio zbierze je za Ciebie · noxio.pl"
   },
   {
    "type": "pain",

@@ -40,7 +40,11 @@
   const check = '<svg width="30" height="20" viewBox="0 0 30 20"><path d="M2 10 L10 18 L28 2" stroke="#11B981" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   const HTML = {
-    cover: d => `<div class="cov"><img class="covimg" src="${d.src}" alt=""></div>`,
+    // cover: either a finished image (`src`) or a photo with our own headline (`photo`, `head`, `sub`, `layout`, `focus`).
+    cover: d => d.photo ? `<div class="cov ${d.layout || (DARK ? 'dark' : 'light')}"><img class="covimg" src="${d.photo}" alt=""${d.focus ? ` style="object-position:${d.focus}"` : ''}><div class="covshade"></div>
+        <div class="covbrand"><img src="../assets/logo.png" alt=""><span>Noxio</span></div>
+        <div class="h covhead">${lines(d.head)}</div>${d.sub ? `<div class="covsub">${mark(d.sub)}</div>` : ''}</div>`
+      : `<div class="cov"><img class="covimg" src="${d.src}" alt=""></div>`,
     codes: d => {
       const c = Object.assign({}, L.codes || {}, d);
       const rows = c.lines || Array.from({ length: 42 }, (_, k) =>
@@ -134,6 +138,13 @@
       const el = s.el;
       const head = $(el, '.head');
       if (head) fitWidth(head, 920);
+      if (s.type === 'cover' && $(el, '.covhead')) {
+        const h = $(el, '.covhead'), sub = $(el, '.covsub');
+        fitWidth(h, 936);
+        if ($(el, '.cov.light')) { if (sub) sub.style.top = (bottomOf(h) + 28) + 'px'; }
+        else if (sub) { sub.style.top = '1404px'; h.style.top = (1376 - h.getBoundingClientRect().height) + 'px'; }
+        else h.style.top = (1420 - h.getBoundingClientRect().height) + 'px';
+      }
       if (s.type === 'hook') {
         const setup = $(el, '.setup'), p1 = $(el, '.p1'), p2 = $(el, '.p2');
         fitWidth(setup, 920);
@@ -181,6 +192,10 @@
   const TL = {
     cover(tl, T, d, el, dur) {
       tl.fromTo($(el, '.covimg'), { scale: 1.0, yPercent: 0 }, { scale: 1.09, yPercent: -1.5, duration: dur + .3, ease: 'none' }, T);
+      if ($(el, '.covhead')) {
+        tl.from($$(el, '.covhead .line'), { y: 50, opacity: 0, duration: .35, stagger: .1, ease: E }, T + .05);
+        if ($(el, '.covsub')) tl.from($(el, '.covsub'), { opacity: 0, y: 20, duration: .3 }, T + .5);
+      }
       cue(T + .05, 'pop_down'); cue(T + .9, 'impact_soft');
     },
     codes(tl, T, d, el, dur) {

@@ -199,3 +199,18 @@ body.dark .rule{background:#3B1414;color:#FCA5A5}
 .fs{font-size:26px;color:var(--muted);margin-top:4px;white-space:nowrap}
 .free{align-self:flex-start;margin-left:10px;background:var(--em);color:#fff;font-family:'Inter Display','Inter','InterFS',sans-serif;font-weight:900;font-size:44px;padding:14px 34px;border-radius:999px;transform:rotate(-3deg);box-shadow:0 14px 34px rgba(17,185,129,.35)}
 .emo{display:inline-block;width:1.05em;height:1.05em;vertical-align:-.16em;margin:0 .05em}
+
+/* COVER built from a photo (no third-party marks on it) */
+.sc-cover .covshade{position:absolute;inset:0}
+.sc-cover .cov.dark .covshade{background:linear-gradient(to bottom,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 40%,rgba(4,20,16,.86) 68%,rgba(4,20,16,.96) 100%)}
+.sc-cover .cov.light .covshade{background:linear-gradient(to bottom,rgba(245,248,247,.97) 0%,rgba(245,248,247,.92) 34%,rgba(245,248,247,0) 58%)}
+.covbrand{position:absolute;left:72px;top:277px;display:flex;align-items:center;gap:18px;font-family:'Inter','InterFS',sans-serif;font-weight:800;font-size:44px}
+.covbrand img{width:74px;height:auto}
+.cov.dark .covbrand{color:#fff}
+.cov.light .covbrand{color:#111827}
+.covhead{position:absolute;left:72px;top:400px;font-size:104px;line-height:1.0}
+.cov.dark .covhead{color:#fff}
+.cov.light .covhead{color:#111827}
+.covsub{position:absolute;left:72px;right:72px;font-size:40px;font-weight:600;line-height:1.25}
+.cov.dark .covsub{color:#E2E4E1}
+.cov.light .covsub{color:#4B5563;font-size:38px}

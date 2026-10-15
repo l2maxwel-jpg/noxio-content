@@ -14,4 +14,5 @@ ffmpeg -hide_banner -y -loglevel error -i "build/$ID.silent.mp4" -i "build/$ID.w
   -af "loudnorm=I=-14:TP=-2:LRA=11,aresample=48000,alimiter=limit=0.72:level=disabled" -ar 48000 -c:a aac -b:a 192k -shortest \
   -movflags +faststart "videos/$ID.mp4"
 scripts/fix_peaks.sh "$ID"
+scripts/cover_still.sh "$EP"
 ffprobe -v error -show_entries format=duration,size -of compact "videos/$ID.mp4"
