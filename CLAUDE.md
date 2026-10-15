@@ -36,19 +36,35 @@ test data. Brand: emerald #11B981, teal #0098B7, Inter, plenty of white; don't b
   219,99 zł/month, plus the weekly plan 89,99 zł; mark it as an example calculation. Scene `price`. PL/RU only.
 - **K4 "Buyers write in different languages"** (LV, RU): mixed LV/RU/PL comments with typos and emoji → one order list.
 - **K5 "The live is over, the work begins"**, **K6 "Buyers get the confirmation in Messenger"** (page connected).
+- Feature angles with their own scenes: `setup` (expected codes / colours / sizes before the scan, the seller's own comments
+  skipped), `group` (one buyer's comments → one order), `review` (an unclear comment flagged for a check and fixed by hand),
+  `merge` (several lives → one list — lives only; don't show videos or posts merged), `excel` (one-click XLSX export).
 Show "without codes" on comments instead of just claiming it. Every video ends with the logo and the offer
 "14 days free, up to 3 streams, no card". Keep text inside the middle of the frame: about 14% free at the top and
 25–35% at the bottom.
+
+## Every video is one of a kind (Maxim's rule)
+
+Each Reel must be unrepeatable — across all languages, not just within one. Before rendering anything new:
+- give it its own `angle` (the idea, e.g. `excel-export`, `grouped-by-buyer`; see `plan.json` and the episode files for
+  the ones taken) — the same angle may come back only 14+ days later, and then with everything else different;
+- its own product set in `data` (`feed`, `table`, `ai`, `chat`, and `group`/`review`/`merge`/`setup` when used): never the
+  language defaults or a shared `niche` that another live episode already shows — those are translations of each other;
+- its own cover photo (never a photo or a photo series another episode used — check `assets/photos/CREDITS.md`),
+  cover headline, scene order, heads for every scene and `cta` tag; never translate another episode's text;
+- run `node scripts/check_unique.mjs` — it must report 0 errors. Fix its warnings for scheduled episodes too (same music
+  variant → pin `"music": {"bpm", "transpose", "prog", "hats16"}`; spares that clash get changed before they are used).
 
 ## Making a batch
 
 1. Continue the schedule in `episodes/plan.json` (Europe/Warsaw, check the UTC offset for DST):
    Mondays and Thursdays — RU at 10:00 **and** PL at 14:00; Wednesdays — LV at 10:00; Fridays — EN at 10:00.
-2. Every language gets its own episode: a different angle, product niche (`niche`), theme (`theme`), scene order and cover.
-   Never translate another episode — videos must not look like copies of each other. The RU and PL episodes of the same
-   day must differ in niche and theme. Retired copies stay in `plan.json` with `status: retired`.
-   Keep heads to the line counts the template expects (pain ≤ 3, solution ≤ 4, ai ≤ 3, connect ≤ 4, messenger ≤ 3).
-3. `scripts/preview_all.sh` each new episode and look at the contact sheets before rendering.
+2. Every language gets its own episode (see "Every video is one of a kind"). The RU and PL episodes of the same day
+   must differ in products and theme. Retired copies stay in `plan.json` with `status: retired`.
+   Aim for 15–20 s (scene `dur` can stretch a scene).
+   Keep heads to the line counts the template expects (pain ≤ 3, solution ≤ 4, ai ≤ 3, connect ≤ 4, messenger ≤ 3,
+   group/excel/merge/review/setup ≤ 3). Table: buyer names ≤ 8 letters, items ≤ 16, variants ≤ 6.
+3. `node scripts/check_unique.mjs`, then `scripts/preview_all.sh` each new episode and look at the contact sheets before rendering.
 4. `scripts/make_episode.sh` each episode, then check duration with ffprobe and look at a few frames.
 5. Add the episodes to `plan.json` (caption in the episode's language, date, offset, url, `status: planned`, plus
    `cover`/`thumbnail`/`aiGenerated` when the episode has a cover, otherwise `coverMs: 3000`), commit and push.

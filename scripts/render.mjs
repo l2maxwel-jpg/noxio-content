@@ -37,7 +37,7 @@ async function layoutReport() {
     const out = [];
     document.querySelectorAll('.scene').forEach(s => {
       if (parseFloat(getComputedStyle(s).opacity) < 0.5) return;
-      s.querySelectorAll('.line,.p1,.p2,.big,.chip,.pill,.cta,.tag,.sub,.ot,.os,.inp,.qb,.tt,.badge,.msg,.small,.tcard,.chat,.cardB,.nocode,.dn,.fr,.wmtxt').forEach(el => {
+      s.querySelectorAll('.line,.p1,.p2,.big,.chip,.pill,.cta,.tag,.sub,.ot,.os,.inp,.qb,.tt,.badge,.msg,.small,.tcard,.chat,.cardB,.nocode,.dn,.fr,.wmtxt,.gcard,.gb,.xcard,.sheet,.mcard,.src,.rcard,.rq,.scard,.sbub,.srow').forEach(el => {
         if (el.closest('.fly,.feed,.bgwrap')) return;
         const r = el.getBoundingClientRect();
         if (!r.width) return;

@@ -135,10 +135,13 @@ PROGS = [  # (semitones from A, quality)
     [(0, "m"), (3, "M"), (-2, "M"), (-4, "M")],   # Am C G F
     [(-4, "M"), (-2, "M"), (0, "m"), (0, "m")],   # F G Am Am
 ]
-BPM = [116, 120, 124, 128][SEED % 4]
-TRANSPOSE = [0, 2, -2, 3, -3, 1][(SEED // 4) % 6]
-PROG = PROGS[(SEED // 24) % len(PROGS)]
-HATS16 = (SEED // 120) % 2 == 1
+# An episode can pin its own variant ("music": {"bpm": 120, "transpose": 2, "prog": 3, "hats16": true}, passed through
+# the cues) when two episodes would otherwise share one — scripts/check_unique.mjs reports that.
+MUS = cues.get("music") or {}
+BPM = MUS.get("bpm", [116, 120, 124, 128][SEED % 4])
+TRANSPOSE = MUS.get("transpose", [0, 2, -2, 3, -3, 1][(SEED // 4) % 6])
+PROG = PROGS[MUS.get("prog", (SEED // 24) % len(PROGS))]
+HATS16 = MUS.get("hats16", (SEED // 120) % 2 == 1)
 BEAT = 60.0 / BPM
 f = lambda base, semi: base * 2 ** (semi / 12)
 ROOTS = [f(55.0, s + TRANSPOSE) for s, _ in PROG]

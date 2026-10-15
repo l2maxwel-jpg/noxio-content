@@ -6,7 +6,9 @@ for EP in "$@"; do
   ID=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['id'])" "$EP")
   TIMES=$(python3 -c "
 import json,sys
-D={'cover':2.8,'hook':3.5,'codes':3.5,'price':4.5,'sendlink':3.5,'pain':3.5,'solution':4.0,'ai':3.0,'connect':3.0,'messenger':3.0,'offer':2.5,'cta':2.5}
+import re
+src=open('template/template.js').read()
+D={k:float(v) for k,v in re.findall(r'(\w+): ([0-9.]+)', re.search(r'const DUR = \{(.*?)\};', src, re.S).group(1))}
 t=0;out=[]
 for s in json.load(open(sys.argv[1]))['scenes']:
     d=s.get('dur',D[s['type']]); out.append(f'{t+d*0.82:.2f}'); t+=d

@@ -19,10 +19,12 @@
   if (EP.theme === 'dark') document.body.classList.add('dark');
   const DARK = EP.theme === 'dark';
   const COLORS = ['#EF4444', '#0098B7', '#11B981', '#F59E0B', '#8B5CF6'];
-  const DUR = { cover: 2.8, hook: 3.5, codes: 3.5, pain: 3.5, solution: 4.0, ai: 3.0, connect: 3.0, messenger: 3.0, price: 4.5, sendlink: 3.5, offer: 2.5, cta: 2.5 };
+  const DUR = { cover: 2.8, hook: 3.5, codes: 3.5, pain: 3.5, solution: 4.0, ai: 3.0, connect: 3.0, messenger: 3.0, price: 4.5, sendlink: 3.5,
+    group: 3.5, excel: 3.5, merge: 3.5, review: 3.5, setup: 4.0, offer: 2.5, cta: 2.5 };
   const BODY = { // default top, gap under head, max top before the body would run out of the safe zone
     pain: [580, 40, 605], solution: [690, 40, 910], ai: [790, 60, 945], connect: [690, 40, 870], messenger: [470, 20, 590],
-    codes: [560, 40, 620], price: [560, 50, 700], sendlink: [600, 40, 720] };
+    codes: [560, 40, 620], price: [560, 50, 700], sendlink: [600, 40, 720],
+    group: [560, 40, 600], excel: [580, 40, 660], merge: [580, 40, 660], review: [580, 40, 680], setup: [560, 40, 620] };
   const GLOW = { cover: 'none', hook: 'red', codes: 'red', pain: 'red', price: 'teal', offer: 'teal', cta: 'teal' };
   const E = 'power3.out';
 
@@ -37,6 +39,10 @@
   const lines = arr => arr.map(l => `<span class="line">${mark(l)}</span>`).join('');
   const bubble = (name, text, ci, cls = '') =>
     `<div class="bub ${cls}"><div class="ava" style="background:${COLORS[ci % 5]}">${name[0]}</div><div class="bt"><div class="bn">${name}</div><div class="bx">${text}</div></div></div>`;
+  const ICON = {
+    live: '<span class="ldot"></span>',
+    video: '<svg viewBox="0 0 40 40"><path d="M12 7 L33 20 L12 33 Z" fill="currentColor"/></svg>',
+    post: '<svg viewBox="0 0 40 40"><rect x="6" y="8" width="28" height="5" rx="2.5" fill="currentColor"/><rect x="6" y="18" width="28" height="5" rx="2.5" fill="currentColor"/><rect x="6" y="28" width="18" height="5" rx="2.5" fill="currentColor"/></svg>' };
   const check = '<svg width="30" height="20" viewBox="0 0 30 20"><path d="M2 10 L10 18 L28 2" stroke="#11B981" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   const HTML = {
@@ -67,6 +73,37 @@
         <div class="msgs"><div class="msg me"><span class="typed2"></span><span class="cur2"></span></div>
         <div class="msg them"><div class="file"><div class="xls">XLSX</div><div><div class="fn">${c.file}</div><div class="fs">${c.fileSub}</div></div></div></div>
         <div class="free">${c.badge}</div></div></div></div>`; },
+    // group: one buyer's comments land in one order (orders grouped by buyer)
+    group: d => { const g = L.group; return `<div class="h head">${lines(d.head)}</div>
+      <div class="body"><div class="gbubs">${g.comments.map((c, i) => bubble(g.name, c, 2, `gb gb${i}`)).join('')}</div>
+      <div class="gcard"><div class="ghd"><div class="ava" style="background:${COLORS[2]}">${g.name[0]}</div><div class="gname">${g.name}</div><div class="badge">${g.badge}</div></div>
+      ${g.items.map((it, i) => `<div class="grow gr${i}"><span class="gi">${it[0]}</span><span class="gv">${it[1]}</span><span class="gq">×${it[2]}</span></div>`).join('')}
+      <div class="gfoot">${mark(g.foot)}</div></div></div>`; },
+    // excel: the order list, one click, a spreadsheet (uses the episode's table)
+    excel: d => { const t = L.table, x = L.excel, rows = t.rows.slice(0, 4); return `<div class="h head">${lines(d.head)}</div>
+      <div class="body"><div class="xcard"><div class="ttitle"><div class="tt"><img class="tlogo" src="../assets/logo.png" alt="">${t.title}</div><div class="xbtn"><span class="xi">XLSX</span>${x.btn}</div></div>
+      ${rows.map(r => `<div class="xrow"><span class="xn">${r[0]}</span><span>${r[1]}</span><span class="xv">${r[2]}</span></div>`).join('')}</div>
+      <div class="sheet"><div class="shbar"><span class="xi">XLSX</span><span class="shf">${x.file}</span><span class="shok">${check}</span></div>
+      <div class="grid"><div class="gl"></div>${['A', 'B', 'C', 'D'].map(c => `<div class="gl">${c}</div>`).join('')}
+      <div class="gl gn">1</div>${t.cols.map(c => `<div class="gc gh">${c}</div>`).join('')}
+      ${rows.map((r, i) => `<div class="gl gn">${i + 2}</div>${[r[0], r[1], r[2], r[3]].map(c => `<div class="gc gr r${i}">${c}</div>`).join('')}`).join('')}</div></div></div>`; },
+    // merge: several lives / videos / posts -> one order list
+    merge: d => { const m = L.merge, total = m.sources.reduce((a, s) => a + s[2], 0); return `<div class="h head">${lines(d.head)}</div>
+      <div class="body"><div class="msrc">${m.sources.map((s, i) => `<div class="src s${i}"><div class="sic ic-${s[0]}">${ICON[s[0]]}</div><div class="sl1">${s[1]}</div><div class="sl2"><b>${s[2]}</b> ${L.ordersWord(s[2])}</div></div>`).join('')}</div>
+      <div class="mcard" data-total="${total}"><div class="ttitle"><div class="tt"><img class="tlogo" src="../assets/logo.png" alt="">${m.title}</div><div class="badge"><span class="mcnt">0</span> <span class="mcw">${L.ordersWord(0)}</span></div></div>
+      ${L.table.rows.slice(0, 3).map(r => `<div class="xrow"><span class="xn">${r[0]}</span><span>${r[1]}</span><span class="xv">${r[2]}</span></div>`).join('')}</div></div>`; },
+    // review: clear orders pass, an unclear comment is flagged and fixed by hand
+    review: d => { const r = L.review; return `<div class="h head">${lines(d.head)}</div>
+      <div class="body"><div class="rcard"><div class="ttitle"><div class="tt"><img class="tlogo" src="../assets/logo.png" alt="">${r.title}</div><div class="rbadge">${r.flagWord}: <b><span class="rc1">1</span><span class="rc0">0</span></b></div></div>
+      ${r.ok.map(o => `<div class="rrow ok"><span class="rn">${o[0]}</span><span class="rt">${o[1]}</span><span class="rk">${check}</span></div>`).join('')}
+      <div class="rrow un"><div class="ru1"><span class="rn">${r.unclear[0]}</span><span class="rq">“${r.unclear[1]}”</span></div>
+      <div class="ru2"><span class="rflag">${r.flag}</span><span class="rfix">${r.fix}</span><span class="rdone">${check} ${r.done}</span></div></div></div></div>`; },
+    // setup: expected codes / colours / sizes before the scan, the seller's own comments are skipped
+    setup: d => { const s = L.setup; return `<div class="h head">${lines(d.head)}</div>
+      <div class="body"><div class="scard"><div class="stitle">${s.title}</div>
+      ${s.fields.map((f, i) => `<div class="sfield f${i}"><div class="sfl">${f[0]}</div><div class="sfv">${f[1].map(v => `<span class="schip">${v}</span>`).join('')}</div></div>`).join('')}
+      <div class="srow"><span>${s.toggle}</span><div class="tog stog"><div class="knob"></div></div></div></div>
+      ${bubble(s.seller[0], s.seller[1], 4, 'sbub').replace('</div></div></div>', `</div></div><span class="skip">${s.skipped}</span></div>`)}</div>`; },
     hook: d => {
       const pos = [[60,640],[420,840],[140,1060],[520,1260],[90,1460],[460,1660],[200,1860],[560,2060]];
       const bg = pos.map((p, i) => bubble(L.feed[i][0], L.feed[i][1], i, 'bgb').replace('class="bub bgb"', `class="bub bgb" style="left:${p[0]}px;top:${p[1]}px"`)).join('');
@@ -169,6 +206,11 @@
       if (s.type === 'offer') { fitWidth($(el, '.dn'), 920); fitWidth($(el, '.fr'), 920); }
       if (s.type === 'price') { const w = $(el, '.week'); w.style.top = ($(el, '.calc').offsetHeight + 40) + 'px'; }
       if (s.type === 'sendlink') fitOverflow($(el, '.msg.me'), $(el, '.msg.me'), 26);
+      if (s.type === 'excel') { $(el, '.sheet').style.top = '120px'; fitOverflow($(el, '.xcard .ttitle'), $(el, '.xcard .tt')); }
+      if (s.type === 'review') { fitOverflow($(el, '.ru1'), $(el, '.rq'), 26); }
+      if (s.type === 'setup') { $(el, '.sbub').style.top = ($(el, '.scard').offsetHeight + 36) + 'px'; fitOverflow($(el, '.srow'), $(el, '.srow span'), 24);
+        const sb = $(el, '.sbub'), sx = $(sb, '.bx'); let g = 0; while (sb.getBoundingClientRect().width > 880 && g++ < 40) sx.style.fontSize = (parseFloat(getComputedStyle(sx).fontSize) - 2) + 'px'; }
+      if (s.type === 'group') { $$(el, '.gb').forEach(b => fitOverflow(b, $(b, '.bx'), 28)); }
       if (s.type === 'cta') { fitWidth($(el, '.tag'), 960); fitWidth($(el, '.cta'), 900); fitWidth($(el, '.wmtxt'), 900); }
     });
   }
@@ -178,7 +220,16 @@
   const cue = (t, kind) => cues.events.push({ t: Math.round(t * 1000) / 1000, kind });
   const flights = new Map();
 
+  const centre = el => { const r = el.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2, l: r.left }; };
   function measureFlights() {
+    scenes.filter(s => s.type === 'group').forEach(s => {
+      const rows = [...$$(s.el, '.grow')];
+      $$(s.el, '.gb').forEach((b, i) => { const a = centre(b), r = centre(rows[i] || rows[rows.length - 1]); flights.set(b, { x: r.l + 10 - a.l, y: r.y - a.y }); });
+    });
+    scenes.filter(s => s.type === 'merge').forEach(s => {
+      const c = centre($(s.el, '.mcard .ttitle'));
+      $$(s.el, '.src').forEach(b => { const a = centre(b); flights.set(b, { x: c.x - a.x, y: c.y - a.y }); });
+    });
     scenes.filter(s => s.type === 'solution').forEach(s => {
       const rows = [...$$(s.el, '.trow.r')];
       $$(s.el, '.fly').forEach(b => {
@@ -238,6 +289,77 @@
       cue(T + 2.05, 'ding');
       tl.from($(el, '.free'), { scale: 1.8, opacity: 0, duration: .3, ease: 'back.out(2)' }, T + 2.5);
       cue(T + 2.5, 'pop');
+    },
+    group(tl, T, d, el) {
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      [...$$(el, '.gb')].forEach((b, i) => { tl.from(b, { scale: .6, opacity: 0, duration: .3, ease: 'back.out(2)' }, T + .3 + i * .25); cue(T + .3 + i * .25, 'pop_small'); });
+      tl.from($(el, '.gcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + 1.05);
+      const rows = [...$$(el, '.grow')];
+      [...$$(el, '.gb')].forEach((b, i) => {
+        const t = T + 1.5 + i * .25, f = flights.get(b);
+        tl.to(b, { x: f.x, y: f.y, scale: .5, opacity: 0, duration: .4, ease: 'power2.in', transformOrigin: '0% 50%' }, t);
+        if (rows[i]) { tl.from(rows[i], { opacity: 0, x: -40, duration: .3, ease: E }, t + .32);
+          tl.fromTo(rows[i], { backgroundColor: 'rgba(17,185,129,.16)' }, { backgroundColor: 'rgba(17,185,129,0)', duration: .6 }, t + .32); }
+        cue(t + .32, 'pop');
+      });
+      tl.from($(el, '.gcard .badge'), { scale: .4, opacity: 0, duration: .3, ease: 'back.out(2)' }, T + 2.4);
+      tl.from($(el, '.gfoot'), { opacity: 0, y: 16, duration: .3 }, T + 2.55);
+      tl.to($(el, '.gcard'), { y: -250, duration: .45, ease: 'power2.inOut' }, T + 2.5);   // close the gap the comments left
+    },
+    excel(tl, T, d, el) {
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      tl.from($(el, '.xcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .3);
+      tl.from($$(el, '.xcard .xrow'), { x: -30, opacity: 0, duration: .25, stagger: .1, ease: E }, T + .55);
+      tl.to($(el, '.xbtn'), { scale: .88, duration: .1, yoyo: true, repeat: 1 }, T + 1.25);
+      cue(T + 1.25, 'click');
+      tl.fromTo($(el, '.sheet'), { y: 700, opacity: 0 }, { y: 0, opacity: 1, duration: .45, ease: 'power3.out' }, T + 1.45);
+      cue(T + 1.4, 'whoosh_up');
+      tl.from($$(el, '.grid .gh'), { opacity: 0, duration: .2 }, T + 1.8);
+      [0, 1, 2, 3].forEach(i => { const c = $$(el, `.grid .r${i}`); if (c.length) { tl.from(c, { opacity: 0, x: -14, duration: .2, stagger: .04 }, T + 1.95 + i * .14); cue(T + 1.95 + i * .14, 'tick_soft'); } });
+      tl.from($(el, '.shok'), { scale: 0, duration: .3, ease: 'back.out(2.4)' }, T + 2.6);
+      cue(T + 2.6, 'ding');
+    },
+    merge(tl, T, d, el) {
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      [...$$(el, '.src')].forEach((b, i) => { tl.from(b, { y: 60, opacity: 0, duration: .35, ease: E }, T + .3 + i * .18); cue(T + .3 + i * .18, 'pop_small'); });
+      tl.from($(el, '.mcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + 1.0);
+      [...$$(el, '.src')].forEach((b, i) => { const f = flights.get(b);
+        tl.to(b, { x: f.x, y: f.y, scale: .3, opacity: 0, duration: .42, ease: 'power2.in' }, T + 1.45 + i * .14); cue(T + 1.8 + i * .14, 'pop'); });
+      const total = +$(el, '.mcard').dataset.total, n = { v: 0 }, ce = $(el, '.mcnt'), cw = $(el, '.mcw');
+      tl.to(n, { v: total, duration: .7, ease: 'none', onUpdate: () => { const k = Math.round(n.v); ce.textContent = k; cw.textContent = L.ordersWord(k); } }, T + 1.75);
+      tl.from($$(el, '.mcard .xrow'), { x: -30, opacity: 0, duration: .25, stagger: .12, ease: E }, T + 2.2);
+      tl.to($(el, '.mcard .badge'), { scale: 1.15, duration: .15, yoyo: true, repeat: 1 }, T + 2.55);
+    },
+    review(tl, T, d, el) {
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      tl.from($(el, '.rcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .3);
+      [...$$(el, '.rrow.ok')].forEach((r, i) => { tl.from(r, { x: -30, opacity: 0, duration: .25, ease: E }, T + .6 + i * .18);
+        tl.from($(r, '.rk'), { scale: 0, duration: .25, ease: 'back.out(2.4)' }, T + .7 + i * .18); cue(T + .7 + i * .18, 'pop_small'); });
+      tl.from($(el, '.rrow.un'), { x: -30, opacity: 0, duration: .3, ease: E }, T + 1.25);
+      cue(T + 1.25, 'pop_low');
+      tl.to($(el, '.rflag'), { scale: 1.12, duration: .14, yoyo: true, repeat: 3 }, T + 1.55);
+      cue(T + 2.0, 'click');
+      tl.to($(el, '.rflag'), { opacity: 0, duration: .12 }, T + 2.0);
+      tl.from($(el, '.rfix'), { scale: .6, opacity: 0, duration: .3, ease: 'back.out(2)', transformOrigin: '0% 50%' }, T + 2.1);
+      tl.to($(el, '.rrow.un'), { backgroundColor: 'rgba(17,185,129,.12)', borderColor: 'rgba(17,185,129,.5)', duration: .3 }, T + 2.3);
+      tl.from($(el, '.rdone'), { scale: 0, opacity: 0, duration: .3, ease: 'back.out(2.4)' }, T + 2.35);
+      tl.to($(el, '.rc1'), { opacity: 0, duration: .1 }, T + 2.35).to($(el, '.rc0'), { opacity: 1, duration: .1 }, T + 2.4);
+      cue(T + 2.35, 'ding');
+    },
+    setup(tl, T, d, el) {
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      tl.from($(el, '.scard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .3);
+      [...$$(el, '.sfield')].forEach((f, i) => { tl.from($(f, '.sfl'), { opacity: 0, duration: .2 }, T + .6 + i * .38);
+        tl.from($$(f, '.schip'), { scale: .5, opacity: 0, duration: .22, stagger: .06, ease: 'back.out(2)' }, T + .7 + i * .38); cue(T + .7 + i * .38, 'pop_small'); });
+      tl.from($(el, '.srow'), { opacity: 0, duration: .25 }, T + 1.75);
+      tl.to($(el, '.stog .knob'), { x: 58, duration: .25, ease: 'power2.out' }, T + 2.1);
+      tl.to($(el, '.stog'), { backgroundColor: '#11B981', duration: .2 }, T + 2.1);
+      cue(T + 2.1, 'click');
+      tl.from($(el, '.sbub'), { y: 40, opacity: 0, duration: .35, ease: E }, T + 2.5);
+      cue(T + 2.5, 'pop');
+      tl.to($(el, '.sbub'), { opacity: .45, filter: 'grayscale(1)', duration: .3 }, T + 3.05);
+      tl.from($(el, '.skip'), { scale: 1.7, opacity: 0, duration: .3, ease: 'back.out(2)' }, T + 3.05);
+      cue(T + 3.05, 'pop_low');
     },
     hook(tl, T, d, el, dur) {
       tl.fromTo($$(el, '.bgb'), { y: 0 }, { y: -620, duration: dur, ease: 'none' }, T);
@@ -350,6 +472,7 @@
     let t = 0;
     const calm = new Set(['cover', 'hook', 'codes', 'pain']);
     cues.drop = null;
+    cues.music = EP.music || null;   // optional per-episode soundtrack variant, read by scripts/music.py
     scenes.forEach((s, i) => {
       s.start = t;
       cues.scenes.push({ type: s.type, start: t, dur: s.dur });
