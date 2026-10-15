@@ -15,8 +15,8 @@ Noxio (noxio.pl) turns comments under Facebook live streams, videos and sale pos
 - one-click Excel (XLSX) export;
 - order confirmation to buyers in Messenger when the page is connected (Facebook allows one reply per comment within 7 days);
 - interface in English, Polish, Latvian and Russian;
-- trial: 14 days free, up to 3 streams, no card. Plans (check noxio.pl before quoting): week 89,99 zł, month 219,99 zł,
-  year 1999,99 zł; fixed price, no percentage of sales.
+- trial: 14 days free, up to 3 streams, no card. Plans (confirmed on noxio.pl 2026-10-15): week 89,99 zł / 7 days,
+  month 219,99 zł, year 1999,99 zł (166,67 zł/month, save 24%); fixed price, no percentage of sales.
 
 Never present these as available: real-time scanning or a bot during the live, auto-replies, Instagram or TikTok
 integration, payments, courier labels, invoices, a warehouse or reservations, a buyer app, CRM integrations.
@@ -57,12 +57,15 @@ Show "without codes" on comments instead of just claiming it. Every video ends w
 
 ## Covers
 
-Episodes with a file in `assets/covers/eNN.jpg` start with a `cover` scene and use that file as `videoThumbnailUrl`
-(raw.githubusercontent.com URL). Covers are designed in Moda (canvas "Noxio — обложки Reels", Noxio light brand kit,
-1080×1920): a stock photo from Unsplash (`file_search` with `source: "stock"`), logo, headline in the episode's language,
-a one-line sub, and a small photo credit ("Fot./Foto/Photo/Фото: <author> / Unsplash"). Dark-theme episodes put the
-headline at the bottom over a dark gradient; light ones at the top over a light gradient.
-Export the page as JPEG and download it straight into `assets/covers/` (assets-cdn.moda.app is reachable).
-Set `instagramData.isAiGenerated: true` only when the photo is AI-generated; stock photos are `false`.
-If a Moda export cannot be downloaded, pass its JPEG export URL as `videoThumbnailUrl` and start the episode with a
-`hook` scene instead of `cover`. Never crop or hide the moda.app badge that free-plan exports carry.
+**No marks of other companies anywhere in the visuals** — no tool badges (moda.app or any other), no stock-site credits,
+no watermarks, no other brands' logos (Maxim's rule). Do not use Moda exports for covers or frames: the free plan adds a badge.
+
+Every episode except `codes` openers starts with a `cover` scene built by the template:
+`{"type": "cover", "photo": "../assets/photos/eNN.jpg", "head": [...], "sub": "..."}` — a stock photo with our logo,
+headline and sub on top (light episodes: headline at the top over a light gradient; dark: at the bottom over a dark one;
+`layout` and `focus` can override). Find photos with Moda's `file_search` (`source: "stock"`) or on Unsplash, check a
+preview first (no foreign signs, brands or currencies), then `scripts/fetch_photo.sh eNN <images.unsplash.com URL> "<author>"`
+— it saves the photo and notes the author in `assets/photos/CREDITS.md` (record only, never on screen).
+`scripts/make_episode.sh` also writes `assets/covers/eNN.jpg`, a still of the cover, used as `videoThumbnailUrl`.
+Episodes that open with `codes` have no cover; use `coverMs: 2700` (`videoCoverMilliseconds`) for the thumbnail.
+Stock photos → `instagramData.isAiGenerated: false`.

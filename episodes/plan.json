@@ -61,7 +61,7 @@
    "status": "spare",
    "cover": "assets/covers/e02.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e02.jpg",
-   "aiGenerated": true,
+   "aiGenerated": false,
    "autoPublish": true,
    "note": "Rendered, not scheduled: its slot went to a brief concept episode (2026-10-15). Can fill a later slot."
   },
@@ -157,7 +157,7 @@
    "status": "scheduled",
    "cover": "assets/covers/e03.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e03.jpg",
-   "aiGenerated": true,
+   "aiGenerated": false,
    "autoPublish": true
   },
   {
@@ -233,7 +233,7 @@
    "status": "scheduled",
    "cover": "assets/covers/e04.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e04.jpg",
-   "aiGenerated": true,
+   "aiGenerated": false,
    "autoPublish": true
   },
   {
@@ -386,7 +386,7 @@
    "status": "scheduled",
    "cover": "assets/covers/e06.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e06.jpg",
-   "aiGenerated": true,
+   "aiGenerated": false,
    "autoPublish": true
   },
   {
@@ -519,7 +519,7 @@
    "status": "scheduled",
    "cover": "assets/covers/e08.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e08.jpg",
-   "aiGenerated": true,
+   "aiGenerated": false,
    "autoPublish": true
   },
   {

@@ -15,7 +15,8 @@ soundtrack is timed to the cuts.
 | `scripts/preview_all.sh` | Key-frame contact sheets in `build/` for checking layouts before a full render |
 | `videos/` | Finished MP4s, served publicly via raw.githubusercontent.com for scheduling |
 | `assets/logo.png` | Noxio logo |
-| `assets/covers/` | Cover images (one per episode), also used as Reel thumbnails |
+| `assets/photos/` | Stock photos for covers (`CREDITS.md` lists authors) |
+| `assets/covers/` | Cover stills (one per episode), used as Reel thumbnails |
 
 ## Scene types
 
@@ -25,9 +26,9 @@ soundtrack is timed to the cuts.
 `price` compares a 3% commission with Noxio's fixed price and the weekly plan (copy in `l10n.js`, prices in zł);
 `sendlink` shows a seller sending a live link in Messenger and getting the order list back as Excel (concept K1).
 Emoji in any text are swapped for Noto SVGs from `assets/emoji/` (`scripts/emoji.py` extracts them; run by the build scripts).
-`cover` shows a finished 1080×1920 cover image (`"src": "../assets/covers/eNN.jpg"`, headline already in the picture) with a slow zoom;
-use it instead of `hook` when a cover exists. Covers are designed in Moda (photo + headline + logo, Noxio brand kit) and the same
-file is used as the Reel thumbnail.
+`cover` is a stock photo with our logo, headline and sub (`"photo": "../assets/photos/eNN.jpg"`, `"head"`, `"sub"`, optional
+`"layout": "light"|"dark"`, `"focus"` for object-position) with a slow zoom; `make_episode.sh` saves a still of it as
+`assets/covers/eNN.jpg` for the Reel thumbnail. (The old form `"src"` shows a finished image.)
 Any scene accepts `kicker` (small label, e.g. "Шаг 1"). Heads are arrays of lines; `[text]` highlights in emerald,
 `{text}` in teal. `connect` accepts `"only": "link"` to show only the paste-a-link option.
 
