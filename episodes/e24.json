@@ -2,6 +2,7 @@
  "id": "e24",
  "lang": "pl",
  "theme": "dark",
+ "angle": "send-link",
  "niche": "home",
  "data": {
   "feed": [
@@ -116,10 +117,11 @@
    "type": "cover",
    "photo": "../assets/photos/e24.jpg",
    "head": [
-    "Sprawdź na",
-    "[swoim live’ie]"
+    "Wyślij link",
+    "do live’a —",
+    "[odeślemy zamówienia]"
    ],
-   "sub": "14 dni za darmo, bez karty · noxio.pl"
+   "sub": "Za darmo, w Excelu · noxio.pl"
   },
   {
    "type": "solution",
@@ -131,14 +133,23 @@
    ]
   },
   {
-   "type": "connect"
+   "type": "sendlink",
+   "head": [
+    "Twój ostatni live —",
+    "[lista w Excelu]",
+    "za darmo"
+   ],
+   "file": "zamowienia_ceramika.xlsx",
+   "link": "facebook.com/twojsklep/videos/5520…"
   },
   {
    "type": "offer"
   },
   {
    "type": "cta",
-   "tag": "Sprawdź na swoim live’ie"
+   "tag": "Wyślij link — odeślemy listę zamówień",
+   "button": "Napisz do nas",
+   "small": "lub wypróbuj sam: noxio.pl"
   }
  ]
 }

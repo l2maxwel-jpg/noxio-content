@@ -1,36 +1,150 @@
 {
  "id": "e13",
  "lang": "en",
- "theme": "light",
- "niche": "home",
+ "angle": "excel-export",
+ "data": {
+  "feed": [
+   [
+    "Harriet",
+    "I’ll take the yellow throw"
+   ],
+   [
+    "Bea",
+    "2 cushion covers, 45×45"
+   ],
+   [
+    "Clara",
+    "is it pure wool?"
+   ],
+   [
+    "Imogen",
+    "hold the cream blanket for me!"
+   ],
+   [
+    "Lottie",
+    "+ grey bed runner 💛"
+   ],
+   [
+    "Maud",
+    "any in green?"
+   ],
+   [
+    "Florence",
+    "mine! yellow"
+   ],
+   [
+    "Elsie",
+    "2 throws pls"
+   ],
+   [
+    "Nancy",
+    "what size is the blanket?"
+   ],
+   [
+    "Ottilie",
+    "cream one for me"
+   ],
+   [
+    "Winnie",
+    "cover 45×45 ×3"
+   ],
+   [
+    "Agnes",
+    "hold a runner for me"
+   ],
+   [
+    "Dot",
+    "do you post to Ireland?"
+   ],
+   [
+    "Pearl",
+    "I’ll take 2"
+   ]
+  ],
+  "table": {
+   "cols": [
+    "Buyer",
+    "Item",
+    "Variant",
+    "Qty"
+   ],
+   "rows": [
+    [
+     "Harriet",
+     "Wool throw",
+     "yellow",
+     "1",
+     0
+    ],
+    [
+     "Bea",
+     "Cushion cover",
+     "45×45",
+     "2",
+     1
+    ],
+    [
+     "Imogen",
+     "Blanket",
+     "cream",
+     "1",
+     3
+    ],
+    [
+     "Lottie",
+     "Bed runner",
+     "grey",
+     "1",
+     4
+    ]
+   ]
+  },
+  "excel": {
+   "btn": "Excel",
+   "file": "orders_throws.xlsx"
+  }
+ },
  "scenes": [
   {
    "type": "cover",
    "photo": "../assets/photos/e13.jpg",
    "head": [
-    "Orders buried",
-    "in your [live]",
-    "[comments?]"
+    "Live comments",
+    "→ [a spreadsheet]"
    ],
-   "sub": "Noxio turns them into a list · noxio.pl"
+   "sub": "One-click Excel export · noxio.pl"
   },
   {
-   "type": "pain"
+   "type": "pain",
+   "head": [
+    "Still copying",
+    "orders into a sheet",
+    "by hand?"
+   ],
+   "big": "line by line"
   },
   {
-   "type": "solution"
+   "type": "solution",
+   "head": [
+    "Noxio turns",
+    "comments into",
+    "[a clean order list]"
+   ]
   },
   {
-   "type": "ai"
-  },
-  {
-   "type": "connect"
+   "type": "excel",
+   "head": [
+    "One click —",
+    "[an Excel file]",
+    "ready to pack"
+   ]
   },
   {
    "type": "offer"
   },
   {
-   "type": "cta"
+   "type": "cta",
+   "tag": "Comments in, spreadsheet out"
   }
  ]
 }

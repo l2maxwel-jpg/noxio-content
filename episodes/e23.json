@@ -1,32 +1,191 @@
 {
  "id": "e23",
  "lang": "en",
- "theme": "light",
+ "angle": "skip-own-comments",
+ "data": {
+  "feed": [
+   [
+    "Hattie",
+    "camel coat M for me"
+   ],
+   [
+    "Rosa",
+    "silk blouse S, 2 pls"
+   ],
+   [
+    "Pip",
+    "what’s the fabric?"
+   ],
+   [
+    "Edie",
+    "hold the leather jacket, S!"
+   ],
+   [
+    "Mabel",
+    "+ knit vest M"
+   ],
+   [
+    "June",
+    "any marks on it?"
+   ],
+   [
+    "Cora",
+    "mine! M"
+   ],
+   [
+    "Lou",
+    "blouse in cream?"
+   ],
+   [
+    "Vi",
+    "how long is the coat?"
+   ],
+   [
+    "Bette",
+    "vest L"
+   ],
+   [
+    "Kitty",
+    "jacket S 😍"
+   ],
+   [
+    "Mae",
+    "hold a blouse for me"
+   ],
+   [
+    "Tilly",
+    "do you ship to France?"
+   ],
+   [
+    "Wren",
+    "I’ll take 2"
+   ]
+  ],
+  "table": {
+   "cols": [
+    "Buyer",
+    "Item",
+    "Size",
+    "Qty"
+   ],
+   "rows": [
+    [
+     "Hattie",
+     "Camel coat",
+     "M",
+     "1",
+     0
+    ],
+    [
+     "Rosa",
+     "Silk blouse",
+     "S",
+     "2",
+     1
+    ],
+    [
+     "Edie",
+     "Leather jacket",
+     "S",
+     "1",
+     3
+    ],
+    [
+     "Mabel",
+     "Knit vest",
+     "M",
+     "1",
+     4
+    ]
+   ]
+  },
+  "ai": {
+   "name": "Edie",
+   "html": "hold the <span class=\"hl l h1\">leather jacket</span>, <span class=\"hl v h2\">S</span>!",
+   "chips": [
+    "Leather jacket",
+    "Size S",
+    "1 pc"
+   ]
+  },
+  "setup": {
+   "title": "Before the scan",
+   "fields": [
+    [
+     "Product codes",
+     [
+      "V12",
+      "V15",
+      "V21",
+      "…"
+     ]
+    ],
+    [
+     "Colours",
+     [
+      "camel",
+      "black",
+      "cream"
+     ]
+    ],
+    [
+     "Sizes",
+     [
+      "S",
+      "M",
+      "L"
+     ]
+    ]
+   ],
+   "toggle": "Skip the seller’s own comments",
+   "seller": [
+    "Your shop",
+    "The camel coat is back, size M! 🧥"
+   ],
+   "skipped": "not an order"
+  }
+ },
  "scenes": [
   {
    "type": "cover",
    "photo": "../assets/photos/e23.jpg",
    "head": [
-    "Try it on your",
-    "[next live]"
+    "Your own",
+    "comments",
+    "[aren’t orders]"
    ],
-   "sub": "14 days free · no card · noxio.pl"
+   "sub": "Noxio skips the seller’s comments · noxio.pl"
   },
   {
-   "type": "solution"
+   "type": "setup",
+   "head": [
+    "One switch —",
+    "[your comments]",
+    "stay out"
+   ]
   },
   {
-   "type": "ai"
+   "type": "solution",
+   "head": [
+    "Only buyers’",
+    "comments",
+    "[become orders]"
+   ]
   },
   {
-   "type": "messenger"
+   "type": "ai",
+   "head": [
+    "“hold the leather",
+    "jacket, S!” —",
+    "[got it]"
+   ]
   },
   {
    "type": "offer"
   },
   {
    "type": "cta",
-   "tag": "Try it on your next live"
+   "tag": "Your comments stay out of the order list"
   }
  ]
 }

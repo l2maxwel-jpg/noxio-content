@@ -23,7 +23,8 @@ Unsplash License. Kept for the record; not shown on the videos.
 | e20 | Christian Agbede | https://images.unsplash.com/photo-1775642545475-1484e32d98dc |
 | e21 | Zayed Ahmed Zadu | https://images.unsplash.com/photo-1760287363879-6012adab292c |
 | e22 | Asterfolio | https://images.unsplash.com/photo-1619658535018-5a55d32e4628 |
-| e23 | Yanhao Fang | https://images.unsplash.com/photo-1788949703668-11aabe86a3f4 |
 | e24 | Moon Moons | https://images.unsplash.com/photo-1604680124443-5610f57efe0d |
 | e26 | Vitaly Gariev | https://images.unsplash.com/photo-1714647212109-acd0300a58f6 |
 | e28 | Cayley Nossiter | https://images.unsplash.com/photo-1539343915366-4da26f7a1f2c |
+| e27 | Julia Rekamie | https://images.unsplash.com/photo-1606902965551-dce093cda6e7 |
+| e23 | Amanda Vick | https://images.unsplash.com/photo-1551232864-3f0890e580d9 |

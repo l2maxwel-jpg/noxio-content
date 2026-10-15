@@ -2,42 +2,178 @@
  "id": "e22",
  "lang": "pl",
  "theme": "dark",
+ "angle": "grouped-by-buyer",
+ "data": {
+  "feed": [
+   [
+    "Natalia",
+    "biorę piżamę satynową M"
+   ],
+   [
+    "Ola",
+    "2 szlafroki, L"
+   ],
+   [
+    "Kasia",
+    "jaki to materiał?"
+   ],
+   [
+    "Natalia",
+    "+ szlafrok do kompletu 🤍"
+   ],
+   [
+    "Ola",
+    "i kapcie 39"
+   ],
+   [
+    "Ewa",
+    "jest rozmiar XL?"
+   ],
+   [
+    "Natalia",
+    "kapcie 38 też!"
+   ],
+   [
+    "Iza",
+    "piżama S dla mnie"
+   ],
+   [
+    "Marta",
+    "czy szlafrok ma kaptur?"
+   ],
+   [
+    "Ola",
+    "biorę jeszcze opaskę"
+   ],
+   [
+    "Basia",
+    "komplet M 😍"
+   ],
+   [
+    "Iza",
+    "odłóżcie mi kapcie"
+   ],
+   [
+    "Gosia",
+    "kiedy wysyłka?"
+   ],
+   [
+    "Basia",
+    "biorę 2"
+   ]
+  ],
+  "table": {
+   "cols": [
+    "Kupujący",
+    "Produkt",
+    "Rozmiar",
+    "Ilość"
+   ],
+   "rows": [
+    [
+     "Natalia",
+     "Piżama satynowa",
+     "M",
+     "1",
+     0
+    ],
+    [
+     "Natalia",
+     "Szlafrok",
+     "M",
+     "1",
+     1
+    ],
+    [
+     "Natalia",
+     "Kapcie",
+     "38",
+     "1",
+     3
+    ],
+    [
+     "Ola",
+     "Szlafrok",
+     "L",
+     "2",
+     4
+    ]
+   ]
+  },
+  "group": {
+   "name": "Natalia",
+   "comments": [
+    "biorę piżamę satynową, M",
+    "+ szlafrok do kompletu 🤍",
+    "i kapcie 38 też!"
+   ],
+   "items": [
+    [
+     "Piżama satynowa",
+     "M",
+     "1"
+    ],
+    [
+     "Szlafrok",
+     "M",
+     "1"
+    ],
+    [
+     "Kapcie",
+     "38",
+     "1"
+    ]
+   ],
+   "badge": "3 produkty",
+   "foot": "Jedna klientka — [jedna paczka]"
+  },
+  "excel": {
+   "btn": "Excel",
+   "file": "zamowienia_pizamy.xlsx"
+  }
+ },
  "scenes": [
   {
    "type": "cover",
    "photo": "../assets/photos/e22.jpg",
    "head": [
-    "Potwierdzenia",
-    "[w Messengerze]"
+    "Kto co kupił?",
+    "[Wszystko]",
+    "[po klientkach]"
    ],
-   "sub": "W kilka kliknięć, z listy zamówień · noxio.pl"
+   "sub": "Zamówienia według kupujących · noxio.pl"
   },
   {
    "type": "pain",
    "head": [
-    "Pisać do",
-    "każdego kupującego",
-    "osobno?"
+    "Ta sama klientka",
+    "pisze trzy razy",
+    "w różnych miejscach…"
    ],
-   "big": "serio?"
+   "big": "i co teraz?"
   },
   {
-   "type": "messenger",
+   "type": "group",
    "head": [
-    "Potwierdzenia",
-    "zamówień —",
-    "[w kilka kliknięć]"
-   ],
-   "sub": "+ prosto z listy zamówień, gdy strona jest podłączona"
+    "Noxio zbiera",
+    "komentarze",
+    "[jednej klientki]"
+   ]
   },
   {
-   "type": "solution"
+   "type": "excel",
+   "head": [
+    "Lista po klientkach",
+    "[w Excelu] —",
+    "do pakowania"
+   ]
   },
   {
    "type": "offer"
   },
   {
-   "type": "cta"
+   "type": "cta",
+   "tag": "Jedna klientka — jedno zamówienie"
   }
  ]
 }

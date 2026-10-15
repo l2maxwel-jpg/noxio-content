@@ -1,39 +1,204 @@
 {
  "id": "e20",
  "lang": "lv",
- "theme": "light",
- "niche": "cosmetics",
+ "angle": "merge-lives",
+ "data": {
+  "feed": [
+   [
+    "Elīna",
+    "ņemu balto cepuri"
+   ],
+   [
+    "Kristīne",
+    "2 šalles, bēšas"
+   ],
+   [
+    "Agnese",
+    "vai cepure ir vilnas?"
+   ],
+   [
+    "Sintija",
+    "atlieciet cimdus, M!"
+   ],
+   [
+    "Laura",
+    "+ zeķes 38"
+   ],
+   [
+    "Dace",
+    "vai baltā vēl ir?"
+   ],
+   [
+    "Ieva",
+    "ņemu! M"
+   ],
+   [
+    "Zane",
+    "man tādu pašu kā Elīnai"
+   ],
+   [
+    "Anete",
+    "kāds sastāvs?"
+   ],
+   [
+    "Marta",
+    "šalli, bēšu"
+   ],
+   [
+    "Una",
+    "cimdi L 😍"
+   ],
+   [
+    "Rita",
+    "atlieciet man cepuri"
+   ],
+   [
+    "Liene",
+    "piegāde uz Rīgu?"
+   ],
+   [
+    "Ilze",
+    "ņemu 2"
+   ]
+  ],
+  "table": {
+   "cols": [
+    "Pircējs",
+    "Prece",
+    "Variants",
+    "Daudz."
+   ],
+   "rows": [
+    [
+     "Elīna",
+     "Adīta cepure",
+     "balta",
+     "1",
+     0
+    ],
+    [
+     "Kristīne",
+     "Šalle",
+     "bēša",
+     "2",
+     1
+    ],
+    [
+     "Sintija",
+     "Cimdi",
+     "M",
+     "1",
+     3
+    ],
+    [
+     "Laura",
+     "Zeķes",
+     "38",
+     "1",
+     4
+    ]
+   ]
+  },
+  "ai": {
+   "name": "Sintija",
+   "html": "atlieciet <span class=\"hl l h1\">cimdus</span>, <span class=\"hl v h2\">M</span>!",
+   "chips": [
+    "Cimdi",
+    "Izmērs M",
+    "1 pāris"
+   ]
+  },
+  "merge": {
+   "title": "Visi pasūtījumi",
+   "sources": [
+    [
+     "live",
+     "Tiešraide · P",
+     6
+    ],
+    [
+     "live",
+     "Tiešraide · T",
+     4
+    ],
+    [
+     "live",
+     "Tiešraide · Pk",
+     5
+    ]
+   ]
+  },
+  "review": {
+   "title": "Pārbaude",
+   "flagWord": "jāpārbauda",
+   "ok": [
+    [
+     "Elīna",
+     "Adīta cepure · balta"
+    ],
+    [
+     "Kristīne",
+     "Šalle · bēša ×2"
+    ],
+    [
+     "Sintija",
+     "Cimdi · M"
+    ]
+   ],
+   "unclear": [
+    "Zane",
+    "man tādu pašu kā Elīnai"
+   ],
+   "flag": "pārbaudīt",
+   "fix": "Adīta cepure · balta",
+   "done": "gatavs"
+  }
+ },
  "scenes": [
   {
    "type": "cover",
    "photo": "../assets/photos/e20.jpg",
    "head": [
-    "Bez [Facebook]",
-    "[pieteikšanās]"
+    "Trīs tiešraides —",
+    "[viens saraksts]"
    ],
-   "sub": "Vienkārši ielīmējiet saiti · noxio.pl"
+   "sub": "Noxio apvieno pasūtījumus · noxio.pl"
   },
   {
-   "type": "connect",
-   "only": "link",
+   "type": "merge",
    "head": [
-    "Ielīmējiet",
-    "[saiti uz tiešraidi] —",
-    "bez pieteikšanās",
-    "Facebook"
+    "Pirmdiena, trešdiena,",
+    "piektdiena —",
+    "[viena tabula]"
    ]
   },
   {
-   "type": "solution"
+   "type": "ai",
+   "head": [
+    "Raksta bez kodiem —",
+    "[Noxio saprot]"
+   ]
   },
   {
-   "type": "ai"
+   "type": "review",
+   "head": [
+    "Neskaidrus",
+    "komentārus —",
+    "[uz pārbaudi]"
+   ]
   },
   {
    "type": "offer"
   },
   {
-   "type": "cta"
+   "type": "cta",
+   "tag": "Visas tiešraides — vienā sarakstā"
   }
- ]
+ ],
+ "music": {
+  "bpm": 124,
+  "transpose": 1,
+  "prog": 0,
+  "hats16": true
+ }
 }

@@ -2,7 +2,121 @@
  "id": "e18",
  "lang": "en",
  "theme": "dark",
- "niche": "shoes",
+ "angle": "questions-not-orders",
+ "data": {
+  "feed": [
+   [
+    "Poppy",
+    "black chelsea 39 pls 🖤"
+   ],
+   [
+    "Freya",
+    "2 pairs of ankle boots, 38"
+   ],
+   [
+    "Isla",
+    "do they run small?"
+   ],
+   [
+    "Maisie",
+    "hold the biker boots, 40!"
+   ],
+   [
+    "Esme",
+    "+ snow boots 37"
+   ],
+   [
+    "Ada",
+    "are they waterproof?"
+   ],
+   [
+    "Willow",
+    "mine! 38"
+   ],
+   [
+    "Iris",
+    "tan ones, 39"
+   ],
+   [
+    "Nell",
+    "what’s the heel height?"
+   ],
+   [
+    "Orla",
+    "40 for me"
+   ],
+   [
+    "Bea",
+    "chelsea 37 🖤"
+   ],
+   [
+    "Ivy",
+    "hold a 39 for me"
+   ],
+   [
+    "Kit",
+    "do you ship today?"
+   ],
+   [
+    "Rae",
+    "I’ll take 2"
+   ]
+  ],
+  "table": {
+   "cols": [
+    "Buyer",
+    "Item",
+    "Size",
+    "Qty"
+   ],
+   "rows": [
+    [
+     "Poppy",
+     "Chelsea boots",
+     "39",
+     "1",
+     0
+    ],
+    [
+     "Freya",
+     "Ankle boots",
+     "38",
+     "2",
+     1
+    ],
+    [
+     "Maisie",
+     "Biker boots",
+     "40",
+     "1",
+     3
+    ],
+    [
+     "Esme",
+     "Snow boots",
+     "37",
+     "1",
+     4
+    ]
+   ]
+  },
+  "ai": {
+   "name": "Poppy",
+   "html": "<span class=\"hl v h2\">black</span> <span class=\"hl l h1\">chelsea</span> 39 pls 🖤",
+   "chips": [
+    "Chelsea boots",
+    "Black · 39",
+    "1 pair"
+   ]
+  },
+  "chat": {
+   "msgs": [
+    "Poppy, your order:<br><b>chelsea boots, black 39&nbsp;—&nbsp;1&nbsp;pair</b>",
+    "Freya, your order:<br><b>ankle boots, 38&nbsp;—&nbsp;2&nbsp;pairs</b>",
+    "Maisie, your order:<br><b>biker boots, 40&nbsp;—&nbsp;1&nbsp;pair</b>"
+   ]
+  }
+ },
  "scenes": [
   {
    "type": "cover",
@@ -12,32 +126,37 @@
     "small?” is [not]",
     "[an order]"
    ],
-   "sub": "Noxio’s AI tells questions from orders · noxio.pl"
-  },
-  {
-   "type": "ai",
-   "head": [
-    "AI reads",
-    "comments like",
-    "[a person]"
-   ]
+   "sub": "Noxio tells questions from orders · noxio.pl"
   },
   {
    "type": "solution",
    "head": [
-    "Questions out,",
-    "orders in —",
-    "[a ready table]"
+    "Questions stay out,",
+    "[orders go in]"
    ]
   },
   {
-   "type": "messenger"
+   "type": "ai",
+   "head": [
+    "“black chelsea",
+    "39 pls” —",
+    "[that’s an order]"
+   ]
+  },
+  {
+   "type": "messenger",
+   "head": [
+    "Real orders get",
+    "[a confirmation]"
+   ],
+   "sub": "+ in Messenger, when your Page is connected"
   },
   {
    "type": "offer"
   },
   {
-   "type": "cta"
+   "type": "cta",
+   "tag": "Questions stay questions. Orders get listed."
   }
  ]
 }

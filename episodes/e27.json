@@ -2,121 +2,187 @@
  "id": "e27",
  "lang": "pl",
  "theme": "dark",
- "niche": "kids",
+ "angle": "expected-codes",
  "data": {
   "feed": [
    [
-    "Ania",
-    "biorę kombinezon 92 ❤️"
+    "Wiktoria",
+    "legginsy 301 czarne S"
    ],
    [
-    "Magda",
-    "2x body 74"
+    "Paula",
+    "2x top 305 różowy, M"
    ],
    [
-    "Kasia",
-    "co macie na 2 latka?"
+    "Kinga",
+    "a jaki to materiał?"
    ],
    [
-    "Ela",
-    "kurtka 110 dla mnie!!"
+    "Dominika",
+    "bluza oliwkowa L dla mnie 💚"
    ],
    [
-    "Gosia",
-    "+ czapka 52 🧡"
+    "Agata",
+    "+ szorty 309 XS"
    ],
    [
-    "Iza",
-    "to bawełna?"
-   ],
-   [
-    "Asia",
-    "biore piżamke 98"
+    "Iga",
+    "jest jeszcze M?"
    ],
    [
     "Ola",
-    "poprosze 104"
-   ],
-   [
-    "Ewa",
-    "jaki skład?"
-   ],
-   [
-    "Monika",
-    "biorę! 104"
-   ],
-   [
-    "Basia",
-    "sukienka 116 😍"
+    "biorę! S"
    ],
    [
     "Natalia",
-    "odłóżcie mi 86"
+    "309 czarne M"
    ],
    [
-    "Karolina",
-    "dla chłopca macie?"
+    "Zuza",
+    "ile kosztuje bluza?"
    ],
    [
-    "Justyna",
-    "biore 2"
+    "Marta",
+    "301 L"
+   ],
+   [
+    "Ula",
+    "top różowy S 😍"
+   ],
+   [
+    "Kamila",
+    "odłóżcie mi M"
+   ],
+   [
+    "Ewa",
+    "wysyłka jutro?"
+   ],
+   [
+    "Sandra",
+    "biorę 2"
    ]
   ],
-  "ai": {
-   "name": "Ela",
-   "html": "<span class=\"hl l h1\">kurtka</span> <span class=\"hl v h2\">110</span> dla mnie!!",
-   "chips": [
-    "Kurtka",
-    "Rozmiar 110",
-    "1 szt."
+  "table": {
+   "cols": [
+    "Kupujący",
+    "Produkt",
+    "Rozm.",
+    "Ilość"
+   ],
+   "rows": [
+    [
+     "Wiktoria",
+     "Legginsy czarne",
+     "S",
+     "1",
+     0
+    ],
+    [
+     "Paula",
+     "Top różowy",
+     "M",
+     "2",
+     1
+    ],
+    [
+     "Dominika",
+     "Bluza oliwkowa",
+     "L",
+     "1",
+     3
+    ],
+    [
+     "Agata",
+     "Szorty",
+     "XS",
+     "1",
+     4
+    ]
    ]
+  },
+  "setup": {
+   "title": "Przed skanowaniem",
+   "fields": [
+    [
+     "Kody produktów",
+     [
+      "301",
+      "305",
+      "309",
+      "…"
+     ]
+    ],
+    [
+     "Kolory",
+     [
+      "czarny",
+      "różowy",
+      "oliwkowy"
+     ]
+    ],
+    [
+     "Rozmiary",
+     [
+      "XS",
+      "S",
+      "M",
+      "L"
+     ]
+    ]
+   ],
+   "toggle": "Pomijaj komentarze sprzedawcy",
+   "seller": [
+    "Twój sklep",
+    "Kochane, legginsy 301 wróciły! 🖤"
+   ],
+   "skipped": "pominięte"
+  },
+  "excel": {
+   "btn": "Excel",
+   "file": "zamowienia_sport.xlsx"
   }
  },
  "scenes": [
   {
-   "type": "codes",
-   "start": 233,
-   "colors": [
-    "róż",
-    "granat",
-    "szary",
-    "biały"
+   "type": "cover",
+   "photo": "../assets/photos/e27.jpg",
+   "head": [
+    "Kody pomagają.",
+    "[Bez kodów]",
+    "[też działa.]"
    ],
-   "sizes": [
-    "92",
-    "98",
-    "104",
-    "110",
-    "116"
+   "sub": "Ustaw je przed skanem · noxio.pl"
+  },
+  {
+   "type": "setup",
+   "head": [
+    "Wpisz kody,",
+    "kolory i rozmiary",
+    "[przed skanowaniem]"
    ]
   },
   {
    "type": "solution",
    "head": [
-    "Klientki piszą,",
-    "jak chcą —",
-    "[Noxio i tak zrozumie]"
+    "Z kodem i bez —",
+    "[każde zamówienie]",
+    "na liście"
    ]
   },
   {
-   "type": "ai",
+   "type": "excel",
    "head": [
-    "Bez kodu, z literówką",
-    "i emoji —",
-    "[to dalej zamówienie]"
+    "Lista gotowa —",
+    "[eksport do Excela]",
+    "jednym klikiem"
    ]
-  },
-  {
-   "type": "sendlink"
   },
   {
    "type": "offer"
   },
   {
    "type": "cta",
-   "tag": "Wyślij link — odeślemy listę zamówień",
-   "button": "Napisz do nas",
-   "small": "lub wypróbuj sam: noxio.pl"
+   "tag": "Kody pomagają, ale nie są konieczne"
   }
  ]
 }
