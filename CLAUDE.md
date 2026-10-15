@@ -62,7 +62,8 @@ Each Reel must be unrepeatable — across all languages, not just within one. Be
 1. Continue the schedule in `episodes/plan.json` (Europe/Warsaw, check the UTC offset for DST):
    Mondays and Thursdays — RU at 10:00 **and** PL at 14:00; Wednesdays — LV at 10:00; Fridays — EN at 10:00.
 2. Every language gets its own episode (see "Every video is one of a kind"). The RU and PL episodes of the same day
-   must differ in products and theme. Retired copies stay in `plan.json` with `status: retired`.
+   must differ in products and theme. Retired copies stay in `plan.json` with `status: retired`. Spares must pass
+   `check_unique.mjs` and be re-rendered before use (their videos predate the feed-safe layout).
    Aim for 15–20 s (scene `dur` can stretch a scene).
    Keep heads to the line counts the template expects (pain ≤ 3, solution ≤ 4, ai ≤ 3, connect ≤ 4, messenger ≤ 3,
    group/excel/merge/review/setup ≤ 3). Table: buyer names ≤ 8 letters, items ≤ 16, variants ≤ 6.
@@ -81,7 +82,8 @@ no watermarks, no other brands' logos (Maxim's rule). Do not use Moda exports fo
 Every episode except `codes` openers starts with a `cover` scene built by the template:
 `{"type": "cover", "photo": "../assets/photos/eNN.jpg", "head": [...], "sub": "..."}` — a stock photo with our logo,
 headline and sub on top (light episodes: headline at the top over a light gradient; dark: at the bottom over a dark one;
-`layout` and `focus` can override). Find photos with Moda's `file_search` (`source: "stock"`) or on Unsplash, check a
+`layout` and `focus` can override — when a face is in the upper half of the photo use `"layout": "dark"` so the text
+does not cover it). Find photos with Moda's `file_search` (`source: "stock"`) or on Unsplash, check a
 preview first (no foreign signs, brands or currencies), then `scripts/fetch_photo.sh eNN <images.unsplash.com URL> "<author>"`
 — it saves the photo and notes the author in `assets/photos/CREDITS.md` (record only, never on screen).
 `scripts/make_episode.sh` also writes `assets/covers/eNN.jpg`, a still of the cover, used as `videoThumbnailUrl`.

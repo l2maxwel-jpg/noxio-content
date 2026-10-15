@@ -162,7 +162,8 @@
     "Trīs tiešraides —",
     "[viens saraksts]"
    ],
-   "sub": "Noxio apvieno pasūtījumus · noxio.pl"
+   "sub": "Noxio apvieno pasūtījumus · noxio.pl",
+   "layout": "dark"
   },
   {
    "type": "merge",

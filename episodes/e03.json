@@ -47,7 +47,8 @@
     "Теперь написать",
     "[каждому покупателю?]"
    ],
-   "sub": "Подтверждения заказов в Messenger · noxio.pl"
+   "sub": "Подтверждения заказов в Messenger · noxio.pl",
+   "layout": "dark"
   },
   {
    "type": "group",
