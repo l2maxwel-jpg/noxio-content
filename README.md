@@ -18,7 +18,10 @@ soundtrack is timed to the cuts.
 
 ## Scene types
 
-`hook`, `pain`, `solution`, `ai`, `connect`, `messenger`, `offer`, `cta` (durations 3.5 / 3.5 / 4 / 3 / 3 / 3 / 2.5 / 2.5 s).
+`cover`, `hook`, `pain`, `solution`, `ai`, `connect`, `messenger`, `offer`, `cta` (durations 2.8 / 3.5 / 3.5 / 4 / 3 / 3 / 3 / 2.5 / 2.5 s).
+`cover` shows a finished 1080×1920 cover image (`"src": "../assets/covers/eNN.jpg"`, headline already in the picture) with a slow zoom;
+use it instead of `hook` when a cover exists. Covers are designed in Moda (photo + headline + logo, Noxio brand kit) and the same
+file is used as the Reel thumbnail.
 Any scene accepts `kicker` (small label, e.g. "Шаг 1"). Heads are arrays of lines; `[text]` highlights in emerald,
 `{text}` in teal. `connect` accepts `"only": "link"` to show only the paste-a-link option.
 

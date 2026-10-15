@@ -25,3 +25,12 @@ payments, courier labels, invoices, a warehouse. If a roadmap item must be menti
 4. `scripts/make_episode.sh` each episode, then check duration with ffprobe and look at a few frames.
 5. Add the episodes to `plan.json` (caption, date, offset, coverMs, url, `status: planned`), commit and push.
 6. Schedule each as an Instagram REEL + Facebook REEL with manual approval (`autoPublish: false`), then set `status: scheduled`.
+
+## Covers
+
+Episodes with a file in `assets/covers/eNN.jpg` start with a `cover` scene and use that file as `videoThumbnailUrl`
+(raw.githubusercontent.com URL); set `instagramData.isAiGenerated: true` when the cover photo is AI-generated.
+New covers are designed in Moda (Noxio brand kit, 1080×1920, photo + headline + logo, essentials inside y 250–1670).
+Moda exports cannot be downloaded from the build sandbox: if a cover exists only in Moda, pass its per-page JPEG export URL
+as `videoThumbnailUrl` and start the episode with a `hook` scene instead of `cover`. Never crop or hide the moda.app badge
+that free-plan exports carry.
