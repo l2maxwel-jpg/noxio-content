@@ -6,15 +6,24 @@ This repository produces Noxio's Reels. Read README.md for the layout. Rules for
 
 Noxio (noxio.pl) turns comments under Facebook live streams, videos and sale posts into an order list. Safe to show:
 - orders are recognized from comments **after** the stream ends (processing is not real-time);
-- AI understands orders written in natural language, without product codes (codes are optional, they improve accuracy);
-- two ways in: connect the Facebook business page (fast mode) **or** paste a link to the video, without logging in through Facebook;
-- a ready order table (buyer, item, size, quantity), discrepancy check, Excel export;
-- messages to buyers in Messenger, when the Facebook page is connected;
+- AI understands orders written in natural language, without product codes, with typos, emoji and in different
+  languages (codes are optional, they improve accuracy) — show it on real-looking comments, don't just claim it;
+- two ways in: paste a link to the video, without logging in through Facebook (slower), **or** connect the Facebook
+  business page once and pick videos from a list (faster); works with finished lives, regular videos and sale posts;
+- before a scan the seller can set expected codes, colours and sizes and ignore comments from the seller and admins;
+- orders grouped by buyer, search and manual edits, a check of unclear orders, several lives merged into one list;
+- one-click Excel (XLSX) export;
+- order confirmation to buyers in Messenger when the page is connected (Facebook allows one reply per comment within 7 days);
 - interface in English, Polish, Latvian and Russian;
-- trial: 14 days free, up to 3 streams, no card.
+- trial: 14 days free, up to 3 streams, no card. Plans (check noxio.pl before quoting): week 89,99 zł, month 219,99 zł,
+  year 1999,99 zł; fixed price, no percentage of sales.
 
-Never present these as available: real-time scanning or a bot during the live, auto-replies, Instagram integration,
-payments, courier labels, invoices, a warehouse. If a roadmap item must be mentioned, label it clearly as planned.
+Never present these as available: real-time scanning or a bot during the live, auto-replies, Instagram or TikTok
+integration, payments, courier labels, invoices, a warehouse or reservations, a buyer app, CRM integrations.
+If a roadmap item must be mentioned, label it clearly as planned ("тестируем / wkrótce / скоро").
+Never use invented numbers (only real results with the seller's permission), competitor names, logos or screenshots
+(say "other systems" / "systems that take a percentage"), fake customers or testimonials. Buyer names on screen are
+test data. Brand: emerald #11B981, teal #0098B7, Inter, plenty of white; don't borrow other brands' palettes.
 
 ## Making a batch
 
