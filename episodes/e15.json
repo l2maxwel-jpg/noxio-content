@@ -1,0 +1,32 @@
+{
+ "id": "e15",
+ "lang": "lv",
+ "theme": "dark",
+ "niche": "kids",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e15.jpg"
+  },
+  {
+   "type": "ai",
+   "head": [
+    "Pircēji raksta",
+    "kā runā —",
+    "[MI saprot]"
+   ]
+  },
+  {
+   "type": "solution"
+  },
+  {
+   "type": "messenger"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta"
+  }
+ ]
+}

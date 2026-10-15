@@ -1,0 +1,34 @@
+{
+ "id": "e21",
+ "lang": "ru",
+ "theme": "light",
+ "niche": "kids",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e21.jpg"
+  },
+  {
+   "type": "solution",
+   "head": [
+    "Эфир, видео",
+    "или пост —",
+    "Noxio соберёт",
+    "[заказы]"
+   ]
+  },
+  {
+   "type": "ai"
+  },
+  {
+   "type": "messenger"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta",
+   "tag": "Заказы из эфиров, видео и постов"
+  }
+ ]
+}

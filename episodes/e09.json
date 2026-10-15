@@ -1,0 +1,52 @@
+{
+ "id": "e09",
+ "lang": "pl",
+ "theme": "dark",
+ "niche": "cosmetics",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e09.jpg"
+  },
+  {
+   "type": "pain",
+   "head": [
+    "Setki komentarzy.",
+    "Jedno przeoczone",
+    "zamówienie…"
+   ],
+   "big": "= strata"
+  },
+  {
+   "type": "solution",
+   "head": [
+    "Noxio zbiera je",
+    "w gotową tabelę",
+    "[po zakończeniu live’a]"
+   ]
+  },
+  {
+   "type": "ai",
+   "head": [
+    "Nawet gdy ktoś",
+    "pisze [bez kodu]",
+    "produktu"
+   ]
+  },
+  {
+   "type": "messenger",
+   "head": [
+    "Każdy kupujący",
+    "dostaje",
+    "[potwierdzenie]"
+   ],
+   "sub": "+ wiadomość w Messengerze, gdy strona jest podłączona"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta"
+  }
+ ]
+}

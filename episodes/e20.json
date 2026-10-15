@@ -1,0 +1,34 @@
+{
+ "id": "e20",
+ "lang": "lv",
+ "theme": "light",
+ "niche": "cosmetics",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e20.jpg"
+  },
+  {
+   "type": "connect",
+   "only": "link",
+   "head": [
+    "Ielīmējiet",
+    "[saiti uz tiešraidi] —",
+    "bez pieteikšanās",
+    "Facebook"
+   ]
+  },
+  {
+   "type": "solution"
+  },
+  {
+   "type": "ai"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta"
+  }
+ ]
+}

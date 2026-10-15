@@ -2,7 +2,22 @@
 // Exposes: window.ready (Promise), window.seek(t), window.duration(), window.cues (for the soundtrack).
 (function () {
   const EP = window.EP || { id: 'demo', lang: 'ru', scenes: ['hook','pain','solution','ai','connect','messenger','offer','cta'].map(type => ({ type })) };
-  const L = window.L10N[EP.lang || 'ru'];
+  // Strings for the language, then the product niche (window.NICHES[niche][lang]) and per-episode `data` on top.
+  // Objects (table, ai, chat, connect, live) merge one level deep; arrays and strings replace.
+  const merge = (base, over) => {
+    const out = Object.assign({}, base);
+    Object.entries(over || {}).forEach(([k, v]) => {
+      const b = base[k];
+      out[k] = v && typeof v === 'object' && !Array.isArray(v) && b && typeof b === 'object' && !Array.isArray(b) ? Object.assign({}, b, v) : v;
+    });
+    return out;
+  };
+  const lang = EP.lang || 'ru';
+  const niche = EP.niche && window.NICHES && window.NICHES[EP.niche] ? window.NICHES[EP.niche][lang] : null;
+  if (EP.niche && !niche) throw new Error(`niche "${EP.niche}" has no "${lang}" strings`);
+  const L = merge(merge(window.L10N[lang], niche), EP.data);
+  if (EP.theme === 'dark') document.body.classList.add('dark');
+  const DARK = EP.theme === 'dark';
   const COLORS = ['#EF4444', '#0098B7', '#11B981', '#F59E0B', '#8B5CF6'];
   const DUR = { cover: 2.8, hook: 3.5, pain: 3.5, solution: 4.0, ai: 3.0, connect: 3.0, messenger: 3.0, offer: 2.5, cta: 2.5 };
   const BODY = { // default top, gap under head, max top before the body would run out of the safe zone
@@ -139,7 +154,7 @@
     hook(tl, T, d, el, dur) {
       tl.fromTo($$(el, '.bgb'), { y: 0 }, { y: -620, duration: dur, ease: 'none' }, T);
       tl.to($(el, '.live .dot'), { scale: 1.5, opacity: .35, duration: .22, repeat: 1, yoyo: true }, T + .2);
-      tl.to($(el, '.live'), { backgroundColor: '#E5E7EB', duration: .2 }, T + .8);
+      tl.to($(el, '.live'), { backgroundColor: DARK ? '#2A3632' : '#E5E7EB', duration: .2 }, T + .8);
       tl.to($(el, '.live .on'), { opacity: 0, duration: .12 }, T + .8).to($(el, '.live .off'), { opacity: 1, duration: .12 }, T + .86);
       tl.to($(el, '.live .dot'), { backgroundColor: '#9CA3AF', duration: .2 }, T + .8);
       cue(T + .05, 'pop_down'); cue(T + .8, 'pop_low');

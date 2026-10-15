@@ -1,0 +1,41 @@
+{
+ "id": "e10",
+ "lang": "pl",
+ "theme": "dark",
+ "niche": "shoes",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e10.jpg"
+  },
+  {
+   "type": "pain",
+   "head": [
+    "Zeszyt,",
+    "długopis,",
+    "przepisywanie…"
+   ],
+   "big": "po co?"
+  },
+  {
+   "type": "solution",
+   "kicker": "Eksport do Excela",
+   "head": [
+    "Noxio robi",
+    "tabelę za Ciebie:",
+    "kto, co, rozmiar,",
+    "[ile sztuk]"
+   ]
+  },
+  {
+   "type": "connect"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta",
+   "tag": "Gotowa lista zamówień + Excel"
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 {
  "brand": "Noxio",
  "timezone": "Europe/Warsaw",
- "publishMode": "manual-approval (autoPublish=false)",
+ "publishMode": "auto (autoPublish=true) from 2026-10-15",
  "episodes": [
   {
    "id": "e01",
@@ -27,6 +27,25 @@
    }
   },
   {
+   "id": "e09",
+   "lang": "pl",
+   "date": "2026-10-15T17:00:00",
+   "offset": "+02:00",
+   "title": "Ile zamówień ginie w komentarzach",
+   "caption": "Ile zamówień ginie w komentarzach pod Twoim live’em? 🤔\nSetki komentarzy, a jedno przeoczone zamówienie to stracony klient. Noxio po zakończeniu transmisji zbiera zamówienia z komentarzy w gotową tabelę: kto, co, wariant, ile. AI rozumie zamówienia nawet bez kodów produktów.\n14 dni za darmo, do 3 transmisji, bez karty 👉 noxio.pl\n#livecommerce #sprzedażnalive #kosmetyki #noxio",
+   "file": "videos/e09.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e09.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e09.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e09.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
    "id": "e02",
    "lang": "ru",
    "date": "2026-10-19T10:00:00",
@@ -43,6 +62,44 @@
    "cover": "assets/covers/e02.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e02.jpg",
    "aiGenerated": true
+  },
+  {
+   "id": "e10",
+   "lang": "pl",
+   "date": "2026-10-19T14:00:00",
+   "offset": "+02:00",
+   "title": "Koniec z zeszytem zamówień",
+   "caption": "Zeszyt, długopis i przepisywanie komentarzy po każdym live’ie? 📒\nNoxio zbiera zamówienia z komentarzy w gotową tabelę: kto, co, jaki rozmiar, ile sztuk. Tabelę możesz wyeksportować do Excela.\n14 dni za darmo, do 3 transmisji, bez karty 👉 noxio.pl\n#livecommerce #sprzedażnalive #facebooklive #noxio",
+   "file": "videos/e10.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e10.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e10.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e10.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
+   "id": "e11",
+   "lang": "lv",
+   "date": "2026-10-21T10:00:00",
+   "offset": "+02:00",
+   "title": "Pasūtījumi no komentāriem (LV)",
+   "caption": "Tiešraide beigusies, un komentāros — pasūtījumi? 💬\nNoxio savāc tos gatavā sarakstā: kas, ko, kādu variantu, cik. MI saprot pasūtījumus pat bez preču kodiem, un Noxio ir pieejams arī latviešu valodā.\n14 dienas bez maksas, līdz 3 tiešraidēm, bez kartes 👉 noxio.pl\n#livecommerce #tiešraide #facebooklive #noxio",
+   "file": "videos/e11.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e11.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e11.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e11.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
   },
   {
    "id": "e03",
@@ -63,6 +120,44 @@
    "aiGenerated": true
   },
   {
+   "id": "e12",
+   "lang": "pl",
+   "date": "2026-10-22T14:00:00",
+   "offset": "+02:00",
+   "title": "Pytanie to nie zamówienie",
+   "caption": "„Ile kosztuje?”, „Jest jeszcze 98?”, „Odłóżcie kurtkę, 110!” — tylko ostatni komentarz to zamówienie 👶\nAI w Noxio odróżnia pytania od zamówień i zbiera same zamówienia w tabelę: kto, co, rozmiar, ile.\n14 dni za darmo 👉 noxio.pl\n#livecommerce #sprzedażnalive #ubrankadladzieci #noxio",
+   "file": "videos/e12.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e12.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e12.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e12.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
+   "id": "e13",
+   "lang": "en",
+   "date": "2026-10-23T10:00:00",
+   "offset": "+02:00",
+   "title": "Orders buried in comments (EN)",
+   "caption": "Your live is over — and the orders are buried in hundreds of comments? 🧺\nNoxio collects them into a ready order list: who, what, which variant, how many. AI understands orders even without product codes.\n✅ Connect your Facebook Page or just paste a link to the video\n✅ Export to Excel\n14 days free, up to 3 lives, no card 👉 noxio.pl\n#livecommerce #livesales #facebooklive #noxio",
+   "file": "videos/e13.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e13.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e13.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e13.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
    "id": "e04",
    "lang": "ru",
    "date": "2026-10-26T10:00:00",
@@ -81,6 +176,44 @@
    "aiGenerated": true
   },
   {
+   "id": "e14",
+   "lang": "pl",
+   "date": "2026-10-26T14:00:00",
+   "offset": "+01:00",
+   "title": "Nie tylko live: wideo i posty",
+   "caption": "Sprzedajesz nie tylko na live’ach? 💍\nNoxio zbiera zamówienia z komentarzy pod transmisjami, filmami i postami sprzedażowymi na Facebooku — w jedną tabelę: kto, co, wariant, ile.\n14 dni za darmo, bez karty 👉 noxio.pl\n#livecommerce #sprzedażnalive #biżuteria #noxio",
+   "file": "videos/e14.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e14.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e14.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e14.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
+   "id": "e15",
+   "lang": "lv",
+   "date": "2026-10-28T10:00:00",
+   "offset": "+01:00",
+   "title": "Bez preču kodiem (LV)",
+   "caption": "„Atlieciet jaku, 110!” — bez preču koda, kā parasti raksta pircēji 🙂\nNoxio MI saprot šādus komentārus un pats saliek tos pasūtījumu tabulā: kas, ko, izmērs, daudzums. Kodi nav obligāti, bet palīdz precizitātei.\n14 dienas bez maksas 👉 noxio.pl\n#livecommerce #tiešraide #bērnuapģērbs #noxio",
+   "file": "videos/e15.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e15.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e15.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e15.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
    "id": "e05",
    "lang": "lv",
    "date": "2026-10-29T10:00:00",
@@ -93,10 +226,68 @@
     "instagram",
     "facebook"
    ],
-   "status": "scheduled",
+   "status": "retired",
    "cover": "assets/covers/e05.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e05.jpg",
-   "aiGenerated": true
+   "aiGenerated": true,
+   "note": "Replaced: same content as e01 in another language; every language now gets its own episode."
+  },
+  {
+   "id": "e16",
+   "lang": "ru",
+   "date": "2026-10-29T10:00:00",
+   "offset": "+01:00",
+   "title": "Заказы на любые товары",
+   "caption": "Продаёте косметику, обувь или детские вещи в эфирах? 💄\nNoxio понимает заказы на любые товары: «мне 2 помады, тон 03» превратится в строку таблицы — покупатель, товар, вариант, количество.\n14 дней бесплатно, до 3 эфиров, без карты 👉 noxio.pl\n#livecommerce #продаживэфире #косметика #noxio",
+   "file": "videos/e16.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e16.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e16.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e16.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
+   "id": "e17",
+   "lang": "pl",
+   "date": "2026-10-29T14:00:00",
+   "offset": "+01:00",
+   "title": "Strona albo link",
+   "caption": "Nie chcesz podłączać strony na Facebooku? Nie musisz 🙂\nW Noxio możesz podłączyć stronę (tryb szybki) albo po prostu wkleić link do transmisji — bez logowania przez Facebook. Zamówienia z komentarzy trafią do gotowej tabeli.\n14 dni za darmo 👉 noxio.pl\n#livecommerce #sprzedażnalive #facebooklive #noxio",
+   "file": "videos/e17.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e17.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e17.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e17.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
+   "id": "e18",
+   "lang": "en",
+   "date": "2026-10-30T10:00:00",
+   "offset": "+01:00",
+   "title": "Questions aren't orders (EN)",
+   "caption": "“Do you have a 37?” “Do they run small?” “Hold the boots, 39!” — only one of these is an order 👢\nNoxio’s AI tells questions from orders and collects the orders into a table: who, what, size, how many.\n14 days free 👉 noxio.pl\n#livecommerce #livesales #facebooklive #noxio",
+   "file": "videos/e18.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e18.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e18.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e18.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
   },
   {
    "id": "e06",
@@ -117,6 +308,44 @@
    "aiGenerated": true
   },
   {
+   "id": "e19",
+   "lang": "pl",
+   "date": "2026-11-02T14:00:00",
+   "offset": "+01:00",
+   "title": "Wieczór po live’ie",
+   "caption": "Live skończony, a przed Tobą jeszcze wieczór z komentarzami i zeszytem? 🌙\nNoxio zbiera zamówienia z komentarzy po zakończeniu transmisji i układa je w tabelę. Potwierdzenia wyślesz kupującym w Messengerze (przy podłączonej stronie).\n14 dni za darmo, do 3 transmisji 👉 noxio.pl\n#livecommerce #sprzedażnalive #kosmetyki #noxio",
+   "file": "videos/e19.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e19.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e19.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e19.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
+   "id": "e20",
+   "lang": "lv",
+   "date": "2026-11-04T10:00:00",
+   "offset": "+01:00",
+   "title": "Bez Facebook pieteikšanās (LV)",
+   "caption": "Nevēlaties pievienot savu Facebook lapu? Nav jāpievieno.\nNoxio var vienkārši ielīmēt saiti uz tiešraidi vai video — bez pieteikšanās caur Facebook. Pasūtījumi no komentāriem tiks savākti tabulā.\n14 dienas bez maksas, bez kartes 👉 noxio.pl\n#livecommerce #tiešraide #facebooklive #noxio",
+   "file": "videos/e20.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e20.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e20.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e20.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
    "id": "e07",
    "lang": "pl",
    "date": "2026-11-05T10:00:00",
@@ -129,10 +358,68 @@
     "instagram",
     "facebook"
    ],
-   "status": "scheduled",
+   "status": "retired",
    "cover": "assets/covers/e07.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e07.jpg",
-   "aiGenerated": true
+   "aiGenerated": true,
+   "note": "Replaced: same content as e01 in another language; every language now gets its own episode."
+  },
+  {
+   "id": "e21",
+   "lang": "ru",
+   "date": "2026-11-05T10:00:00",
+   "offset": "+01:00",
+   "title": "Не только эфиры: видео и посты",
+   "caption": "Продаёте не только в эфирах? 🧸\nNoxio собирает заказы из комментариев под трансляциями, видео и постами с продажами в Facebook — в одну таблицу: кто, что, размер, сколько.\n14 дней бесплатно, без карты 👉 noxio.pl\n#livecommerce #продаживэфире #детскаяодежда #noxio",
+   "file": "videos/e21.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e21.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e21.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e21.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
+   "id": "e22",
+   "lang": "pl",
+   "date": "2026-11-05T14:00:00",
+   "offset": "+01:00",
+   "title": "Potwierdzenia w Messengerze",
+   "caption": "Zamówienia zebrane — a teraz napisać do każdego kupującego osobno? 😮‍💨\nW Noxio wiadomość z zamówieniem wyślesz kupującym w Messengerze w kilka kliknięć, prosto z listy zamówień (potrzebna podłączona strona na Facebooku).\n14 dni za darmo 👉 noxio.pl\n#livecommerce #sprzedażnalive #messenger #noxio",
+   "file": "videos/e22.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e22.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e22.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e22.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
+  },
+  {
+   "id": "e23",
+   "lang": "en",
+   "date": "2026-11-06T10:00:00",
+   "offset": "+01:00",
+   "title": "Try it on your next live (EN)",
+   "caption": "Try Noxio on your next live — for free 🎁\n14 days, up to 3 lives, no card. Noxio collects orders from the comments into a ready list, and you can message buyers in Messenger when your Page is connected.\n👉 noxio.pl\n#livecommerce #livesales #facebooklive #noxio",
+   "file": "videos/e23.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e23.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e23.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e23.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
   },
   {
    "id": "e08",
@@ -151,6 +438,26 @@
    "cover": "assets/covers/e08.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e08.jpg",
    "aiGenerated": true
+  },
+  {
+   "id": "e24",
+   "lang": "pl",
+   "date": "2026-11-09T14:00:00",
+   "offset": "+01:00",
+   "title": "Sprawdź na swoim live’ie",
+   "caption": "Sprawdź Noxio na swoim najbliższym live’ie — za darmo 🏡\n14 dni, do 3 transmisji, bez karty. Noxio zbierze zamówienia z komentarzy, a Ty tylko sprawdzisz gotową listę.\n👉 noxio.pl\n#livecommerce #sprzedażnalive #facebooklive #noxio",
+   "file": "videos/e24.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e24.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/e24.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e24.jpg",
+   "aiGenerated": false,
+   "autoPublish": true
   }
- ]
+ ],
+ "schedule": "Mon/Thu: RU 10:00 + PL 14:00 (different videos); Wed: LV 10:00; Fri: EN 10:00 (Europe/Warsaw). Each language gets its own episode, never a translation of another."
 }

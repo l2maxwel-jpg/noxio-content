@@ -1,0 +1,27 @@
+{
+ "id": "e23",
+ "lang": "en",
+ "theme": "light",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e23.jpg"
+  },
+  {
+   "type": "solution"
+  },
+  {
+   "type": "ai"
+  },
+  {
+   "type": "messenger"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta",
+   "tag": "Try it on your next live"
+  }
+ ]
+}

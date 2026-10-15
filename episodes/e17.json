@@ -1,0 +1,33 @@
+{
+ "id": "e17",
+ "lang": "pl",
+ "theme": "light",
+ "niche": "home",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e17.jpg"
+  },
+  {
+   "type": "connect",
+   "head": [
+    "Dwa sposoby:",
+    "podłącz stronę",
+    "{albo} wklej link",
+    "[bez logowania]"
+   ]
+  },
+  {
+   "type": "solution"
+  },
+  {
+   "type": "ai"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta"
+  }
+ ]
+}

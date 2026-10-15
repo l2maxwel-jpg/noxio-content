@@ -1,0 +1,31 @@
+{
+ "id": "e24",
+ "lang": "pl",
+ "theme": "dark",
+ "niche": "home",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e24.jpg"
+  },
+  {
+   "type": "solution",
+   "head": [
+    "Noxio zbierze",
+    "zamówienia",
+    "z Twojego live’a",
+    "[w gotową listę]"
+   ]
+  },
+  {
+   "type": "connect"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta",
+   "tag": "Sprawdź na swoim live’ie"
+  }
+ ]
+}

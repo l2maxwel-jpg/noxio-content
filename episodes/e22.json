@@ -1,0 +1,38 @@
+{
+ "id": "e22",
+ "lang": "pl",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e22.jpg"
+  },
+  {
+   "type": "pain",
+   "head": [
+    "Pisać do",
+    "każdego kupującego",
+    "osobno?"
+   ],
+   "big": "serio?"
+  },
+  {
+   "type": "messenger",
+   "head": [
+    "Potwierdzenia",
+    "zamówień —",
+    "[w kilka kliknięć]"
+   ],
+   "sub": "+ prosto z listy zamówień, gdy strona jest podłączona"
+  },
+  {
+   "type": "solution"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta"
+  }
+ ]
+}

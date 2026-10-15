@@ -1,0 +1,37 @@
+{
+ "id": "e12",
+ "lang": "pl",
+ "theme": "dark",
+ "niche": "kids",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e12.jpg"
+  },
+  {
+   "type": "ai",
+   "head": [
+    "AI czyta",
+    "komentarze jak",
+    "[człowiek]"
+   ]
+  },
+  {
+   "type": "solution",
+   "head": [
+    "Pytania odpadają,",
+    "zamówienia trafiają",
+    "[do tabeli]"
+   ]
+  },
+  {
+   "type": "messenger"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta"
+  }
+ ]
+}

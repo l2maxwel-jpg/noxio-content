@@ -1,0 +1,30 @@
+{
+ "id": "e13",
+ "lang": "en",
+ "theme": "light",
+ "niche": "home",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e13.jpg"
+  },
+  {
+   "type": "pain"
+  },
+  {
+   "type": "solution"
+  },
+  {
+   "type": "ai"
+  },
+  {
+   "type": "connect"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta"
+  }
+ ]
+}

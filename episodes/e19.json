@@ -1,0 +1,39 @@
+{
+ "id": "e19",
+ "lang": "pl",
+ "theme": "dark",
+ "niche": "cosmetics",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e19.jpg"
+  },
+  {
+   "type": "pain",
+   "head": [
+    "Po live’ie —",
+    "jeszcze godziny",
+    "przepisywania?"
+   ],
+   "big": "nie dziś"
+  },
+  {
+   "type": "solution",
+   "head": [
+    "Noxio zbiera",
+    "zamówienia",
+    "[za Ciebie]"
+   ]
+  },
+  {
+   "type": "messenger"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta",
+   "tag": "Wieczór po live’ie — wolny"
+  }
+ ]
+}

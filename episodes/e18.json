@@ -1,0 +1,37 @@
+{
+ "id": "e18",
+ "lang": "en",
+ "theme": "dark",
+ "niche": "shoes",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e18.jpg"
+  },
+  {
+   "type": "ai",
+   "head": [
+    "AI reads",
+    "comments like",
+    "[a person]"
+   ]
+  },
+  {
+   "type": "solution",
+   "head": [
+    "Questions out,",
+    "orders in —",
+    "[a ready table]"
+   ]
+  },
+  {
+   "type": "messenger"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta"
+  }
+ ]
+}

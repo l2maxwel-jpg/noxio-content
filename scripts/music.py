@@ -2,11 +2,13 @@
 
 Usage: python3 scripts/music.py build/<id>.cues.json build/<id>.wav
 
-120 BPM. Calm part (kick + hats + pad) until cues["drop"], riser into the drop, then a full groove
+Tempo, key and progression vary per episode (from its id). Calm part (kick + hats + pad) until cues["drop"], riser into the drop, then a full groove
 (kick, clap, hats, bass, chord stabs). SFX are placed at the times the visuals request.
 """
 import json
+import os
 import sys
+import zlib
 
 import numpy as np
 from scipy.io import wavfile
@@ -19,7 +21,11 @@ DUR = float(cues["duration"])
 DROP = float(cues.get("drop") or 0.0)
 N = int(SR * DUR)
 L = np.zeros(N); R = np.zeros(N)
-rng = np.random.default_rng(7)
+# Every episode gets its own arrangement (tempo, key, chord progression, hat pattern), picked from its id,
+# so two videos never share the same track.
+EP_ID = os.path.basename(sys.argv[1]).split(".")[0]
+SEED = zlib.crc32(EP_ID.encode())
+rng = np.random.default_rng(SEED)
 
 
 def add(sig, t, gain=1.0, pan=0.0):
@@ -122,13 +128,26 @@ def ding():
     return (np.sin(2 * np.pi * 1318.5 * t) + 0.5 * np.sin(2 * np.pi * 1975.5 * t)) * env(n, 0.002, 0.18)
 
 
-BEAT = 0.5
-ROOTS = [55.0, 43.65, 65.41, 49.0]
-CHORDS = [[220.0, 261.63, 329.63], [174.61, 220.0, 261.63], [261.63, 329.63, 392.0], [196.0, 246.94, 293.66]]
+PROGS = [  # (semitones from A, quality)
+    [(0, "m"), (-4, "M"), (3, "M"), (-2, "M")],   # Am F C G
+    [(0, "m"), (-2, "M"), (-4, "M"), (-5, "M")],  # Am G F E
+    [(3, "M"), (-2, "M"), (0, "m"), (-4, "M")],   # C G Am F
+    [(0, "m"), (3, "M"), (-2, "M"), (-4, "M")],   # Am C G F
+    [(-4, "M"), (-2, "M"), (0, "m"), (0, "m")],   # F G Am Am
+]
+BPM = [116, 120, 124, 128][SEED % 4]
+TRANSPOSE = [0, 2, -2, 3, -3, 1][(SEED // 4) % 6]
+PROG = PROGS[(SEED // 24) % len(PROGS)]
+HATS16 = (SEED // 120) % 2 == 1
+BEAT = 60.0 / BPM
+f = lambda base, semi: base * 2 ** (semi / 12)
+ROOTS = [f(55.0, s + TRANSPOSE) for s, _ in PROG]
+CHORDS = [[f(220.0, s + TRANSPOSE + i) for i in (0, 3 if q == "m" else 4, 7)] for s, q in PROG]
+PAD = [f(110.0, PROG[0][0] + TRANSPOSE), f(164.81, PROG[0][0] + TRANSPOSE)]
 
 # calm part
 if DROP > 0.5:
-    add(pad([110.0, 164.81], DROP), 0.0, 0.22)
+    add(pad(PAD, DROP), 0.0, 0.22)
     for b in range(int(DROP / BEAT)):
         t = b * BEAT
         add(kick(), t, 0.65)
@@ -143,11 +162,13 @@ for b in range(int((DUR - start) / BEAT) + 1):
     t = start + b * BEAT
     if t >= DUR:
         break
-    bar = int((t - start) // 2.0) % 4
+    bar = int((t - start) // (4 * BEAT)) % 4
     bi = b % 4
     add(kick(), t, 0.9)
     add(hat(open_=(bi % 2 == 1)), t + BEAT / 2, 0.28, 0.3)
     add(hat(), t + BEAT * 0.75, 0.12, -0.3)
+    if HATS16:
+        add(hat(), t + BEAT * 0.25, 0.09, 0.15)
     if bi in (1, 3):
         add(clap(), t, 0.45)
     add(bass(ROOTS[bar]), t, 0.55)
@@ -181,4 +202,4 @@ fade = np.ones(N); fn = int(0.8 * SR); fade[-fn:] = np.linspace(1, 0, fn) ** 1.5
 mix = np.stack([L * fade, R * fade], axis=1)
 mix = np.tanh(mix / np.max(np.abs(mix)) * 1.4) * 0.85
 wavfile.write(OUT, SR, (mix * 32767).astype(np.int16))
-print(OUT, f"{DUR:.1f}s, drop at {DROP:.1f}s, {len(cues['events'])} sfx")
+print(OUT, f"{DUR:.1f}s, drop at {DROP:.1f}s, {len(cues['events'])} sfx, {BPM} bpm, transpose {TRANSPOSE:+d}, prog {PROGS.index(PROG)}")

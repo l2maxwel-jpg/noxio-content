@@ -1,0 +1,31 @@
+{
+ "id": "e11",
+ "lang": "lv",
+ "theme": "light",
+ "niche": "accessories",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e11.jpg"
+  },
+  {
+   "type": "pain"
+  },
+  {
+   "type": "solution"
+  },
+  {
+   "type": "ai"
+  },
+  {
+   "type": "messenger"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta",
+   "tag": "Noxio runā latviski"
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "id": "e16",
+ "lang": "ru",
+ "theme": "dark",
+ "niche": "cosmetics",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e16.jpg"
+  },
+  {
+   "type": "pain",
+   "head": [
+    "Помады, тона,",
+    "объёмы — всё",
+    "в комментариях"
+   ],
+   "big": "вперемешку"
+  },
+  {
+   "type": "ai",
+   "head": [
+    "ИИ поймёт",
+    "[«2 помады, тон 03»]",
+    "без артикула"
+   ]
+  },
+  {
+   "type": "solution"
+  },
+  {
+   "type": "messenger"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta",
+   "tag": "Заказы на любые товары — автоматически"
+  }
+ ]
+}

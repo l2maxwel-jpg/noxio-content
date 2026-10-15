@@ -64,5 +64,26 @@ window.L10N = {
       offer: { big: '14', l2: 'dni', l3: 'za darmo', pills: ['do 3 transmisji','bez karty'] },
       cta: { brand: 'Noxio', tag: 'Zamówienia z live’ów — automatycznie', button: 'Wypróbuj: noxio.pl', small: '14 dni za darmo' }
     }
+  },
+  en: {
+    live: { on: 'LIVE', off: 'LIVE ENDED' },
+    feed: [['Emma','I’ll take the blue dress, M'],['Sophie','2 red tops for me, S'],['Mia','How much is the beige one?'],['Grace','Hold the jacket for me, L!'],['Chloe','+ black trousers, 42'],['Lily','Is the blue one still there?'],['Ava','I’ll take the bag!'],['Ella','Grey scarf ×2'],['Amy','How long is the dress?'],['Zoe','Mine! M'],['Ruby','Red top, M'],['Kate','Hold the white one for me'],['Lucy','How much is shipping?'],['Jess','I’ll take 2']],
+    table: { title: 'Orders · live', cols: ['Buyer','Item','Size','Qty'],
+      rows: [['Emma','Blue dress','M','1',0],['Sophie','Red top','S','2',1],['Grace','Jacket','L','1',3],['Chloe','Black trousers','42','1',4]] },
+    ordersWord: n => n === 1 ? 'order' : 'orders',
+    ai: { name: 'Emma', html: 'I’ll take the <span class="hl l h1">blue dress</span>, <span class="hl v h2">M</span>', chips: ['Blue dress','Size M','1 pc'], code: '#A-1042', nocode: 'no product code needed' },
+    connect: { aTitle: 'Facebook Page', aSub: 'fast mode', or: 'or', bTitle: 'Link to your live', bSub: 'no Facebook login', url: 'facebook.com/live/videos/2918…', btn: 'Process' },
+    chat: { shop: 'Your shop', ava: 'S', net: 'Messenger', sent: 'Sent',
+      msgs: ['Emma, your order:<br><b>blue dress, M&nbsp;—&nbsp;1&nbsp;pc</b>','Sophie, your order:<br><b>red top, S&nbsp;—&nbsp;2&nbsp;pcs</b>','Grace, your order:<br><b>jacket, L&nbsp;—&nbsp;1&nbsp;pc</b>'] },
+    defaults: {
+      hook: { setup: ['The live is over,','and the comments hold'], p1: 'hundreds', p2: 'of orders?' },
+      pain: { head: ['Scrolling,','copying,','checking…'], big: 'for hours' },
+      solution: { head: ['Noxio collects','orders from','comments','[automatically]'] },
+      ai: { head: ['AI understands','orders even','[without product codes]'] },
+      connect: { head: ['Connect your','Facebook Page','{or} just paste','a link to the live'] },
+      messenger: { head: ['A ready','order list'], sub: '+ messages to buyers in Messenger' },
+      offer: { big: '14', l2: 'days', l3: 'free', pills: ['up to 3 lives','no card'] },
+      cta: { brand: 'Noxio', tag: 'Orders from lives — automatically', button: 'Try it: noxio.pl', small: '14 days free' }
+    }
   }
 };

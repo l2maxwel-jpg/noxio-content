@@ -134,3 +134,17 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg)}
 /* COVER (photo from Moda, headline baked in) */
 .sc-cover .cov{position:absolute;inset:0;overflow:hidden;background:#000}
 .sc-cover .covimg{width:100%;height:100%;object-fit:cover;transform-origin:50% 40%;display:block}
+
+/* DARK theme (episode "theme": "dark") — noxio.pl dark palette */
+body.dark{--bg:#0B1311;--card:#131D1A;--line:#25332F;--ink:#F2F6F4;--muted:#93A39D}
+body.dark .dots{background-image:radial-gradient(rgba(255,255,255,.06) 2px,transparent 2px)}
+body.dark .bub{box-shadow:0 10px 30px rgba(0,0,0,.35)}
+body.dark .tcard,body.dark .qb,body.dark .chat,body.dark .ocard{box-shadow:0 20px 60px rgba(0,0,0,.45)}
+body.dark .live .off{color:#C9D3CF}
+body.dark .inp{background:#0E1714}
+body.dark .tog{background:#3A4743}
+body.dark .chip.p{background:var(--card);color:var(--ink)}
+body.dark .pill{background:transparent;border-color:var(--ink);color:var(--ink)}
+body.dark .nocode s{color:#6B7A75}
+body.dark .g-em{background:radial-gradient(circle,rgba(17,185,129,.30),rgba(17,185,129,0) 62%)}
+body.dark .g-teal{background:radial-gradient(circle,rgba(0,152,183,.30),rgba(0,152,183,0) 62%)}

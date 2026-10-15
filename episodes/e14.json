@@ -1,0 +1,34 @@
+{
+ "id": "e14",
+ "lang": "pl",
+ "theme": "dark",
+ "niche": "accessories",
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e14.jpg"
+  },
+  {
+   "type": "solution",
+   "head": [
+    "Live, wideo",
+    "czy post —",
+    "Noxio zbierze",
+    "[zamówienia]"
+   ]
+  },
+  {
+   "type": "ai"
+  },
+  {
+   "type": "connect"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta",
+   "tag": "Zamówienia z live’ów, filmów i postów"
+  }
+ ]
+}
