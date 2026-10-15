@@ -1,0 +1,122 @@
+{
+ "id": "e27",
+ "lang": "pl",
+ "theme": "dark",
+ "niche": "kids",
+ "data": {
+  "feed": [
+   [
+    "Ania",
+    "biorę kombinezon 92 ❤️"
+   ],
+   [
+    "Magda",
+    "2x body 74"
+   ],
+   [
+    "Kasia",
+    "co macie na 2 latka?"
+   ],
+   [
+    "Ela",
+    "kurtka 110 dla mnie!!"
+   ],
+   [
+    "Gosia",
+    "+ czapka 52 🧡"
+   ],
+   [
+    "Iza",
+    "to bawełna?"
+   ],
+   [
+    "Asia",
+    "biore piżamke 98"
+   ],
+   [
+    "Ola",
+    "poprosze 104"
+   ],
+   [
+    "Ewa",
+    "jaki skład?"
+   ],
+   [
+    "Monika",
+    "biorę! 104"
+   ],
+   [
+    "Basia",
+    "sukienka 116 😍"
+   ],
+   [
+    "Natalia",
+    "odłóżcie mi 86"
+   ],
+   [
+    "Karolina",
+    "dla chłopca macie?"
+   ],
+   [
+    "Justyna",
+    "biore 2"
+   ]
+  ],
+  "ai": {
+   "name": "Ela",
+   "html": "<span class=\"hl l h1\">kurtka</span> <span class=\"hl v h2\">110</span> dla mnie!!",
+   "chips": [
+    "Kurtka",
+    "Rozmiar 110",
+    "1 szt."
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "type": "codes",
+   "start": 233,
+   "colors": [
+    "róż",
+    "granat",
+    "szary",
+    "biały"
+   ],
+   "sizes": [
+    "92",
+    "98",
+    "104",
+    "110",
+    "116"
+   ]
+  },
+  {
+   "type": "solution",
+   "head": [
+    "Klientki piszą,",
+    "jak chcą —",
+    "[Noxio i tak zrozumie]"
+   ]
+  },
+  {
+   "type": "ai",
+   "head": [
+    "Bez kodu, z literówką",
+    "i emoji —",
+    "[to dalej zamówienie]"
+   ]
+  },
+  {
+   "type": "sendlink"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta",
+   "tag": "Wyślij link — odeślemy listę zamówień",
+   "button": "Napisz do nas",
+   "small": "lub wypróbuj sam: noxio.pl"
+  }
+ ]
+}

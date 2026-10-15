@@ -58,11 +58,30 @@
     "instagram",
     "facebook"
    ],
-   "status": "scheduled",
+   "status": "spare",
    "cover": "assets/covers/e02.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e02.jpg",
    "aiGenerated": true,
-   "autoPublish": true
+   "autoPublish": true,
+   "note": "Rendered, not scheduled: its slot went to a brief concept episode (2026-10-15). Can fill a later slot."
+  },
+  {
+   "id": "e25",
+   "lang": "ru",
+   "date": "2026-10-19T10:00:00",
+   "offset": "+02:00",
+   "title": "Стена кодов против живых комментариев (K2+K1)",
+   "caption": "Ваш пост с товаром выглядит так? 👇 Стена кодов и правила «1 цвет = 1 комментарий»…\nС Noxio покупатели пишут как им удобно — «беру белый 80E ❤️», «+ как у Оли» — а вы получаете готовую таблицу заказов: кто, что, размер, сколько.\n📩 Пришлите нам в Messenger ссылку на ваш последний эфир — бесплатно вернём список заказов в Excel.\nИли попробуйте сами: 14 дней бесплатно, до 3 эфиров, без карты 👉 noxio.pl\n#livecommerce #продаживэфире #facebooklive #noxio",
+   "file": "videos/e25.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e25.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "aiGenerated": false,
+   "autoPublish": true,
+   "coverMs": 2700
   },
   {
    "id": "e10",
@@ -96,11 +115,31 @@
     "instagram",
     "facebook"
    ],
-   "status": "scheduled",
+   "status": "spare",
    "cover": "assets/covers/e11.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e11.jpg",
    "aiGenerated": false,
-   "autoPublish": true
+   "autoPublish": true,
+   "note": "Rendered, not scheduled: its slot went to a brief concept episode (2026-10-15). Can fill a later slot."
+  },
+  {
+   "id": "e26",
+   "lang": "lv",
+   "date": "2026-10-21T10:00:00",
+   "offset": "+02:00",
+   "title": "Raksta dažādās valodās (K4+K1)",
+   "caption": "Pircēji raksta latviski, krieviski, ar kļūdām un smaidiņiem? Noxio saprot visus 💬\nNo komentāriem jūs saņemat vienu sakārtotu pasūtījumu sarakstu: kas, ko, izmērs, daudzums.\n📩 Atsūtiet mums Messenger saiti uz savu pēdējo tiešraidi — bez maksas atsūtīsim pasūtījumu sarakstu Excel failā.\nVai izmēģiniet paši: 14 dienas bez maksas, līdz 3 tiešraidēm, bez kartes 👉 noxio.pl\n#livecommerce #tiešraide #facebooklive #noxio",
+   "file": "videos/e26.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e26.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "aiGenerated": false,
+   "autoPublish": true,
+   "cover": "assets/covers/e26.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e26.jpg"
   },
   {
    "id": "e03",
@@ -134,11 +173,30 @@
     "instagram",
     "facebook"
    ],
-   "status": "scheduled",
+   "status": "spare",
    "cover": "assets/covers/e12.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e12.jpg",
    "aiGenerated": false,
-   "autoPublish": true
+   "autoPublish": true,
+   "note": "Rendered, not scheduled: its slot went to a brief concept episode (2026-10-15). Can fill a later slot."
+  },
+  {
+   "id": "e27",
+   "lang": "pl",
+   "date": "2026-10-22T14:00:00",
+   "offset": "+02:00",
+   "title": "Ściana kodów (K2+K1)",
+   "caption": "Twój post sprzedażowy wygląda tak? 👇 Ściana kodów i zasady „1 kolor = 1 komentarz”…\nZ Noxio klientki piszą, jak chcą — „biorę kombinezon 92 ❤️”, „kurtka 110 dla mnie!!” — a Ty dostajesz gotową tabelę zamówień: kto, co, rozmiar, ile.\n📩 Wyślij nam na Messengerze link do swojego ostatniego live’a — za darmo odeślemy Ci listę zamówień w Excelu.\nAlbo wypróbuj sam: 14 dni za darmo, do 3 transmisji, bez karty 👉 noxio.pl\n#livecommerce #sprzedażnalive #ubrankadladzieci #noxio",
+   "file": "videos/e27.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e27.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "aiGenerated": false,
+   "autoPublish": true,
+   "coverMs": 2700
   },
   {
    "id": "e13",
@@ -191,11 +249,31 @@
     "instagram",
     "facebook"
    ],
-   "status": "scheduled",
+   "status": "spare",
    "cover": "assets/covers/e14.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e14.jpg",
    "aiGenerated": false,
-   "autoPublish": true
+   "autoPublish": true,
+   "note": "Rendered, not scheduled: its slot went to a brief concept episode (2026-10-15). Can fill a later slot."
+  },
+  {
+   "id": "e28",
+   "lang": "pl",
+   "date": "2026-10-26T14:00:00",
+   "offset": "+01:00",
+   "title": "Stała cena bez prowizji (K3)",
+   "caption": "Ile oddajesz z każdej sprzedaży? 💸\nPrzy 20 000 zł sprzedaży miesięcznie 3% prowizji to 600 zł. Noxio kosztuje 219,99 zł miesięcznie — stała cena, bez procentu od sprzedaży (przykład obliczeń).\nLive nie co tydzień? Płać tylko za tydzień — 89,99 zł.\n✅ Zamówienia z komentarzy w gotowej tabeli\n✅ Eksport do Excela\n14 dni za darmo, do 3 transmisji, bez karty 👉 noxio.pl\n#livecommerce #sprzedażnalive #facebooklive #noxio",
+   "file": "videos/e28.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/e28.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "aiGenerated": false,
+   "autoPublish": true,
+   "cover": "assets/covers/e28.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e28.jpg"
   },
   {
    "id": "e15",

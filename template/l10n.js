@@ -20,6 +20,9 @@ window.L10N = {
       connect: { head: ['Подключите','страницу Facebook','{или} просто вставьте','ссылку на эфир'] },
       messenger: { head: ['Готовый список','заказов'], sub: '+ сообщения покупателям в Messenger' },
       offer: { big: '14', l2: 'дней', l3: 'бесплатно', pills: ['до 3 эфиров','без карты'] },
+      codes: { head: ['Ваш пост','с товаром','выглядит так? 👇'], shop: 'Ваш магазин', postSub: 'Продажа в комментариях', word: 'код', start: 612, colors: ['белый','чёрный','бежевый','розовый'], sizes: ['75E','80E','85D','75D','80C'], rules: ['1 цвет = 1 комментарий','пишите точный код','подтвердите: КУПИЛА'] },
+      price: { head: ['Платите процент','с каждой продажи?'], salesLabel: 'Продажи за месяц', sales: '20 000 zł', feeLabel: 'Комиссия 3%', fee: 600, cur: 'zł', noxio: '219,99 zł / мес.', nopct: 'без %', note: 'пример расчёта', weekQ: 'Эфиры не каждую неделю?', weekA: 'Платите только за неделю — [89,99 zł]' },
+      sendlink: { head: ['Пришлите ссылку','на последний эфир —','[вернём список заказов]'], link: 'facebook.com/vashmagazin/videos/2918…', file: 'zakazy_efir.xlsx', fileSub: 'список заказов · Excel', badge: 'бесплатно' },
       cta: { brand: 'Noxio', tag: 'Заказы из эфиров — автоматически', button: 'Попробуйте: noxio.pl', small: '14 дней бесплатно' }
     }
   },
@@ -41,6 +44,9 @@ window.L10N = {
       connect: { head: ['Pievienojiet','Facebook lapu','{vai} vienkārši','ielīmējiet saiti'] },
       messenger: { head: ['Gatavs','pasūtījumu saraksts'], sub: '+ ziņas pircējiem Messenger' },
       offer: { big: '14', l2: 'dienas', l3: 'bez maksas', pills: ['līdz 3 tiešraidēm','bez kartes'] },
+      codes: { head: ['Jūsu ieraksts','ar precēm','izskatās tā? 👇'], shop: 'Jūsu veikals', postSub: 'Pārdošana komentāros', word: 'kods', start: 612, colors: ['balts','melns','bēšs','rozā'], sizes: ['75E','80E','85D','75D','80C'], rules: ['1 krāsa = 1 komentārs','rakstiet precīzu kodu','apstipriniet: NOPIRKU'] },
+      price: { head: ['Maksājat procentus','no katra pirkuma?'], salesLabel: 'Pārdošana mēnesī', sales: '20 000 zł', feeLabel: 'Komisija 3%', fee: 600, cur: 'zł', noxio: '219,99 zł / mēn.', nopct: 'bez %', note: 'aprēķina piemērs', weekQ: 'Tiešraides ne katru nedēļu?', weekA: 'Maksājiet tikai par nedēļu — [89,99 zł]' },
+      sendlink: { head: ['Atsūtiet saiti','uz pēdējo tiešraidi —','[atsūtīsim pasūtījumus]'], link: 'facebook.com/jusuveikals/videos/2918…', file: 'pasutijumi.xlsx', fileSub: 'pasūtījumu saraksts · Excel', badge: 'bez maksas' },
       cta: { brand: 'Noxio', tag: 'Pasūtījumi no tiešraidēm — automātiski', button: 'Izmēģiniet: noxio.pl', small: '14 dienas bez maksas' }
     }
   },
@@ -62,6 +68,9 @@ window.L10N = {
       connect: { head: ['Podłącz stronę','na Facebooku','{lub} po prostu wklej','link do live’a'] },
       messenger: { head: ['Gotowa lista','zamówień'], sub: '+ wiadomości do kupujących w Messengerze' },
       offer: { big: '14', l2: 'dni', l3: 'za darmo', pills: ['do 3 transmisji','bez karty'] },
+      codes: { head: ['Twój post','sprzedażowy','wygląda tak? 👇'], shop: 'Twój sklep', postSub: 'Sprzedaż w komentarzach', word: 'kod', start: 612, colors: ['biały','czarny','beżowy','różowy'], sizes: ['75E','80E','85D','75D','80C'], rules: ['1 kolor = 1 komentarz','wpisz poprawny kod','potwierdź: KUPIŁAM'] },
+      price: { head: ['Ile oddajesz','z każdej sprzedaży?'], salesLabel: 'Sprzedaż w miesiącu', sales: '20 000 zł', feeLabel: 'Prowizja 3%', fee: 600, cur: 'zł', noxio: '219,99 zł / mies.', nopct: 'bez %', note: 'przykład obliczeń', weekQ: 'Live nie co tydzień?', weekA: 'Płać tylko za tydzień — [89,99 zł]' },
+      sendlink: { head: ['Wyślij nam link','do ostatniego live’a —','[odeślemy listę zamówień]'], link: 'facebook.com/twojsklep/videos/2918…', file: 'zamowienia_live.xlsx', fileSub: 'lista zamówień · Excel', badge: 'za darmo' },
       cta: { brand: 'Noxio', tag: 'Zamówienia z live’ów — automatycznie', button: 'Wypróbuj: noxio.pl', small: '14 dni za darmo' }
     }
   },
@@ -83,6 +92,9 @@ window.L10N = {
       connect: { head: ['Connect your','Facebook Page','{or} just paste','a link to the live'] },
       messenger: { head: ['A ready','order list'], sub: '+ messages to buyers in Messenger' },
       offer: { big: '14', l2: 'days', l3: 'free', pills: ['up to 3 lives','no card'] },
+      codes: { head: ['Does your','sales post','look like this? 👇'], shop: 'Your shop', postSub: 'Selling in the comments', word: 'code', start: 612, colors: ['white','black','beige','pink'], sizes: ['75E','80E','85D','75D','80C'], rules: ['1 colour = 1 comment','type the exact code','confirm: BOUGHT'] },
+      price: { head: ['Paying a percentage','on every sale?'], salesLabel: 'Sales per month', sales: '20 000 zł', feeLabel: '3% commission', fee: 600, cur: 'zł', noxio: '219,99 zł / month', nopct: 'no %', note: 'example calculation', weekQ: 'Not live every week?', weekA: 'Pay just for the week — [89,99 zł]' },
+      sendlink: { head: ['Send us a link','to your last live —','[get the order list back]'], link: 'facebook.com/yourshop/videos/2918…', file: 'orders_live.xlsx', fileSub: 'order list · Excel', badge: 'free' },
       cta: { brand: 'Noxio', tag: 'Orders from lives — automatically', button: 'Try it: noxio.pl', small: '14 days free' }
     }
   }

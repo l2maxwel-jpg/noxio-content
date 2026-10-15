@@ -25,6 +25,21 @@ Never use invented numbers (only real results with the seller's permission), com
 (say "other systems" / "systems that take a percentage"), fake customers or testimonials. Buyer names on screen are
 test data. Brand: emerald #11B981, teal #0098B7, Inter, plenty of white; don't borrow other brands' palettes.
 
+## Content concepts (use these angles)
+
+- **K1 "Send us a link — get your orders"** (main): the seller sends a link to their last live in Messenger, Noxio replies
+  with the order list in Excel, free. Maxim answers these messages himself, so this offer is allowed. Scene `sendlink`,
+  CTA "write to us in Messenger"; caption says how to send the link.
+- **K2 "Wall of codes vs live comments"**: a sales post full of "kod 612 biały 75E…" lines and rules like "1 kolor =
+  1 komentarz" → real-looking comments with typos and emoji → a clean order table. Scenes `codes` → `solution` → `ai`.
+- **K3 "Fixed price, no percentage"**: "Ile oddajesz z każdej sprzedaży?" — example 20 000 zł × 3% = 600 zł vs Noxio
+  219,99 zł/month, plus the weekly plan 89,99 zł; mark it as an example calculation. Scene `price`. PL/RU only.
+- **K4 "Buyers write in different languages"** (LV, RU): mixed LV/RU/PL comments with typos and emoji → one order list.
+- **K5 "The live is over, the work begins"**, **K6 "Buyers get the confirmation in Messenger"** (page connected).
+Show "without codes" on comments instead of just claiming it. Every video ends with the logo and the offer
+"14 days free, up to 3 streams, no card". Keep text inside the middle of the frame: about 14% free at the top and
+25–35% at the bottom.
+
 ## Making a batch
 
 1. Continue the schedule in `episodes/plan.json` (Europe/Warsaw, check the UTC offset for DST):

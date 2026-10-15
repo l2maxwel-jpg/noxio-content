@@ -19,7 +19,12 @@ soundtrack is timed to the cuts.
 
 ## Scene types
 
-`cover`, `hook`, `pain`, `solution`, `ai`, `connect`, `messenger`, `offer`, `cta` (durations 2.8 / 3.5 / 3.5 / 4 / 3 / 3 / 3 / 2.5 / 2.5 s).
+`cover`, `hook`, `codes`, `pain`, `solution`, `ai`, `connect`, `messenger`, `price`, `sendlink`, `offer`, `cta`
+(durations 2.8 / 3.5 / 3.5 / 3.5 / 4 / 3 / 3 / 3 / 4.5 / 3.5 / 2.5 / 2.5 s).
+`codes` is a seller's post buried in a wall of product codes with rules stickers (override `start`, `colors`, `sizes`, `rules`, `head`);
+`price` compares a 3% commission with Noxio's fixed price and the weekly plan (copy in `l10n.js`, prices in zł);
+`sendlink` shows a seller sending a live link in Messenger and getting the order list back as Excel (concept K1).
+Emoji in any text are swapped for Noto SVGs from `assets/emoji/` (`scripts/emoji.py` extracts them; run by the build scripts).
 `cover` shows a finished 1080×1920 cover image (`"src": "../assets/covers/eNN.jpg"`, headline already in the picture) with a slow zoom;
 use it instead of `hook` when a cover exists. Covers are designed in Moda (photo + headline + logo, Noxio brand kit) and the same
 file is used as the Reel thumbnail.

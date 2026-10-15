@@ -19,12 +19,20 @@
   if (EP.theme === 'dark') document.body.classList.add('dark');
   const DARK = EP.theme === 'dark';
   const COLORS = ['#EF4444', '#0098B7', '#11B981', '#F59E0B', '#8B5CF6'];
-  const DUR = { cover: 2.8, hook: 3.5, pain: 3.5, solution: 4.0, ai: 3.0, connect: 3.0, messenger: 3.0, offer: 2.5, cta: 2.5 };
+  const DUR = { cover: 2.8, hook: 3.5, codes: 3.5, pain: 3.5, solution: 4.0, ai: 3.0, connect: 3.0, messenger: 3.0, price: 4.5, sendlink: 3.5, offer: 2.5, cta: 2.5 };
   const BODY = { // default top, gap under head, max top before the body would run out of the safe zone
-    pain: [580, 40, 605], solution: [690, 40, 910], ai: [790, 60, 945], connect: [690, 40, 870], messenger: [470, 20, 590] };
-  const GLOW = { cover: 'none', hook: 'red', pain: 'red', offer: 'teal', cta: 'teal' };
+    pain: [580, 40, 605], solution: [690, 40, 910], ai: [790, 60, 945], connect: [690, 40, 870], messenger: [470, 20, 590],
+    codes: [560, 40, 620], price: [560, 50, 700], sendlink: [600, 40, 720] };
+  const GLOW = { cover: 'none', hook: 'red', codes: 'red', pain: 'red', price: 'teal', offer: 'teal', cta: 'teal' };
   const E = 'power3.out';
 
+  // Headless Chromium has no colour emoji font: swap emoji for Noto SVGs from assets/emoji (made by scripts/emoji.py).
+  const EMO = /(?:[\u{1F1E6}-\u{1F1FF}]{2})|(?:[\u2190-\u21FF\u2300-\u23FF\u2460-\u27BF\u2900-\u297F\u2B00-\u2BFF\u3030\u303D\u3297\u3299\u{1F000}-\u{1FAFF}]\uFE0F?[\u{1F3FB}-\u{1F3FF}]?(?:\u200D[\u2600-\u27BF\u{1F000}-\u{1FAFF}]\uFE0F?[\u{1F3FB}-\u{1F3FF}]?)*)/gu;
+  const emojify = html => html.replace(EMO, m => {
+    if (!m.includes('\uFE0F') && m.codePointAt(0) < 0x1F000 && !'❤✅⭐✨☀'.includes(m[0])) return m;
+    const c = [...m].map(ch => ch.codePointAt(0).toString(16).toUpperCase()).join('-');
+    return `<img class="emo" src="../assets/emoji/${c}.svg" alt="">`;
+  });
   const mark = s => String(s).replace(/\[([^\]]+)\]/g, '<span class="lime">$1</span>').replace(/\{([^}]+)\}/g, '<span class="tealc">$1</span>');
   const lines = arr => arr.map(l => `<span class="line">${mark(l)}</span>`).join('');
   const bubble = (name, text, ci, cls = '') =>
@@ -33,6 +41,28 @@
 
   const HTML = {
     cover: d => `<div class="cov"><img class="covimg" src="${d.src}" alt=""></div>`,
+    codes: d => {
+      const c = Object.assign({}, L.codes || {}, d);
+      const rows = c.lines || Array.from({ length: 42 }, (_, k) =>
+        `${c.word} ${c.start + Math.floor(k / c.sizes.length) * 2} ${c.colors[Math.floor(k / c.sizes.length) % c.colors.length]} ${c.sizes[k % c.sizes.length]}`);
+      return `<div class="h head">${lines(c.head)}</div>
+        <div class="body"><div class="post"><div class="posthd"><div class="ava pava">${c.shop[0]}</div><div><div class="pn">${c.shop}</div><div class="ps">${c.postSub}</div></div></div>
+        <div class="codewrap"><div class="codes">${rows.map(r => `<div>${r}</div>`).join('')}</div></div></div>
+        ${c.rules.map((r, i) => `<div class="rule r${i}">${r}</div>`).join('')}</div>`;
+    },
+    price: d => { const c = Object.assign({}, L.price || {}, d); return `<div class="h head">${lines(c.head)}</div>
+      <div class="body"><div class="calc">
+        <div class="crow"><span>${c.salesLabel}</span><b>${c.sales}</b></div>
+        <div class="crow fee"><span>${c.feeLabel}</span><b><span class="fcnt">0</span> ${c.cur}</b><i class="strike"></i></div>
+        <div class="cdiv"></div>
+        <div class="crow nox"><span><img class="clogo" src="../assets/logo.png" alt="">Noxio</span><b>${c.noxio}</b></div>
+        <div class="cnote"><span class="nopct">${c.nopct}</span>${c.note}</div></div>
+        <div class="week"><div class="wq">${c.weekQ}</div><div class="wa">${mark(c.weekA)}</div></div></div>`; },
+    sendlink: d => { const c = Object.assign({}, L.sendlink || {}, d); return `<div class="h head">${lines(c.head)}</div>
+      <div class="body"><div class="chat sl"><div class="chathd"><div class="ava"><img src="../assets/logo.png" alt=""></div><div><div class="cn">Noxio</div><div class="cs">Messenger</div></div></div>
+        <div class="msgs"><div class="msg me"><span class="typed2"></span><span class="cur2"></span></div>
+        <div class="msg them"><div class="file"><div class="xls">XLSX</div><div><div class="fn">${c.file}</div><div class="fs">${c.fileSub}</div></div></div></div>
+        <div class="free">${c.badge}</div></div></div></div>`; },
     hook: d => {
       const pos = [[60,640],[420,840],[140,1060],[520,1260],[90,1460],[460,1660],[200,1860],[560,2060]];
       const bg = pos.map((p, i) => bubble(L.feed[i][0], L.feed[i][1], i, 'bgb').replace('class="bub bgb"', `class="bub bgb" style="left:${p[0]}px;top:${p[1]}px"`)).join('');
@@ -78,7 +108,7 @@
     const d = Object.assign({}, L.defaults[s.type] || {}, s);
     const el = document.createElement('section');
     el.className = `scene sc-${s.type}`;
-    el.innerHTML = (d.kicker ? `<div class="kicker">${d.kicker}</div>` : '') + HTML[s.type](d);
+    el.innerHTML = emojify((d.kicker ? `<div class="kicker">${d.kicker}</div>` : '') + HTML[s.type](d));
     if (i === 0) el.style.opacity = 1;
     root.appendChild(el);
     return { type: s.type, d, el, dur: s.dur || DUR[s.type] };
@@ -126,6 +156,8 @@
       }
       if (s.type === 'connect' && $(el, '.cardA')) { fitOverflow($(el, '.cardA'), $(el, '.cardA .ot')); }
       if (s.type === 'offer') { fitWidth($(el, '.dn'), 920); fitWidth($(el, '.fr'), 920); }
+      if (s.type === 'price') { const w = $(el, '.week'); w.style.top = ($(el, '.calc').offsetHeight + 40) + 'px'; }
+      if (s.type === 'sendlink') fitOverflow($(el, '.msg.me'), $(el, '.msg.me'), 26);
       if (s.type === 'cta') { fitWidth($(el, '.tag'), 960); fitWidth($(el, '.cta'), 900); fitWidth($(el, '.wmtxt'), 900); }
     });
   }
@@ -150,6 +182,47 @@
     cover(tl, T, d, el, dur) {
       tl.fromTo($(el, '.covimg'), { scale: 1.0, yPercent: 0 }, { scale: 1.09, yPercent: -1.5, duration: dur + .3, ease: 'none' }, T);
       cue(T + .05, 'pop_down'); cue(T + .9, 'impact_soft');
+    },
+    codes(tl, T, d, el, dur) {
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .35, stagger: .12, ease: E }, T);
+      tl.from($(el, '.post'), { y: 90, opacity: 0, duration: .4, ease: E }, T + .15);
+      tl.fromTo($(el, '.codes'), { y: 0 }, { y: -1100, duration: dur, ease: 'power1.in' }, T);
+      [...$$(el, '.rule')].forEach((r, i) => {
+        tl.from(r, { scale: 1.8, opacity: 0, duration: .25, ease: 'back.out(2)' }, T + 1.0 + i * .55);
+        cue(T + 1.0 + i * .55, i ? 'pop_low' : 'dissonant');
+      });
+      cue(T + .05, 'pop_down');
+      for (let t = T + .2; t < T + dur - .1; t += .2) cue(t, 'tick');
+    },
+    price(tl, T, d, el) {
+      const c = Object.assign({}, L.price || {}, d);
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .13, ease: E }, T);
+      tl.from($(el, '.calc'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .3);
+      tl.from($$(el, '.crow'), { x: -40, opacity: 0, duration: .3, stagger: .35, ease: E }, T + .6);
+      const n = { v: 0 }, fe = $(el, '.fcnt');
+      tl.to(n, { v: c.fee, duration: .6, ease: 'none', onUpdate: () => { fe.textContent = Math.round(n.v); } }, T + 1.0);
+      for (let k = 0; k < 8; k++) cue(T + 1.0 + k * .075, 'tick_soft');
+      tl.fromTo($(el, '.strike'), { scaleX: 0 }, { scaleX: 1, duration: .25, ease: 'power2.out' }, T + 1.8);
+      cue(T + 1.8, 'click');
+      tl.from($(el, '.crow.nox b'), { scale: .5, duration: .4, ease: 'back.out(2)', transformOrigin: '100% 50%' }, T + 1.45);
+      tl.from($(el, '.cnote'), { opacity: 0, y: 20, duration: .3 }, T + 2.1);
+      tl.from($(el, '.week'), { y: 60, opacity: 0, duration: .4, ease: E }, T + 2.7);
+      cue(T + 2.7, 'pop');
+    },
+    sendlink(tl, T, d, el) {
+      const c = Object.assign({}, L.sendlink || {}, d);
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .13, ease: E }, T);
+      tl.from($(el, '.chat'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .3);
+      tl.from($(el, '.msg.me'), { scale: .9, opacity: 0, duration: .25, transformOrigin: '100% 100%' }, T + .7);
+      const ty = { n: 0 }, te = $(el, '.typed2');
+      tl.to(ty, { n: c.link.length, duration: .8, ease: 'none', onUpdate: () => { te.textContent = c.link.slice(0, Math.round(ty.n)); } }, T + .8);
+      for (let k = 0; k < 11; k++) cue(T + .8 + k * .07, 'tick_soft');
+      tl.to($(el, '.cur2'), { opacity: 0, duration: .1 }, T + 1.65);
+      cue(T + 1.7, 'click');
+      tl.from($(el, '.msg.them'), { y: 40, scale: .92, opacity: 0, duration: .35, ease: 'back.out(1.6)', transformOrigin: '0% 100%' }, T + 1.95);
+      cue(T + 2.05, 'ding');
+      tl.from($(el, '.free'), { scale: 1.8, opacity: 0, duration: .3, ease: 'back.out(2)' }, T + 2.5);
+      cue(T + 2.5, 'pop');
     },
     hook(tl, T, d, el, dur) {
       tl.fromTo($$(el, '.bgb'), { y: 0 }, { y: -620, duration: dur, ease: 'none' }, T);
@@ -260,7 +333,7 @@
     gsap.set(['#wipe', '#wipe2'], { yPercent: 100 });
     const tl = gsap.timeline({ paused: true });
     let t = 0;
-    const calm = new Set(['cover', 'hook', 'pain']);
+    const calm = new Set(['cover', 'hook', 'codes', 'pain']);
     cues.drop = null;
     scenes.forEach((s, i) => {
       s.start = t;

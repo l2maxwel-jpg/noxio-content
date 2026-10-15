@@ -1,0 +1,140 @@
+{
+ "id": "e26",
+ "lang": "lv",
+ "theme": "dark",
+ "data": {
+  "feed": [
+   [
+    "Anna",
+    "ņemu zilo M 💙"
+   ],
+   [
+    "Olga",
+    "мне чёрное L"
+   ],
+   [
+    "Laura",
+    "cik maksā?"
+   ],
+   [
+    "Ilze",
+    "+ kā Annai"
+   ],
+   [
+    "Marina",
+    "беру бежевый S"
+   ],
+   [
+    "Liene",
+    "есть ещё синее?"
+   ],
+   [
+    "Inese",
+    "ņemšu baltu L"
+   ],
+   [
+    "Kristīne",
+    "man 2 gab"
+   ],
+   [
+    "Dace",
+    "какой размер?"
+   ],
+   [
+    "Agnese",
+    "ņemu! M"
+   ],
+   [
+    "Zane",
+    "sarkano M 😍"
+   ],
+   [
+    "Evija",
+    "мне как у Анны"
+   ],
+   [
+    "Marta",
+    "piegāde?"
+   ],
+   [
+    "Linda",
+    "ņemu 2"
+   ]
+  ],
+  "table": {
+   "rows": [
+    [
+     "Anna",
+     "Zilā kleita",
+     "M",
+     "1",
+     0
+    ],
+    [
+     "Olga",
+     "Melnā kleita",
+     "L",
+     "1",
+     1
+    ],
+    [
+     "Ilze",
+     "Zilā kleita",
+     "M",
+     "1",
+     3
+    ],
+    [
+     "Marina",
+     "Bēšs džemperis",
+     "S",
+     "1",
+     4
+    ]
+   ]
+  },
+  "ai": {
+   "name": "Olga",
+   "html": "мне <span class=\"hl l h1\">чёрное</span> <span class=\"hl v h2\">L</span>",
+   "chips": [
+    "Melnā kleita",
+    "Izmērs L",
+    "1 gab."
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "type": "cover",
+   "src": "../assets/covers/e26.jpg"
+  },
+  {
+   "type": "solution",
+   "head": [
+    "Latviski, krieviski,",
+    "ar kļūdām —",
+    "[Noxio saprot visus]"
+   ]
+  },
+  {
+   "type": "ai",
+   "head": [
+    "Komentārs krieviski,",
+    "pasūtījums —",
+    "[sarakstā]"
+   ]
+  },
+  {
+   "type": "sendlink"
+  },
+  {
+   "type": "offer"
+  },
+  {
+   "type": "cta",
+   "tag": "Atsūtiet saiti — atsūtīsim pasūtījumus",
+   "button": "Rakstiet Messenger",
+   "small": "vai izmēģiniet paši: noxio.pl"
+  }
+ ]
+}
