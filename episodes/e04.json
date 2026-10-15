@@ -3,13 +3,8 @@
  "lang": "ru",
  "scenes": [
   {
-   "type": "hook",
-   "setup": [
-    "Не хотите давать доступ",
-    "к своей странице?"
-   ],
-   "p1": "Не нужно.",
-   "p2": ""
+   "type": "cover",
+   "src": "../assets/covers/e04.jpg"
   },
   {
    "type": "connect",

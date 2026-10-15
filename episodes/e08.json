@@ -3,13 +3,8 @@
  "lang": "ru",
  "scenes": [
   {
-   "type": "hook",
-   "setup": [
-    "Проверьте Noxio",
-    "на своём эфире —"
-   ],
-   "p1": "бесплатно",
-   "p2": ""
+   "type": "cover",
+   "src": "../assets/covers/e08.jpg"
   },
   {
    "type": "solution"

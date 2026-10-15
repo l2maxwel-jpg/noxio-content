@@ -3,13 +3,8 @@
  "lang": "ru",
  "scenes": [
   {
-   "type": "hook",
-   "setup": [
-    "Как эфир превращается",
-    "в список заказов?"
-   ],
-   "p1": "3 шага",
-   "p2": ""
+   "type": "cover",
+   "src": "../assets/covers/e06.jpg"
   },
   {
    "type": "connect",

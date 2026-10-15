@@ -3,7 +3,8 @@
  "lang": "lv",
  "scenes": [
   {
-   "type": "hook"
+   "type": "cover",
+   "src": "../assets/covers/e05.jpg"
   },
   {
    "type": "pain"

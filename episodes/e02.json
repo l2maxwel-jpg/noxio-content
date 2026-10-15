@@ -3,13 +3,8 @@
  "lang": "ru",
  "scenes": [
   {
-   "type": "hook",
-   "setup": [
-    "Покупатели не пишут",
-    "коды товаров."
-   ],
-   "p1": "И не надо.",
-   "p2": ""
+   "type": "cover",
+   "src": "../assets/covers/e02.jpg"
   },
   {
    "type": "ai"

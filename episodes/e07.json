@@ -3,7 +3,8 @@
  "lang": "pl",
  "scenes": [
   {
-   "type": "hook"
+   "type": "cover",
+   "src": "../assets/covers/e07.jpg"
   },
   {
    "type": "pain"

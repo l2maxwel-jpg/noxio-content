@@ -4,10 +4,10 @@
   const EP = window.EP || { id: 'demo', lang: 'ru', scenes: ['hook','pain','solution','ai','connect','messenger','offer','cta'].map(type => ({ type })) };
   const L = window.L10N[EP.lang || 'ru'];
   const COLORS = ['#EF4444', '#0098B7', '#11B981', '#F59E0B', '#8B5CF6'];
-  const DUR = { hook: 3.5, pain: 3.5, solution: 4.0, ai: 3.0, connect: 3.0, messenger: 3.0, offer: 2.5, cta: 2.5 };
+  const DUR = { cover: 2.8, hook: 3.5, pain: 3.5, solution: 4.0, ai: 3.0, connect: 3.0, messenger: 3.0, offer: 2.5, cta: 2.5 };
   const BODY = { // default top, gap under head, max top before the body would run out of the safe zone
     pain: [580, 40, 605], solution: [690, 40, 910], ai: [790, 60, 945], connect: [690, 40, 870], messenger: [470, 20, 590] };
-  const GLOW = { hook: 'red', pain: 'red', offer: 'teal', cta: 'teal' };
+  const GLOW = { cover: 'none', hook: 'red', pain: 'red', offer: 'teal', cta: 'teal' };
   const E = 'power3.out';
 
   const mark = s => String(s).replace(/\[([^\]]+)\]/g, '<span class="lime">$1</span>').replace(/\{([^}]+)\}/g, '<span class="tealc">$1</span>');
@@ -17,6 +17,7 @@
   const check = '<svg width="30" height="20" viewBox="0 0 30 20"><path d="M2 10 L10 18 L28 2" stroke="#11B981" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   const HTML = {
+    cover: d => `<div class="cov"><img class="covimg" src="${d.src}" alt=""></div>`,
     hook: d => {
       const pos = [[60,640],[420,840],[140,1060],[520,1260],[90,1460],[460,1660],[200,1860],[560,2060]];
       const bg = pos.map((p, i) => bubble(L.feed[i][0], L.feed[i][1], i, 'bgb').replace('class="bub bgb"', `class="bub bgb" style="left:${p[0]}px;top:${p[1]}px"`)).join('');
@@ -131,6 +132,10 @@
   }
 
   const TL = {
+    cover(tl, T, d, el, dur) {
+      tl.fromTo($(el, '.covimg'), { scale: 1.0, yPercent: 0 }, { scale: 1.09, yPercent: -1.5, duration: dur + .3, ease: 'none' }, T);
+      cue(T + .05, 'pop_down'); cue(T + .9, 'impact_soft');
+    },
     hook(tl, T, d, el, dur) {
       tl.fromTo($$(el, '.bgb'), { y: 0 }, { y: -620, duration: dur, ease: 'none' }, T);
       tl.to($(el, '.live .dot'), { scale: 1.5, opacity: .35, duration: .22, repeat: 1, yoyo: true }, T + .2);
@@ -240,7 +245,7 @@
     gsap.set(['#wipe', '#wipe2'], { yPercent: 100 });
     const tl = gsap.timeline({ paused: true });
     let t = 0;
-    const calm = new Set(['hook', 'pain']);
+    const calm = new Set(['cover', 'hook', 'pain']);
     cues.drop = null;
     scenes.forEach((s, i) => {
       s.start = t;
