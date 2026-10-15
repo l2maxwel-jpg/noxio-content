@@ -39,11 +39,15 @@
     "instagram",
     "facebook"
    ],
-   "status": "scheduled",
+   "status": "published",
    "cover": "assets/covers/e09.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e09.jpg",
    "aiGenerated": false,
-   "autoPublish": true
+   "autoPublish": true,
+   "published": {
+    "instagram": "https://www.instagram.com/reel/DehPrw-jM4C/",
+    "facebook": "https://facebook.com/reel/1130658612796100"
+   }
   },
   {
    "id": "e02",
