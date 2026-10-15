@@ -78,7 +78,7 @@
     "instagram",
     "facebook"
    ],
-   "status": "planned",
+   "status": "scheduled",
    "aiGenerated": false,
    "autoPublish": true,
    "coverMs": 2700
@@ -135,7 +135,7 @@
     "instagram",
     "facebook"
    ],
-   "status": "planned",
+   "status": "scheduled",
    "aiGenerated": false,
    "autoPublish": true,
    "cover": "assets/covers/e26.jpg",
@@ -193,7 +193,7 @@
     "instagram",
     "facebook"
    ],
-   "status": "planned",
+   "status": "scheduled",
    "aiGenerated": false,
    "autoPublish": true,
    "coverMs": 2700
@@ -269,7 +269,7 @@
     "instagram",
     "facebook"
    ],
-   "status": "planned",
+   "status": "scheduled",
    "aiGenerated": false,
    "autoPublish": true,
    "cover": "assets/covers/e28.jpg",
