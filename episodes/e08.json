@@ -4,7 +4,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e08.jpg"
+   "photo": "../assets/photos/e08.jpg",
+   "head": [
+    "Проверьте Noxio",
+    "на своём эфире —",
+    "[бесплатно]"
+   ],
+   "sub": "14 дней · до 3 эфиров · без карты"
   },
   {
    "type": "solution"

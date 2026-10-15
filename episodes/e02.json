@@ -4,7 +4,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e02.jpg"
+   "photo": "../assets/photos/e02.jpg",
+   "head": [
+    "Покупатели не пишут",
+    "коды товаров.",
+    "[И не надо.]"
+   ],
+   "sub": "ИИ понимает обычные комментарии · noxio.pl"
   },
   {
    "type": "ai"

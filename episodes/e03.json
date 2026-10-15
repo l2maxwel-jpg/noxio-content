@@ -4,7 +4,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e03.jpg"
+   "photo": "../assets/photos/e03.jpg",
+   "head": [
+    "Заказы собраны.",
+    "Теперь написать",
+    "[каждому покупателю?]"
+   ],
+   "sub": "Сообщения в Messenger — в пару кликов"
   },
   {
    "type": "pain",

@@ -114,7 +114,12 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e24.jpg"
+   "photo": "../assets/photos/e24.jpg",
+   "head": [
+    "Sprawdź na",
+    "[swoim live’ie]"
+   ],
+   "sub": "14 dni za darmo, bez karty · noxio.pl"
   },
   {
    "type": "solution",

@@ -6,7 +6,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e16.jpg"
+   "photo": "../assets/photos/e16.jpg",
+   "head": [
+    "Продаёте",
+    "[косметику]",
+    "в эфирах?"
+   ],
+   "sub": "Noxio соберёт заказы и на неё · noxio.pl"
   },
   {
    "type": "pain",

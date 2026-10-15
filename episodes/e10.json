@@ -6,7 +6,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e10.jpg"
+   "photo": "../assets/photos/e10.jpg",
+   "head": [
+    "Koniec z",
+    "[zeszytem]",
+    "zamówień"
+   ],
+   "sub": "Gotowa tabela + Excel · noxio.pl"
   },
   {
    "type": "pain",

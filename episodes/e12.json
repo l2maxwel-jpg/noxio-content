@@ -6,7 +6,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e12.jpg"
+   "photo": "../assets/photos/e12.jpg",
+   "head": [
+    "„Ile kosztuje?”",
+    "to [nie]",
+    "[zamówienie]"
+   ],
+   "sub": "AI odróżnia pytania od zamówień · noxio.pl"
   },
   {
    "type": "ai",

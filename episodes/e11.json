@@ -6,7 +6,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e11.jpg"
+   "photo": "../assets/photos/e11.jpg",
+   "head": [
+    "Pasūtījumi no",
+    "komentāriem —",
+    "[automātiski]"
+   ],
+   "sub": "Noxio runā latviski · noxio.pl"
   },
   {
    "type": "pain"

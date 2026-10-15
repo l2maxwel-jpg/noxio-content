@@ -6,7 +6,12 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e20.jpg"
+   "photo": "../assets/photos/e20.jpg",
+   "head": [
+    "Bez [Facebook]",
+    "[pieteikšanās]"
+   ],
+   "sub": "Vienkārši ielīmējiet saiti · noxio.pl"
   },
   {
    "type": "connect",

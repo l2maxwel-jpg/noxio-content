@@ -106,7 +106,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e26.jpg"
+   "photo": "../assets/photos/e26.jpg",
+   "head": [
+    "Latviski,",
+    "krieviski,",
+    "[ar kļūdām?]"
+   ],
+   "sub": "Noxio saprot visus komentārus · noxio.pl"
   },
   {
    "type": "solution",

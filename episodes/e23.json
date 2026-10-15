@@ -5,7 +5,12 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e23.jpg"
+   "photo": "../assets/photos/e23.jpg",
+   "head": [
+    "Try it on your",
+    "[next live]"
+   ],
+   "sub": "14 days free · no card · noxio.pl"
   },
   {
    "type": "solution"

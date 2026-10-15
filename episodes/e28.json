@@ -6,7 +6,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e28.jpg"
+   "photo": "../assets/photos/e28.jpg",
+   "head": [
+    "Ile oddajesz",
+    "z każdej",
+    "[sprzedaży?]"
+   ],
+   "sub": "Noxio: stała cena, bez prowizji · noxio.pl"
   },
   {
    "type": "price"

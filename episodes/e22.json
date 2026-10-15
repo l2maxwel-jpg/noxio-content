@@ -5,7 +5,12 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e22.jpg"
+   "photo": "../assets/photos/e22.jpg",
+   "head": [
+    "Potwierdzenia",
+    "[w Messengerze]"
+   ],
+   "sub": "W kilka kliknięć, z listy zamówień · noxio.pl"
   },
   {
    "type": "pain",

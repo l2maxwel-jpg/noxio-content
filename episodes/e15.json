@@ -6,7 +6,12 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e15.jpg"
+   "photo": "../assets/photos/e15.jpg",
+   "head": [
+    "Pircēji neraksta",
+    "[preču kodus]"
+   ],
+   "sub": "Un tie nav vajadzīgi · noxio.pl"
   },
   {
    "type": "ai",

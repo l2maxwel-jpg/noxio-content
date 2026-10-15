@@ -6,7 +6,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e18.jpg"
+   "photo": "../assets/photos/e18.jpg",
+   "head": [
+    "“Do they run",
+    "small?” is [not]",
+    "[an order]"
+   ],
+   "sub": "Noxio’s AI tells questions from orders · noxio.pl"
   },
   {
    "type": "ai",

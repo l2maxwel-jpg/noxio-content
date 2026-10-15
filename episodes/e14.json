@@ -6,7 +6,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e14.jpg"
+   "photo": "../assets/photos/e14.jpg",
+   "head": [
+    "Nie tylko live:",
+    "[wideo i posty]",
+    "też"
+   ],
+   "sub": "Zamówienia z komentarzy · noxio.pl"
   },
   {
    "type": "solution",

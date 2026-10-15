@@ -4,7 +4,14 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e06.jpg"
+   "photo": "../assets/photos/e06.jpg",
+   "head": [
+    "Как эфир",
+    "превращается",
+    "в список заказов?",
+    "[3 шага]"
+   ],
+   "sub": "Смотрите до конца · noxio.pl"
   },
   {
    "type": "connect",

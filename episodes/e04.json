@@ -4,7 +4,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e04.jpg"
+   "photo": "../assets/photos/e04.jpg",
+   "head": [
+    "Не хотите давать",
+    "доступ к странице?",
+    "[Не нужно.]"
+   ],
+   "sub": "Просто вставьте ссылку на эфир · noxio.pl"
   },
   {
    "type": "connect",

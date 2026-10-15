@@ -114,7 +114,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e19.jpg"
+   "photo": "../assets/photos/e19.jpg",
+   "head": [
+    "Live skończony.",
+    "[Wieczór]",
+    "[wolny?]"
+   ],
+   "sub": "Zamówienia zbierze Noxio · noxio.pl"
   },
   {
    "type": "pain",

@@ -6,7 +6,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e21.jpg"
+   "photo": "../assets/photos/e21.jpg",
+   "head": [
+    "Не только эфиры:",
+    "[видео и посты]",
+    "тоже"
+   ],
+   "sub": "Заказы из комментариев под ними · noxio.pl"
   },
   {
    "type": "solution",

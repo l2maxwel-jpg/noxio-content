@@ -6,7 +6,13 @@
  "scenes": [
   {
    "type": "cover",
-   "src": "../assets/covers/e17.jpg"
+   "photo": "../assets/photos/e17.jpg",
+   "head": [
+    "[Strona] albo",
+    "{link} —",
+    "Ty wybierasz"
+   ],
+   "sub": "Dwa sposoby na zamówienia z komentarzy · noxio.pl"
   },
   {
    "type": "connect",
