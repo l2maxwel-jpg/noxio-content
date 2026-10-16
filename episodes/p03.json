@@ -1,0 +1,53 @@
+{
+ "id": "p03",
+ "lang": "en",
+ "series": "import",
+ "angle": "import-duplicates",
+ "fx": "scramble",
+ "scenes": [
+  {
+   "type": "cover",
+   "video": "mixkit:4939",
+   "layout": "light",
+   "head": [
+    "Same product,",
+    "[added twice?]"
+   ],
+   "sub": "PrestaShop product import · Noxio",
+   "dur": 2.6
+  },
+  {
+   "type": "idupe",
+   "head": [
+    "Noxio checks",
+    "your shop [first]"
+   ],
+   "photo": "../assets/photos/p03.jpg",
+   "name": "Leather satchel, grey",
+   "sku": "BG-0457",
+   "existing": "Leather satchel, grey",
+   "id": "842",
+   "done": "Updated — no duplicate"
+  },
+  {
+   "type": "offer",
+   "big": "14",
+   "l2": "days",
+   "l3": "free",
+   "pills": [
+    "then 149,99 zł/month",
+    "no card"
+   ]
+  },
+  {
+   "type": "cta",
+   "tag": "PrestaShop product import",
+   "button": "Try it: noxio.pl",
+   "small": "14 days free · no card"
+  }
+ ],
+ "music": {
+  "track": "mixkit:1001",
+  "start": 99.17
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "id": "p05",
+ "lang": "lv",
+ "series": "import",
+ "angle": "import-variants",
+ "fx": "split",
+ "scenes": [
+  {
+   "type": "cover",
+   "video": "mixkit:51404",
+   "layout": "dark",
+   "head": [
+    "Krāsas × izmēri —",
+    "[visi varianti ar roku?]"
+   ],
+   "sub": "PrestaShop preču imports · Noxio",
+   "dur": 2.6
+  },
+  {
+   "type": "ivariants",
+   "head": [
+    "Krāsa no foto,",
+    "izmēri — un",
+    "[visas kombinācijas]"
+   ],
+   "photo": "../assets/photos/p05.jpg",
+   "colors": [
+    [
+     "#D8C7AE",
+     "bēšs"
+    ],
+    [
+     "#6E4630",
+     "brūns"
+    ],
+    [
+     "#C98A2E",
+     "sinepju"
+    ]
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "totalWord": "kombinācijas"
+  },
+  {
+   "type": "offer",
+   "big": "14",
+   "l2": "dienas",
+   "l3": "bez maksas",
+   "pills": [
+    "pēc tam 149,99 zł/mēn.",
+    "bez kartes"
+   ]
+  },
+  {
+   "type": "cta",
+   "tag": "Preču imports PrestaShop veikalam",
+   "button": "Izmēģiniet: noxio.pl",
+   "small": "14 dienas bez maksas"
+  }
+ ],
+ "music": {
+  "track": "mixkit:762",
+  "start": 42.14
+ }
+}

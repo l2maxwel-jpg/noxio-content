@@ -74,3 +74,9 @@ from the list page below. Kept for the record; not shown on the videos.
 | 486 | Alone | Diego Nava | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |
 | 567 | Anthem #01 | Eugenio Mininni | EDM | https://mixkit.co/free-stock-music/electro-house/ |
 | 1280 | Razor Edge | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 661 | Fashion 01 | Francisco Alvear | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |
+| 762 | Dance 02 | Lily J | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 1001 | I Do! | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/house/ |
+| 782 | Hey | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 623 | Deep Urban | Eugenio Mininni | House | https://mixkit.co/free-stock-music/house/ |
+| 773 | Aquella Tarde en Yelapa | Mauro Urbina | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |

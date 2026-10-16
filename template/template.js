@@ -22,18 +22,21 @@
   const COLORS = ['#EF4444', '#0098B7', '#11B981', '#F59E0B', '#8B5CF6'];
   const DUR = { cover: 2.8, hook: 3.5, codes: 3.5, pain: 3.5, solution: 4.0, ai: 3.0, connect: 3.0, messenger: 3.0, price: 4.5, sendlink: 3.5,
     group: 3.5, excel: 3.5, merge: 3.5, review: 3.5, setup: 4.0, offer: 2.5, cta: 2.5,
-    wtitle: 3.0, wtips: 5.4, wquiz: 5.5, wpov: 6.0, wmyth: 5.5, follow: 3.0 };
+    wtitle: 3.0, wtips: 5.4, wquiz: 5.5, wpov: 6.0, wmyth: 5.5, follow: 3.0,
+    icard: 4.6, isync: 4.4, idupe: 4.0, iscan: 4.0, ivariants: 4.2, ibatch: 4.6, iform: 3.2 };
   const BODY = { // default top, gap under head, max top before the body would run out of the safe zone
     pain: [580, 40, 605], solution: [690, 40, 910], ai: [790, 60, 945], connect: [690, 40, 870], messenger: [470, 20, 590],
     codes: [560, 40, 620], price: [560, 50, 700], sendlink: [600, 40, 720],
     group: [560, 40, 600], excel: [580, 40, 660], merge: [580, 40, 660], review: [580, 40, 680], setup: [560, 40, 620],
-    wtips: [480, 48, 560], wquiz: [500, 44, 560], wpov: [480, 30, 560], wmyth: [440, 56, 540] };
+    wtips: [480, 48, 560], wquiz: [500, 44, 560], wpov: [480, 30, 560], wmyth: [440, 56, 540],
+    icard: [540, 40, 600], isync: [560, 40, 640], idupe: [560, 40, 640], iscan: [540, 40, 600], ivariants: [560, 40, 640],
+    ibatch: [540, 40, 620], iform: [520, 40, 600] };
   // Feed-safe band. Facebook and Instagram show Reels in the feed cropped to 4:5 (y 285..1635 of 1920) and the Reels
   // player covers the bottom quarter with the caption, so everything readable must sit inside y 330..1440.
   // Scenes are laid out in the band 255..1450 and then scaled into it (style.css: .framed .frame).
   const SAFE = { top: 330, bottom: 1440 };
   const GLOW = { cover: 'none', hook: 'red', codes: 'red', pain: 'red', price: 'teal', offer: 'teal', cta: 'teal',
-    wquiz: 'teal', wmyth: 'red', wpov: 'red', follow: 'teal' };
+    wquiz: 'teal', wmyth: 'red', wpov: 'red', follow: 'teal', isync: 'teal', idupe: 'teal', ivariants: 'teal', iform: 'red' };
   // Warm-up series (episodes wNN): each format has its own accent for the label chip.
   const WFMT = { tip: '#11B981', quiz: '#0098B7', pov: '#F59E0B', myth: '#EF4444' };
   const E = 'power3.out';
@@ -105,6 +108,9 @@
     video: '<svg viewBox="0 0 40 40"><path d="M12 7 L33 20 L12 33 Z" fill="currentColor"/></svg>',
     post: '<svg viewBox="0 0 40 40"><rect x="6" y="8" width="28" height="5" rx="2.5" fill="currentColor"/><rect x="6" y="18" width="28" height="5" rx="2.5" fill="currentColor"/><rect x="6" y="28" width="18" height="5" rx="2.5" fill="currentColor"/></svg>' };
   const check = '<svg width="30" height="20" viewBox="0 0 30 20"><path d="M2 10 L10 18 L28 2" stroke="#11B981" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  // import-card field values: ["S","M"] -> chips, "#hex|text" -> colour swatch + text, anything else -> text
+  const ival = v => Array.isArray(v) ? v.map(x => `<span class="ich">${x}</span>`).join('')
+    : /^#[0-9a-f]{3,8}\|/i.test(v) ? `<i class="isw" style="background:${v.split('|')[0]}"></i>${mark(v.split('|')[1])}` : mark(v);
 
   const HTML = {
     // cover: either a finished image (`src`) or a photo / Mixkit clip (`photo` | `video`) with our own headline (`head`, `sub`, `layout`, `focus`).
@@ -183,6 +189,45 @@
       <div class="wtruth"><div class="wtl">${d.truthLabel || (myth ? L.warm.truthLabel : L.warm.whyLabel)}</div><div class="wtt">${mark(d.truth)}</div></div></div>`; },
     follow: d => { const f = Object.assign({}, L.warm.follow, d); return `<div class="fava"><img src="../assets/logo.png" alt=""><span class="fplus">+</span><span class="fok">${check}</span></div>
       <div class="h fname">Noxio</div><div class="ftag">${mark(f.tag)}</div><div class="fbtn">${f.button}</div><div class="fsmall">${f.small}</div>`; },
+    // ---- PrestaShop product import (series pNN): photo -> card, supplier file, duplicates, label scan, variants, batch, manual form ----
+    icard: d => { const I = L.imp; return `<div class="h head">${lines(d.head)}</div><div class="body"><div class="icard">
+      <div class="itop"><div class="iph"><img src="${d.photo}" alt=""${d.focus ? ` style="object-position:${d.focus}"` : ''}><i class="iscanl"></i></div>
+      <div class="ihd"><div class="iai">:ph-sparkle.fill: ${I.ai}</div><div class="iname"><span class="ity"></span><span class="icur"></span></div><div class="isku">SKU ${d.sku}</div></div></div>
+      <div class="igrid">${d.fields.map((f, i) => `<div class="ifld f${i}"><div class="ifl">${f[0]}</div><div class="ifv">${ival(f[1])}</div><i class="ishim"></i></div>`).join('')}</div>
+      <div class="ifld idesc"><div class="ifl">${I.desc}</div><div class="ifv">${mark(d.desc)}</div><i class="ishim"></i></div>
+      <div class="ifoot"><div class="ilang">${(d.langs || []).map(l => `<span>${l}</span>`).join('')}</div><div class="ipub">:ph-upload-simple.bold: ${I.publish}</div></div></div>
+      <div class="itoast">${check}<span>${I.published} · ID ${d.id}</span></div></div>`; },
+    isync: d => { const I = L.imp; return `<div class="h head">${lines(d.head)}</div><div class="body">
+      <div class="ifile"><span class="ifx">:ph-file-xls.fill:</span><span>${d.file}</span></div>
+      <div class="isheet"><div class="ishd"><div class="ist">${I.preview}</div><div class="ibadge">${I.bySku}</div></div>
+      <div class="isr hd">${d.cols.map(c => `<div>${c}</div>`).join('')}</div>
+      ${d.rows.map((r, i) => `<div class="isr r${i}"><div class="isk">${r[0]}</div><div class="isn">${r[1]}</div><div class="isv"><s>${r[2]}</s><b>${r[3]}</b></div><div class="isv"><s>${r[4]}</s><b>${r[5]}</b></div></div>`).join('')}
+      <div class="isfoot"><div class="ipub isave">${I.save}</div></div></div>
+      <div class="itoast">${check}<span>${d.done}</span></div></div>`; },
+    idupe: d => { const I = L.imp; return `<div class="h head">${lines(d.head)}</div><div class="body">
+      <div class="inew"><img src="${d.photo}" alt=""><div><div class="ifl">${I.newp}</div><div class="inn">${d.name}</div><div class="isku">SKU ${d.sku}</div></div></div>
+      <div class="ichk"><span class="ispin">:ph-magnifying-glass.bold:</span><span>${I.checking}</span></div>
+      <div class="iwarn"><div class="iwt">:ph-copy.fill: ${I.exists}</div><div class="iex"><img src="${d.photo}" alt=""><div><div class="inn">${d.existing}</div><div class="isku">ID ${d.id} · SKU ${d.sku}</div></div></div>
+      <div class="ibtns"><div class="ib2 icopy">${I.copy}</div><div class="ib2 iupd">${I.update}</div></div></div>
+      <div class="itoast">${check}<span>${d.done}</span></div></div>`; },
+    iscan: d => { const I = L.imp; return `<div class="h head">${lines(d.head)}</div><div class="body">
+      <div class="iphone"><div class="icam"><div class="itag"><i class="ihole"></i><div class="itg1">${d.tag[0]}</div><div class="itg2">${d.tag[1]}</div><div class="itg3">${d.tag[2]}</div></div>
+      <i class="ibr tl"></i><i class="ibr tr"></i><i class="ibr bl"></i><i class="ibr br"></i><i class="iscanl"></i></div></div>
+      <div class="iread">${[[I.code, d.read[0]], [I.price, d.read[1]], [I.comp, d.read[2]]].map((f, i) => `<div class="irr r${i}"><span class="ifl">${f[0]}</span><span class="irv">${f[1]}</span>${check}</div>`).join('')}</div></div>`; },
+    ivariants: d => { const I = L.imp, n = d.colors.length * d.sizes.length; return `<div class="h head">${lines(d.head)}</div><div class="body"><div class="ivcard">
+      <div class="ivtop"><div class="iph"><img src="${d.photo}" alt=""${d.focus ? ` style="object-position:${d.focus}"` : ''}><i class="iscanl"></i></div>
+      <div class="ivr"><div class="ifl">${I.colorsFound}</div><div class="ivsw">${d.colors.map(c => `<div class="ivc"><i style="background:${c[0]}"></i>${c[1]}</div>`).join('')}</div>
+      <div class="ifl">${I.sizes}</div><div class="ivsz">${d.sizes.map(z => `<span>${z}</span>`).join('')}</div></div></div>
+      <div class="ivgrid" style="grid-template-columns:repeat(${d.sizes.length},1fr)">${d.colors.map(c => d.sizes.map(z => `<div class="ivx"><i style="background:${c[0]}"></i>${z}</div>`).join('')).join('')}</div>
+      <div class="ivtot"><span class="ivn">0</span> ${d.totalWord || I.combos}</div><i class="ivmax" data-n="${n}"></i></div></div>`; },
+    ibatch: d => { const I = L.imp; return `<div class="h head">${lines(d.head)}</div><div class="body"><div class="ibcard">
+      <div class="ishd"><div class="ist">:ph-stack.fill: ${I.queue}</div><div class="ibadge"><span class="ibn">0</span> / ${d.items.length}</div></div>
+      ${d.items.map((it, i) => `<div class="ibrow r${i}"><div class="ibt" style="color:${COLORS[(i + 1) % 5]};background:${COLORS[(i + 1) % 5]}1f">:ph-${it[0]}.fill:</div>
+      <div class="ibname">${it[1]}</div><div class="ibst"><span class="q">${I.queued}</span><span class="w">${I.working}</span><span class="k">${check} ID ${it[2]}</span></div></div>`).join('')}</div></div>`; },
+    iform: d => { const I = L.imp; return `<div class="h head">${lines(d.head)}</div><div class="body"><div class="ifcard">
+      <div class="ishd"><div class="ist">${I.newProduct}</div><div class="ifcnt">1 / ${d.count}</div></div>
+      ${I.formFields.map((f, i) => `<div class="iff"><div class="ifl">${f}</div><div class="ifi">${i === 0 ? '<span class="ity"></span><span class="icur"></span>' : ''}</div></div>`).join('')}</div>
+      <div class="h ibig">${mark(d.big)}</div></div>`; },
     hook: d => {
       const pos = [[60,640],[420,840],[140,1060],[520,1260],[90,1460],[460,1660],[200,1860],[560,2060]];
       const bg = pos.map((p, i) => bubble(L.feed[i][0], L.feed[i][1], i, 'bgb').replace('class="bub bgb"', `class="bub bgb" style="left:${p[0]}px;top:${p[1]}px"`)).join('');
@@ -307,6 +352,15 @@
       if (s.type === 'wtips') $$(el, '.witem').forEach(o => { fitOverflow($(o, '.wtx'), $(o, '.wt'), 30); if ($(o, '.ws')) fitOverflow($(o, '.wtx'), $(o, '.ws'), 24); });
       if (s.type === 'follow') { fitWidth($(el, '.ftag'), 940); fitWidth($(el, '.fbtn'), 900); }
       if (s.type === 'cta') { fitWidth($(el, '.tag'), 960); fitWidth($(el, '.cta'), 900); fitWidth($(el, '.wmtxt'), 900); }
+      // import scenes: stack the cards, then the toast under the last one
+      const below = (a, b, gap) => { b.style.top = (a.offsetTop + a.offsetHeight + gap) + 'px'; };
+      if (s.type === 'icard') { fitOverflow($(el, '.ihd'), $(el, '.iname'), 30); $$(el, '.ifld').forEach(f => fitOverflow(f, $(f, '.ifv'), 22)); below($(el, '.icard'), $(el, '.itoast'), 26); }
+      if (s.type === 'isync') { $$(el, '.isn').forEach(n => fitOverflow(n, n, 22)); below($(el, '.isheet'), $(el, '.itoast'), 26); }
+      if (s.type === 'idupe') { below($(el, '.inew'), $(el, '.ichk'), 22); below($(el, '.ichk'), $(el, '.iwarn'), 22); below($(el, '.iwarn'), $(el, '.itoast'), 26);
+        $$(el, '.inn').forEach(n => fitOverflow(n.parentNode, n, 26)); }
+      if (s.type === 'iscan') { below($(el, '.iphone'), $(el, '.iread'), 30); $$(el, '.irr').forEach(r => fitOverflow(r, $(r, '.irv'), 22)); }
+      if (s.type === 'ibatch') $$(el, '.ibrow').forEach(r => fitOverflow(r, $(r, '.ibname'), 24));
+      if (s.type === 'iform') { below($(el, '.ifcard'), $(el, '.ibig'), 34); fitWidth($(el, '.ibig'), 940); }
       // scrambled letters keep the width of the real ones, so the line does not jitter
       if (fxOf(s.d) === 'scramble') $$(el, '.fxc').forEach(c => { c.style.width = c.getBoundingClientRect().width + 'px'; });
     });
@@ -512,6 +566,91 @@
       tl.to($(el, '.fbtn'), { backgroundColor: DARK ? '#25332F' : '#E5E7EB', color: DARK ? '#F2F6F4' : '#111827', duration: .2 }, T + 1.65);
       cue(T, 'impact'); cue(T + .05, 'chord_end'); cue(T + 1.5, 'click'); cue(T + 1.7, 'ding');
     },
+    // ---- import series ----
+    icard(tl, T, d, el) {
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      tl.from($(el, '.icard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .25);
+      tl.fromTo($(el, '.iscanl'), { top: '-25%', opacity: 1 }, { top: '100%', duration: .8, ease: 'power1.inOut' }, T + .5);
+      tl.to($(el, '.iscanl'), { opacity: 0, duration: .15 }, T + 1.3);
+      tl.from($(el, '.iai'), { scale: .6, opacity: 0, duration: .3, ease: 'back.out(2)', transformOrigin: '0% 50%' }, T + .6);
+      const ty = { n: 0 }, te = $(el, '.ity'), name = d.name;
+      tl.to(ty, { n: name.length, duration: .7, ease: 'none', onUpdate: () => { te.textContent = name.slice(0, Math.round(ty.n)); } }, T + .85);
+      tl.to($(el, '.icur'), { opacity: 0, duration: .1 }, T + 1.6);
+      [...$$(el, '.ifld')].forEach((f, i) => { const t = T + 1.45 + i * .26;
+        tl.from($(f, '.ifv'), { opacity: 0, x: -16, duration: .25, ease: E }, t);
+        tl.to($(f, '.ishim'), { opacity: 0, duration: .25 }, t);
+        cue(t, 'pop_small'); });
+      tl.from($$(el, '.ilang span'), { scale: .5, opacity: 0, duration: .25, stagger: .08, ease: 'back.out(2)' }, T + 2.9);
+      tl.to($(el, '.ipub'), { scale: .9, duration: .1, yoyo: true, repeat: 1 }, T + 3.35); cue(T + 3.35, 'click');
+      tl.from($(el, '.itoast'), { y: 40, opacity: 0, scale: .9, duration: .35, ease: 'back.out(1.8)' }, T + 3.55); cue(T + 3.6, 'ding');
+    },
+    isync(tl, T, d, el) {
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      tl.from($(el, '.ifile'), { x: -260, opacity: 0, duration: .45, ease: E }, T + .3); cue(T + .3, 'pop_down');
+      tl.from($(el, '.isheet'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .7);
+      tl.from($$(el, '.isr'), { opacity: 0, x: -30, duration: .25, stagger: .1, ease: E }, T + 1.0);
+      [...$$(el, '.isr:not(.hd)')].forEach((r, i) => { const t = T + 1.75 + i * .28;
+        tl.from($$(r, '.isv b'), { opacity: 0, x: -14, duration: .22, stagger: .06 }, t);
+        tl.fromTo(r, { backgroundColor: 'rgba(17,185,129,.18)' }, { backgroundColor: 'rgba(17,185,129,0)', duration: .6 }, t);
+        cue(t, 'tick_soft'); });
+      tl.to($(el, '.isave'), { scale: .9, duration: .1, yoyo: true, repeat: 1 }, T + 3.2); cue(T + 3.2, 'click');
+      tl.from($(el, '.itoast'), { y: 40, opacity: 0, scale: .9, duration: .35, ease: 'back.out(1.8)' }, T + 3.4); cue(T + 3.45, 'ding');
+    },
+    idupe(tl, T, d, el) {
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      tl.from($(el, '.inew'), { y: 70, opacity: 0, duration: .4, ease: E }, T + .3);
+      tl.from($(el, '.ichk'), { opacity: 0, y: 20, duration: .3 }, T + .8);
+      tl.to($(el, '.ispin'), { rotation: 360, duration: .7, ease: 'none', transformOrigin: '50% 50%' }, T + .85);
+      tl.from($(el, '.iwarn'), { y: 70, opacity: 0, scale: .96, duration: .45, ease: 'back.out(1.5)' }, T + 1.45); cue(T + 1.45, 'impact_soft');
+      tl.to($(el, '.iupd'), { scale: .9, duration: .1, yoyo: true, repeat: 1 }, T + 2.55); cue(T + 2.55, 'click');
+      tl.to($(el, '.icopy'), { opacity: .3, duration: .25 }, T + 2.6);
+      tl.from($(el, '.itoast'), { y: 40, opacity: 0, scale: .9, duration: .35, ease: 'back.out(1.8)' }, T + 2.8); cue(T + 2.85, 'ding');
+    },
+    iscan(tl, T, d, el) {
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      tl.from($(el, '.iphone'), { y: 90, opacity: 0, duration: .45, ease: E }, T + .25);
+      tl.from($(el, '.itag'), { rotation: -14, scale: .85, opacity: 0, duration: .45, ease: 'back.out(1.6)' }, T + .45);
+      tl.from($$(el, '.ibr'), { scale: 1.6, opacity: 0, duration: .3, stagger: .05, ease: E }, T + .8);
+      tl.fromTo($(el, '.iscanl'), { top: '12%', opacity: 1 }, { top: '84%', duration: .5, repeat: 1, yoyo: true, ease: 'sine.inOut' }, T + 1.0);
+      tl.to($(el, '.iscanl'), { opacity: 0, duration: .15 }, T + 2.0);
+      [...$$(el, '.irr')].forEach((r, i) => { const t = T + 1.55 + i * .32;
+        tl.from(r, { x: 80, opacity: 0, duration: .35, ease: E }, t);
+        tl.from($(r, 'svg'), { scale: 0, duration: .25, ease: 'back.out(2.4)' }, t + .2); cue(t + .2, 'pop'); });
+    },
+    ivariants(tl, T, d, el) {
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      tl.from($(el, '.ivcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .25);
+      tl.fromTo($(el, '.iscanl'), { top: '-25%', opacity: 1 }, { top: '100%', duration: .7, ease: 'power1.inOut' }, T + .45);
+      tl.to($(el, '.iscanl'), { opacity: 0, duration: .15 }, T + 1.15);
+      [...$$(el, '.ivc')].forEach((c, i) => { tl.from(c, { scale: .5, opacity: 0, duration: .28, ease: 'back.out(2)' }, T + .95 + i * .18); cue(T + .95 + i * .18, 'pop_small'); });
+      tl.from($$(el, '.ivsz span'), { scale: .5, opacity: 0, duration: .22, stagger: .07, ease: 'back.out(2)' }, T + 1.6);
+      const cells = $$(el, '.ivx'), n = cells.length;
+      tl.from(cells, { scale: .4, opacity: 0, duration: .22, stagger: .045, ease: 'back.out(2)' }, T + 2.05);
+      const c = { v: 0 }, ce = $(el, '.ivn');
+      tl.to(c, { v: n, duration: .045 * n + .2, ease: 'none', onUpdate: () => { ce.textContent = Math.round(c.v); } }, T + 2.05);
+      for (let k = 0; k < n; k += 2) cue(T + 2.05 + k * .045, 'tick_soft');
+      tl.from($(el, '.ivtot'), { scale: .7, duration: .3, ease: 'back.out(2)' }, T + 2.05);
+    },
+    ibatch(tl, T, d, el) {
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      tl.from($(el, '.ibcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .25);
+      tl.from($$(el, '.ibrow'), { x: 60, opacity: 0, duration: .25, stagger: .07, ease: E }, T + .45);
+      const c = { v: 0 }, ce = $(el, '.ibn');
+      [...$$(el, '.ibrow')].forEach((r, i) => { const t = T + .95 + i * .42;
+        tl.to($(r, '.q'), { opacity: 0, duration: .1 }, t).fromTo($(r, '.w'), { opacity: 0 }, { opacity: 1, duration: .1 }, t);
+        tl.to($(r, '.w'), { opacity: 0, duration: .1 }, t + .32).fromTo($(r, '.k'), { opacity: 0, scale: .6 }, { opacity: 1, scale: 1, duration: .25, ease: 'back.out(2)' }, t + .32);
+        tl.to(c, { v: i + 1, duration: .05, onUpdate: () => { ce.textContent = Math.round(c.v); } }, t + .32);
+        cue(t + .32, i % 2 ? 'pop' : 'pop_small'); });
+    },
+    iform(tl, T, d, el) {
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      tl.from($(el, '.ifcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .25);
+      const ty = { n: 0 }, te = $(el, '.ity'), txt = d.typed;
+      tl.to(ty, { n: txt.length, duration: 1.6, ease: 'none', onUpdate: () => { te.textContent = txt.slice(0, Math.round(ty.n)); } }, T + .7);
+      for (let k = 0; k < 10; k++) cue(T + .7 + k * .16, 'tick');
+      tl.to($(el, '.icur'), { opacity: 0, duration: .15, repeat: 9, yoyo: true, ease: 'steps(1)' }, T + .5);
+      tl.from($(el, '.ibig'), { scale: .5, opacity: 0, duration: .45, ease: 'back.out(1.7)', transformOrigin: '0% 50%' }, T + 2.25); cue(T + 2.25, 'impact_soft');
+    },
     hook(tl, T, d, el, dur) {
       tl.fromTo($$(el, '.bgb'), { y: 0 }, { y: -620, duration: dur, ease: 'none' }, T);
       tl.to($(el, '.live .dot'), { scale: 1.5, opacity: .35, duration: .22, repeat: 1, yoyo: true }, T + .2);
@@ -635,7 +774,7 @@
     gsap.set(['#wipe', '#wipe2'], { yPercent: 100 });
     const tl = gsap.timeline({ paused: true });
     let t = 0;
-    const calm = new Set(['cover', 'hook', 'codes', 'pain', 'wtitle']);
+    const calm = new Set(['cover', 'hook', 'codes', 'pain', 'wtitle', 'iform']);
     cues.drop = null;
     cues.music = EP.music || null;   // optional per-episode soundtrack variant, read by scripts/music.py
     scenes.forEach((s, i) => {

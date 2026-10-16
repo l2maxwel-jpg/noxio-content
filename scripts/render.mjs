@@ -45,8 +45,12 @@ for (const s of ep.scenes) for (const o of [].concat(s.lottie || [])) {
 }
 // Phosphor icons named in the episode (":ph-name:" / ":ph-name.fill:" in texts, the third field of a wtips item).
 const PH = {};
-const icons = [...JSON.stringify(ep).matchAll(/:ph-([a-z0-9-]+)(?:\.(bold|fill|duotone|regular|light|thin))?:/g)].map(m => [m[1], m[2] || 'bold']);
+// The template's own scenes use some too (import series), and an ibatch item names its icon in its first field.
+const PHRE = /:ph-([a-z0-9-]+)(?:\.(bold|fill|duotone|regular|light|thin))?:/g;
+const tplText = ['template/template.js', 'template/l10n.js'].map(f => readFileSync(path.join(root, f), 'utf8')).join('\n');
+const icons = [...JSON.stringify(ep).matchAll(PHRE), ...tplText.matchAll(PHRE)].filter(m => !m[1].includes('$')).map(m => [m[1], m[2] || 'bold']);
 for (const s of ep.scenes) if (s.type === 'wtips') for (const it of s.items || []) if (it[2]) { const [n, w] = it[2].split('.'); icons.push([n, w || 'bold']); }
+for (const s of ep.scenes) if (s.type === 'ibatch') for (const it of s.items || []) icons.push([it[0], 'fill']);
 for (const [n, w] of icons) {
   const f = path.join(root, 'node_modules/@phosphor-icons/core/assets', w, w === 'regular' ? `${n}.svg` : `${n}-${w}.svg`);
   if (!existsSync(f)) throw new Error(`Phosphor icon ${n} (${w}) does not exist`);

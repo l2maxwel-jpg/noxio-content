@@ -1,0 +1,57 @@
+{
+ "id": "p04",
+ "lang": "pl",
+ "series": "import",
+ "theme": "dark",
+ "angle": "import-label-scan",
+ "scenes": [
+  {
+   "type": "cover",
+   "video": "mixkit:42134",
+   "layout": "dark",
+   "head": [
+    "Przyszła dostawa?",
+    "[Zeskanuj metkę]"
+   ],
+   "sub": "Kod, cena i skład — aparatem telefonu",
+   "dur": 2.6
+  },
+  {
+   "type": "iscan",
+   "head": [
+    "Kod, cena, skład —",
+    "[prosto z metki]"
+   ],
+   "tag": [
+    "KOD 4471",
+    "129,00 zł",
+    "95% bawełna<br>5% elastan"
+   ],
+   "read": [
+    "4471",
+    "129,00 zł",
+    "95% bawełna, 5% elastan"
+   ]
+  },
+  {
+   "type": "offer",
+   "big": "14",
+   "l2": "dni",
+   "l3": "bez opłat",
+   "pills": [
+    "potem 149,99 zł/mies.",
+    "bez karty"
+   ]
+  },
+  {
+   "type": "cta",
+   "tag": "Metka → karta produktu",
+   "button": "Sprawdź: noxio.pl",
+   "small": "Import produktów PrestaShop"
+  }
+ ],
+ "music": {
+  "track": "mixkit:782",
+  "start": 73.31
+ }
+}

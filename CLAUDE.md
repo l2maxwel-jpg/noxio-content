@@ -76,6 +76,28 @@ follow card instead of the offer.
   `showReelOnFeed: false` (Reels tab only, not the profile grid), Facebook REEL, `videoCoverMilliseconds: 2600`,
   `autoPublish: true`.
 
+## Import series (second product)
+
+Noxio also sells **Import produktów PrestaShop**, a separate tool with its own subscription, for adding products to a
+PrestaShop shop quickly (noxio.pl → Narzędzia). Price (confirmed on noxio.pl by Maxim, 2026-10-16): **149,99 zł/month**,
+14-day free trial, no card. Don't mix it with the live-orders plans or the "up to 3 streams" offer.
+- Safe to show: AI writes the product card from a photo (name, description, category matching, colour, sizes,
+  composition), variants (combinations of colours and sizes), publishing to the shop, batch import of many photos,
+  label scanning (code, price, composition read from a tag), duplicate detection before publishing, sync with a
+  supplier's file (prices and stock by SKU), quantity discounts, SEO fields, import history, catalogue export.
+  Steps: connect the shop → add photos → AI fills the card → publish.
+- **Not yet**: "Zdjęcie studyjne AI", "Zdjęcie na modelu AI", "Przeniesienie na górę kategorii" were seen only on a test
+  site — don't show them until Maxim confirms they are live. No multi-language claims either until confirmed.
+- PrestaShop is named in text only: never its logo, admin screens or colours. The template draws our own cards.
+- Files `episodes/pNN.json` with `"series": "import"`, 10–15 s: `cover` (a Mixkit clip) → one scene of `icard` (photo →
+  card → publish), `isync` (supplier file → updated prices/stock), `idupe` (duplicate found → update instead of a copy),
+  `iscan` (label → fields), `ivariants` (colours from the photo × sizes → combinations), `iform` + `ibatch` (a long form →
+  a queue of cards) → `offer` (14 days, pills with the price and "no card") → `cta` (tag naming the tool). Each episode
+  brings its own products, ids and texts in the scene (strings in `l10n.js` under `imp`); new features get new scenes.
+- Slots: Tuesday and Saturday 12:00 (Europe/Warsaw), languages in turn PL, RU, EN, PL, LV, RU. Feed **and** Reels:
+  Instagram REEL with `showReelOnFeed: true` + Facebook REEL, `autoPublish: true`, the cover still as the thumbnail.
+  Captions say the price, the trial and where to find it. Same uniqueness rules as the ads (`check_unique.mjs`).
+
 ## Clips, animations, icons, text effects
 
 All of these are free for business use without credits on screen; never show a source, author or watermark.

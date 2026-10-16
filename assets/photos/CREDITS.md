@@ -28,3 +28,6 @@ Unsplash License. Kept for the record; not shown on the videos.
 | e28 | Cayley Nossiter | https://images.unsplash.com/photo-1539343915366-4da26f7a1f2c |
 | e27 | Julia Rekamie | https://images.unsplash.com/photo-1606902965551-dce093cda6e7 |
 | e23 | Amanda Vick | https://images.unsplash.com/photo-1551232864-3f0890e580d9 |
+| p01 | Shelter | https://images.unsplash.com/photo-1621198059871-0d5f9b449233 |
+| p03 | mostafa mahmoudi | https://images.unsplash.com/photo-1605733513597-a8f8341084e6 |
+| p05 | Meg MacDonald | https://images.unsplash.com/photo-1646270968745-05e006d5bdd1 |

@@ -13,9 +13,11 @@
 // Warm-up series episodes (wNN, "series": "warmup") share one format on purpose, so their scene order is not
 // compared; instead any repeated text line (a head, tip, option, claim, punchline…) in one language and a repeated
 // title emoji fail.
+// Import series episodes (pNN, "series": "import") are compared like ads; their products are the names in the import
+// scenes (same names in one language fail) and the product photos in those scenes are never reused.
 // Warns on the same music variant within 7 days, on the same Lottie accent within 7 days, on reused cta tags and on
 // episodes without an `angle`. A Lottie that replaces a warm-up's title emoji counts as its emoji (never reused).
-// Usage: node scripts/check_unique.mjs [eNN|wNN ...]   (ids limit the report to pairs that involve them)
+// Usage: node scripts/check_unique.mjs [eNN|wNN|pNN ...]   (ids limit the report to pairs that involve them)
 import fs from 'fs';
 import path from 'path';
 import vm from 'vm';
@@ -32,7 +34,7 @@ const plan = JSON.parse(fs.readFileSync(path.join(ROOT, 'episodes/plan.json'), '
 const status = Object.fromEntries(plan.map(e => [e.id, e.status]));
 const credits = {};
 for (const line of fs.readFileSync(path.join(ROOT, 'assets/photos/CREDITS.md'), 'utf8').split('\n')) {
-  const m = line.match(/^\|\s*([ew]\d+)\s*\|\s*([^|]+?)\s*\|/);
+  const m = line.match(/^\|\s*([ewp]\d+)\s*\|\s*([^|]+?)\s*\|/);
   if (m) credits[m[1]] = m[2];
 }
 const only = new Set(process.argv.slice(2));
@@ -44,7 +46,12 @@ const HEADS = { cover: d => d.head, hook: d => [...(d.setup || []), d.p1, d.p2],
   sendlink: d => d.head, pain: d => [...(d.head || []), d.big], solution: d => d.head, ai: d => d.head, connect: d => d.head,
   messenger: d => [...(d.head || []), d.sub], group: d => d.head, excel: d => d.head, review: d => d.head, merge: d => d.head,
   setup: d => d.head, wtitle: d => [...(d.head || []), d.sub], wtips: d => d.head, wquiz: d => d.head, wpov: d => [...(d.head || []), ...(d.punch || [])],
-  wmyth: d => [...(d.head || []), d.claim] };
+  wmyth: d => [...(d.head || []), d.claim],
+  icard: d => d.head, isync: d => d.head, idupe: d => d.head, iscan: d => d.head, ivariants: d => d.head, ibatch: d => d.head,
+  iform: d => [...(d.head || []), d.big] };
+// Products an import scene shows (the names on its cards).
+const IMP = { icard: d => [d.name], isync: d => (d.rows || []).map(r => r[1]), idupe: d => [d.name], iscan: d => d.read || [],
+  ivariants: d => (d.colors || []).map(c => [].concat(c).pop()), ibatch: d => (d.items || []).map(i => i[1]) };
 // Every text line a warm-up shows (comments under a POV are left out: short "+" or "беру!" repeat naturally).
 const WTEXT = s => [(s.head || []).join(' '), s.sub, ...(s.items || []).flat(), ...(s.options || []), (s.punch || []).join(' '), s.claim, s.truth]
   .filter(Boolean).map(norm).filter(t => t.length >= 10);
@@ -57,7 +64,7 @@ const music = (id, m = {}) => { if (m.track) return `track ${String(m.track).rep
 // calendar days (the local date in plan.json), so 26.10 -> 09.11 is 14 days whatever the hour or DST
 const dates = Object.fromEntries(plan.map(e => [e.id, e.date ? new Date(e.date.slice(0, 10) + 'T00:00:00Z') : null]));
 
-const eps = fs.readdirSync(path.join(ROOT, 'episodes')).filter(f => /^[ew]\d+\.json$/.test(f)).map(f => {
+const eps = fs.readdirSync(path.join(ROOT, 'episodes')).filter(f => /^[ewp]\d+\.json$/.test(f)).map(f => {
   const ep = JSON.parse(fs.readFileSync(path.join(ROOT, 'episodes', f), 'utf8'));
   const st = status[ep.id] || 'new';
   if (st === 'retired') return null;
@@ -79,6 +86,8 @@ const eps = fs.readdirSync(path.join(ROOT, 'episodes')).filter(f => /^[ew]\d+\.j
     const o = origin(k);
     products[k] = o.startsWith('own:') ? `${lang}:${key}` : `${o}:${k}`;   // niche/default sets are translations: no lang
   }
+  const imp = scenes.flatMap(s => IMP[s.type] ? IMP[s.type](s) : []).map(norm).filter(Boolean);
+  if (imp.length) products.imp = `${lang}:${[...new Set(imp)].sort().join('|')}`;
   const cover = scenes.find(s => s.type === 'cover');
   return { id: ep.id, lang, st, ep, scenes, products,
     order: scenes.map(s => s.type + (s.only ? `:${s.only}` : '')).join('>'),
@@ -86,6 +95,7 @@ const eps = fs.readdirSync(path.join(ROOT, 'episodes')).filter(f => /^[ew]\d+\.j
     clip: cover && cover.video ? +String(cover.video).replace(/^mixkit:/, '') : null,
     lotties: new Set(scenes.filter(s => s.type !== 'wtitle').flatMap(s => [].concat(s.lottie || []).map(o => typeof o === 'string' ? o : o.src))),
     author: credits[ep.id] || null,
+    pphotos: new Set(scenes.filter(s => s.type !== 'cover' && s.photo).map(s => path.basename(s.photo))),
     coverHead: cover && cover.head ? norm(cover.head.join(' ')) : null,
     heads: scenes.filter(s => s.type !== 'cover' && HEADS[s.type]).map(s => `${s.type}:${norm(HEADS[s.type](s).filter(Boolean).join(' '))}`),
     cta: norm((scenes.find(s => s.type === 'cta') || {}).tag),
@@ -110,6 +120,7 @@ for (let i = 0; i < eps.length; i++) for (let j = i + 1; j < eps.length; j++) {
   if (a.emoji && a.emoji === b.emoji) report(a, b, `same title emoji ${a.emoji}`);
   if (a.clip && b.clip && Math.abs(a.clip - b.clip) <= 20) report(a, b, a.clip === b.clip ? `same cover clip mixkit:${a.clip}` : `cover clips mixkit:${a.clip} and mixkit:${b.clip} come from one Mixkit shoot`);
   if (days < 7) { const dup = [...a.lotties].filter(x => b.lotties.has(x)); if (dup.length) report(a, b, `same Lottie ${dup.join(', ')} ${days.toFixed(0)} days apart`, false); }
+  { const dup = [...a.pphotos].filter(x => b.pphotos.has(x) || x === b.photo); if (dup.length) report(a, b, `same product photo ${dup.join(', ')}`); }
   if (a.photo && a.photo === b.photo) report(a, b, `same cover photo ${a.photo}`);
   else if (a.author && a.author === b.author) report(a, b, `cover photos by the same author (${a.author}) — a photo series`);
   if (same && a.coverHead && a.coverHead === b.coverHead) report(a, b, `same cover headline "${a.coverHead}"`);

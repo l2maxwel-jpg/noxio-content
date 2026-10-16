@@ -1538,7 +1538,133 @@
    "autoPublish": true,
    "coverMs": 2600,
    "angle": "warm-myth-actress"
+  },
+  {
+   "id": "p01",
+   "lang": "pl",
+   "series": "import",
+   "date": "2026-10-20T12:00:00",
+   "offset": "+02:00",
+   "title": "Import: Jedno zdjęcie — gotowa karta",
+   "caption": "Jedno zdjęcie produktu — i AI wypełnia kartę: nazwa, opis, kategoria, kolor, rozmiary, skład 📸\nSprawdzasz i publikujesz w swoim sklepie PrestaShop.\nImport produktów PrestaShop od Noxio: 14 dni za darmo, bez karty, potem 149,99 zł/mies. 👉 noxio.pl\n#prestashop #sklepinternetowy #ecommerce #noxio",
+   "file": "videos/p01.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/p01.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/p01.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/p01.jpg",
+   "aiGenerated": false,
+   "autoPublish": true,
+   "angle": "import-photo-to-card"
+  },
+  {
+   "id": "p02",
+   "lang": "ru",
+   "series": "import",
+   "date": "2026-10-24T12:00:00",
+   "offset": "+02:00",
+   "title": "Импорт: новый прайс поставщика",
+   "caption": "Новый прайс от поставщика? Загрузите файл — Noxio обновит цены и остатки в PrestaShop по SKU 📄\nБез ручной правки каждой карточки.\nИмпорт товаров PrestaShop от Noxio: 14 дней бесплатно, без карты, далее 149,99 zł/мес. 👉 noxio.pl\n#prestashop #интернетмагазин #ecommerce #noxio",
+   "file": "videos/p02.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/p02.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/p02.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/p02.jpg",
+   "aiGenerated": false,
+   "autoPublish": true,
+   "angle": "import-supplier-sync"
+  },
+  {
+   "id": "p03",
+   "lang": "en",
+   "series": "import",
+   "date": "2026-10-27T12:00:00",
+   "offset": "+01:00",
+   "title": "Import: no duplicates",
+   "caption": "Adding a product you already sell? Noxio checks your PrestaShop shop first and offers to update the existing card instead of creating a duplicate 🔍\nImport produktów PrestaShop by Noxio: 14 days free, no card, then 149,99 zł/month 👉 noxio.pl\n#prestashop #ecommerce #onlineshop #noxio",
+   "file": "videos/p03.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/p03.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/p03.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/p03.jpg",
+   "aiGenerated": false,
+   "autoPublish": true,
+   "angle": "import-duplicates"
+  },
+  {
+   "id": "p04",
+   "lang": "pl",
+   "series": "import",
+   "date": "2026-10-31T12:00:00",
+   "offset": "+01:00",
+   "title": "Import: Zeskanuj metkę",
+   "caption": "Przyszła dostawa? Zeskanuj metkę telefonem — kod, cena i skład trafiają prosto do karty produktu 🏷️\nImport produktów PrestaShop od Noxio: 14 dni bez opłat, bez karty, potem 149,99 zł/mies. 👉 noxio.pl\n#prestashop #sklepinternetowy #dostawa #noxio",
+   "file": "videos/p04.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/p04.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/p04.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/p04.jpg",
+   "aiGenerated": false,
+   "autoPublish": true,
+   "angle": "import-label-scan"
+  },
+  {
+   "id": "p05",
+   "lang": "lv",
+   "series": "import",
+   "date": "2026-11-03T12:00:00",
+   "offset": "+01:00",
+   "title": "Imports: krāsas × izmēri",
+   "caption": "Viena prece, trīs krāsas, četri izmēri — 12 kombinācijas 🎨\nKrāsas no foto, izmēri — un Noxio izveido visas kombinācijas jūsu PrestaShop veikalam.\nPrestaShop preču imports no Noxio: 14 dienas bez maksas, bez kartes, pēc tam 149,99 zł/mēn. 👉 noxio.pl\n#prestashop #internetveikals #ecommerce #noxio",
+   "file": "videos/p05.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/p05.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/p05.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/p05.jpg",
+   "aiGenerated": false,
+   "autoPublish": true,
+   "angle": "import-variants"
+  },
+  {
+   "id": "p06",
+   "lang": "ru",
+   "series": "import",
+   "date": "2026-11-07T12:00:00",
+   "offset": "+01:00",
+   "title": "Импорт: фото пачкой",
+   "caption": "50 новых товаров — это 50 одинаковых форм: название, описание, категория, варианты… 📦\nС Noxio вы загружаете фото пачкой, а карточки для PrestaShop AI заполняет сам.\nИмпорт товаров PrestaShop от Noxio: 14 дней бесплатно, без карты, далее 149,99 zł/мес. 👉 noxio.pl\n#prestashop #интернетмагазин #ecommerce #noxio",
+   "file": "videos/p06.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/p06.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "status": "planned",
+   "cover": "assets/covers/p06.jpg",
+   "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/p06.jpg",
+   "aiGenerated": false,
+   "autoPublish": true,
+   "angle": "import-batch"
   }
  ],
- "schedule": "Mon/Thu: RU 10:00 + PL 14:00 (different videos); Wed: LV 10:00; Fri: EN 10:00 (Europe/Warsaw). Each language gets its own episode, never a translation of another."
+ "schedule": "Mon/Thu: RU 10:00 + PL 14:00 (different videos); Wed: LV 10:00; Fri: EN 10:00 (Europe/Warsaw). Each language gets its own episode, never a translation of another. Import series (Import produktów PrestaShop): Tue/Sat 12:00, PL/RU/EN/PL/LV/RU in turn, feed + Reels."
 }

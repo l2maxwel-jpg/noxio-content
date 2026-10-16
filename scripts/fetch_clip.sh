@@ -28,7 +28,7 @@ fi
 read -r W H D <<< "$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height:format=duration -of csv=p=0 "$OUT" | tr ',\n' '  ')"
 [ "$H" -gt "$W" ] || echo "warning: clip $ID is not vertical (${W}x${H}); the cover crops its middle" >&2
 # contact sheet: 6 frames across the clip
-ffmpeg -hide_banner -loglevel error -y -i "$OUT" -vf "fps=6/$D,scale=270:-2,tile=6x1:padding=6:color=white" -frames:v 1 "build/mixkit/${ID}_sheet.jpg"
+ffmpeg -nostdin -hide_banner -loglevel error -y -i "$OUT" -vf "fps=6/$D,scale=270:-2,tile=6x1:padding=6:color=white" -frames:v 1 "build/mixkit/${ID}_sheet.jpg"
 if [ "$EP" != "-" ]; then
   [ -f assets/clips.md ] || printf '# Cover clips\n\nMixkit Stock Video Free License (commercial use, no attribution). The clips are not kept in the repo;\nscripts/render.mjs downloads them from the page below. Kept for the record; not shown on the videos.\n\n| Episode | Mixkit id | Page |\n| --- | --- | --- |\n' > assets/clips.md
   grep -v "^| $EP |" assets/clips.md > build/clips.tmp || true

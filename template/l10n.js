@@ -3,6 +3,8 @@
 // Feed index meaning (keep in every language): 0,1,3,4 = orders (table rows 0..3); 2,5 = questions (filtered out).
 window.L10N = {
   ru: {
+    // PrestaShop product import series (pNN)
+    imp: { ai: 'AI заполняет карточку', desc: 'Описание', publish: 'Опубликовать', published: 'Опубликовано', preview: 'Предпросмотр изменений', bySku: 'по SKU', save: 'Сохранить', newp: 'Новый товар', checking: 'Проверяю магазин…', exists: 'Такой товар уже есть в магазине', copy: 'Создать копию', update: 'Обновить', code: 'Код', price: 'Цена', comp: 'Состав', colorsFound: 'Цвета с фото', sizes: 'Размеры', combos: 'комбинаций', queue: 'Очередь импорта', queued: 'в очереди', working: 'AI заполняет…', newProduct: 'Новый товар', formFields: ['Название', 'Кратко', 'Описание', 'Категория', 'Комбинации'] },
     live: { on: 'В ЭФИРЕ', off: 'ЭФИР ЗАВЕРШЁН' },
     feed: [['Оля','Беру синее платье, M'],['Марина','Мне 2 красных топа, S'],['Катя','Сколько стоит бежевая?'],['Света','Отложите куртку, L!'],['Наташа','+ чёрные брюки, 42'],['Ирина','А синее ещё есть?'],['Оксана','Беру сумку!'],['Лена','Мне шарф серый ×2'],['Юля','Какая длина у платья?'],['Таня','Беру! M'],['Вика','Красный топ, M'],['Аня','Отложите мне белую'],['Даша','Сколько доставка?'],['Галина','Беру 2 шт']],
     table: { title: 'Заказы · эфир', cols: ['Покупатель','Товар','Размер','Кол-во'],
@@ -39,6 +41,8 @@ window.L10N = {
     }
   },
   lv: {
+    // PrestaShop product import series (pNN)
+    imp: { ai: 'AI aizpilda kartīti', desc: 'Apraksts', publish: 'Publicēt', published: 'Publicēts', preview: 'Izmaiņu priekšskatījums', bySku: 'pēc SKU', save: 'Saglabāt', newp: 'Jauna prece', checking: 'Pārbaudu veikalu…', exists: 'Šī prece jau ir veikalā', copy: 'Izveidot kopiju', update: 'Atjaunināt', code: 'Kods', price: 'Cena', comp: 'Sastāvs', colorsFound: 'Krāsas no foto', sizes: 'Izmēri', combos: 'kombinācijas', queue: 'Importa rinda', queued: 'rindā', working: 'AI aizpilda…', newProduct: 'Jauna prece', formFields: ['Nosaukums', 'Īsi', 'Apraksts', 'Kategorija', 'Kombinācijas'] },
     live: { on: 'TIEŠRAIDĒ', off: 'TIEŠRAIDE BEIGUSIES' },
     feed: [['Anna','Ņemu zilo kleitu, M'],['Ilze','Man 2 sarkanos topus, S'],['Laura','Cik maksā bēšā?'],['Sanita','Atlieciet jaku, L!'],['Inese','+ melnās bikses, 42'],['Liene','Vai zilā vēl ir?'],['Kristīne','Ņemu somu!'],['Elīna','Man pelēko šalli ×2'],['Dace','Cik gara ir kleita?'],['Agnese','Ņemu! M'],['Zane','Sarkano topu, M'],['Evija','Atlieciet man balto'],['Marta','Cik maksā piegāde?'],['Linda','Ņemu 2 gab.']],
     table: { title: 'Pasūtījumi · tiešraide', cols: ['Pircējs','Prece','Izmērs','Daudz.'],
@@ -75,6 +79,8 @@ window.L10N = {
     }
   },
   pl: {
+    // PrestaShop product import series (pNN)
+    imp: { ai: 'AI wypełnia kartę', desc: 'Opis', publish: 'Publikuj', published: 'Opublikowano', preview: 'Podgląd zmian', bySku: 'po SKU', save: 'Zapisz', newp: 'Nowy produkt', checking: 'Sprawdzam sklep…', exists: 'Ten produkt już jest w sklepie', copy: 'Utwórz kopię', update: 'Zaktualizuj', code: 'Kod', price: 'Cena', comp: 'Skład', colorsFound: 'Kolory ze zdjęcia', sizes: 'Rozmiary', combos: 'kombinacji', queue: 'Kolejka importu', queued: 'w kolejce', working: 'AI wypełnia…', newProduct: 'Nowy produkt', formFields: ['Nazwa', 'Opis krótki', 'Opis', 'Kategoria', 'Kombinacje'] },
     live: { on: 'NA ŻYWO', off: 'LIVE ZAKOŃCZONY' },
     feed: [['Ola','Biorę niebieską sukienkę, M'],['Kasia','Poproszę 2 czerwone topy, S'],['Magda','Ile kosztuje beżowa?'],['Ewa','Odłóżcie mi kurtkę, L!'],['Asia','+ czarne spodnie, 42'],['Ania','Czy niebieska jest jeszcze?'],['Monika','Biorę torebkę!'],['Basia','Szary szal ×2'],['Gosia','Jaka długość sukienki?'],['Iza','Biorę! M'],['Ula','Czerwony top, M'],['Natalia','Odłóżcie mi białą'],['Karolina','Ile kosztuje wysyłka?'],['Justyna','Biorę 2 szt.']],
     table: { title: 'Zamówienia · live', cols: ['Kupujący','Produkt','Rozmiar','Ilość'],
@@ -111,6 +117,8 @@ window.L10N = {
     }
   },
   en: {
+    // PrestaShop product import series (pNN)
+    imp: { ai: 'AI fills the card', desc: 'Description', publish: 'Publish', published: 'Published', preview: 'Preview of changes', bySku: 'by SKU', save: 'Save', newp: 'New product', checking: 'Checking your shop…', exists: 'Already in your shop', copy: 'Create a copy', update: 'Update', code: 'Code', price: 'Price', comp: 'Composition', colorsFound: 'Colours from the photo', sizes: 'Sizes', combos: 'combinations', queue: 'Import queue', queued: 'queued', working: 'AI filling…', newProduct: 'New product', formFields: ['Name', 'Summary', 'Description', 'Category', 'Combinations'] },
     live: { on: 'LIVE', off: 'LIVE ENDED' },
     feed: [['Emma','I’ll take the blue dress, M'],['Sophie','2 red tops for me, S'],['Mia','How much is the beige one?'],['Grace','Hold the jacket for me, L!'],['Chloe','+ black trousers, 42'],['Lily','Is the blue one still there?'],['Ava','I’ll take the bag!'],['Ella','Grey scarf ×2'],['Amy','How long is the dress?'],['Zoe','Mine! M'],['Ruby','Red top, M'],['Kate','Hold the white one for me'],['Lucy','How much is shipping?'],['Jess','I’ll take 2']],
     table: { title: 'Orders · live', cols: ['Buyer','Item','Size','Qty'],

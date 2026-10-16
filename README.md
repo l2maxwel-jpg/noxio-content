@@ -11,6 +11,7 @@ soundtrack is timed to the cuts.
 | `template/` | HTML/CSS/GSAP template: `template.js` (scenes + timeline), `l10n.js` (RU/LV/PL/EN strings and default copy), `niches.js` (product sets: cosmetics, shoes, kids, accessories, home), `style.css` (Noxio light and dark themes: #11B981, #0098B7, Inter) |
 | `episodes/eNN.json` | One ad episode: `lang` and an ordered list of `scenes` with optional text overrides |
 | `episodes/wNN.json` | One warm-up Reel (series `warmup`, Reels tab only) |
+| `episodes/pNN.json` | One Reel for Import produktów PrestaShop (series `import`, feed + Reels) |
 | `episodes/plan.json` | Publishing plan: date, caption, cover frame, video URL and status per episode |
 | `scripts/make_episode.sh` | Render one episode end to end into `videos/<id>.mp4` |
 | `scripts/preview_all.sh` | Key-frame contact sheets in `build/` for checking layouts before a full render |
@@ -41,6 +42,12 @@ Warm-up series (`episodes/wNN.json`, `"series": "warmup"`): `wtitle` (`fmt` tip|
 `emoji`, `head`, `sub`), `wtips` (`head`, `items` = [title, sub], `"style": "x"` for mistakes), `wquiz` (`head`, `options`,
 `ask`), `wpov` (`head`, `comments`, `punch`), `wmyth` (`claim`, `truth`, `"verdict": "truth"` for a true statement) and
 `follow` (`tag`, `button`, `small`; defaults in `l10n.js` under `warm`). Their content lives in the scene itself.
+Import series (`episodes/pNN.json`, `"series": "import"`; UI strings in `l10n.js` under `imp`): `icard` (`photo`, `name`, `sku`,
+`fields` = [label, value] where a value is text, `"#hex|text"` for a colour swatch or an array of chips, `desc`, `id`),
+`isync` (`file`, `cols`, `rows` = [sku, name, old price, new price, old stock, new stock], `done`), `idupe` (`photo`, `name`,
+`sku`, `existing`, `id`, `done`), `iscan` (`tag` = lines on the label, `read` = values read into code/price/composition),
+`ivariants` (`photo`, `colors` = [hex, name], `sizes`, `totalWord`), `iform` (`typed`, `count`, `big`) and `ibatch`
+(`items` = [Phosphor icon, name, id]). All take `head`.
 Emoji in any text are swapped for Noto SVGs from `assets/emoji/` (`scripts/emoji.py` extracts them; run by the build scripts).
 `cover` is a stock photo or a Mixkit clip (`"video": "mixkit:<id>"`, optional `clipStart`, `rate`, `cropX`) with our logo, headline and sub (`"photo": "../assets/photos/eNN.jpg"`, `"head"`, `"sub"`, optional
 `"layout": "light"|"dark"`, `"focus"` for object-position) with a slow zoom; `make_episode.sh` saves a still of it as

@@ -7,7 +7,7 @@ Candidates are the instrumental tracks in build/music/candidates.json (fetch the
 scripts/fetch_music.py <id> <list page> --try — a few at a time, Mixkit rate-limits). Tracks that another live episode uses
 within 14 days (by the dates in episodes/plan.json; episodes not in the plan count as today) are skipped. Every (episode,
 track) pair gets the best cut (scripts/track_bed.py: the drop on a loud downbeat, no breaks, a full intro); ads prefer
-house/EDM, warm-ups the lighter electronic styles; then one track per episode by an optimal assignment. Needs the episode's
+house/EDM (ads and the import series), warm-ups the lighter electronic styles; then one track per episode by an optimal assignment. Needs the episode's
 cues (build/<id>.cues.json): run scripts/preview_all.sh or render.mjs first. The tracks are noted in assets/music.md.
 """
 import datetime, json, os, sys
@@ -28,7 +28,7 @@ def main(ids):
     day = lambda i: datetime.date.fromisoformat(plan[i]['date'][:10]) if i in plan and plan[i].get('date') else datetime.date.today()
     used = {}   # track -> dates of other live episodes using it
     for f in os.listdir(os.path.join(ROOT, 'episodes')):
-        if not (f.endswith('.json') and f[0] in 'ew' and f[1:-5].isdigit()) or f[:-5] in ids:
+        if not (f.endswith('.json') and f[0] in 'ewp' and f[1:-5].isdigit()) or f[:-5] in ids:
             continue
         ep = json.load(open(os.path.join(ROOT, 'episodes', f)))
         t = str((ep.get('music') or {}).get('track', '')).replace('mixkit:', '')
@@ -45,7 +45,7 @@ def main(ids):
                 continue
             st, sc = best_cut(an[t], drop, dur)
             g = cand[t].get('genre')
-            sc += (.3 if g in HOUSE else 0) if eid.startswith('e') else (.15 if g in LIGHT else 0)
+            sc += (.3 if g in HOUSE else 0) if eid[0] in 'ep' else (.15 if g in LIGHT else 0)
             sc -= .3 if not (98 <= cand[t].get('tempo', 120) <= 136) else 0
             S[i, j], ST[i, j] = sc, st
     if len(tids) < len(ids):

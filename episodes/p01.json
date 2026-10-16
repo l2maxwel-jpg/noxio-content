@@ -1,0 +1,78 @@
+{
+ "id": "p01",
+ "lang": "pl",
+ "series": "import",
+ "theme": "dark",
+ "angle": "import-photo-to-card",
+ "fx": "split",
+ "scenes": [
+  {
+   "type": "cover",
+   "video": "mixkit:10343",
+   "clipStart": 2.5,
+   "layout": "dark",
+   "head": [
+    "Jedno zdjęcie —",
+    "[gotowa karta]",
+    "w PrestaShop"
+   ],
+   "sub": ":ph-sparkle.fill: Import produktów · Noxio",
+   "dur": 2.6
+  },
+  {
+   "type": "icard",
+   "head": [
+    "Zrób zdjęcie.",
+    "Resztę wpisze [AI]"
+   ],
+   "photo": "../assets/photos/p01.jpg",
+   "name": "Sweter z dzianiny, kremowy",
+   "sku": "SW-2310",
+   "fields": [
+    [
+     "Kategoria",
+     "Odzież › Swetry"
+    ],
+    [
+     "Kolor",
+     "#EFE8DA|kremowy"
+    ],
+    [
+     "Rozmiary",
+     [
+      "S",
+      "M",
+      "L",
+      "XL"
+     ]
+    ],
+    [
+     "Skład",
+     "wełna, akryl"
+    ]
+   ],
+   "desc": "Miękki sweter o luźnym kroju — ciepły i lekki na co dzień.",
+   "id": "1287"
+  },
+  {
+   "type": "offer",
+   "big": "14",
+   "l2": "dni",
+   "l3": "za darmo",
+   "pills": [
+    "potem 149,99 zł/mies.",
+    "bez karty"
+   ]
+  },
+  {
+   "type": "cta",
+   "tag": "Import produktów PrestaShop",
+   "button": "Wypróbuj: noxio.pl",
+   "small": "14 dni za darmo · bez karty"
+  }
+ ],
+ "music": {
+  "track": "mixkit:661",
+  "start": 35.95
+ }
+}
