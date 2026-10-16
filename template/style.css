@@ -344,3 +344,15 @@ body.dark .rbadge{background:#3A2A0B;color:#FCD34D}
 .fsmall{position:absolute;left:0;right:0;top:1200px;text-align:center;font-size:36px;font-weight:700;color:var(--muted)}
 body.dark .witem,body.dark .wopt,body.dark .wclaim,body.dark .wtruth{box-shadow:0 16px 44px rgba(0,0,0,.4)}
 body.dark .fava{background:#fff}
+
+/* Phosphor icons (inline SVG, colour from the text), Lottie boxes, video covers, text effects */
+.ph{display:inline-flex;width:1em;height:1em;vertical-align:-.13em}
+.ph svg{width:100%;height:100%;display:block}
+.wic .ph{width:56px;height:56px}
+.wlist.check .wic .ph{color:var(--em)}
+.lot{position:absolute;pointer-events:none;line-height:0}
+.lot.behind{z-index:-1}
+.lot svg{display:block}
+.wemoji .lot.lfill{position:relative;width:340px;height:340px}
+.fxw{display:inline-block;white-space:nowrap}
+.fxc{display:inline-block;text-align:center}

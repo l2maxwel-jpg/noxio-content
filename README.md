@@ -19,6 +19,9 @@ soundtrack is timed to the cuts.
 | `assets/logo.png` | Noxio logo |
 | `assets/photos/` | Stock photos for covers (`CREDITS.md` lists authors) |
 | `assets/covers/` | Cover stills (one per episode), used as Reel thumbnails |
+| `assets/clips.md` | Mixkit clips used as video covers (id and page; the clips themselves are downloaded into `build/mixkit/`) |
+| `assets/lottie/` | Lottie animations (`SOURCES.md`, `LICENSE.md`) |
+| `scripts/fetch_clip.sh`, `scripts/fetch_lottie.py` | Fetch a Mixkit clip / a LottieFiles animation after checking its license, with a contact sheet to review |
 
 ## Scene types
 
@@ -38,10 +41,12 @@ Warm-up series (`episodes/wNN.json`, `"series": "warmup"`): `wtitle` (`fmt` tip|
 `ask`), `wpov` (`head`, `comments`, `punch`), `wmyth` (`claim`, `truth`, `"verdict": "truth"` for a true statement) and
 `follow` (`tag`, `button`, `small`; defaults in `l10n.js` under `warm`). Their content lives in the scene itself.
 Emoji in any text are swapped for Noto SVGs from `assets/emoji/` (`scripts/emoji.py` extracts them; run by the build scripts).
-`cover` is a stock photo with our logo, headline and sub (`"photo": "../assets/photos/eNN.jpg"`, `"head"`, `"sub"`, optional
+`cover` is a stock photo or a Mixkit clip (`"video": "mixkit:<id>"`, optional `clipStart`, `rate`, `cropX`) with our logo, headline and sub (`"photo": "../assets/photos/eNN.jpg"`, `"head"`, `"sub"`, optional
 `"layout": "light"|"dark"`, `"focus"` for object-position) with a slow zoom; `make_episode.sh` saves a still of it as
 `assets/covers/eNN.jpg` for the Reel thumbnail. (The old form `"src"` shows a finished image.)
-Any scene accepts `kicker` (small label, e.g. "Шаг 1"). Heads are arrays of lines; `[text]` highlights in emerald,
+Any scene accepts `kicker` (small label, e.g. "Шаг 1"), `lottie` (an animation from `assets/lottie/` as `{src, x, y, w, h, at, speed, loop,
+behind}`; in `wtitle` a plain src replaces the emoji) and `fx` (`blur`, `split` or `scramble` for its heads; `"fx"` on the episode
+applies to every scene). `:ph-name:` / `:ph-name.fill:` in any text inserts a Phosphor icon; a `wtips` item takes an icon as its third field. Heads are arrays of lines; `[text]` highlights in emerald,
 `{text}` in teal. `connect` accepts `"only": "link"` to show only the paste-a-link option.
 
 Episode options: `"lang"` (`ru`, `pl`, `lv`, `en`), `"theme": "dark"` (default light), `"angle"` (the episode's idea,

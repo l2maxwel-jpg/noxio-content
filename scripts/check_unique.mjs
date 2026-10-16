@@ -2,7 +2,8 @@
 // Compares every episode that is not retired (published, scheduled, planned, new files not yet in plan.json;
 // spares are checked too but only warn) and fails on:
 //   - the same scene order;
-//   - the same cover photo, or two photos by the same author (a photo series);
+//   - the same cover photo, or two photos by the same author (a photo series); the same Mixkit cover clip, or two clips
+//     whose ids are within 20 of each other (Mixkit numbers a shoot's clips in a row: same people, same place);
 //   - the same cover headline in one language;
 //   - the same product set: a shared niche or the default set (those are translations of each other,
 //     so they count across languages), or own `data` sets with the same products in one language;
@@ -12,7 +13,8 @@
 // Warm-up series episodes (wNN, "series": "warmup") share one format on purpose, so their scene order is not
 // compared; instead any repeated text line (a head, tip, option, claim, punchline…) in one language and a repeated
 // title emoji fail.
-// Warns on the same music variant within 7 days, on reused cta tags and on episodes without an `angle`.
+// Warns on the same music variant within 7 days, on the same Lottie accent within 7 days, on reused cta tags and on
+// episodes without an `angle`. A Lottie that replaces a warm-up's title emoji counts as its emoji (never reused).
 // Usage: node scripts/check_unique.mjs [eNN|wNN ...]   (ids limit the report to pairs that involve them)
 import fs from 'fs';
 import path from 'path';
@@ -80,12 +82,14 @@ const eps = fs.readdirSync(path.join(ROOT, 'episodes')).filter(f => /^[ew]\d+\.j
   return { id: ep.id, lang, st, ep, scenes, products,
     order: scenes.map(s => s.type + (s.only ? `:${s.only}` : '')).join('>'),
     photo: cover && (cover.photo || cover.src) ? path.basename(cover.photo || cover.src) : null,
+    clip: cover && cover.video ? +String(cover.video).replace(/^mixkit:/, '') : null,
+    lotties: new Set(scenes.filter(s => s.type !== 'wtitle').flatMap(s => [].concat(s.lottie || []).map(o => typeof o === 'string' ? o : o.src))),
     author: credits[ep.id] || null,
     coverHead: cover && cover.head ? norm(cover.head.join(' ')) : null,
     heads: scenes.filter(s => s.type !== 'cover' && HEADS[s.type]).map(s => `${s.type}:${norm(HEADS[s.type](s).filter(Boolean).join(' '))}`),
     cta: norm((scenes.find(s => s.type === 'cta') || {}).tag),
     warm: ep.series === 'warmup', texts: new Set(scenes.flatMap(WTEXT)),
-    emoji: (scenes.find(s => s.type === 'wtitle') || {}).emoji || null,
+    emoji: (t => t ? t.emoji || (t.lottie ? 'lottie ' + [].concat(t.lottie).map(o => typeof o === 'string' ? o : o.src)[0] : null) : null)(scenes.find(s => s.type === 'wtitle')),
     angle: ep.angle || null, date: dates[ep.id] || new Date(new Date().toISOString().slice(0, 10) + 'T00:00:00Z'),
     music: music(ep.id, ep.music) };
 }).filter(Boolean).sort((a, b) => a.id.localeCompare(b.id));
@@ -103,6 +107,8 @@ for (let i = 0; i < eps.length; i++) for (let j = i + 1; j < eps.length; j++) {
   if (a.order === b.order && !(a.warm && b.warm)) report(a, b, `same scene order ${a.order}`);
   if (same && (a.warm || b.warm)) { const dup = [...a.texts].filter(t => b.texts.has(t)); if (dup.length) report(a, b, `same text "${dup[0]}"` + (dup.length > 1 ? ` (+${dup.length - 1})` : '')); }
   if (a.emoji && a.emoji === b.emoji) report(a, b, `same title emoji ${a.emoji}`);
+  if (a.clip && b.clip && Math.abs(a.clip - b.clip) <= 20) report(a, b, a.clip === b.clip ? `same cover clip mixkit:${a.clip}` : `cover clips mixkit:${a.clip} and mixkit:${b.clip} come from one Mixkit shoot`);
+  if (days < 7) { const dup = [...a.lotties].filter(x => b.lotties.has(x)); if (dup.length) report(a, b, `same Lottie ${dup.join(', ')} ${days.toFixed(0)} days apart`, false); }
   if (a.photo && a.photo === b.photo) report(a, b, `same cover photo ${a.photo}`);
   else if (a.author && a.author === b.author) report(a, b, `cover photos by the same author (${a.author}) — a photo series`);
   if (same && a.coverHead && a.coverHead === b.coverHead) report(a, b, `same cover headline "${a.coverHead}"`);

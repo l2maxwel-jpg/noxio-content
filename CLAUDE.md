@@ -52,7 +52,8 @@ Each Reel must be unrepeatable — across all languages, not just within one. Be
   the ones taken) — the same angle may come back only 14+ days later, and then with everything else different;
 - its own product set in `data` (`feed`, `table`, `ai`, `chat`, and `group`/`review`/`merge`/`setup` when used): never the
   language defaults or a shared `niche` that another live episode already shows — those are translations of each other;
-- its own cover photo (never a photo or a photo series another episode used — check `assets/photos/CREDITS.md`),
+- its own cover photo or clip (never a photo, photo series or clip another episode used — check `assets/photos/CREDITS.md`
+  and `assets/clips.md`),
   cover headline, scene order, heads for every scene and `cta` tag; never translate another episode's text;
 - run `node scripts/check_unique.mjs` — it must report 0 errors. Fix its warnings for scheduled episodes too (same music
   variant → pin `"music": {"bpm", "transpose", "prog", "hats16"}`; spares that clash get changed before they are used).
@@ -74,6 +75,29 @@ follow card instead of the offer.
 - Plan entries carry `"series": "warmup", "reelsOnly": true, "coverMs": 2600`. In Metricool: Instagram REEL with
   `showReelOnFeed: false` (Reels tab only, not the profile grid), Facebook REEL, `videoCoverMilliseconds: 2600`,
   `autoPublish: true`.
+
+## Clips, animations, icons, text effects
+
+All of these are free for business use without credits on screen; never show a source, author or watermark.
+- **Video covers (Mixkit)** — new ads should open with a moving cover: `{"type": "cover", "video": "mixkit:<id>", "head", "sub",
+  "layout"}` instead of `photo` (optional `clipStart` in s, `rate` 0.5–1 for slow motion, `cropX` 0–1). Find vertical clips at
+  `https://mixkit.co/free-stock-video/discover/<word>/?orientation=vertical`, then `scripts/fetch_clip.sh eNN <item page URL>`:
+  it accepts only the "Stock Video Free License" (the "Restricted" one forbids business use) and writes
+  `build/mixkit/<id>_sheet.jpg` — check it for signs, brands, phone or laptop logos, currencies. Clips are never committed
+  (Mixkit's terms forbid handing out the files); `assets/clips.md` keeps id → page and `render.mjs` downloads them again.
+  Each clip is used once; `check_unique.mjs` also rejects clips whose ids are within 20 (one shoot = a series).
+- **Lottie animations** (`assets/lottie/`, Lottie Simple License — keep `LICENSE.md` and `SOURCES.md` with the files):
+  `scripts/fetch_lottie.py <name> <https://lottiefiles.com/free-animation/... URL> [--tint emerald|teal|brand]`, then look at
+  `build/lottie/<name>_sheet.png` (no words, logos, social-network UI such as like counters, currencies). A Lottie can replace
+  a warm-up's title emoji (`"lottie": "../assets/lottie/x.json"` in `wtitle`; never reused, like emoji) or sit in any scene as
+  an accent: `"lottie": {"src", "x", "y", "w", "h", "at", "speed", "loop", "behind"}` (frame pixels). Accents repeated within
+  7 days are warned about.
+- **Phosphor icons** (MIT, npm `@phosphor-icons/core`): `:ph-name:` or `:ph-name.fill:` in any text; a `wtips` item takes an
+  icon name as its third field. phosphoricons.com is not reachable from here — list names in
+  `node_modules/@phosphor-icons/core/assets/bold/`.
+- **Text effects** in the spirit of React Bits: `"fx": "blur" | "split" | "scramble"` on the episode or one scene (animates the
+  heads). Vary them between episodes.
+- The soundtrack stays synthesized (`scripts/music.py`): one variant per episode keeps every video unique.
 
 ## Making a batch
 
@@ -97,13 +121,14 @@ follow card instead of the offer.
 **No marks of other companies anywhere in the visuals** — no tool badges (moda.app or any other), no stock-site credits,
 no watermarks, no other brands' logos (Maxim's rule). Do not use Moda exports for covers or frames: the free plan adds a badge.
 
-Every episode except `codes` openers starts with a `cover` scene built by the template:
+Every episode except `codes` openers starts with a `cover` scene built by the template (a Mixkit clip instead of the photo
+is preferred for new ads, see above):
 `{"type": "cover", "photo": "../assets/photos/eNN.jpg", "head": [...], "sub": "..."}` — a stock photo with our logo,
 headline and sub on top (light episodes: headline at the top over a light gradient; dark: at the bottom over a dark one;
 `layout` and `focus` can override — when a face is in the upper half of the photo use `"layout": "dark"` so the text
 does not cover it). Find photos with Moda's `file_search` (`source: "stock"`) or on Unsplash, check a
 preview first (no foreign signs, brands or currencies), then `scripts/fetch_photo.sh eNN <images.unsplash.com URL> "<author>"`
 — it saves the photo and notes the author in `assets/photos/CREDITS.md` (record only, never on screen).
-`scripts/make_episode.sh` also writes `assets/covers/eNN.jpg`, a still of the cover, used as `videoThumbnailUrl`.
+`scripts/make_episode.sh` also writes `assets/covers/eNN.jpg`, a still of the cover (photo or clip), used as `videoThumbnailUrl`.
 Episodes that open with `codes` have no cover; use `coverMs: 2700` (`videoCoverMilliseconds`) for the thumbnail.
 Stock photos → `instagramData.isAiGenerated: false`.

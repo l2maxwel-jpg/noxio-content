@@ -3,8 +3,8 @@
 //   node scripts/render.mjs full    episodes/e02.json               -> build/<id>.silent.mp4 + build/<id>.cues.json
 import chromium from '@sparticuz/chromium';
 import puppeteer from 'puppeteer-core';
-import { spawn } from 'node:child_process';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { spawn, execFileSync } from 'node:child_process';
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 const [mode, epPath, ...rest] = process.argv.slice(2);
@@ -13,6 +13,45 @@ const FPS = 30;
 const ep = JSON.parse(readFileSync(path.resolve(epPath), 'utf8'));
 const build = path.join(root, 'build');
 mkdirSync(build, { recursive: true });
+
+// ---- media the page cannot load by itself ----
+// Video covers ("video": "mixkit:<id>"): the clip is downloaded again from the page noted in assets/clips.md when build/ is
+// empty (clips are never committed), then cut into frames that the template swaps on every seek.
+ep.scenes.forEach((s, i) => {
+  if (!s.video) return;
+  const id = String(s.video).replace(/^mixkit:/, '');
+  const clip = path.join(build, 'mixkit', `${id}.mp4`);
+  if (!existsSync(clip)) {
+    const row = readFileSync(path.join(root, 'assets/clips.md'), 'utf8').split('\n').find(l => l.split('|').map(x => x.trim())[2] === id);
+    if (!row) throw new Error(`clip ${id} is not in assets/clips.md — fetch it with scripts/fetch_clip.sh`);
+    execFileSync(path.join(root, 'scripts/fetch_clip.sh'), ['-', row.split('|')[3].trim()], { stdio: 'inherit' });
+  }
+  const len = (s.dur || 3.2) + .8, rate = s.rate || 1, start = s.clipStart || 0;
+  const dir = path.join(build, 'frames', `${ep.id}_${i}`), key = JSON.stringify({ id, len, rate, start, cropX: s.cropX ?? .5 });
+  if (!existsSync(path.join(dir, 'key.json')) || readFileSync(path.join(dir, 'key.json'), 'utf8') !== key) {
+    rmSync(dir, { recursive: true, force: true }); mkdirSync(dir, { recursive: true });
+    execFileSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(start), '-i', clip, '-t', String(len), '-an',
+      '-vf', `setpts=PTS/${rate},fps=${FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920:(iw-1080)*${s.cropX ?? .5}:(ih-1920)/2`,
+      '-q:v', '3', path.join(dir, '%04d.jpg')]);
+    writeFileSync(path.join(dir, 'key.json'), key);
+  }
+  s.frames = { dir: `../build/frames/${ep.id}_${i}`, n: readdirSync(dir).filter(f => f.endsWith('.jpg')).length, fps: FPS };
+});
+// Lottie JSON by src (paths relative to template/, e.g. "../assets/lottie/w50.json").
+const LOTTIE = {};
+for (const s of ep.scenes) for (const o of [].concat(s.lottie || [])) {
+  const src = typeof o === 'string' ? o : o.src;
+  LOTTIE[src] = JSON.parse(readFileSync(path.resolve(root, 'template', src), 'utf8'));
+}
+// Phosphor icons named in the episode (":ph-name:" / ":ph-name.fill:" in texts, the third field of a wtips item).
+const PH = {};
+const icons = [...JSON.stringify(ep).matchAll(/:ph-([a-z0-9-]+)(?:\.(bold|fill|duotone|regular|light|thin))?:/g)].map(m => [m[1], m[2] || 'bold']);
+for (const s of ep.scenes) if (s.type === 'wtips') for (const it of s.items || []) if (it[2]) { const [n, w] = it[2].split('.'); icons.push([n, w || 'bold']); }
+for (const [n, w] of icons) {
+  const f = path.join(root, 'node_modules/@phosphor-icons/core/assets', w, w === 'regular' ? `${n}.svg` : `${n}-${w}.svg`);
+  if (!existsSync(f)) throw new Error(`Phosphor icon ${n} (${w}) does not exist`);
+  PH[`${n}.${w}`] = readFileSync(f, 'utf8');
+}
 
 const browser = await puppeteer.launch({
   args: [...chromium.args, '--allow-file-access-from-files', '--font-render-hinting=none'],
@@ -23,7 +62,7 @@ const browser = await puppeteer.launch({
 const page = await browser.newPage();
 page.on('pageerror', e => console.error('PAGE ERROR', e.message));
 page.on('console', m => { if (m.type() === 'error') console.error('CONSOLE', m.text()); });
-await page.evaluateOnNewDocument(`window.EP = ${JSON.stringify(ep)};`);
+await page.evaluateOnNewDocument(`window.EP = ${JSON.stringify(ep)}; window.LOTTIE = ${JSON.stringify(LOTTIE)}; window.PH = ${JSON.stringify(PH)};`);
 await page.goto('file://' + path.join(root, 'template', 'index.html'), { waitUntil: 'load' });
 await page.evaluate(() => window.ready);
 const duration = await page.evaluate(() => window.duration());

@@ -1,5 +1,6 @@
 // Builds a Noxio vertical video from window.EP (episode) + window.L10N, drives it with a paused GSAP timeline.
-// Exposes: window.ready (Promise), window.seek(t), window.duration(), window.cues (for the soundtrack).
+// Exposes: window.ready (Promise), window.seek(t) (async: waits for video-cover frames), window.duration(), window.cues.
+// render.mjs fills in window.LOTTIE (Lottie JSON by src), window.PH (Phosphor SVGs) and cover.frames (Mixkit clip frames).
 (function () {
   const EP = window.EP || { id: 'demo', lang: 'ru', scenes: ['hook','pain','solution','ai','connect','messenger','offer','cta'].map(type => ({ type })) };
   // Strings for the language, then the product niche (window.NICHES[niche][lang]) and per-episode `data` on top.
@@ -46,6 +47,57 @@
   });
   const mark = s => String(s).replace(/\[([^\]]+)\]/g, '<span class="lime">$1</span>').replace(/\{([^}]+)\}/g, '<span class="tealc">$1</span>');
   const lines = arr => arr.map(l => `<span class="line">${mark(l)}</span>`).join('');
+  // Phosphor icons (MIT): ":ph-package:" or ":ph-package.fill:" in any text become inline SVGs (window.PH, loaded by render.mjs).
+  const PHRE = /:ph-([a-z0-9-]+)(?:\.(bold|fill|duotone|regular|light|thin))?:/g;
+  const phosphorify = html => html.replace(PHRE, (m, n, w = 'bold') => {
+    const svg = (window.PH || {})[`${n}.${w}`];
+    if (!svg) throw new Error(`Phosphor icon "${n}" (${w}) is not loaded: no such icon?`);
+    return `<i class="ph">${svg}</i>`;
+  });
+  // Lottie animations (Lottie Simple License, assets/lottie/): a scene's `lottie` is a src or {src, x, y, w, h, at, speed, loop, behind}
+  // (x/y/w/h in frame pixels); in `wtitle` it takes the emoji's place. window.LOTTIE[src] holds the JSON (loaded by render.mjs).
+  const lotList = d => d.lottie ? [].concat(d.lottie).map(o => typeof o === 'string' ? { src: o } : o) : [];
+  const lotBox = (o, cls = '') => `<div class="lot ${cls}${o.behind ? ' behind' : ''}"${o.x != null ? ` style="left:${o.x}px;top:${o.y}px;width:${o.w || 300}px;height:${o.h || o.w || 300}px"` : ''}></div>`;
+  // Text effects for heads, in the spirit of React Bits (BlurText, SplitText, DecryptedText): episode or scene "fx": blur | split | scramble.
+  const FXSEL = '.head .line, .covhead .line, .whead .line';
+  const fxOf = d => { const f = d.fx || EP.fx; return f && f !== 'none' ? f : null; };
+  function splitLine(line, mode) {   // words (blur) or characters (split, scramble) in spans; emoji, icons and highlights stay
+    const walk = node => [...node.childNodes].forEach(ch => {
+      if (ch.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        ch.textContent.split(/(\s+)/).forEach(w => {
+          if (!w) return;
+          if (/^\s+$/.test(w)) { frag.appendChild(document.createTextNode(w)); return; }
+          const ws = document.createElement('span'); ws.className = 'fxw';
+          if (mode === 'blur') ws.textContent = w;
+          else [...w].forEach(c => { const cs = document.createElement('span'); cs.className = 'fxc'; cs.textContent = c; cs.dataset.c = c; ws.appendChild(cs); });
+          frag.appendChild(ws);
+        });
+        ch.replaceWith(frag);
+      } else if (ch.nodeType === 1 && !['IMG', 'I'].includes(ch.tagName)) walk(ch);
+    });
+    walk(line);
+  }
+  // stand-in letters of the same case and roughly the same width (no Ж, Ш, Ю, M, W…), punctuation stays
+  const GL = lang === 'ru' ? { lo: 'абвгдезиклнопрстухчэя', up: 'АБВГДЕЗИКЛНОПРСТУХЧЭЯ' } : { lo: 'abcdeghknopqrsuvxyz', up: 'ABCDEGHKNOPRSUVXYZ' };
+  const glyph = (c, k) => /[0-9]/.test(c) ? '0123456789'[k % 10] : /[ilj1.,:;!?'"’«»()\-—–]/i.test(c) ? c
+    : (c === c.toUpperCase() && c !== c.toLowerCase() ? GL.up : GL.lo)[k % GL.lo.length];
+  const FX = {
+    blur: (tl, lines, pos) => tl.from([...lines].flatMap(l => [...l.querySelectorAll('.fxw, .emo, .ph')]),
+      { opacity: 0, filter: 'blur(14px)', y: 26, duration: .45, stagger: .055, ease: 'power2.out' }, pos),
+    split: (tl, lines, pos) => tl.from([...lines].flatMap(l => [...l.querySelectorAll('.fxc, .emo, .ph')]),
+      { opacity: 0, yPercent: 85, rotation: 9, duration: .36, stagger: .016, ease: 'back.out(1.8)' }, pos),
+    scramble: (tl, lines, pos) => {
+      tl.from(lines, { opacity: 0, duration: .12, stagger: .07 }, pos);
+      const c = [...lines].flatMap(l => [...l.querySelectorAll('.fxc')]), n = c.length, p = { v: 0 };
+      tl.fromTo(p, { v: 0 }, { v: 1, duration: .8 + n * .01, ease: 'none', immediateRender: false, onUpdate: () => {
+        const step = Math.floor(p.v * 46);
+        c.forEach((e, i) => { const done = p.v >= i / n * .72 + .28;
+          e.textContent = done ? e.dataset.c : glyph(e.dataset.c, (Math.imul(i + 1, 2654435761) ^ Math.imul(step + 1, 40503)) >>> 7); });
+      } }, pos);
+    }
+  };
+  const lineIn = (tl, el, sel, d, vars, pos) => { const f = fxOf(d); return f && FX[f] ? FX[f](tl, $$(el, sel), pos) : tl.from($$(el, sel), vars, pos); };
   const bubble = (name, text, ci, cls = '') =>
     `<div class="bub ${cls}"><div class="ava" style="background:${COLORS[ci % 5]}">${name[0]}</div><div class="bt"><div class="bn">${name}</div><div class="bx">${text}</div></div></div>`;
   const ICON = {
@@ -55,8 +107,8 @@
   const check = '<svg width="30" height="20" viewBox="0 0 30 20"><path d="M2 10 L10 18 L28 2" stroke="#11B981" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   const HTML = {
-    // cover: either a finished image (`src`) or a photo with our own headline (`photo`, `head`, `sub`, `layout`, `focus`).
-    cover: d => d.photo ? `<div class="cov ${d.layout || (DARK ? 'dark' : 'light')}"><img class="covimg" src="${d.photo}" alt=""${d.focus ? ` style="object-position:${d.focus}"` : ''}><div class="covshade"></div>
+    // cover: either a finished image (`src`) or a photo / Mixkit clip (`photo` | `video`) with our own headline (`head`, `sub`, `layout`, `focus`).
+    cover: d => (d.photo || d.frames) ? `<div class="cov ${d.layout || (DARK ? 'dark' : 'light')}"><img class="covimg${d.frames ? ' covvid' : ''}" src="${d.frames ? d.frames.dir + '/0001.jpg' : d.photo}" alt=""${d.focus ? ` style="object-position:${d.focus}"` : ''}><div class="covshade"></div>
         <div class="covbrand"><img src="../assets/logo.png" alt=""><span>Noxio</span></div>
         <div class="h covhead">${lines(d.head)}</div>${d.sub ? `<div class="covsub">${mark(d.sub)}</div>` : ''}</div>`
       : `<div class="cov"><img class="covimg" src="${d.src}" alt=""></div>`,
@@ -115,10 +167,10 @@
       ${bubble(s.seller[0], s.seller[1], 4, 'sbub').replace('</div></div></div>', `</div></div><span class="skip">${s.skipped}</span></div>`)}</div>`; },
     // ---- warm-up series: title card, tips / mistakes list, question to viewers, POV, myth or truth, follow card ----
     wtitle: d => `<div class="wchip" style="background:${WFMT[d.fmt] || WFMT.tip}">${d.chip}</div>
-      <div class="wemoji">${d.emoji || ''}</div><div class="h whead">${lines(d.head)}</div>${d.sub ? `<div class="wsub">${mark(d.sub)}</div>` : ''}`,
-    wtips: d => { const st = d.style || 'num', ic = i => st === 'x' ? '<span class="wx">✕</span>' : st === 'check' ? check : `<b>${i + 1}</b>`;
+      <div class="wemoji">${d.lottie ? lotBox(lotList(d)[0], 'lfill') : (d.emoji || '')}</div><div class="h whead">${lines(d.head)}</div>${d.sub ? `<div class="wsub">${mark(d.sub)}</div>` : ''}`,
+    wtips: d => { const st = d.style || 'num', ic = (i, it) => it[2] ? `:ph-${it[2]}:` : st === 'x' ? '<span class="wx">✕</span>' : st === 'check' ? check : `<b>${i + 1}</b>`;
       return `<div class="h head">${lines(d.head)}</div><div class="body"><div class="wlist ${st}">${d.items.map((it, i) =>
-        `<div class="witem w${i}"><div class="wic">${ic(i)}</div><div class="wtx"><div class="wt">${mark(it[0])}</div>${it[1] ? `<div class="ws">${mark(it[1])}</div>` : ''}</div></div>`).join('')}</div></div>`; },
+        `<div class="witem w${i}"><div class="wic">${ic(i, it)}</div><div class="wtx"><div class="wt">${mark(it[0])}</div>${it[1] ? `<div class="ws">${mark(it[1])}</div>` : ''}</div></div>`).join('')}</div></div>`; },
     wquiz: d => `<div class="h head">${lines(d.head)}</div><div class="body"><div class="wopts">${d.options.map((o, i) =>
         `<div class="wopt o${i}"><span class="wl" style="background:${COLORS[[2, 1, 3, 4][i]]}">${'ABCD'[i]}</span><span class="wot">${mark(o)}</span></div>`).join('')}</div>
       <div class="wask">${mark(d.ask || L.warm.ask)}</div></div>`,
@@ -177,8 +229,10 @@
     const el = document.createElement('section');
     el.className = `scene sc-${s.type}` + (d.kicker ? ' kicked' : '');
     // Everything but the full-bleed cover sits in a .frame that is scaled into the feed-safe band after layout (see SAFE).
-    const inner = emojify((d.kicker ? `<div class="kicker">${d.kicker}</div>` : '') + HTML[s.type](d));
+    const lots = s.type === 'wtitle' ? '' : lotList(d).map(o => lotBox(o, 'abs')).join('');
+    const inner = phosphorify(emojify((d.kicker ? `<div class="kicker">${d.kicker}</div>` : '') + HTML[s.type](d))) + lots;
     el.innerHTML = s.type === 'cover' ? inner : `<div class="frame">${inner}</div>`;
+    if (fxOf(d)) el.querySelectorAll(FXSEL).forEach(l => splitLine(l, fxOf(d)));
     if (i === 0) el.style.opacity = 1;
     root.appendChild(el);
     return { type: s.type, d, el, dur: s.dur || DUR[s.type] };
@@ -253,6 +307,8 @@
       if (s.type === 'wtips') $$(el, '.witem').forEach(o => { fitOverflow($(o, '.wtx'), $(o, '.wt'), 30); if ($(o, '.ws')) fitOverflow($(o, '.wtx'), $(o, '.ws'), 24); });
       if (s.type === 'follow') { fitWidth($(el, '.ftag'), 940); fitWidth($(el, '.fbtn'), 900); }
       if (s.type === 'cta') { fitWidth($(el, '.tag'), 960); fitWidth($(el, '.cta'), 900); fitWidth($(el, '.wmtxt'), 900); }
+      // scrambled letters keep the width of the real ones, so the line does not jitter
+      if (fxOf(s.d) === 'scramble') $$(el, '.fxc').forEach(c => { c.style.width = c.getBoundingClientRect().width + 'px'; });
     });
   }
 
@@ -283,15 +339,15 @@
 
   const TL = {
     cover(tl, T, d, el, dur) {
-      tl.fromTo($(el, '.covimg'), { scale: 1.0, yPercent: 0 }, { scale: 1.09, yPercent: -1.5, duration: dur + .3, ease: 'none' }, T);
+      tl.fromTo($(el, '.covimg'), { scale: 1.0, yPercent: 0 }, d.frames ? { scale: 1.04, duration: dur + .3, ease: 'none' } : { scale: 1.09, yPercent: -1.5, duration: dur + .3, ease: 'none' }, T);
       if ($(el, '.covhead')) {
-        tl.from($$(el, '.covhead .line'), { y: 50, opacity: 0, duration: .35, stagger: .1, ease: E }, T + .05);
+        lineIn(tl, el, '.covhead .line', d, { y: 50, opacity: 0, duration: .35, stagger: .1, ease: E }, T + .05);
         if ($(el, '.covsub')) tl.from($(el, '.covsub'), { opacity: 0, y: 20, duration: .3 }, T + .5);
       }
       cue(T + .05, 'pop_down'); cue(T + .9, 'impact_soft');
     },
     codes(tl, T, d, el, dur) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .35, stagger: .12, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .35, stagger: .12, ease: E }, T);
       tl.from($(el, '.post'), { y: 90, opacity: 0, duration: .4, ease: E }, T + .15);
       tl.fromTo($(el, '.codes'), { y: 0 }, { y: -1100, duration: dur, ease: 'power1.in' }, T);
       [...$$(el, '.rule')].forEach((r, i) => {
@@ -303,7 +359,7 @@
     },
     price(tl, T, d, el) {
       const c = Object.assign({}, L.price || {}, d);
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .13, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .13, ease: E }, T);
       tl.from($(el, '.calc'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .3);
       tl.from($$(el, '.crow'), { x: -40, opacity: 0, duration: .3, stagger: .35, ease: E }, T + .6);
       const n = { v: 0 }, fe = $(el, '.fcnt');
@@ -318,7 +374,7 @@
     },
     sendlink(tl, T, d, el) {
       const c = Object.assign({}, L.sendlink || {}, d);
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .13, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .13, ease: E }, T);
       tl.from($(el, '.chat'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .3);
       tl.from($(el, '.msg.me'), { scale: .9, opacity: 0, duration: .25, transformOrigin: '100% 100%' }, T + .7);
       const ty = { n: 0 }, te = $(el, '.typed2');
@@ -332,7 +388,7 @@
       cue(T + 2.5, 'pop');
     },
     group(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
       [...$$(el, '.gb')].forEach((b, i) => { tl.from(b, { scale: .6, opacity: 0, duration: .3, ease: 'back.out(2)' }, T + .3 + i * .25); cue(T + .3 + i * .25, 'pop_small'); });
       tl.from($(el, '.gcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + 1.05);
       const rows = [...$$(el, '.grow')];
@@ -348,7 +404,7 @@
       tl.to($(el, '.gcard'), { y: -250, duration: .45, ease: 'power2.inOut' }, T + 2.5);   // close the gap the comments left
     },
     excel(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
       tl.from($(el, '.xcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .3);
       tl.from($$(el, '.xcard .xrow'), { x: -30, opacity: 0, duration: .25, stagger: .1, ease: E }, T + .55);
       tl.to($(el, '.xbtn'), { scale: .88, duration: .1, yoyo: true, repeat: 1 }, T + 1.25);
@@ -361,7 +417,7 @@
       cue(T + 2.6, 'ding');
     },
     merge(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
       [...$$(el, '.src')].forEach((b, i) => { tl.from(b, { y: 60, opacity: 0, duration: .35, ease: E }, T + .3 + i * .18); cue(T + .3 + i * .18, 'pop_small'); });
       tl.from($(el, '.mcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + 1.0);
       [...$$(el, '.src')].forEach((b, i) => { const f = flights.get(b);
@@ -372,7 +428,7 @@
       tl.to($(el, '.mcard .badge'), { scale: 1.15, duration: .15, yoyo: true, repeat: 1 }, T + 2.55);
     },
     review(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
       tl.from($(el, '.rcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .3);
       [...$$(el, '.rrow.ok')].forEach((r, i) => { tl.from(r, { x: -30, opacity: 0, duration: .25, ease: E }, T + .6 + i * .18);
         tl.from($(r, '.rk'), { scale: 0, duration: .25, ease: 'back.out(2.4)' }, T + .7 + i * .18); cue(T + .7 + i * .18, 'pop_small'); });
@@ -388,7 +444,7 @@
       cue(T + 2.35, 'ding');
     },
     setup(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
       tl.from($(el, '.scard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .3);
       [...$$(el, '.sfield')].forEach((f, i) => { tl.from($(f, '.sfl'), { opacity: 0, duration: .2 }, T + .6 + i * .38);
         tl.from($$(f, '.schip'), { scale: .5, opacity: 0, duration: .22, stagger: .06, ease: 'back.out(2)' }, T + .7 + i * .38); cue(T + .7 + i * .38, 'pop_small'); });
@@ -406,19 +462,19 @@
       tl.from($(el, '.wchip'), { x: -60, opacity: 0, duration: .35, ease: E }, T + .05);
       tl.from($(el, '.wemoji'), { scale: 0, rotation: -25, duration: .55, ease: 'back.out(2.2)', transformOrigin: '50% 60%' }, T + .2);
       tl.to($(el, '.wemoji'), { rotation: 6, duration: .25, yoyo: true, repeat: 3, ease: 'sine.inOut', transformOrigin: '50% 90%' }, T + .8);
-      tl.from($$(el, '.whead .line'), { y: 60, opacity: 0, duration: .4, stagger: .14, ease: E }, T + .45);
+      lineIn(tl, el, '.whead .line', d, { y: 60, opacity: 0, duration: .4, stagger: .14, ease: E }, T + .45);
       if ($(el, '.wsub')) tl.from($(el, '.wsub'), { opacity: 0, y: 20, duration: .3 }, T + 1.2);
       cue(T + .05, 'pop_down'); cue(T + .25, 'pop'); cue(T + .9, 'impact_soft');
     },
     wtips(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
       [...$$(el, '.witem')].forEach((w, i) => { const t = T + .55 + i * 1.2;
         tl.from(w, { x: 120, opacity: 0, duration: .4, ease: E }, t);
         tl.from($(w, '.wic'), { scale: 0, duration: .35, ease: 'back.out(2.4)' }, t + .15);
         cue(t + .15, i ? 'pop' : 'pop_small'); });
     },
     wquiz(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
       [...$$(el, '.wopt')].forEach((o, i) => { tl.from(o, { y: 40, opacity: 0, duration: .32, ease: E }, T + .6 + i * .32); cue(T + .6 + i * .32, 'pop_small'); });
       const t = T + .7 + $$(el, '.wopt').length * .32 + .4;
       tl.from($(el, '.wask'), { scale: .6, opacity: 0, duration: .4, ease: 'back.out(2)' }, t);
@@ -427,7 +483,7 @@
     },
     wpov(tl, T, d, el, dur) {
       tl.from($(el, '.wchip'), { x: -60, opacity: 0, duration: .3, ease: E }, T);
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T + .1);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T + .1);
       tl.fromTo($(el, '.wfeed .feed'), { y: 420 }, { y: -1350, duration: dur, ease: 'power1.in' }, T);
       for (let t = T + .2; t < T + 3.0; t += .22) cue(t, 'tick');
       tl.to($(el, '.wfeed'), { opacity: .25, duration: .4 }, T + 3.0);
@@ -435,7 +491,7 @@
       cue(T + 3.1, 'impact_soft');
     },
     wmyth(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
       tl.from($(el, '.wclaim'), { y: 70, opacity: 0, duration: .45, ease: E }, T + .35);
       tl.from($(el, '.wstamp'), { scale: 2.6, opacity: 0, rotation: -30, duration: .3, ease: 'power3.in' }, T + 1.7);
       tl.to($(el, '.wclaim'), { x: 8, duration: .05, repeat: 5, yoyo: true, ease: 'none' }, T + 2.0);
@@ -470,7 +526,7 @@
       tl.to($(el, '.p1'), { scale: 1.04, duration: .18, yoyo: true, repeat: 1, transformOrigin: '0% 60%' }, T + 2.4);
     },
     pain(tl, T, d, el, dur) {
-      tl.from($$(el, '.head .line'), { y: 60, opacity: 0, duration: .4, stagger: .16, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 60, opacity: 0, duration: .4, stagger: .16, ease: E }, T);
       tl.fromTo($(el, '.feed'), { y: 420 }, { y: -1500, duration: dur, ease: 'power1.in' }, T);
       tl.from($(el, '.big'), { scale: 1.6, opacity: 0, duration: .35, ease: E, transformOrigin: '0% 50%' }, T + 1.5);
       tl.to($(el, '.big'), { x: 10, duration: .05, repeat: 7, yoyo: true, ease: 'none' }, T + 1.9);
@@ -478,7 +534,7 @@
       for (let t = T; t < T + dur - .1; t += .25) cue(t + .125, 'tick');
     },
     solution(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T + .15);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T + .15);
       tl.from($$(el, '.fly'), { scale: .6, opacity: 0, duration: .3, stagger: .05, ease: 'back.out(2)' }, T + .1);
       tl.from($(el, '.tcard'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .5);
       const rows = [...$$(el, '.trow.r')];
@@ -499,7 +555,7 @@
       tl.to($(el, '.badge'), { scale: 1.15, duration: .15, yoyo: true, repeat: 1 }, T + 2.2);
     },
     ai(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .13, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .13, ease: E }, T);
       tl.from($(el, '.qb'), { y: 70, opacity: 0, duration: .45, ease: E }, T + .35);
       tl.to($(el, '.h1'), { backgroundSize: '100% 46%', duration: .35, ease: 'power2.out' }, T + .95);
       tl.to($(el, '.h2'), { backgroundSize: '100% 46%', duration: .25, ease: 'power2.out' }, T + 1.2);
@@ -509,7 +565,7 @@
       tl.from($(el, '.nocode'), { y: 30, opacity: 0, duration: .35, ease: E }, T + 2.0);
     },
     connect(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
       if ($(el, '.cardA')) {
         tl.from($(el, '.cardA'), { y: 70, opacity: 0, duration: .4, ease: E }, T + .3);
         tl.to($(el, '.knob'), { x: 58, duration: .25, ease: 'power2.out' }, T + .85);
@@ -526,7 +582,7 @@
       cue(T + 2.35, 'click');
     },
     messenger(tl, T, d, el) {
-      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .13, ease: E }, T);
+      lineIn(tl, el, '.head .line', d, { y: 50, opacity: 0, duration: .4, stagger: .13, ease: E }, T);
       tl.from($(el, '.sub'), { y: 40, opacity: 0, duration: .4, ease: E }, T + .3);
       tl.from($(el, '.chat'), { y: 80, opacity: 0, duration: .45, ease: E }, T + .45);
       [0, 1, 2].forEach(i => {
@@ -561,6 +617,20 @@
     });
   }
 
+  // Lottie: a paused animation whose frame follows the GSAP timeline, so every render frame is exact.
+  function playLottie(tl, box, o, T, s) {
+    const data = (window.LOTTIE || {})[o.src];
+    if (!data) throw new Error(`Lottie ${o.src} is not loaded`);
+    const anim = lottie.loadAnimation({ container: box, renderer: 'svg', loop: false, autoplay: false,
+      animationData: JSON.parse(JSON.stringify(data)), rendererSettings: { preserveAspectRatio: 'xMidYMid meet' } });
+    const total = anim.totalFrames, fr = data.fr || 30, speed = o.speed || 1, at = o.at ?? .25;
+    const len = Math.max(.1, o.loop ? s.dur - at : Math.min((total - 1) / fr / speed, s.dur - at)), p = { f: 0 };   // never past the scene: the timeline length is the video length
+    anim.goToAndStop(0, true);
+    tl.fromTo(p, { f: 0 }, { f: len * fr * speed, duration: len, ease: 'none', immediateRender: false,
+      onUpdate: () => anim.goToAndStop(o.loop ? p.f % (total - 1) : Math.min(p.f, total - 1), true) }, T + at);
+  }
+  const VIDS = [];   // video covers: frame images swapped on seek
+
   function build() {
     gsap.set(['#wipe', '#wipe2'], { yPercent: 100 });
     const tl = gsap.timeline({ paused: true });
@@ -575,6 +645,8 @@
       glowTo(tl, GLOW[s.type] || 'em', t, i === 0);
       if (i > 0) tl.set(s.el, { opacity: 1 }, t);
       TL[s.type](tl, t, s.d, s.el, s.dur);
+      [...$$(s.el, '.lot')].forEach((box, k) => playLottie(tl, box, lotList(s.d)[k], t, s));
+      if (s.d.frames) VIDS.push(Object.assign({ img: $(s.el, '.covimg'), start: t, cur: 1 }, s.d.frames));
       const end = t + s.dur, next = scenes[i + 1];
       if (next) {
         const wipe = next.type === 'solution' && i > 0 ? '#wipe' : (next.type === 'offer' || next.type === 'follow') ? '#wipe2' : null;
@@ -609,6 +681,12 @@
     window.cues = cues;
     return true;
   })();
-  window.seek = t => { window.tl.seek(t, false); };
+  window.seek = async t => {
+    window.tl.seek(t, false);
+    for (const v of VIDS) {
+      const i = Math.max(1, Math.min(v.n, 1 + Math.floor((t - v.start) * v.fps + 1e-6)));
+      if (i !== v.cur) { v.cur = i; v.img.src = `${v.dir}/${String(i).padStart(4, '0')}.jpg`; await v.img.decode().catch(() => {}); }
+    }
+  };
   window.duration = () => window.tl.duration();
 })();
