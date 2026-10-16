@@ -71,5 +71,9 @@
    "type": "follow",
    "tag": "Follow if [this is you]"
   }
- ]
+ ],
+ "music": {
+  "track": "mixkit:190",
+  "start": 72.56
+ }
 }

@@ -31,3 +31,27 @@ from the list page below. Kept for the record; not shown on the videos.
 | 201 | Swish Swed | Arulo | Tech House | https://mixkit.co/free-stock-music/tech-house/ |
 | 942 | Be Happy | Michael Ramir C. | Synthpop | https://mixkit.co/free-stock-music/edm/?page=2 |
 | 930 | The Great Wall | Michael Ramir C. | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |
+| 629 | Skeeomaver Sound | Eugenio Mininni | EDM | https://mixkit.co/free-stock-music/edm/ |
+| 1168 | Coffee or Tea | Michael Ramir C. | Electronica | https://mixkit.co/free-stock-music/electronic/ |
+| 179 | Solitude | Alejandro Magaña (A. M.) | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |
+| 555 | South Waves | Eugenio Mininni | Synthpop | https://mixkit.co/free-stock-music/electropop/ |
+| 439 | Tides Turning | Arulo | Electropop | https://mixkit.co/free-stock-music/electropop/ |
+| 704 | Pop 11 | Grigoriy Nuzhny | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |
+| 173 | Better Times are Coming | Alejandro Magaña (A. M.) | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |
+| 106 | Deep Techno | Alejandro Magaña (A. M.) | House | https://mixkit.co/free-stock-music/house/ |
+| 1156 | The Clique | Michael Ramir C. | House | https://mixkit.co/free-stock-music/house/ |
+| 470 | Golden Storm | Diego Nava | EDM | https://mixkit.co/free-stock-music/edm/ |
+| 190 | Electro Dreams | Arulo | House | https://mixkit.co/free-stock-music/house/ |
+| 755 | Workout 01 | Lily J | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |
+| 628 | Summer Dream | Eugenio Mininni | EDM | https://mixkit.co/free-stock-music/house/ |
+| 119 | Perfect Stranger | Alejandro Magaña (A. M.) | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 756 | Workout 03 | Lily J | Electronica | https://mixkit.co/free-stock-music/electronica/?page=3 |
+| 132 | Hazy After Hours | Alejandro Magaña (A. M.) | Electronica | https://mixkit.co/free-stock-music/electronica/ |
+| 1062 | Friday Routine | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/house/ |
+| 581 | Nights With Ga | Eugenio Mininni | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 745 | House Vibez | Lily J | House | https://mixkit.co/free-stock-music/house/ |
+| 619 | Before the Dawn | Eugenio Mininni | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 371 | Cat Walk | Arulo | House | https://mixkit.co/free-stock-music/house/ |
+| 159 | Lonerism | Alejandro Magaña (A. M.) | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |
+| 693 | House 01 | Grigoriy Nuzhny | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 870 | Forbidden Apple | Michael Ramir C. | Electropop | https://mixkit.co/free-stock-music/electropop/ |

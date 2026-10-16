@@ -41,5 +41,9 @@
    "type": "follow",
    "tag": "Sekojiet — [mazāk kļūdu tiešraidēs]"
   }
- ]
+ ],
+ "music": {
+  "track": "mixkit:119",
+  "start": 41.33
+ }
 }

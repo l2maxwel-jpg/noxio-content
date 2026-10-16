@@ -24,5 +24,9 @@
    "type": "follow",
    "tag": "Follow for [myths, busted]"
   }
- ]
+ ],
+ "music": {
+  "track": "mixkit:745",
+  "start": 30.04
+ }
 }

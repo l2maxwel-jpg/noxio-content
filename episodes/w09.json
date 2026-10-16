@@ -72,5 +72,9 @@
    "type": "follow",
    "tag": "Obserwuj, jeśli [to znasz]"
   }
- ]
+ ],
+ "music": {
+  "track": "mixkit:179",
+  "start": 64.5
+ }
 }
