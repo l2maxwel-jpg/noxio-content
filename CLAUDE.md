@@ -86,8 +86,9 @@ PrestaShop shop quickly (noxio.pl → Narzędzia). Price (confirmed on noxio.pl 
   label scanning (code, price, composition read from a tag), duplicate detection before publishing, sync with a
   supplier's file (prices and stock by SKU), quantity discounts, SEO fields, import history, catalogue export.
   Steps: connect the shop → add photos → AI fills the card → publish.
-- **Not yet**: "Zdjęcie studyjne AI", "Zdjęcie na modelu AI", "Przeniesienie na górę kategorii" were seen only on a test
-  site — don't show them until Maxim confirms they are live. No multi-language claims either until confirmed.
+- **Not live yet — never show or mention** (Maxim, 2026-10-16): "Zdjęcie studyjne AI", "Zdjęcie na modelu AI",
+  "Przeniesienie na górę kategorii" — not in videos, captions or covers, not even as "coming soon". No multi-language
+  claims (cards in several shop languages) either until Maxim confirms them.
 - PrestaShop is named in text only: never its logo, admin screens or colours. The template draws our own cards.
 - Files `episodes/pNN.json` with `"series": "import"`, 10–15 s: `cover` (a Mixkit clip) → one scene of `icard` (photo →
   card → publish), `isync` (supplier file → updated prices/stock), `idupe` (duplicate found → update instead of a copy),
