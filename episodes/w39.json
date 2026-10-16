@@ -40,5 +40,9 @@
    "type": "follow",
    "tag": "Follow for [live selling tips]"
   }
- ]
+ ],
+ "music": {
+  "track": "mixkit:569",
+  "start": 90.81
+ }
 }

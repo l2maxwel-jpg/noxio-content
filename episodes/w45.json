@@ -32,5 +32,9 @@
    "type": "follow",
    "tag": "Follow for [more questions]"
   }
- ]
+ ],
+ "music": {
+  "track": "mixkit:472",
+  "start": 34.22
+ }
 }

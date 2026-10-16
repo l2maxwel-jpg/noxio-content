@@ -41,5 +41,9 @@
    "type": "follow",
    "tag": "Follow to [skip these mistakes]"
   }
- ]
+ ],
+ "music": {
+  "track": "mixkit:1191",
+  "start": 36.03
+ }
 }

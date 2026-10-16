@@ -55,3 +55,22 @@ from the list page below. Kept for the record; not shown on the videos.
 | 159 | Lonerism | Alejandro Magaña (A. M.) | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |
 | 693 | House 01 | Grigoriy Nuzhny | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
 | 870 | Forbidden Apple | Michael Ramir C. | Electropop | https://mixkit.co/free-stock-music/electropop/ |
+| 1191 | Silver Lining | Michael Ramir C. | Electronica | https://mixkit.co/free-stock-music/electronica/?page=3 |
+| 951 | Don't You Know It's True | Michael Ramir C. | Electronica | https://mixkit.co/free-stock-music/electronica/?page=3 |
+| 279 | New House | Arulo | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 973 | Positive Energy | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/edm/ |
+| 729 | Pop Track 03 | Lily J | Electronic | https://mixkit.co/free-stock-music/electronic/ |
+| 694 | House Two | Grigoriy Nuzhny | Electropop | https://mixkit.co/free-stock-music/electropop/ |
+| 186 | Savana | Andrew Ev | House | https://mixkit.co/free-stock-music/house/ |
+| 1012 | Take this Higher | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/edm/ |
+| 569 | Miles Away | Eugenio Mininni | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |
+| 196 | Deep House | Arulo | House | https://mixkit.co/free-stock-music/house/ |
+| 113 | House Fest | Alejandro Magaña (A. M.) | EDM | https://mixkit.co/free-stock-music/house/ |
+| 180 | Gear | Andrew Ev | EDM | https://mixkit.co/free-stock-music/house/ |
+| 205 | India | Arulo | EDM | https://mixkit.co/free-stock-music/house/ |
+| 164 | Ode to Synths | Alejandro Magaña (A. M.) | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |
+| 472 | Something About Freedom | Diego Nava | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 707 | Hiding Under | House | EDM | https://mixkit.co/free-stock-music/electro-house/ |
+| 486 | Alone | Diego Nava | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |
+| 567 | Anthem #01 | Eugenio Mininni | EDM | https://mixkit.co/free-stock-music/electro-house/ |
+| 1280 | Razor Edge | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |

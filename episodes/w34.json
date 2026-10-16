@@ -72,5 +72,9 @@
    "type": "follow",
    "tag": "Sekojiet, ja [atpazināt sevi]"
   }
- ]
+ ],
+ "music": {
+  "track": "mixkit:973",
+  "start": 2.8
+ }
 }
