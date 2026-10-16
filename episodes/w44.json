@@ -1,0 +1,45 @@
+{
+ "id": "w44",
+ "lang": "lv",
+ "series": "warmup",
+ "angle": "warm-mistakes-sound",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "myth",
+   "chip": "KĻŪDAS",
+   "emoji": "🔇",
+   "head": [
+    "3 kļūdas",
+    "[ar skaņu]"
+   ]
+  },
+  {
+   "type": "wtips",
+   "style": "x",
+   "head": [
+    "Skaņa",
+    "tiešraidē"
+   ],
+   "items": [
+    [
+     "Mūzika skaļāka par balsi",
+     "[→ mūziku klusāk vai nemaz]"
+    ],
+    [
+     "Runāt prom no telefona",
+     "[→ turiet to tuvāk]"
+    ],
+    [
+     "Fona troksnis",
+     "[→ aizveriet logu un durvis]"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Sekojiet — [mazāk kļūdu tiešraidēs]"
+  }
+ ]
+}

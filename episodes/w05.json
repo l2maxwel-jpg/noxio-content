@@ -1,0 +1,44 @@
+{
+ "id": "w05",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-tips-description",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "tip",
+   "chip": "PORADA DNIA",
+   "emoji": "🎯",
+   "head": [
+    "Jak opisać",
+    "produkt,",
+    "[żeby kupowały]"
+   ]
+  },
+  {
+   "type": "wtips",
+   "head": [
+    "Opis produktu",
+    "w 3 krokach"
+   ],
+   "items": [
+    [
+     "Cena na początku",
+     "nikt nie musi pytać"
+    ],
+    [
+     "Rozmiary w jednej linii",
+     "S–XL i wymiary obok"
+    ],
+    [
+     "Jak zamówić",
+     "„napisz: biorę + rozmiar”"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj — [porady do live’ów]"
+  }
+ ]
+}

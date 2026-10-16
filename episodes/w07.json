@@ -1,0 +1,37 @@
+{
+ "id": "w07",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-quiz-live-length",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "quiz",
+   "chip": "PYTANIE",
+   "emoji": "🐢",
+   "head": [
+    "Ile trwa",
+    "Twój",
+    "[live?]"
+   ]
+  },
+  {
+   "type": "wquiz",
+   "head": [
+    "Ile zwykle",
+    "trwa Twój live?"
+   ],
+   "options": [
+    "Do 30 minut",
+    "Około godziny",
+    "Dwie godziny",
+    "Dłużej niż dwie"
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj — [więcej pytań wkrótce]"
+  }
+ ]
+}

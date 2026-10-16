@@ -1,0 +1,43 @@
+{
+ "id": "w06",
+ "lang": "lv",
+ "series": "warmup",
+ "angle": "warm-quiz-language",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "quiz",
+   "chip": "JAUTĀJUMS",
+   "emoji": "💭",
+   "head": [
+    "Kurā valodā",
+    "raksta",
+    "[jūsu pircēji?]"
+   ]
+  },
+  {
+   "type": "wquiz",
+   "head": [
+    "Kurā valodā",
+    "raksta pircēji?"
+   ],
+   "options": [
+    "Latviski",
+    "Krieviski",
+    "Abās valodās",
+    "Arī angliski"
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Sekojiet — [drīz vēl jautājumi]"
+  }
+ ],
+ "music": {
+  "bpm": 124,
+  "transpose": 2,
+  "prog": 1,
+  "hats16": true
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "w26",
+ "lang": "lv",
+ "series": "warmup",
+ "angle": "warm-tips-product-photo",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "tip",
+   "chip": "DIENAS PADOMS",
+   "emoji": "📷",
+   "head": [
+    "Foto",
+    "ierakstam,",
+    "[kas pārdod]"
+   ]
+  },
+  {
+   "type": "wtips",
+   "head": [
+    "Labs preces",
+    "foto"
+   ],
+   "items": [
+    [
+     "Dienas gaisma",
+     "pie loga, bez zibspuldzes"
+    ],
+    [
+     "Vienkāršs fons",
+     "balta siena vai audums"
+    ],
+    [
+     "Detaļa tuvplānā",
+     "audums, poga, etiķete"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Sekojiet — [padomi tiešraidēm]"
+  }
+ ]
+}

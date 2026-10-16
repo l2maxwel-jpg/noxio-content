@@ -1,0 +1,76 @@
+{
+ "id": "w34",
+ "lang": "lv",
+ "series": "warmup",
+ "angle": "warm-pov-2am",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "pov",
+   "chip": "POV",
+   "emoji": "😴",
+   "head": [
+    "Pulkstenis",
+    "[divi naktī]"
+   ]
+  },
+  {
+   "type": "wpov",
+   "head": [
+    "pulkstenis divi naktī,",
+    "tu vēl pārraksti"
+   ],
+   "comments": [
+    [
+     "Anna",
+     "ņemu M"
+    ],
+    [
+     "Ilze",
+     "2 gab."
+    ],
+    [
+     "Laura",
+     "zilo"
+    ],
+    [
+     "Sanita",
+     "L lūdzu"
+    ],
+    [
+     "Inese",
+     "kā Annai"
+    ],
+    [
+     "Liene",
+     "ņemu!"
+    ],
+    [
+     "Dace",
+     "melno S"
+    ],
+    [
+     "Zane",
+     "+"
+    ],
+    [
+     "Marta",
+     "atlieciet"
+    ],
+    [
+     "Evija",
+     "man arī"
+    ]
+   ],
+   "punch": [
+    "un rīt",
+    "[atkal tiešraide] 😴"
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Sekojiet, ja [atpazināt sevi]"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "id": "w40",
+ "lang": "lv",
+ "series": "warmup",
+ "angle": "warm-myth-more-items",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "myth",
+   "chip": "MĪTS VAI PATIESĪBA",
+   "emoji": "🧩",
+   "head": [
+    "Vairāk preču",
+    "[= vairāk]",
+    "pārdošanas?"
+   ]
+  },
+  {
+   "type": "wmyth",
+   "claim": "Jo vairāk preču vienā tiešraidē, jo labāk",
+   "truth": "Ja preču ir par daudz, skatītāji apjūk. Labāk mazāk preču, un katrai — savs laiks un skaidra cena."
+  },
+  {
+   "type": "follow",
+   "tag": "Sekojiet — [apgāžam mītus]"
+  }
+ ]
+}

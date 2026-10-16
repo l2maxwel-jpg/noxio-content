@@ -1,0 +1,36 @@
+{
+ "id": "w45",
+ "lang": "en",
+ "series": "warmup",
+ "angle": "warm-quiz-plan",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "quiz",
+   "chip": "QUESTION",
+   "emoji": "🎧",
+   "head": [
+    "How do you",
+    "[plan]",
+    "a live?"
+   ]
+  },
+  {
+   "type": "wquiz",
+   "head": [
+    "How do you plan",
+    "your lives?"
+   ],
+   "options": [
+    "A written list",
+    "In my head",
+    "With a helper",
+    "I just go live"
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Follow for [more questions]"
+  }
+ ]
+}

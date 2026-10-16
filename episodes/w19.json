@@ -1,0 +1,45 @@
+{
+ "id": "w19",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-mistakes-replies",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "myth",
+   "chip": "BŁĘDY",
+   "emoji": "💌",
+   "head": [
+    "3 błędy",
+    "w odpowiedziach",
+    "[klientkom]"
+   ]
+  },
+  {
+   "type": "wtips",
+   "style": "x",
+   "head": [
+    "Odpowiadając",
+    "klientkom"
+   ],
+   "items": [
+    [
+     "Odpowiedź po 2 dniach",
+     "[→ jeszcze w dniu live’a]"
+    ],
+    [
+     "Jedno „ok” dla wszystkich",
+     "[→ po imieniu i konkretnie]"
+    ],
+    [
+     "Cena tylko na priv",
+     "[→ cena widoczna dla wszystkich]"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj — [mniej błędów na live]"
+  }
+ ]
+}

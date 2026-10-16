@@ -1,0 +1,29 @@
+{
+ "id": "w14",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-myth-big-shops",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "myth",
+   "chip": "MIT CZY PRAWDA",
+   "emoji": "🏪",
+   "head": [
+    "Live tylko",
+    "[dla dużych]",
+    "sklepów?"
+   ]
+  },
+  {
+   "type": "wmyth",
+   "claim": "Live’y mają sens tylko dla dużych sklepów",
+   "truth": "Mały sklep też może sprzedawać na live — wystarczy telefon, dobre światło i stały termin."
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj — [obalamy mity]"
+  }
+ ]
+}

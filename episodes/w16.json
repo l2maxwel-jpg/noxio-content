@@ -1,0 +1,29 @@
+{
+ "id": "w16",
+ "lang": "lv",
+ "series": "warmup",
+ "angle": "warm-myth-cheap-only",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "myth",
+   "chip": "MĪTS VAI PATIESĪBA",
+   "emoji": "🤨",
+   "head": [
+    "Tiešraidēs",
+    "pērk tikai",
+    "[lētas lietas?]"
+   ]
+  },
+  {
+   "type": "wmyth",
+   "claim": "Tiešraidēs pērk tikai lētas lietas",
+   "truth": "Pērk to, kam uzticas. Ja labi parādāt kvalitāti un atbildat uz jautājumiem, pērk arī dārgākas preces."
+  },
+  {
+   "type": "follow",
+   "tag": "Sekojiet — [apgāžam mītus]"
+  }
+ ]
+}

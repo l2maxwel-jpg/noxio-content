@@ -1,0 +1,45 @@
+{
+ "id": "w20",
+ "lang": "lv",
+ "series": "warmup",
+ "angle": "warm-mistakes-prices",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "myth",
+   "chip": "KĻŪDAS",
+   "emoji": "🚫",
+   "head": [
+    "3 kļūdas",
+    "ar",
+    "[cenām]"
+   ]
+  },
+  {
+   "type": "wtips",
+   "style": "x",
+   "head": [
+    "Ar cenām",
+    "nedariet tā"
+   ],
+   "items": [
+    [
+     "„Cena privāti”",
+     "[→ cena redzama visiem]"
+    ],
+    [
+     "Cena tikai sākumā",
+     "[→ atkārtojiet to laiku pa laikam]"
+    ],
+    [
+     "Neskaidra piegāde",
+     "[→ piegādes cena uzreiz]"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Sekojiet — [mazāk kļūdu tiešraidēs]"
+  }
+ ]
+}

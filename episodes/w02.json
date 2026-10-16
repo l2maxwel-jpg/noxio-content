@@ -1,0 +1,44 @@
+{
+ "id": "w02",
+ "lang": "lv",
+ "series": "warmup",
+ "angle": "warm-tips-live-start",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "tip",
+   "chip": "DIENAS PADOMS",
+   "emoji": "🧭",
+   "head": [
+    "Kā sākt",
+    "[tiešraidi]",
+    "pareizi"
+   ]
+  },
+  {
+   "type": "wtips",
+   "head": [
+    "Pirmās",
+    "divas minūtes"
+   ],
+   "items": [
+    [
+     "Sasveicinieties",
+     "un pasakiet, kas būs šodien"
+    ],
+    [
+     "Parādiet populārāko",
+     "uzreiz, nevis beigās"
+    ],
+    [
+     "Pasakiet, kā pasūtīt",
+     "„rakstiet: ņemu + izmērs”"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Sekojiet — [padomi tiešraidēm]"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "id": "w11",
+ "lang": "en",
+ "series": "warmup",
+ "angle": "warm-quiz-where-sell",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "quiz",
+   "chip": "QUESTION",
+   "emoji": "📊",
+   "head": [
+    "Where do",
+    "you sell",
+    "[the most?]"
+   ]
+  },
+  {
+   "type": "wquiz",
+   "head": [
+    "Where do you",
+    "sell the most?"
+   ],
+   "options": [
+    "Facebook lives",
+    "Sale posts",
+    "Local groups",
+    "Stories and DMs"
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Follow for [more questions]"
+  }
+ ]
+}

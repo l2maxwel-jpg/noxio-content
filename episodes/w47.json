@@ -1,0 +1,75 @@
+{
+ "id": "w47",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-pov-new-collection",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "pov",
+   "chip": "POV",
+   "emoji": "👀",
+   "head": [
+    "Pokazujesz",
+    "[nową kolekcję]"
+   ]
+  },
+  {
+   "type": "wpov",
+   "head": [
+    "pokazujesz",
+    "nową kolekcję"
+   ],
+   "comments": [
+    [
+     "Ola",
+     "wow 😍"
+    ],
+    [
+     "Kasia",
+     "biorę!"
+    ],
+    [
+     "Ewa",
+     "ta zielona!"
+    ],
+    [
+     "Magda",
+     "M dla mnie"
+    ],
+    [
+     "Asia",
+     "pokaż jeszcze raz"
+    ],
+    [
+     "Ania",
+     "a z tyłu?"
+    ],
+    [
+     "Monika",
+     "cudo"
+    ],
+    [
+     "Basia",
+     "biorę dwie"
+    ],
+    [
+     "Gosia",
+     "a L?"
+    ],
+    [
+     "Iza",
+     "chcę!"
+    ]
+   ],
+   "punch": [
+    "a Ty liczysz,",
+    "[czy wystarczy] 👀"
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj, jeśli [to znasz]"
+  }
+ ]
+}

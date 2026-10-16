@@ -1,0 +1,84 @@
+{
+ "id": "w28",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-pov-wifi",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "pov",
+   "chip": "POV",
+   "emoji": "🤦",
+   "head": [
+    "Najlepszy",
+    "moment",
+    "[live’a…]"
+   ],
+   "sub": "i coś idzie nie tak"
+  },
+  {
+   "type": "wpov",
+   "head": [
+    "najlepszy moment",
+    "live’a…"
+   ],
+   "comments": [
+    [
+     "Ola",
+     "zawiesiło się"
+    ],
+    [
+     "Kasia",
+     "nie widać"
+    ],
+    [
+     "Ewa",
+     "jesteś?"
+    ],
+    [
+     "Magda",
+     "halo?"
+    ],
+    [
+     "Asia",
+     "obraz stoi"
+    ],
+    [
+     "Ania",
+     "wróciło!"
+    ],
+    [
+     "Monika",
+     "znowu nie ma"
+    ],
+    [
+     "Basia",
+     "co się dzieje"
+    ],
+    [
+     "Gosia",
+     "czekam"
+    ],
+    [
+     "Iza",
+     "już widać!"
+    ]
+   ],
+   "punch": [
+    "i wtedy",
+    "[pada internet] 🤦"
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj, jeśli [to znasz]"
+  }
+ ],
+ "music": {
+  "bpm": 128,
+  "transpose": 0,
+  "prog": 0,
+  "hats16": false
+ }
+}

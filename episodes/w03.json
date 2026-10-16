@@ -1,0 +1,44 @@
+{
+ "id": "w03",
+ "lang": "en",
+ "series": "warmup",
+ "angle": "warm-tips-before-live",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "tip",
+   "chip": "TIP OF THE DAY",
+   "emoji": "🚀",
+   "head": [
+    "Your first",
+    "[live sale]",
+    "checklist"
+   ]
+  },
+  {
+   "type": "wtips",
+   "head": [
+    "Before you",
+    "go live"
+   ],
+   "items": [
+    [
+     "Charge your phone",
+     "and plug it in anyway"
+    ],
+    [
+     "Line up the items",
+     "in the order you’ll show them"
+    ],
+    [
+     "Write the rules",
+     "“comment: mine + size”"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Follow for [live selling tips]"
+  }
+ ]
+}

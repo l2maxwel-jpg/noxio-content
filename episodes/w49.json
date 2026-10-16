@@ -1,0 +1,29 @@
+{
+ "id": "w49",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-myth-actress",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "myth",
+   "chip": "MIT CZY PRAWDA",
+   "emoji": "🦉",
+   "head": [
+    "Na live’ie",
+    "[trzeba]",
+    "[grać rolę?]"
+   ]
+  },
+  {
+   "type": "wmyth",
+   "claim": "Żeby sprzedawać na live, trzeba umieć występować",
+   "truth": "Klientki kupują od osoby, która zna swój towar. Wystarczy mówić spokojnie i konkretnie."
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj — [obalamy mity]"
+  }
+ ]
+}

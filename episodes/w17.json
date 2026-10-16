@@ -1,0 +1,75 @@
+{
+ "id": "w17",
+ "lang": "en",
+ "series": "warmup",
+ "angle": "warm-pov-still-available",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "pov",
+   "chip": "POV",
+   "emoji": "🤣",
+   "head": [
+    "“Is it",
+    "[still available?]”"
+   ]
+  },
+  {
+   "type": "wpov",
+   "head": [
+    "you sold it",
+    "10 minutes ago"
+   ],
+   "comments": [
+    [
+     "Emma",
+     "is it still available?"
+    ],
+    [
+     "Mia",
+     "still there?"
+    ],
+    [
+     "Grace",
+     "available??"
+    ],
+    [
+     "Lily",
+     "I’ll take it!"
+    ],
+    [
+     "Ava",
+     "sold?"
+    ],
+    [
+     "Zoe",
+     "any left?"
+    ],
+    [
+     "Ruby",
+     "still have it?"
+    ],
+    [
+     "Kate",
+     "mine if available"
+    ],
+    [
+     "Lucy",
+     "?"
+    ],
+    [
+     "Jess",
+     "is it gone?"
+    ]
+   ],
+   "punch": [
+    "and they keep",
+    "[asking] 🤣"
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Follow if [this is you]"
+  }
+ ]
+}

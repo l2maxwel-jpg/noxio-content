@@ -1,0 +1,45 @@
+{
+ "id": "w31",
+ "lang": "en",
+ "series": "warmup",
+ "angle": "warm-mistakes-comments",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "myth",
+   "chip": "MISTAKES",
+   "emoji": "🛑",
+   "head": [
+    "3 mistakes",
+    "with",
+    "[comments]"
+   ]
+  },
+  {
+   "type": "wtips",
+   "style": "x",
+   "head": [
+    "Comments:",
+    "don’t do this"
+   ],
+   "items": [
+    [
+     "Ignoring questions",
+     "[→ answer each one by name]"
+    ],
+    [
+     "Arguing in public",
+     "[→ move it to messages]"
+    ],
+    [
+     "Deleting “how much?”",
+     "[→ pin the price instead]"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Follow to [skip these mistakes]"
+  }
+ ]
+}

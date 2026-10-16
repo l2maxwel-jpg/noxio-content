@@ -1,0 +1,46 @@
+{
+ "id": "w35",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-mistakes-frame",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "myth",
+   "chip": "BŁĘDY",
+   "emoji": "🎬",
+   "head": [
+    "3 błędy",
+    "w kadrze",
+    "[na live’ie]"
+   ]
+  },
+  {
+   "type": "wtips",
+   "style": "x",
+   "head": [
+    "W kadrze",
+    "nie rób tak"
+   ],
+   "items": [
+    [
+     "Telefon w poziomie",
+     "[→ trzymaj go pionowo]"
+    ],
+    [
+     "Bałagan w tle",
+     "[→ prosty, jasny kąt]"
+    ],
+    [
+     "Kamera w ręce",
+     "[→ statyw za kilka złotych]"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj — [mniej błędów na live]"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "id": "w25",
+ "lang": "en",
+ "series": "warmup",
+ "angle": "warm-myth-studio",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "myth",
+   "chip": "MYTH OR TRUTH",
+   "emoji": "🔍",
+   "head": [
+    "Selling live",
+    "[needs a studio?]"
+   ]
+  },
+  {
+   "type": "wmyth",
+   "claim": "You need professional gear to sell live",
+   "truth": "A phone, daylight from a window and a stand are enough to start. Clear sound matters more than a fancy camera."
+  },
+  {
+   "type": "follow",
+   "tag": "Follow for [myths, busted]"
+  }
+ ]
+}

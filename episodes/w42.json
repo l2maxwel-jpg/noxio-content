@@ -1,0 +1,37 @@
+{
+ "id": "w42",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-quiz-most-work",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "quiz",
+   "chip": "PYTANIE",
+   "emoji": "🙋",
+   "head": [
+    "Co zabiera",
+    "najwięcej",
+    "[czasu?]"
+   ]
+  },
+  {
+   "type": "wquiz",
+   "head": [
+    "Co zajmuje najwięcej",
+    "czasu po live’ie?"
+   ],
+   "options": [
+    "Przepisywanie zamówień",
+    "Odpowiedzi na pytania",
+    "Pakowanie",
+    "Pilnowanie wpłat"
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj — [więcej pytań wkrótce]"
+  }
+ ]
+}

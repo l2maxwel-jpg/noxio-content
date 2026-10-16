@@ -1,0 +1,36 @@
+{
+ "id": "w30",
+ "lang": "lv",
+ "series": "warmup",
+ "angle": "warm-quiz-camera",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "quiz",
+   "chip": "JAUTĀJUMS",
+   "emoji": "📱",
+   "head": [
+    "Ar ko",
+    "jūs",
+    "[filmējat?]"
+   ]
+  },
+  {
+   "type": "wquiz",
+   "head": [
+    "Ar ko filmējat",
+    "tiešraides?"
+   ],
+   "options": [
+    "Ar telefonu rokā",
+    "Telefons uz statīva",
+    "Divi telefoni",
+    "Kamera un dators"
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Sekojiet — [drīz vēl jautājumi]"
+  }
+ ]
+}

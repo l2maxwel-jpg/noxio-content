@@ -50,6 +50,126 @@
    }
   },
   {
+   "id": "w01",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-10-16T19:30:00",
+   "offset": "+02:00",
+   "title": "Прогрев: Как вести эфир, чтобы заказывали больше",
+   "caption": "Три простых приёма, после которых в эфире заказывают охотнее 💡\nКакой из них вы уже используете?\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w01.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w01.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-live-orders"
+  },
+  {
+   "id": "w02",
+   "lang": "lv",
+   "series": "warmup",
+   "date": "2026-10-17T08:00:00",
+   "offset": "+02:00",
+   "title": "Iesildīšana: Kā sākt tiešraidi pareizi",
+   "caption": "Pirmās minūtes nosaka, vai skatītāji paliks 🧭\nKā jūs parasti sākat tiešraidi?\nSekojiet — katru dienu par pārdošanu tiešraidēs.\n#tiešraide #livecommerce #noxio",
+   "file": "videos/w02.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w02.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-live-start"
+  },
+  {
+   "id": "w03",
+   "lang": "en",
+   "series": "warmup",
+   "date": "2026-10-17T19:30:00",
+   "offset": "+02:00",
+   "title": "Warm-up: Your first live sale checklist",
+   "caption": "Three things to sort out before you hit “Go live” 🚀\nSave it for your next live.\nFollow for daily live selling tips.\n#livesales #livecommerce #noxio",
+   "file": "videos/w03.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w03.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-before-live"
+  },
+  {
+   "id": "w04",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-10-18T08:00:00",
+   "offset": "+02:00",
+   "title": "Прогрев: Как вы собираете заказы?",
+   "caption": "Честно: как вы собираете заказы после эфира? 🤔\nПишите букву — A, B, C или D.\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w04.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w04.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-quiz-how-collect"
+  },
+  {
+   "id": "w05",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-10-18T19:30:00",
+   "offset": "+02:00",
+   "title": "Rozgrzewka: Jak opisać produkt, żeby kupowały",
+   "caption": "Dobry opis sprzedaje, zanim ktoś zapyta o cenę 🎯\nZapisz na później.\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w05.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w05.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-description"
+  },
+  {
+   "id": "w06",
+   "lang": "lv",
+   "series": "warmup",
+   "date": "2026-10-19T08:00:00",
+   "offset": "+02:00",
+   "title": "Iesildīšana: Kurā valodā raksta jūsu pircēji?",
+   "caption": "Kurā valodā jums raksta komentāros? 💭\nRakstiet burtu.\nSekojiet — katru dienu par pārdošanu tiešraidēs.\n#tiešraide #livecommerce #noxio",
+   "file": "videos/w06.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w06.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-quiz-language"
+  },
+  {
    "id": "e02",
    "lang": "ru",
    "date": "2026-10-19T10:00:00",
@@ -107,6 +227,86 @@
    "autoPublish": true
   },
   {
+   "id": "w07",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-10-19T19:30:00",
+   "offset": "+02:00",
+   "title": "Rozgrzewka: Ile trwa Twój live?",
+   "caption": "Ile zwykle trwa Twój live? 🐢\nNapisz literę w komentarzu.\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w07.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w07.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-quiz-live-length"
+  },
+  {
+   "id": "w08",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-10-20T08:00:00",
+   "offset": "+02:00",
+   "title": "Прогрев: Вы сказали: «последний размер M»",
+   "caption": "«Остался последний размер» — и в комментариях начинается гонка 😅\nКак вы решаете, кто был первым?\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w08.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w08.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-pov-last-size"
+  },
+  {
+   "id": "w09",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-10-20T19:30:00",
+   "offset": "+02:00",
+   "title": "Rozgrzewka: Klientka pisze: „odłóż do 10.”",
+   "caption": "„Odłóż do wypłaty” — znasz to? 😂\nIle czekasz na takie zamówienia?\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w09.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w09.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-pov-payday"
+  },
+  {
+   "id": "w10",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-10-21T08:00:00",
+   "offset": "+02:00",
+   "title": "Прогрев: Эфир должен идти час и больше?",
+   "caption": "Миф: чем дольше эфир, тем больше продаж 🧐\nА сколько длится ваш обычный эфир?\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w10.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w10.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-myth-long-live"
+  },
+  {
    "id": "e11",
    "lang": "lv",
    "date": "2026-10-21T10:00:00",
@@ -144,6 +344,46 @@
    "autoPublish": true,
    "cover": "assets/covers/e26.jpg",
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e26.jpg"
+  },
+  {
+   "id": "w11",
+   "lang": "en",
+   "series": "warmup",
+   "date": "2026-10-21T19:30:00",
+   "offset": "+02:00",
+   "title": "Warm-up: Where do you sell the most?",
+   "caption": "Where do your sales really happen? 📊\nDrop the letter in the comments.\nFollow for daily live selling tips.\n#livesales #livecommerce #noxio",
+   "file": "videos/w11.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w11.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-quiz-where-sell"
+  },
+  {
+   "id": "w12",
+   "lang": "lv",
+   "series": "warmup",
+   "date": "2026-10-22T08:00:00",
+   "offset": "+02:00",
+   "title": "Iesildīšana: Pircēja raksta: „kā Annai”",
+   "caption": "„Man tādu pašu kā Annai” — un Anna ir 200 komentāru augstāk 😬\nPazīstami?\nSekojiet — katru dienu par pārdošanu tiešraidēs.\n#tiešraide #livecommerce #noxio",
+   "file": "videos/w12.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w12.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-pov-same-as-anna"
   },
   {
    "id": "e03",
@@ -206,6 +446,46 @@
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e27.jpg"
   },
   {
+   "id": "w13",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-10-22T19:30:00",
+   "offset": "+02:00",
+   "title": "Прогрев: 3 ошибки в посте с товаром",
+   "caption": "Три ошибки в посте с товаром, из-за которых покупатели проходят мимо 🙈\nКакую видите чаще всего?\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w13.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w13.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-mistakes-post"
+  },
+  {
+   "id": "w14",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-10-23T08:00:00",
+   "offset": "+02:00",
+   "title": "Rozgrzewka: Live tylko dla dużych sklepów?",
+   "caption": "Mit: live’y są tylko dla dużych sklepów 🏪\nOd kiedy sprzedajesz na live?\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w14.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w14.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-myth-big-shops"
+  },
+  {
    "id": "e13",
    "lang": "en",
    "date": "2026-10-23T10:00:00",
@@ -224,6 +504,126 @@
    "aiGenerated": false,
    "autoPublish": true,
    "angle": "excel-export"
+  },
+  {
+   "id": "w15",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-10-23T19:30:00",
+   "offset": "+02:00",
+   "title": "Прогрев: Свет решает: товар продаёт себя",
+   "caption": "Как показать вещь в эфире так, чтобы её захотели купить 📸\nСохраните, чтобы не забыть.\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w15.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w15.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-show-item"
+  },
+  {
+   "id": "w16",
+   "lang": "lv",
+   "series": "warmup",
+   "date": "2026-10-24T08:00:00",
+   "offset": "+02:00",
+   "title": "Iesildīšana: Tiešraidēs pērk tikai lētas lietas?",
+   "caption": "Mīts: tiešraidēs pērk tikai lētas lietas 🤨\nKāda ir dārgākā prece, ko esat pārdevuši tiešraidē?\nSekojiet — katru dienu par pārdošanu tiešraidēs.\n#tiešraide #livecommerce #noxio",
+   "file": "videos/w16.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w16.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-myth-cheap-only"
+  },
+  {
+   "id": "w17",
+   "lang": "en",
+   "series": "warmup",
+   "date": "2026-10-24T19:30:00",
+   "offset": "+02:00",
+   "title": "Warm-up: “Is it still available?”",
+   "caption": "Sold 10 minutes ago. Still getting “is it available?” 🤣\nHow many times a day do you answer this one?\nFollow for daily live selling tips.\n#livesales #livecommerce #noxio",
+   "file": "videos/w17.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w17.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-pov-still-available"
+  },
+  {
+   "id": "w18",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-10-25T08:00:00",
+   "offset": "+01:00",
+   "title": "Прогрев: Когда ваши эфиры?",
+   "caption": "В какое время вы обычно выходите в эфир? 🕖\nОтвечайте буквой — посмотрим, когда эфиры у большинства.\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w18.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w18.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-quiz-live-time"
+  },
+  {
+   "id": "w19",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-10-25T19:30:00",
+   "offset": "+01:00",
+   "title": "Rozgrzewka: 3 błędy w odpowiedziach klientkom",
+   "caption": "Odpowiedzi też sprzedają 💌\nKtóry błąd widzisz najczęściej?\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w19.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w19.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-mistakes-replies"
+  },
+  {
+   "id": "w20",
+   "lang": "lv",
+   "series": "warmup",
+   "date": "2026-10-26T08:00:00",
+   "offset": "+01:00",
+   "title": "Iesildīšana: 3 kļūdas ar cenām",
+   "caption": "Trīs kļūdas ar cenām, kas atbaida pircējus 🚫\nKā jūs rādāt cenas?\nSekojiet — katru dienu par pārdošanu tiešraidēs.\n#tiešraide #livecommerce #noxio",
+   "file": "videos/w20.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w20.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-mistakes-prices"
   },
   {
    "id": "e04",
@@ -285,6 +685,86 @@
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e28.jpg"
   },
   {
+   "id": "w21",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-10-26T19:30:00",
+   "offset": "+01:00",
+   "title": "Rozgrzewka: Paczki po live’ie bez chaosu",
+   "caption": "Trzy proste nawyki, które porządkują pakowanie po live’ie 🎀\nJak u Ciebie wygląda pakowanie?\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w21.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w21.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-packing"
+  },
+  {
+   "id": "w22",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-10-27T08:00:00",
+   "offset": "+01:00",
+   "title": "Прогрев: Эфир закончился",
+   "caption": "Эфир закончился, а самое долгое только начинается 🤯\nСколько у вас уходит на разбор комментариев?\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w22.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w22.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-pov-300-comments"
+  },
+  {
+   "id": "w23",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-10-27T19:30:00",
+   "offset": "+01:00",
+   "title": "Rozgrzewka: Skąd przychodzą Twoje klientki?",
+   "caption": "Skąd najczęściej przychodzą Twoje klientki? 🧲\nNapisz literę.\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w23.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w23.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-quiz-sources"
+  },
+  {
+   "id": "w24",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-10-28T08:00:00",
+   "offset": "+01:00",
+   "title": "Прогрев: Без кодов заказы теряются?",
+   "caption": "Миф: без кода товара заказ не разобрать 🔎\nА ваши покупатели пишут коды?\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w24.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w24.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-myth-codes"
+  },
+  {
    "id": "e15",
    "lang": "lv",
    "date": "2026-10-28T10:00:00",
@@ -302,6 +782,46 @@
    "thumbnail": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/assets/covers/e15.jpg",
    "aiGenerated": false,
    "autoPublish": true
+  },
+  {
+   "id": "w25",
+   "lang": "en",
+   "series": "warmup",
+   "date": "2026-10-28T19:30:00",
+   "offset": "+01:00",
+   "title": "Warm-up: Selling live needs a studio?",
+   "caption": "Myth: you need a studio to sell live 🔍\nWhat do you film with?\nFollow for daily live selling tips.\n#livesales #livecommerce #noxio",
+   "file": "videos/w25.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w25.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-myth-studio"
+  },
+  {
+   "id": "w26",
+   "lang": "lv",
+   "series": "warmup",
+   "date": "2026-10-29T08:00:00",
+   "offset": "+01:00",
+   "title": "Iesildīšana: Foto ierakstam, kas pārdod",
+   "caption": "Labs foto ierakstā ir puse pārdošanas 📷\nSaglabājiet nākamajai fotosesijai.\nSekojiet — katru dienu par pārdošanu tiešraidēs.\n#tiešraide #livecommerce #noxio",
+   "file": "videos/w26.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w26.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-product-photo"
   },
   {
    "id": "e05",
@@ -362,6 +882,46 @@
    "autoPublish": true
   },
   {
+   "id": "w27",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-10-29T19:30:00",
+   "offset": "+01:00",
+   "title": "Прогрев: 3 ошибки после эфира",
+   "caption": "Эфир закончился — а продажи ещё нет 🔥\nТри ошибки, которые стоят заказов.\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w27.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w27.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-mistakes-after-live"
+  },
+  {
+   "id": "w28",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-10-30T08:00:00",
+   "offset": "+01:00",
+   "title": "Rozgrzewka: Najlepszy moment live’a…",
+   "caption": "Najlepszy moment live’a i… internet 🤦\nCo zawiodło Cię na live’ie?\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w28.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w28.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-pov-wifi"
+  },
+  {
    "id": "e18",
    "lang": "en",
    "date": "2026-10-30T10:00:00",
@@ -380,6 +940,126 @@
    "aiGenerated": false,
    "autoPublish": true,
    "angle": "questions-not-orders"
+  },
+  {
+   "id": "w29",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-10-30T19:30:00",
+   "offset": "+01:00",
+   "title": "Прогрев: Закреплённый комментарий — ваш помощник",
+   "caption": "Закреплённый комментарий работает за вас весь эфир 📌\nЧто вы закрепляете?\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w29.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w29.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-pinned"
+  },
+  {
+   "id": "w30",
+   "lang": "lv",
+   "series": "warmup",
+   "date": "2026-10-31T08:00:00",
+   "offset": "+01:00",
+   "title": "Iesildīšana: Ar ko jūs filmējat?",
+   "caption": "Ar ko jūs filmējat tiešraides? 📱\nRakstiet burtu komentāros.\nSekojiet — katru dienu par pārdošanu tiešraidēs.\n#tiešraide #livecommerce #noxio",
+   "file": "videos/w30.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w30.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-quiz-camera"
+  },
+  {
+   "id": "w31",
+   "lang": "en",
+   "series": "warmup",
+   "date": "2026-10-31T19:30:00",
+   "offset": "+01:00",
+   "title": "Warm-up: 3 mistakes with comments",
+   "caption": "Your comments are your shop window 🛑\nWhich of these have you seen?\nFollow for daily live selling tips.\n#livesales #livecommerce #noxio",
+   "file": "videos/w31.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w31.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-mistakes-comments"
+  },
+  {
+   "id": "w32",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-11-01T08:00:00",
+   "offset": "+01:00",
+   "title": "Прогрев: Что вы продаёте в эфирах?",
+   "caption": "Что вы продаёте в эфирах? 📦\nНапишите букву — и что именно, если хотите.\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w32.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w32.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-quiz-what-sell"
+  },
+  {
+   "id": "w33",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-11-01T19:30:00",
+   "offset": "+01:00",
+   "title": "Rozgrzewka: Bez ceny w poście — mniej zamówień?",
+   "caption": "Prawda: brak ceny w poście kosztuje zamówienia 💰\nPodajesz cenę od razu?\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w33.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w33.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-truth-price-in-post"
+  },
+  {
+   "id": "w34",
+   "lang": "lv",
+   "series": "warmup",
+   "date": "2026-11-02T08:00:00",
+   "offset": "+01:00",
+   "title": "Iesildīšana: Pulkstenis divi naktī",
+   "caption": "Divi naktī, un pasūtījumi vēl nav pārrakstīti 😴\nCikos jūs beidzat darbu pēc tiešraides?\nSekojiet — katru dienu par pārdošanu tiešraidēs.\n#tiešraide #livecommerce #noxio",
+   "file": "videos/w34.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w34.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-pov-2am"
   },
   {
    "id": "e06",
@@ -421,6 +1101,86 @@
    "autoPublish": true
   },
   {
+   "id": "w35",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-11-02T19:30:00",
+   "offset": "+01:00",
+   "title": "Rozgrzewka: 3 błędy w kadrze na live’ie",
+   "caption": "Trzy rzeczy w kadrze, które odciągają uwagę od produktu 🎬\nJak u Ciebie?\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w35.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w35.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-mistakes-frame"
+  },
+  {
+   "id": "w36",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-11-03T08:00:00",
+   "offset": "+01:00",
+   "title": "Прогрев: Покупательница пишет: «а сколько?»",
+   "caption": "Цена на экране. В комментариях: «а сколько?» 🙃\nСколько раз за эфир вы отвечаете на этот вопрос?\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w36.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w36.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-pov-how-much"
+  },
+  {
+   "id": "w37",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-11-03T19:30:00",
+   "offset": "+01:00",
+   "title": "Rozgrzewka: Stały termin przyciąga widzów",
+   "caption": "Klientki wracają tam, gdzie wiedzą, kiedy zajrzeć 📅\nMasz stały termin live’ów?\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w37.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w37.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-fixed-time"
+  },
+  {
+   "id": "w38",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-11-04T08:00:00",
+   "offset": "+01:00",
+   "title": "Прогрев: Подтверждать заказ — лишняя работа?",
+   "caption": "Миф: подтверждать заказы — лишняя работа 🧠\nВы подтверждаете заказы покупателям?\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w38.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w38.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-myth-confirm"
+  },
+  {
    "id": "e20",
    "lang": "lv",
    "date": "2026-11-04T10:00:00",
@@ -439,6 +1199,46 @@
    "aiGenerated": false,
    "autoPublish": true,
    "angle": "merge-lives"
+  },
+  {
+   "id": "w39",
+   "lang": "en",
+   "series": "warmup",
+   "date": "2026-11-04T19:30:00",
+   "offset": "+01:00",
+   "title": "Warm-up: Show fabric like a pro",
+   "caption": "Buyers can’t touch it, so show it ✋\nThree ways to show fabric on a live.\nFollow for daily live selling tips.\n#livesales #livecommerce #noxio",
+   "file": "videos/w39.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w39.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-fabric"
+  },
+  {
+   "id": "w40",
+   "lang": "lv",
+   "series": "warmup",
+   "date": "2026-11-05T08:00:00",
+   "offset": "+01:00",
+   "title": "Iesildīšana: Vairāk preču = vairāk pārdošanas?",
+   "caption": "Mīts: jo vairāk preču tiešraidē, jo labāk 🧩\nCik preču jūs parādāt vienā tiešraidē?\nSekojiet — katru dienu par pārdošanu tiešraidēs.\n#tiešraide #livecommerce #noxio",
+   "file": "videos/w40.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w40.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-myth-more-items"
   },
   {
    "id": "e07",
@@ -500,6 +1300,46 @@
    "angle": "grouped-by-buyer"
   },
   {
+   "id": "w41",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-11-05T19:30:00",
+   "offset": "+01:00",
+   "title": "Прогрев: 3 ошибки в начале эфира",
+   "caption": "Первые минуты эфира решают, останутся ли зрители 🎤\nКак вы обычно начинаете?\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w41.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w41.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-mistakes-live-start"
+  },
+  {
+   "id": "w42",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-11-06T08:00:00",
+   "offset": "+01:00",
+   "title": "Rozgrzewka: Co zabiera najwięcej czasu?",
+   "caption": "Co po live’ie zabiera Ci najwięcej czasu? 🙋\nNapisz literę — jesteśmy ciekawi.\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w42.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w42.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-quiz-most-work"
+  },
+  {
    "id": "e23",
    "lang": "en",
    "date": "2026-11-06T10:00:00",
@@ -518,6 +1358,126 @@
    "aiGenerated": false,
    "autoPublish": true,
    "angle": "skip-own-comments"
+  },
+  {
+   "id": "w43",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-11-06T19:30:00",
+   "offset": "+01:00",
+   "title": "Прогрев: Как позвать людей на эфир",
+   "caption": "Хороший эфир начинается с анонса 📣\nКак вы зовёте покупателей?\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w43.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w43.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-announce"
+  },
+  {
+   "id": "w44",
+   "lang": "lv",
+   "series": "warmup",
+   "date": "2026-11-07T08:00:00",
+   "offset": "+01:00",
+   "title": "Iesildīšana: 3 kļūdas ar skaņu",
+   "caption": "Skatītāji piedod vāju attēlu, bet ne sliktu skaņu 🔇\nKā jūs to risināt?\nSekojiet — katru dienu par pārdošanu tiešraidēs.\n#tiešraide #livecommerce #noxio",
+   "file": "videos/w44.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w44.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-mistakes-sound"
+  },
+  {
+   "id": "w45",
+   "lang": "en",
+   "series": "warmup",
+   "date": "2026-11-07T19:30:00",
+   "offset": "+01:00",
+   "title": "Warm-up: How do you plan a live?",
+   "caption": "Plan or improvise? 🎧\nDrop the letter in the comments.\nFollow for daily live selling tips.\n#livesales #livecommerce #noxio",
+   "file": "videos/w45.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w45.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-quiz-plan"
+  },
+  {
+   "id": "w46",
+   "lang": "ru",
+   "series": "warmup",
+   "date": "2026-11-08T08:00:00",
+   "offset": "+01:00",
+   "title": "Прогрев: Какой комментарий бесит больше?",
+   "caption": "Признавайтесь, какой комментарий вас раздражает больше всего? 💬\nПишите букву.\nПодписывайтесь — каждый день полезное о продажах в эфирах.\n#продаживэфире #продавец #livecommerce #noxio",
+   "file": "videos/w46.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w46.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-quiz-annoying"
+  },
+  {
+   "id": "w47",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-11-08T19:30:00",
+   "offset": "+01:00",
+   "title": "Rozgrzewka: Pokazujesz nową kolekcję",
+   "caption": "Nowa kolekcja na live’ie i ten moment, gdy liczysz sztuki w głowie 👀\nZnasz to?\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w47.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w47.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-pov-new-collection"
+  },
+  {
+   "id": "w48",
+   "lang": "lv",
+   "series": "warmup",
+   "date": "2026-11-09T08:00:00",
+   "offset": "+01:00",
+   "title": "Iesildīšana: Lai pircēji atgrieztos",
+   "caption": "Pastāvīgi pircēji ir labākā reklāma 🤝\nKas jums palīdz noturēt pircējus?\nSekojiet — katru dienu par pārdošanu tiešraidēs.\n#tiešraide #livecommerce #noxio",
+   "file": "videos/w48.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w48.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-tips-returning"
   },
   {
    "id": "e08",
@@ -558,6 +1518,26 @@
    "aiGenerated": false,
    "autoPublish": true,
    "angle": "send-link"
+  },
+  {
+   "id": "w49",
+   "lang": "pl",
+   "series": "warmup",
+   "date": "2026-11-09T19:30:00",
+   "offset": "+01:00",
+   "title": "Rozgrzewka: Na live’ie trzeba grać rolę?",
+   "caption": "Mit: na live’ie trzeba być aktorką 🦉\nCo było dla Ciebie najtrudniejsze na pierwszym live’ie?\nObserwuj — codziennie coś o sprzedaży na live.\n#sprzedażnalive #livecommerce #noxio",
+   "file": "videos/w49.mp4",
+   "url": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/main/videos/w49.mp4",
+   "networks": [
+    "instagram",
+    "facebook"
+   ],
+   "reelsOnly": true,
+   "status": "planned",
+   "autoPublish": true,
+   "coverMs": 2600,
+   "angle": "warm-myth-actress"
   }
  ],
  "schedule": "Mon/Thu: RU 10:00 + PL 14:00 (different videos); Wed: LV 10:00; Fri: EN 10:00 (Europe/Warsaw). Each language gets its own episode, never a translation of another."

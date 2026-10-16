@@ -1,0 +1,29 @@
+{
+ "id": "w33",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-truth-price-in-post",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "myth",
+   "chip": "MIT CZY PRAWDA",
+   "emoji": "💰",
+   "head": [
+    "Bez ceny",
+    "w poście —",
+    "[mniej zamówień?]"
+   ]
+  },
+  {
+   "type": "wmyth",
+   "verdict": "truth",
+   "claim": "Bez ceny w poście klientki kupują mniej",
+   "truth": "Gdy ceny nie ma, każda klientka musi zapytać — a część nie zapyta wcale."
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj — [obalamy mity]"
+  }
+ ]
+}

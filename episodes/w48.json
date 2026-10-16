@@ -1,0 +1,43 @@
+{
+ "id": "w48",
+ "lang": "lv",
+ "series": "warmup",
+ "angle": "warm-tips-returning",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "tip",
+   "chip": "DIENAS PADOMS",
+   "emoji": "🤝",
+   "head": [
+    "Lai pircēji",
+    "[atgrieztos]"
+   ]
+  },
+  {
+   "type": "wtips",
+   "head": [
+    "Trīs ieradumi",
+    "pastāvīgiem pircējiem"
+   ],
+   "items": [
+    [
+     "Atcerieties vārdus",
+     "„Ilze, šis ir tavā krāsā!”"
+    ],
+    [
+     "Pateicieties pēc pirkuma",
+     "īsa ziņa pēc piegādes"
+    ],
+    [
+     "Pastāvīgs laiks",
+     "viņas zina, kad ienākt"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Sekojiet — [padomi tiešraidēm]"
+  }
+ ]
+}

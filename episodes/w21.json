@@ -1,0 +1,45 @@
+{
+ "id": "w21",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-tips-packing",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "tip",
+   "chip": "PORADA DNIA",
+   "emoji": "🎀",
+   "head": [
+    "Paczki",
+    "po live’ie",
+    "[bez chaosu]"
+   ]
+  },
+  {
+   "type": "wtips",
+   "head": [
+    "Pakowanie",
+    "po live’ie"
+   ],
+   "items": [
+    [
+     "Lista według klientek",
+     "wszystko jednej osoby razem"
+    ],
+    [
+     "Karteczka z imieniem",
+     "w każdej paczce"
+    ],
+    [
+     "Zdjęcie przed wysyłką",
+     "koniec sporów o kolor"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj — [porady do live’ów]"
+  }
+ ]
+}

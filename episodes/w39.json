@@ -1,0 +1,44 @@
+{
+ "id": "w39",
+ "lang": "en",
+ "series": "warmup",
+ "angle": "warm-tips-fabric",
+ "theme": "dark",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "tip",
+   "chip": "TIP OF THE DAY",
+   "emoji": "🧵",
+   "head": [
+    "Show fabric",
+    "[like a pro]"
+   ]
+  },
+  {
+   "type": "wtips",
+   "head": [
+    "Show the fabric",
+    "up close"
+   ],
+   "items": [
+    [
+     "Stretch it on camera",
+     "buyers see how it moves"
+    ],
+    [
+     "Hold it to the light",
+     "show the thickness"
+    ],
+    [
+     "Say what it’s made of",
+     "before anyone asks"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Follow for [live selling tips]"
+  }
+ ]
+}

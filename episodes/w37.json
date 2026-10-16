@@ -1,0 +1,50 @@
+{
+ "id": "w37",
+ "lang": "pl",
+ "series": "warmup",
+ "angle": "warm-tips-fixed-time",
+ "scenes": [
+  {
+   "type": "wtitle",
+   "fmt": "tip",
+   "chip": "PORADA DNIA",
+   "emoji": "🔁",
+   "head": [
+    "Stały termin",
+    "[przyciąga]",
+    "widzów"
+   ]
+  },
+  {
+   "type": "wtips",
+   "head": [
+    "Stały termin",
+    "live’ów"
+   ],
+   "items": [
+    [
+     "Ten sam dzień i godzina",
+     "klientki wiedzą, kiedy wejść"
+    ],
+    [
+     "Ogłoś to w opisie",
+     "„live w każdy czwartek 19:00”"
+    ],
+    [
+     "Nie przesuwaj bez słowa",
+     "uprzedź w poście"
+    ]
+   ]
+  },
+  {
+   "type": "follow",
+   "tag": "Obserwuj — [porady do live’ów]"
+  }
+ ],
+ "music": {
+  "bpm": 124,
+  "transpose": -2,
+  "prog": 0,
+  "hats16": true
+ }
+}
