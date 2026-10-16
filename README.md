@@ -22,6 +22,7 @@ soundtrack is timed to the cuts.
 | `assets/clips.md` | Mixkit clips used as video covers (id and page; the clips themselves are downloaded into `build/mixkit/`) |
 | `assets/lottie/` | Lottie animations (`SOURCES.md`, `LICENSE.md`) |
 | `scripts/fetch_clip.sh`, `scripts/fetch_lottie.py` | Fetch a Mixkit clip / a LottieFiles animation after checking its license, with a contact sheet to review |
+| `assets/music.md`, `scripts/fetch_music.py` | Mixkit music tracks used by episodes (id and list page; the mp3s are downloaded into `build/music/`) |
 
 ## Scene types
 
@@ -52,8 +53,9 @@ applies to every scene). `:ph-name:` / `:ph-name.fill:` in any text inserts a Ph
 Episode options: `"lang"` (`ru`, `pl`, `lv`, `en`), `"theme": "dark"` (default light), `"angle"` (the episode's idea,
 checked for repeats), `"niche"` (one of the sets in `niches.js`; default is clothing) and `"data"` for one-off overrides of
 any l10n field (`feed`, `table`, `ai`, `chat`, `group`, `review`…). New episodes bring their own products in `data`.
-The soundtrack's tempo, key and chord progression are picked from the episode id; `"music": {"bpm", "transpose", "prog",
-"hats16"}` pins another variant when two episodes would share one.
+`"music": {"track": "mixkit:<id>"}` scores the episode with a Mixkit track (`scripts/fetch_music.py`, `scripts/track_bed.py`:
+the cut puts the drop on a loud downbeat; `"start"` pins it). Without a track the soundtrack is synthesized: tempo, key and
+chord progression are picked from the episode id, and `"music": {"bpm", "transpose", "prog", "hats16"}` pins another variant.
 
 ```json
 { "id": "e02", "lang": "ru", "scenes": [

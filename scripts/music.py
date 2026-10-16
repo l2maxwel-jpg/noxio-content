@@ -1,4 +1,7 @@
-"""Synthesized soundtrack for a Noxio episode, driven by the cues the template exports.
+"""Soundtrack for a Noxio episode, driven by the cues the template exports.
+
+With "music": {"track": "mixkit:<id>"[, "start": s]} in the episode, the bed is a real Mixkit track (scripts/track_bed.py:
+cut so the drop lands on a loud downbeat, muffled before the drop); otherwise it is synthesized as below.
 
 Usage: python3 scripts/music.py build/<id>.cues.json build/<id>.wav
 
@@ -148,8 +151,15 @@ ROOTS = [f(55.0, s + TRANSPOSE) for s, _ in PROG]
 CHORDS = [[f(220.0, s + TRANSPOSE + i) for i in (0, 3 if q == "m" else 4, 7)] for s, q in PROG]
 PAD = [f(110.0, PROG[0][0] + TRANSPOSE), f(164.81, PROG[0][0] + TRANSPOSE)]
 
-# calm part
-if DROP > 0.5:
+TRACK = str(MUS.get("track") or "").replace("mixkit:", "")
+TRACK_INFO = None
+if TRACK:   # the track is kept apart; the effects go into L/R and are mixed under it at the end
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from track_bed import bed
+    BL, BR, TRACK_INFO = bed(TRACK, DUR, DROP, MUS.get("start"))
+
+# calm part (synthesized bed only)
+if DROP > 0.5 and not TRACK:
     add(pad(PAD, DROP), 0.0, 0.22)
     for b in range(int(DROP / BEAT)):
         t = b * BEAT
@@ -161,7 +171,7 @@ if DROP > 0.5:
 
 # groove
 start = DROP
-for b in range(int((DUR - start) / BEAT) + 1):
+for b in range(0 if TRACK else int((DUR - start) / BEAT) + 1):
     t = start + b * BEAT
     if t >= DUR:
         break
@@ -196,13 +206,38 @@ SFX = {
     "chord": lambda t: add(stab(CHORDS[0], 1.5, 3200), t, 0.25),
     "chord_end": lambda t: add(stab(CHORDS[2], 2.0, 3200), t, 0.25),
 }
+if TRACK:   # over a real track: no pitched stabs or bells (they would clash with its key), ticks barely there
+    for k in ("chord", "chord_end", "dissonant", "ding"):
+        SFX.pop(k)
+    SFX["tick"] = lambda t: add(click(), t, 0.12, -0.4)
+    SFX["tick_soft"] = lambda t: add(click(), t, 0.12, 0.2)
+    SFX["impact"] = lambda t: add(impact(), t, 0.35) if abs(t - DROP) > 0.05 else None
+    if DROP > 0.5:
+        add(impact(), DROP, 0.4)
 for e in cues["events"]:
     f = SFX.get(e["kind"])
     if f:
         f(float(e["t"]))
 
 fade = np.ones(N); fn = int(0.8 * SR); fade[-fn:] = np.linspace(1, 0, fn) ** 1.5
-mix = np.stack([L * fade, R * fade], axis=1)
-mix = np.tanh(mix / np.max(np.abs(mix)) * 1.4) * 0.85
+if TRACK:
+    # the music leads: the effects sit about 7 dB under the track (bed RMS 0.16 vs effects at their gains x 0.45),
+    # the track dips a little under each whoosh and impact so the cut is felt, and a soft limiter catches the peaks
+    duck = np.ones(N)
+    for e in cues["events"]:
+        if e["kind"] in ("whoosh", "whoosh_up", "impact", "impact_soft"):
+            i = int(float(e["t"]) * SR); n = int(0.35 * SR)
+            if 0 <= i < N:
+                seg = 1 - 0.25 * np.sin(np.pi * np.arange(min(n, N - i)) / n)
+                duck[i:i + len(seg)] = np.minimum(duck[i:i + len(seg)], seg)
+    mix = np.stack([(BL * duck * 1.0 + L * 0.45) * fade, (BR * duck * 1.0 + R * 0.45) * fade], axis=1)
+    mix = mix / (np.sqrt(np.mean(mix[int(DROP * SR):] ** 2)) + 1e-9) * 0.2
+    mix = np.tanh(mix / 0.8) * 0.8
+else:
+    mix = np.stack([L * fade, R * fade], axis=1)
+    mix = np.tanh(mix / np.max(np.abs(mix)) * 1.4) * 0.85
 wavfile.write(OUT, SR, (mix * 32767).astype(np.int16))
-print(OUT, f"{DUR:.1f}s, drop at {DROP:.1f}s, {len(cues['events'])} sfx, {BPM} bpm, transpose {TRANSPOSE:+d}, prog {PROGS.index(PROG)}")
+if TRACK:
+    print(OUT, f"{DUR:.1f}s, drop at {DROP:.1f}s, {len(cues['events'])} sfx, track mixkit:{TRACK} from {TRACK_INFO['start']:.2f}s ({TRACK_INFO['tempo']:.0f} bpm)")
+else:
+    print(OUT, f"{DUR:.1f}s, drop at {DROP:.1f}s, {len(cues['events'])} sfx, {BPM} bpm, transpose {TRANSPOSE:+d}, prog {PROGS.index(PROG)}")

@@ -50,7 +50,8 @@ const WTEXT = s => [(s.head || []).join(' '), s.sub, ...(s.items || []).flat(), 
   .filter(Boolean).map(norm).filter(t => t.length >= 10);
 const norm = s => String(s || '').replace(/[\[\]{}]/g, '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
 // Same rule as scripts/music.py (5 progressions), with the episode's own "music" override on top.
-const music = (id, m = {}) => { const s = zlib.crc32(Buffer.from(id));
+const music = (id, m = {}) => { if (m.track) return `track ${String(m.track).replace(/^mixkit:/, '')}`;
+  const s = zlib.crc32(Buffer.from(id));
   return [m.bpm ?? [116, 120, 124, 128][s % 4], m.transpose ?? [0, 2, -2, 3, -3, 1][Math.floor(s / 4) % 6],
     m.prog ?? Math.floor(s / 24) % 5, +(m.hats16 ?? Math.floor(s / 120) % 2 === 1)].join('/'); };
 // calendar days (the local date in plan.json), so 26.10 -> 09.11 is 14 days whatever the hour or DST
@@ -116,7 +117,9 @@ for (let i = 0; i < eps.length; i++) for (let j = i + 1; j < eps.length; j++) {
     report(a, b, `same ${k} products (${a.products[k].startsWith('niche:') || a.products[k].startsWith('default:') ? a.products[k].split(':').slice(0, 2).join(' ') + ', translated' : 'same items'})`);
   if (same) for (const h of a.heads) if (b.heads.includes(h)) report(a, b, `same ${h.split(':')[0]} head "${h.slice(h.indexOf(':') + 1)}"`);
   if (same && a.cta && a.cta === b.cta) report(a, b, `same cta tag "${a.cta}"`, false);
-  if (a.music === b.music && days < 7) report(a, b, `same music variant ${a.music} ${days.toFixed(0)} days apart (pin another one with "music")`, false);
+  if (a.music === b.music && a.music.startsWith('track '))   // a real track: once per 14 days, and then with another cut
+    report(a, b, `same music ${a.music} ${days.toFixed(0)} days apart` + (days < 14 ? '' : ' — use another part of it'), days < 14);
+  else if (a.music === b.music && days < 7) report(a, b, `same music variant ${a.music} ${days.toFixed(0)} days apart (pin another one with "music")`, false);
   if (a.angle && a.angle === b.angle) {
     report(a, b, `same angle "${a.angle}" ${days.toFixed(0)} days apart` + (days < 14 ? '' : ' — make sure everything else differs'), days < 14);
   }

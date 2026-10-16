@@ -97,7 +97,14 @@ All of these are free for business use without credits on screen; never show a s
   `node_modules/@phosphor-icons/core/assets/bold/`.
 - **Text effects** in the spirit of React Bits: `"fx": "blur" | "split" | "scramble"` on the episode or one scene (animates the
   heads). Vary them between episodes.
-- The soundtrack stays synthesized (`scripts/music.py`): one variant per episode keeps every video unique.
+- **Music (Mixkit)** — every episode gets a real track: `"music": {"track": "mixkit:<id>"}` (optional `"start"` in s pins the
+  cut; `scripts/music.py` prints the one it chose). Pick from the genre or mood list pages
+  (`https://mixkit.co/free-stock-music/<genre>/`, `.../mood/<mood>/`), then `scripts/fetch_music.py <id> <list page URL>`: it
+  accepts only the "Stock Music Free License" and prints tempo and loud sections. Instrumental tracks only (no vocals in
+  any language), nothing whose title names a brand or an artist ("… type beat"). The mp3 is never committed; `assets/music.md`
+  keeps id → list page and `music.py` downloads it again. The cut puts the drop on a loud downbeat and muffles the track before
+  it; our effects play quietly on top. A track may come back only 14+ days later and with another part of it
+  (`check_unique.mjs`). Without `track` the old synthesized bed is used.
 
 ## Making a batch
 
