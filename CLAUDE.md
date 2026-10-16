@@ -136,6 +136,7 @@ All of these are free for business use without credits on screen; never show a s
 
 1. Continue the schedule in `episodes/plan.json` (Europe/Warsaw, check the UTC offset for DST):
    Mondays and Thursdays — RU at 10:00 **and** PL at 14:00; Wednesdays — LV at 10:00; Fridays — EN at 10:00.
+   Continue the warm-ups (two a day) and the import series (Tuesdays and Saturdays 12:00) in the same batch.
 2. Every language gets its own episode (see "Every video is one of a kind"). The RU and PL episodes of the same day
    must differ in products and theme. Retired copies stay in `plan.json` with `status: retired`. Spares must pass
    `check_unique.mjs` and be re-rendered before use (their videos predate the feed-safe layout).
