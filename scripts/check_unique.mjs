@@ -9,8 +9,11 @@
 //   - the same scene head (same scene type, same text) in one language;
 //   - the same `angle` (the episode's idea, e.g. "excel-export") less than 14 days apart, in any language
 //     (an episode without a date yet counts as "now"); further apart it only warns;
-// and warns on the same music variant, on reused cta tags and on episodes without an `angle`.
-// Usage: node scripts/check_unique.mjs [eNN ...]   (ids limit the report to pairs that involve them)
+// Warm-up series episodes (wNN, "series": "warmup") share one format on purpose, so their scene order is not
+// compared; instead any repeated text line (a head, tip, option, claim, punchline…) in one language and a repeated
+// title emoji fail.
+// Warns on the same music variant within 7 days, on reused cta tags and on episodes without an `angle`.
+// Usage: node scripts/check_unique.mjs [eNN|wNN ...]   (ids limit the report to pairs that involve them)
 import fs from 'fs';
 import path from 'path';
 import vm from 'vm';
@@ -27,7 +30,7 @@ const plan = JSON.parse(fs.readFileSync(path.join(ROOT, 'episodes/plan.json'), '
 const status = Object.fromEntries(plan.map(e => [e.id, e.status]));
 const credits = {};
 for (const line of fs.readFileSync(path.join(ROOT, 'assets/photos/CREDITS.md'), 'utf8').split('\n')) {
-  const m = line.match(/^\|\s*(e\d+)\s*\|\s*([^|]+?)\s*\|/);
+  const m = line.match(/^\|\s*([ew]\d+)\s*\|\s*([^|]+?)\s*\|/);
   if (m) credits[m[1]] = m[2];
 }
 const only = new Set(process.argv.slice(2));
@@ -38,7 +41,11 @@ const USES = { hook: ['feed'], pain: ['feed'], solution: ['feed', 'table'], ai: 
 const HEADS = { cover: d => d.head, hook: d => [...(d.setup || []), d.p1, d.p2], codes: d => d.head, price: d => d.head,
   sendlink: d => d.head, pain: d => [...(d.head || []), d.big], solution: d => d.head, ai: d => d.head, connect: d => d.head,
   messenger: d => [...(d.head || []), d.sub], group: d => d.head, excel: d => d.head, review: d => d.head, merge: d => d.head,
-  setup: d => d.head };
+  setup: d => d.head, wtitle: d => [...(d.head || []), d.sub], wtips: d => d.head, wquiz: d => d.head, wpov: d => [...(d.head || []), ...(d.punch || [])],
+  wmyth: d => [...(d.head || []), d.claim] };
+// Every text line a warm-up shows (comments under a POV are left out: short "+" or "беру!" repeat naturally).
+const WTEXT = s => [(s.head || []).join(' '), s.sub, ...(s.items || []).flat(), ...(s.options || []), (s.punch || []).join(' '), s.claim, s.truth]
+  .filter(Boolean).map(norm).filter(t => t.length >= 10);
 const norm = s => String(s || '').replace(/[\[\]{}]/g, '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
 // Same rule as scripts/music.py (5 progressions), with the episode's own "music" override on top.
 const music = (id, m = {}) => { const s = zlib.crc32(Buffer.from(id));
@@ -47,7 +54,7 @@ const music = (id, m = {}) => { const s = zlib.crc32(Buffer.from(id));
 // calendar days (the local date in plan.json), so 26.10 -> 09.11 is 14 days whatever the hour or DST
 const dates = Object.fromEntries(plan.map(e => [e.id, e.date ? new Date(e.date.slice(0, 10) + 'T00:00:00Z') : null]));
 
-const eps = fs.readdirSync(path.join(ROOT, 'episodes')).filter(f => /^e\d+\.json$/.test(f)).map(f => {
+const eps = fs.readdirSync(path.join(ROOT, 'episodes')).filter(f => /^[ew]\d+\.json$/.test(f)).map(f => {
   const ep = JSON.parse(fs.readFileSync(path.join(ROOT, 'episodes', f), 'utf8'));
   const st = status[ep.id] || 'new';
   if (st === 'retired') return null;
@@ -77,6 +84,8 @@ const eps = fs.readdirSync(path.join(ROOT, 'episodes')).filter(f => /^e\d+\.json
     coverHead: cover && cover.head ? norm(cover.head.join(' ')) : null,
     heads: scenes.filter(s => s.type !== 'cover' && HEADS[s.type]).map(s => `${s.type}:${norm(HEADS[s.type](s).filter(Boolean).join(' '))}`),
     cta: norm((scenes.find(s => s.type === 'cta') || {}).tag),
+    warm: ep.series === 'warmup', texts: new Set(scenes.flatMap(WTEXT)),
+    emoji: (scenes.find(s => s.type === 'wtitle') || {}).emoji || null,
     angle: ep.angle || null, date: dates[ep.id] || new Date(new Date().toISOString().slice(0, 10) + 'T00:00:00Z'),
     music: music(ep.id, ep.music) };
 }).filter(Boolean).sort((a, b) => a.id.localeCompare(b.id));
@@ -90,7 +99,10 @@ const report = (a, b, what, hard = true) => {
 };
 for (let i = 0; i < eps.length; i++) for (let j = i + 1; j < eps.length; j++) {
   const a = eps[i], b = eps[j], same = a.lang === b.lang;
-  if (a.order === b.order) report(a, b, `same scene order ${a.order}`);
+  const days = Math.abs(a.date - b.date) / 864e5;
+  if (a.order === b.order && !(a.warm && b.warm)) report(a, b, `same scene order ${a.order}`);
+  if (same && (a.warm || b.warm)) { const dup = [...a.texts].filter(t => b.texts.has(t)); if (dup.length) report(a, b, `same text "${dup[0]}"` + (dup.length > 1 ? ` (+${dup.length - 1})` : '')); }
+  if (a.emoji && a.emoji === b.emoji) report(a, b, `same title emoji ${a.emoji}`);
   if (a.photo && a.photo === b.photo) report(a, b, `same cover photo ${a.photo}`);
   else if (a.author && a.author === b.author) report(a, b, `cover photos by the same author (${a.author}) — a photo series`);
   if (same && a.coverHead && a.coverHead === b.coverHead) report(a, b, `same cover headline "${a.coverHead}"`);
@@ -98,9 +110,8 @@ for (let i = 0; i < eps.length; i++) for (let j = i + 1; j < eps.length; j++) {
     report(a, b, `same ${k} products (${a.products[k].startsWith('niche:') || a.products[k].startsWith('default:') ? a.products[k].split(':').slice(0, 2).join(' ') + ', translated' : 'same items'})`);
   if (same) for (const h of a.heads) if (b.heads.includes(h)) report(a, b, `same ${h.split(':')[0]} head "${h.slice(h.indexOf(':') + 1)}"`);
   if (same && a.cta && a.cta === b.cta) report(a, b, `same cta tag "${a.cta}"`, false);
-  if (a.music === b.music) report(a, b, `same music variant ${a.music} (pin another one with "music")`, false);
+  if (a.music === b.music && days < 7) report(a, b, `same music variant ${a.music} ${days.toFixed(0)} days apart (pin another one with "music")`, false);
   if (a.angle && a.angle === b.angle) {
-    const days = Math.abs(a.date - b.date) / 864e5;
     report(a, b, `same angle "${a.angle}" ${days.toFixed(0)} days apart` + (days < 14 ? '' : ' — make sure everything else differs'), days < 14);
   }
 }

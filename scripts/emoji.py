@@ -41,6 +41,7 @@ def main():
     if not missing:
         return
     sprite = open(SPRITE, encoding="utf-8").read()
+    failed = []
     for w in missing:
         full = code(w)
         for cand in (full, full.replace("-FE0F", ""), full + "-FE0F"):
@@ -55,6 +56,9 @@ def main():
                 break
         else:
             print("emoji not found in sprite:", w, full, file=sys.stderr)
+            failed.append(w)
+    if failed:
+        sys.exit(f"pick other emoji (Noto in node_modules has no artwork for: {' '.join(failed)})")
 
 
 if __name__ == "__main__":

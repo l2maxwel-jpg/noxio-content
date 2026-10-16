@@ -9,7 +9,8 @@ soundtrack is timed to the cuts.
 | Path | What it is |
 | --- | --- |
 | `template/` | HTML/CSS/GSAP template: `template.js` (scenes + timeline), `l10n.js` (RU/LV/PL/EN strings and default copy), `niches.js` (product sets: cosmetics, shoes, kids, accessories, home), `style.css` (Noxio light and dark themes: #11B981, #0098B7, Inter) |
-| `episodes/eNN.json` | One episode: `lang` and an ordered list of `scenes` with optional text overrides |
+| `episodes/eNN.json` | One ad episode: `lang` and an ordered list of `scenes` with optional text overrides |
+| `episodes/wNN.json` | One warm-up Reel (series `warmup`, Reels tab only) |
 | `episodes/plan.json` | Publishing plan: date, caption, cover frame, video URL and status per episode |
 | `scripts/make_episode.sh` | Render one episode end to end into `videos/<id>.mp4` |
 | `scripts/preview_all.sh` | Key-frame contact sheets in `build/` for checking layouts before a full render |
@@ -32,6 +33,10 @@ soundtrack is timed to the cuts.
 `review` passes clear orders and flags an unclear comment that gets fixed (`review`: `ok`, `unclear`, `fix`, …);
 `setup` fills expected codes / colours / sizes and switches off the seller's own comments (`setup`: `fields`, `toggle`, `seller`).
 Their strings live next to `table`/`chat` in `l10n.js`, so an episode replaces them through `data`.
+Warm-up series (`episodes/wNN.json`, `"series": "warmup"`): `wtitle` (`fmt` tip|quiz|pov|myth for the chip colour, `chip`,
+`emoji`, `head`, `sub`), `wtips` (`head`, `items` = [title, sub], `"style": "x"` for mistakes), `wquiz` (`head`, `options`,
+`ask`), `wpov` (`head`, `comments`, `punch`), `wmyth` (`claim`, `truth`, `"verdict": "truth"` for a true statement) and
+`follow` (`tag`, `button`, `small`; defaults in `l10n.js` under `warm`). Their content lives in the scene itself.
 Emoji in any text are swapped for Noto SVGs from `assets/emoji/` (`scripts/emoji.py` extracts them; run by the build scripts).
 `cover` is a stock photo with our logo, headline and sub (`"photo": "../assets/photos/eNN.jpg"`, `"head"`, `"sub"`, optional
 `"layout": "light"|"dark"`, `"focus"` for object-position) with a slow zoom; `make_episode.sh` saves a still of it as

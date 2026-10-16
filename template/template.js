@@ -20,16 +20,21 @@
   const DARK = EP.theme === 'dark';
   const COLORS = ['#EF4444', '#0098B7', '#11B981', '#F59E0B', '#8B5CF6'];
   const DUR = { cover: 2.8, hook: 3.5, codes: 3.5, pain: 3.5, solution: 4.0, ai: 3.0, connect: 3.0, messenger: 3.0, price: 4.5, sendlink: 3.5,
-    group: 3.5, excel: 3.5, merge: 3.5, review: 3.5, setup: 4.0, offer: 2.5, cta: 2.5 };
+    group: 3.5, excel: 3.5, merge: 3.5, review: 3.5, setup: 4.0, offer: 2.5, cta: 2.5,
+    wtitle: 3.0, wtips: 5.4, wquiz: 5.5, wpov: 6.0, wmyth: 5.5, follow: 3.0 };
   const BODY = { // default top, gap under head, max top before the body would run out of the safe zone
     pain: [580, 40, 605], solution: [690, 40, 910], ai: [790, 60, 945], connect: [690, 40, 870], messenger: [470, 20, 590],
     codes: [560, 40, 620], price: [560, 50, 700], sendlink: [600, 40, 720],
-    group: [560, 40, 600], excel: [580, 40, 660], merge: [580, 40, 660], review: [580, 40, 680], setup: [560, 40, 620] };
+    group: [560, 40, 600], excel: [580, 40, 660], merge: [580, 40, 660], review: [580, 40, 680], setup: [560, 40, 620],
+    wtips: [480, 48, 560], wquiz: [500, 44, 560], wpov: [480, 30, 560], wmyth: [440, 56, 540] };
   // Feed-safe band. Facebook and Instagram show Reels in the feed cropped to 4:5 (y 285..1635 of 1920) and the Reels
   // player covers the bottom quarter with the caption, so everything readable must sit inside y 330..1440.
   // Scenes are laid out in the band 255..1450 and then scaled into it (style.css: .framed .frame).
   const SAFE = { top: 330, bottom: 1440 };
-  const GLOW = { cover: 'none', hook: 'red', codes: 'red', pain: 'red', price: 'teal', offer: 'teal', cta: 'teal' };
+  const GLOW = { cover: 'none', hook: 'red', codes: 'red', pain: 'red', price: 'teal', offer: 'teal', cta: 'teal',
+    wquiz: 'teal', wmyth: 'red', wpov: 'red', follow: 'teal' };
+  // Warm-up series (episodes wNN): each format has its own accent for the label chip.
+  const WFMT = { tip: '#11B981', quiz: '#0098B7', pov: '#F59E0B', myth: '#EF4444' };
   const E = 'power3.out';
 
   // Headless Chromium has no colour emoji font: swap emoji for Noto SVGs from assets/emoji (made by scripts/emoji.py).
@@ -108,6 +113,24 @@
       ${s.fields.map((f, i) => `<div class="sfield f${i}"><div class="sfl">${f[0]}</div><div class="sfv">${f[1].map(v => `<span class="schip">${v}</span>`).join('')}</div></div>`).join('')}
       <div class="srow"><span>${s.toggle}</span><div class="tog stog"><div class="knob"></div></div></div></div>
       ${bubble(s.seller[0], s.seller[1], 4, 'sbub').replace('</div></div></div>', `</div></div><span class="skip">${s.skipped}</span></div>`)}</div>`; },
+    // ---- warm-up series: title card, tips / mistakes list, question to viewers, POV, myth or truth, follow card ----
+    wtitle: d => `<div class="wchip" style="background:${WFMT[d.fmt] || WFMT.tip}">${d.chip}</div>
+      <div class="wemoji">${d.emoji || ''}</div><div class="h whead">${lines(d.head)}</div>${d.sub ? `<div class="wsub">${mark(d.sub)}</div>` : ''}`,
+    wtips: d => { const st = d.style || 'num', ic = i => st === 'x' ? '<span class="wx">✕</span>' : st === 'check' ? check : `<b>${i + 1}</b>`;
+      return `<div class="h head">${lines(d.head)}</div><div class="body"><div class="wlist ${st}">${d.items.map((it, i) =>
+        `<div class="witem w${i}"><div class="wic">${ic(i)}</div><div class="wtx"><div class="wt">${mark(it[0])}</div>${it[1] ? `<div class="ws">${mark(it[1])}</div>` : ''}</div></div>`).join('')}</div></div>`; },
+    wquiz: d => `<div class="h head">${lines(d.head)}</div><div class="body"><div class="wopts">${d.options.map((o, i) =>
+        `<div class="wopt o${i}"><span class="wl" style="background:${COLORS[[2, 1, 3, 4][i]]}">${'ABCD'[i]}</span><span class="wot">${mark(o)}</span></div>`).join('')}</div>
+      <div class="wask">${mark(d.ask || L.warm.ask)}</div></div>`,
+    wpov: d => `<div class="wchip" style="background:${WFMT.pov}">${d.chip || 'POV'}</div><div class="h head">${lines(d.head)}</div>
+      <div class="body"><div class="feedwrap wfeed"><div class="feed">${d.comments.map((c, i) => `<div style="padding-left:${[70, 170, 110, 220][i % 4]}px">${bubble(c[0], c[1], i)}</div>`).join('')}</div></div>
+      <div class="h wpunch">${lines(d.punch)}</div></div>`,
+    wmyth: d => { const myth = d.verdict !== 'truth'; return `<div class="h head">${lines(d.head || L.warm.mythHead)}</div>
+      <div class="body"><div class="wclaim"><div class="wcl">${d.claimLabel || L.warm.claim}</div><div class="wct">${mark(d.claim)}</div>
+      <div class="wstamp ${myth ? 'myth' : 'truth'}">${myth ? L.warm.myth : L.warm.truth}</div></div>
+      <div class="wtruth"><div class="wtl">${d.truthLabel || (myth ? L.warm.truthLabel : L.warm.whyLabel)}</div><div class="wtt">${mark(d.truth)}</div></div></div>`; },
+    follow: d => { const f = Object.assign({}, L.warm.follow, d); return `<div class="fava"><img src="../assets/logo.png" alt=""><span class="fplus">+</span><span class="fok">${check}</span></div>
+      <div class="h fname">Noxio</div><div class="ftag">${mark(f.tag)}</div><div class="fbtn">${f.button}</div><div class="fsmall">${f.small}</div>`; },
     hook: d => {
       const pos = [[60,640],[420,840],[140,1060],[520,1260],[90,1460],[460,1660],[200,1860],[560,2060]];
       const bg = pos.map((p, i) => bubble(L.feed[i][0], L.feed[i][1], i, 'bgb').replace('class="bub bgb"', `class="bub bgb" style="left:${p[0]}px;top:${p[1]}px"`)).join('');
@@ -217,6 +240,18 @@
       if (s.type === 'setup') { $(el, '.sbub').style.top = ($(el, '.scard').offsetHeight + 36) + 'px'; fitOverflow($(el, '.srow'), $(el, '.srow span'), 24);
         const sb = $(el, '.sbub'), sx = $(sb, '.bx'); let g = 0; while (sb.getBoundingClientRect().width > 880 && g++ < 40) sx.style.fontSize = (parseFloat(getComputedStyle(sx).fontSize) - 2) + 'px'; }
       if (s.type === 'group') { $$(el, '.gb').forEach(b => fitOverflow(b, $(b, '.bx'), 28)); }
+      if (s.type === 'wtitle') { const h = $(el, '.whead'), sub = $(el, '.wsub'); fitWidth(h, 920);
+        if (sub) sub.style.top = (bottomOf(h) + 26) + 'px'; }
+      if (s.type === 'wpov') fitWidth($(el, '.wpunch'), 920);
+      if (['wtips', 'wquiz', 'wmyth'].includes(s.type)) {   // centre head + list in the 255..1450 band
+        const head = $(el, '.head'), kids = [...$(el, '.body').querySelectorAll(':scope > *, :scope > * > *')];
+        const top = head.getBoundingClientRect().top, bottom = Math.max(...kids.map(k => k.getBoundingClientRect().bottom));
+        const shift = Math.max(0, Math.min(220, (1450 - bottom - (top - 255)) / 2));
+        if (shift > 4) [head, $(el, '.body')].forEach(x => { x.style.top = (parseFloat(getComputedStyle(x).top) + shift) + 'px'; });
+      }
+      if (s.type === 'wquiz') $$(el, '.wopt').forEach(o => fitOverflow(o, $(o, '.wot'), 28));
+      if (s.type === 'wtips') $$(el, '.witem').forEach(o => { fitOverflow($(o, '.wtx'), $(o, '.wt'), 30); if ($(o, '.ws')) fitOverflow($(o, '.wtx'), $(o, '.ws'), 24); });
+      if (s.type === 'follow') { fitWidth($(el, '.ftag'), 940); fitWidth($(el, '.fbtn'), 900); }
       if (s.type === 'cta') { fitWidth($(el, '.tag'), 960); fitWidth($(el, '.cta'), 900); fitWidth($(el, '.wmtxt'), 900); }
     });
   }
@@ -367,6 +402,60 @@
       tl.from($(el, '.skip'), { scale: 1.7, opacity: 0, duration: .3, ease: 'back.out(2)' }, T + 3.05);
       cue(T + 3.05, 'pop_low');
     },
+    wtitle(tl, T, d, el) {
+      tl.from($(el, '.wchip'), { x: -60, opacity: 0, duration: .35, ease: E }, T + .05);
+      tl.from($(el, '.wemoji'), { scale: 0, rotation: -25, duration: .55, ease: 'back.out(2.2)', transformOrigin: '50% 60%' }, T + .2);
+      tl.to($(el, '.wemoji'), { rotation: 6, duration: .25, yoyo: true, repeat: 3, ease: 'sine.inOut', transformOrigin: '50% 90%' }, T + .8);
+      tl.from($$(el, '.whead .line'), { y: 60, opacity: 0, duration: .4, stagger: .14, ease: E }, T + .45);
+      if ($(el, '.wsub')) tl.from($(el, '.wsub'), { opacity: 0, y: 20, duration: .3 }, T + 1.2);
+      cue(T + .05, 'pop_down'); cue(T + .25, 'pop'); cue(T + .9, 'impact_soft');
+    },
+    wtips(tl, T, d, el) {
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      [...$$(el, '.witem')].forEach((w, i) => { const t = T + .55 + i * 1.2;
+        tl.from(w, { x: 120, opacity: 0, duration: .4, ease: E }, t);
+        tl.from($(w, '.wic'), { scale: 0, duration: .35, ease: 'back.out(2.4)' }, t + .15);
+        cue(t + .15, i ? 'pop' : 'pop_small'); });
+    },
+    wquiz(tl, T, d, el) {
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      [...$$(el, '.wopt')].forEach((o, i) => { tl.from(o, { y: 40, opacity: 0, duration: .32, ease: E }, T + .6 + i * .32); cue(T + .6 + i * .32, 'pop_small'); });
+      const t = T + .7 + $$(el, '.wopt').length * .32 + .4;
+      tl.from($(el, '.wask'), { scale: .6, opacity: 0, duration: .4, ease: 'back.out(2)' }, t);
+      tl.to($(el, '.wask'), { y: -10, duration: .22, yoyo: true, repeat: 5, ease: 'sine.inOut' }, t + .5);
+      cue(t, 'ding');
+    },
+    wpov(tl, T, d, el, dur) {
+      tl.from($(el, '.wchip'), { x: -60, opacity: 0, duration: .3, ease: E }, T);
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T + .1);
+      tl.fromTo($(el, '.wfeed .feed'), { y: 420 }, { y: -1350, duration: dur, ease: 'power1.in' }, T);
+      for (let t = T + .2; t < T + 3.0; t += .22) cue(t, 'tick');
+      tl.to($(el, '.wfeed'), { opacity: .25, duration: .4 }, T + 3.0);
+      tl.from($(el, '.wpunch'), { scale: 1.5, opacity: 0, duration: .4, ease: E, transformOrigin: '0% 50%' }, T + 3.1);
+      cue(T + 3.1, 'impact_soft');
+    },
+    wmyth(tl, T, d, el) {
+      tl.from($$(el, '.head .line'), { y: 50, opacity: 0, duration: .4, stagger: .12, ease: E }, T);
+      tl.from($(el, '.wclaim'), { y: 70, opacity: 0, duration: .45, ease: E }, T + .35);
+      tl.from($(el, '.wstamp'), { scale: 2.6, opacity: 0, rotation: -30, duration: .3, ease: 'power3.in' }, T + 1.7);
+      tl.to($(el, '.wclaim'), { x: 8, duration: .05, repeat: 5, yoyo: true, ease: 'none' }, T + 2.0);
+      cue(T + 1.95, d.verdict === 'truth' ? 'ding' : 'impact');
+      tl.from($(el, '.wtruth'), { y: 80, opacity: 0, duration: .45, ease: E }, T + 2.5);
+      cue(T + 2.5, 'pop');
+    },
+    follow(tl, T, d, el) {
+      tl.from($(el, '.fava'), { scale: .3, opacity: 0, duration: .5, ease: 'back.out(1.8)' }, T + .05);
+      tl.from($(el, '.fplus'), { scale: 0, duration: .3, ease: 'back.out(2.4)' }, T + .4);
+      tl.from($(el, '.fname'), { y: 40, opacity: 0, duration: .4, ease: E }, T + .25);
+      tl.from($(el, '.ftag'), { y: 40, opacity: 0, duration: .4, ease: E }, T + .45);
+      tl.from($(el, '.fbtn'), { scale: .5, opacity: 0, duration: .4, ease: 'back.out(1.8)' }, T + .65);
+      tl.from($(el, '.fsmall'), { opacity: 0, duration: .4 }, T + .9);
+      tl.to($(el, '.fbtn'), { scale: .9, duration: .1, yoyo: true, repeat: 1 }, T + 1.5);
+      tl.to($(el, '.fplus'), { scale: 0, duration: .15 }, T + 1.6);
+      tl.fromTo($(el, '.fok'), { scale: 0 }, { scale: 1, duration: .3, ease: 'back.out(2.4)' }, T + 1.65);
+      tl.to($(el, '.fbtn'), { backgroundColor: DARK ? '#25332F' : '#E5E7EB', color: DARK ? '#F2F6F4' : '#111827', duration: .2 }, T + 1.65);
+      cue(T, 'impact'); cue(T + .05, 'chord_end'); cue(T + 1.5, 'click'); cue(T + 1.7, 'ding');
+    },
     hook(tl, T, d, el, dur) {
       tl.fromTo($$(el, '.bgb'), { y: 0 }, { y: -620, duration: dur, ease: 'none' }, T);
       tl.to($(el, '.live .dot'), { scale: 1.5, opacity: .35, duration: .22, repeat: 1, yoyo: true }, T + .2);
@@ -476,7 +565,7 @@
     gsap.set(['#wipe', '#wipe2'], { yPercent: 100 });
     const tl = gsap.timeline({ paused: true });
     let t = 0;
-    const calm = new Set(['cover', 'hook', 'codes', 'pain']);
+    const calm = new Set(['cover', 'hook', 'codes', 'pain', 'wtitle']);
     cues.drop = null;
     cues.music = EP.music || null;   // optional per-episode soundtrack variant, read by scripts/music.py
     scenes.forEach((s, i) => {
@@ -488,7 +577,7 @@
       TL[s.type](tl, t, s.d, s.el, s.dur);
       const end = t + s.dur, next = scenes[i + 1];
       if (next) {
-        const wipe = next.type === 'solution' && i > 0 ? '#wipe' : next.type === 'offer' ? '#wipe2' : null;
+        const wipe = next.type === 'solution' && i > 0 ? '#wipe' : (next.type === 'offer' || next.type === 'follow') ? '#wipe2' : null;
         if (wipe) {
           tl.to(wipe, { yPercent: 0, duration: .28, ease: 'power2.in' }, end - .28);
           tl.set(s.el, { opacity: 0 }, end);

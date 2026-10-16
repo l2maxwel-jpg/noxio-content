@@ -17,6 +17,8 @@ window.L10N = {
     merge: { title: 'Все заказы', sources: [['live','Эфир · пн',5],['live','Эфир · ср',4],['live','Эфир · пт',6]] },
     review: { title: 'Проверка', flagWord: 'на проверку', ok: [['Оля','Синее платье · M'],['Марина','Красный топ · S ×2'],['Света','Куртка · L']], unclear: ['Наташа','мне как у Оли, только побольше'], flag: 'проверить', fix: 'Синее платье · L', done: 'готово' },
     setup: { title: 'Перед сканированием', fields: [['Коды товаров',['612','614','618','…']],['Цвета',['белый','чёрный','бежевый']],['Размеры',['S','M','L','XL']]], toggle: 'Не учитывать комментарии продавца', seller: ['Ваш магазин','Девочки, белый ещё есть! ❤️'], skipped: 'не заказ' },
+    warm: { ask: 'Пишите букву в комментариях 👇', mythHead: ['Миф', 'или правда?'], claim: 'Говорят', myth: 'МИФ', truth: 'ПРАВДА', truthLabel: 'На самом деле', whyLabel: 'Почему',
+      follow: { tag: 'Подписывайтесь — [советы для эфиров]', button: 'Подписаться', small: 'Noxio · заказы из комментариев' } },
     defaults: {
       group: { head: ['Один покупатель —','три комментария —','[один заказ]'] },
       excel: { head: ['Список заказов','в Excel —','[одним кликом]'] },
@@ -51,6 +53,8 @@ window.L10N = {
     merge: { title: 'Visi pasūtījumi', sources: [['live','Tiešraide · P',5],['live','Tiešraide · T',4],['live','Tiešraide · Pk',6]] },
     review: { title: 'Pārbaude', flagWord: 'jāpārbauda', ok: [['Anna','Zilā kleita · M'],['Ilze','Sarkanais tops · S ×2'],['Sanita','Jaka · L']], unclear: ['Inese','man tādu kā Annai, tikai lielāku'], flag: 'pārbaudīt', fix: 'Zilā kleita · L', done: 'gatavs' },
     setup: { title: 'Pirms skenēšanas', fields: [['Preču kodi',['612','614','618','…']],['Krāsas',['balta','melna','bēša']],['Izmēri',['S','M','L','XL']]], toggle: 'Neņemt vērā pārdevēja komentārus', seller: ['Jūsu veikals','Meitenes, baltā vēl ir! ❤️'], skipped: 'nav pasūtījums' },
+    warm: { ask: 'Rakstiet burtu komentāros 👇', mythHead: ['Mīts', 'vai patiesība?'], claim: 'Saka', myth: 'MĪTS', truth: 'PATIESĪBA', truthLabel: 'Patiesībā', whyLabel: 'Kāpēc',
+      follow: { tag: 'Sekojiet — [padomi tiešraidēm]', button: 'Sekot', small: 'Noxio · pasūtījumi no komentāriem' } },
     defaults: {
       group: { head: ['Viens pircējs —','trīs komentāri —','[viens pasūtījums]'] },
       excel: { head: ['Pasūtījumi','Excel failā —','[ar vienu klikšķi]'] },
@@ -85,6 +89,8 @@ window.L10N = {
     merge: { title: 'Wszystkie zamówienia', sources: [['live','Live · pon.',5],['live','Live · śr.',4],['live','Live · pt.',6]] },
     review: { title: 'Sprawdzanie', flagWord: 'do sprawdzenia', ok: [['Ola','Niebieska sukienka · M'],['Kasia','Czerwony top · S ×2'],['Ewa','Kurtka · L']], unclear: ['Asia','mi taką jak Ola, tylko większą'], flag: 'sprawdź', fix: 'Niebieska sukienka · L', done: 'gotowe' },
     setup: { title: 'Przed skanowaniem', fields: [['Kody produktów',['612','614','618','…']],['Kolory',['biały','czarny','beżowy']],['Rozmiary',['S','M','L','XL']]], toggle: 'Pomijaj komentarze sprzedawcy', seller: ['Twój sklep','Dziewczyny, biały jeszcze jest! ❤️'], skipped: 'to nie zamówienie' },
+    warm: { ask: 'Napisz literę w komentarzu 👇', mythHead: ['Mit', 'czy prawda?'], claim: 'Mówią', myth: 'MIT', truth: 'PRAWDA', truthLabel: 'Tak naprawdę', whyLabel: 'Dlaczego',
+      follow: { tag: 'Obserwuj — [porady do live’ów]', button: 'Obserwuj', small: 'Noxio · zamówienia z komentarzy' } },
     defaults: {
       group: { head: ['Jedna klientka —','trzy komentarze —','[jedno zamówienie]'] },
       excel: { head: ['Lista zamówień','w Excelu —','[jednym klikiem]'] },
@@ -119,6 +125,8 @@ window.L10N = {
     merge: { title: 'All orders', sources: [['live','Live · Mon',5],['live','Live · Wed',4],['live','Live · Fri',6]] },
     review: { title: 'Order check', flagWord: 'to check', ok: [['Emma','Blue dress · M'],['Sophie','Red top · S ×2'],['Grace','Jacket · L']], unclear: ['Chloe','same as Emma’s, but bigger'], flag: 'check', fix: 'Blue dress · L', done: 'done' },
     setup: { title: 'Before the scan', fields: [['Product codes',['612','614','618','…']],['Colours',['white','black','beige']],['Sizes',['S','M','L','XL']]], toggle: 'Skip the seller’s own comments', seller: ['Your shop','Girls, the white one is still here! ❤️'], skipped: 'not an order' },
+    warm: { ask: 'Drop the letter in the comments 👇', mythHead: ['Myth', 'or truth?'], claim: 'They say', myth: 'MYTH', truth: 'TRUE', truthLabel: 'Actually', whyLabel: 'Why',
+      follow: { tag: 'Follow for [live selling tips]', button: 'Follow', small: 'Noxio · orders from comments' } },
     defaults: {
       group: { head: ['One buyer,','three comments —','[one order]'] },
       excel: { head: ['Your order list','in Excel —','[in one click]'] },

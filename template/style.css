@@ -298,3 +298,49 @@ body.dark .rbadge{background:#3A2A0B;color:#FCD34D}
 .frame{position:absolute;inset:0}
 .framed .frame{transform:scale(.929);transform-origin:540px 1311px}
 .kicked .head{margin-top:76px}
+
+/* ===== Warm-up series (episodes wNN) ===== */
+.wchip{position:absolute;left:80px;top:255px;font-family:'Inter','InterFS',sans-serif;font-weight:800;font-size:34px;letter-spacing:.04em;color:#fff;padding:12px 30px;border-radius:999px;white-space:nowrap}
+.wemoji{position:absolute;left:66px;top:340px;line-height:0}
+.wemoji .emo{width:340px;height:340px;margin:0;vertical-align:top}
+.whead{position:absolute;left:80px;top:740px;font-size:124px}
+.wsub{position:absolute;left:80px;right:80px;font-size:48px;font-weight:700;line-height:1.25;color:var(--muted)}
+.sc-wtips .head,.sc-wquiz .head,.sc-wmyth .head{top:255px;font-size:96px}
+.sc-wpov .head{top:340px;font-size:88px}
+.sc-wtips .body,.sc-wquiz .body,.sc-wmyth .body{padding:0 60px}
+.witem{display:flex;align-items:center;gap:30px;background:var(--card);border:2px solid var(--line);border-radius:40px;padding:34px 36px;margin-bottom:28px;box-shadow:0 14px 40px rgba(17,24,39,.08)}
+.wic{flex:none;width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--em);color:#fff;font-weight:900;font-size:52px}
+.wlist.x .wic{background:var(--red)} .wx{font-size:44px;font-weight:900;line-height:1}
+.wlist.check .wic{background:rgba(17,185,129,.15)}
+.wtx{flex:1;min-width:0;overflow:hidden}
+.wt{font-size:50px;font-weight:800;line-height:1.15;white-space:nowrap}
+.ws{font-size:37px;font-weight:600;color:var(--muted);margin-top:8px;white-space:nowrap}
+.wlist.x .ws .lime{color:var(--em)}
+.wopt{display:flex;align-items:center;gap:26px;background:var(--card);border:2px solid var(--line);border-radius:34px;padding:26px 30px;margin-bottom:22px;overflow:hidden;box-shadow:0 12px 34px rgba(17,24,39,.07)}
+.wl{flex:none;width:78px;height:78px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:40px}
+.wot{font-size:47px;font-weight:700;white-space:nowrap}
+.wask{display:inline-block;margin-top:24px;background:var(--teal);color:#fff;font-weight:800;font-size:44px;padding:18px 34px;border-radius:999px;white-space:nowrap;box-shadow:0 14px 34px rgba(0,152,183,.3)}
+.wfeed{position:absolute;left:0;right:0;top:0;height:560px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 80%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 80%,transparent 100%)}
+.wfeed .feed{position:absolute;left:0;top:0;width:100%}
+.wfeed .feed .bub{position:relative;display:inline-flex;margin-bottom:20px}
+.wpunch{position:absolute;left:80px;top:590px;font-size:108px}
+.wclaim{position:relative;background:var(--card);border:2px solid var(--line);border-radius:36px;padding:30px 40px 34px;box-shadow:0 16px 44px rgba(17,24,39,.08)}
+.wcl,.wtl{font-size:32px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.wct{font-size:54px;font-weight:800;line-height:1.18;margin-top:10px;padding-right:120px}
+.wstamp{position:absolute;right:24px;top:-40px;font-family:'Inter Display','Inter','InterFS',sans-serif;font-weight:900;font-size:70px;letter-spacing:.04em;padding:4px 24px;border:7px solid currentColor;border-radius:18px;transform:rotate(-12deg);background:var(--card)}
+.wstamp.myth{color:var(--red)} .wstamp.truth{color:var(--em)}
+.wtruth{margin-top:30px;background:var(--card);border:2px solid var(--line);border-left:12px solid var(--em);border-radius:30px;padding:28px 38px 32px;box-shadow:0 16px 44px rgba(17,24,39,.08)}
+.wtl{color:var(--em)}
+.wtt{font-size:48px;font-weight:700;line-height:1.24;margin-top:10px}
+.fava{position:absolute;left:410px;top:360px;width:260px;height:260px;border-radius:50%;background:#fff;border:6px solid var(--em);display:flex;align-items:center;justify-content:center;box-shadow:0 20px 50px rgba(17,185,129,.25)}
+.fava img{width:150px;height:auto}
+.fplus,.fok{position:absolute;right:-8px;bottom:-8px;width:86px;height:86px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:6px solid var(--bg)}
+.fplus{background:var(--em);color:#fff;font-size:62px;font-weight:900;line-height:1}
+.fok{background:#fff}
+.fname{position:absolute;left:0;right:0;top:690px;text-align:center;font-size:130px;letter-spacing:-.045em}
+.ftag{position:absolute;left:0;right:0;top:880px;width:max-content;margin:0 auto;font-size:50px;font-weight:700;color:var(--ink);white-space:nowrap}
+.fbtn{position:absolute;left:0;right:0;top:1000px;width:max-content;margin:0 auto;background:var(--em);color:#fff;font-size:60px;font-weight:800;padding:30px 74px;border-radius:999px;white-space:nowrap;box-shadow:0 18px 40px rgba(17,185,129,.35)}
+.fsmall{position:absolute;left:0;right:0;top:1200px;text-align:center;font-size:36px;font-weight:700;color:var(--muted)}
+body.dark .witem,body.dark .wopt,body.dark .wclaim,body.dark .wtruth{box-shadow:0 16px 44px rgba(0,0,0,.4)}
+body.dark .fava{background:#fff}

@@ -39,8 +39,8 @@ test data. Brand: emerald #11B981, teal #0098B7, Inter, plenty of white; don't b
 - Feature angles with their own scenes: `setup` (expected codes / colours / sizes before the scan, the seller's own comments
   skipped), `group` (one buyer's comments → one order), `review` (an unclear comment flagged for a check and fixed by hand),
   `merge` (several lives → one list — lives only; don't show videos or posts merged), `excel` (one-click XLSX export).
-Show "without codes" on comments instead of just claiming it. Every video ends with the logo and the offer
-"14 days free, up to 3 streams, no card". Everything readable must stay inside y 330–1440 of the 1920 frame:
+Show "without codes" on comments instead of just claiming it. Every ad ends with the logo and the offer
+"14 days free, up to 3 streams, no card" (warm-ups end with the follow card instead). Everything readable must stay inside y 330–1440 of the 1920 frame:
 Facebook and Instagram show Reels in the feed cropped to 4:5 (y 285–1635) and the Reels player covers the bottom
 quarter with the caption. The template scales every scene into that band (`SAFE` in template.js) and
 `render.mjs preview` flags anything outside it — never move text closer to the edges.
@@ -56,6 +56,24 @@ Each Reel must be unrepeatable — across all languages, not just within one. Be
   cover headline, scene order, heads for every scene and `cta` tag; never translate another episode's text;
 - run `node scripts/check_unique.mjs` — it must report 0 errors. Fix its warnings for scheduled episodes too (same music
   variant → pin `"music": {"bpm", "transpose", "prog", "hats16"}`; spares that clash get changed before they are used).
+
+## Warm-up series (Reels tab only)
+
+Besides the ads above, two short warm-up Reels go out every day to keep the account visible and win followers
+(Maxim's decision, 2026-10-16). They are not ads: useful or funny content for people who sell on lives, ending with a
+follow card instead of the offer.
+- Files `episodes/wNN.json` with `"series": "warmup"`; scenes `wtitle` → one of `wtips` (tips, or `"style": "x"` for
+  mistakes), `wquiz` (question with A–D answers for the comments), `wpov` (POV joke over a comment feed), `wmyth`
+  (myth or truth) → `follow`. Rotate the five formats per language and alternate light/dark.
+- Slots (Europe/Warsaw): 08:00 and 19:30 every day — Mon LV/PL, Tue RU/PL, Wed RU/EN, Thu LV/RU, Fri PL/RU,
+  Sat LV/EN, Sun RU/PL.
+- Every warm-up has its own topic (`angle` starting with `warm-`), title emoji (never reused), headline and lines;
+  general advice only — no invented numbers, nothing from the never-list; Noxio itself is named only on the follow card.
+  Pick emoji that exist in the Noto sprite (`scripts/emoji.py` fails otherwise) and from the U+1Fxxx range.
+- `check_unique.mjs` compares them too (texts and emoji instead of scene order).
+- Plan entries carry `"series": "warmup", "reelsOnly": true, "coverMs": 2600`. In Metricool: Instagram REEL with
+  `showReelOnFeed: false` (Reels tab only, not the profile grid), Facebook REEL, `videoCoverMilliseconds: 2600`,
+  `autoPublish: true`.
 
 ## Making a batch
 
