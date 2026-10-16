@@ -100,8 +100,12 @@ All of these are free for business use without credits on screen; never show a s
 - **Music (Mixkit)** — every episode gets a real track: `"music": {"track": "mixkit:<id>"}` (optional `"start"` in s pins the
   cut; `scripts/music.py` prints the one it chose). Pick from the genre or mood list pages
   (`https://mixkit.co/free-stock-music/<genre>/`, `.../mood/<mood>/`), then `scripts/fetch_music.py <id> <list page URL>`: it
-  accepts only the "Stock Music Free License" and prints tempo and loud sections. Instrumental tracks only (no vocals in
-  any language), nothing whose title names a brand or an artist ("… type beat"). The mp3 is never committed; `assets/music.md`
+  accepts only the "Stock Music Free License" and prints tempo, loud sections and a voice check (`scripts/vocal_check.py`).
+  Instrumental tracks only (the check must say "instrumental"), nothing whose title names a brand, an artist or a game.
+  Style (Maxim, 2026-10-16): house, EDM, electropop, synthpop, electronica — modern and upbeat; **no funk**. Ads get the
+  house/EDM tracks with a clear drop. For a batch: fetch candidates with `scripts/fetch_music.py <id> <page> --try` (a few
+  at a time — Mixkit answers 429 to many requests in a row), then `scripts/assign_music.py <ids>` gives every episode its own
+  track and cut (skips tracks used within 14 days) and writes `music` into the episodes. The mp3 is never committed; `assets/music.md`
   keeps id → list page and `music.py` downloads it again. The cut puts the drop on a loud downbeat and muffles the track before
   it; our effects play quietly on top. A track may come back only 14+ days later and with another part of it
   (`check_unique.mjs`). Without `track` the old synthesized bed is used.

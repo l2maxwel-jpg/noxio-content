@@ -22,7 +22,7 @@ soundtrack is timed to the cuts.
 | `assets/clips.md` | Mixkit clips used as video covers (id and page; the clips themselves are downloaded into `build/mixkit/`) |
 | `assets/lottie/` | Lottie animations (`SOURCES.md`, `LICENSE.md`) |
 | `scripts/fetch_clip.sh`, `scripts/fetch_lottie.py` | Fetch a Mixkit clip / a LottieFiles animation after checking its license, with a contact sheet to review |
-| `assets/music.md`, `scripts/fetch_music.py` | Mixkit music tracks used by episodes (id and list page; the mp3s are downloaded into `build/music/`) |
+| `assets/music.md`, `scripts/fetch_music.py`, `scripts/assign_music.py`, `scripts/vocal_check.py` | Mixkit music: tracks used by episodes (id and list page; the mp3s are downloaded into `build/music/`), fetching with a voice check, one track and cut per episode |
 
 ## Scene types
 

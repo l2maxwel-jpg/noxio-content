@@ -6,9 +6,11 @@ remixing into music-only tracks, no registering with rights management services)
 list page that shows the track (a genre or mood page). The mp3 is never committed — Mixkit's terms forbid handing out the
 files — and scripts/music.py downloads it again from the page noted in assets/music.md when build/ is empty.
 
-  scripts/fetch_music.py 872 https://mixkit.co/free-stock-music/funk/        # note it (used by an episode)
-  scripts/fetch_music.py 872 https://mixkit.co/free-stock-music/funk/ --try  # download only, to listen first
-Prints tempo and the track's energetic sections (needs librosa: pip install --break-system-packages librosa).
+  scripts/fetch_music.py 371 https://mixkit.co/free-stock-music/house/        # note it (used by an episode)
+  scripts/fetch_music.py 371 https://mixkit.co/free-stock-music/house/ --try  # download only: a candidate for assign_music.py
+Prints tempo, the track's energetic sections and whether there is a voice in it (scripts/vocal_check.py; needs librosa and
+onnxruntime: pip install --break-system-packages librosa onnxruntime). Mixkit answers 429 to many page requests in a row:
+fetch a handful of tracks at a time.
 """
 import json, os, re, subprocess, sys, urllib.request
 
@@ -65,14 +67,23 @@ def page_for(tid):
     return None
 
 
+def note_candidate(tid, page, info, tempo, voice_ok):
+    """build/music/candidates.json: tracks fetched for a batch, read by scripts/assign_music.py."""
+    f = os.path.join(ROOT, 'build', 'music', 'candidates.json')
+    c = json.load(open(f)) if os.path.exists(f) else {}
+    c[str(tid)] = dict(info, page=page, tempo=round(tempo, 1), instrumental=voice_ok)
+    json.dump(c, open(f, 'w'), ensure_ascii=False, indent=1)
+
+
 if __name__ == '__main__':
     tid, page = sys.argv[1], sys.argv[2]
     out, info = ensure(tid, page, record='--try' not in sys.argv)
     print(f'mixkit:{tid} "{info["name"]}" by {info["artist"]} ({info["genre"]}) -> {out}')
-    try:
-        sys.path.insert(0, os.path.join(ROOT, 'scripts'))
-        from track_bed import analyse
-        a = analyse(out)
-        print(f'  {a["tempo"]:.0f} bpm, {a["length"]:.0f}s; loud sections start at: ' + ', '.join(f'{t:.1f}s' for t in a['sections'][:8]))
-    except ImportError as e:
-        print('  (no analysis:', e, ')')
+    sys.path.insert(0, os.path.join(ROOT, 'scripts'))
+    from track_bed import analyse
+    from vocal_check import vocals, instrumental
+    a = analyse(out)
+    print(f'  {a["tempo"]:.0f} bpm, {a["length"]:.0f}s; loud sections start at: ' + ', '.join(f'{t:.1f}s' for t in a['sections'][:8]))
+    v = vocals(out)
+    print(f'  voice {v[0]:.3f} of the time, longest {v[1]:.2f}s ->', 'instrumental' if instrumental(*v) else 'VOICE — do not use')
+    note_candidate(tid, page, info, a['tempo'], instrumental(*v))

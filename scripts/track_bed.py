@@ -54,6 +54,11 @@ def analyse(path):
 
 def choose_start(a, drop, dur):
     """Seconds into the track where the episode starts."""
+    return best_cut(a, drop, dur)[0]
+
+
+def best_cut(a, drop, dur):
+    """(start, score): the best cut and how good it is (higher is better; below ~1 the track does not suit the episode)."""
     E, times, energy = a['E'], a['times'], a['energy']
     tail = dur - drop
     best, best_s = None, -1e9
@@ -74,7 +79,7 @@ def choose_start(a, drop, dur):
                  - 4.0 * max(0.0, 0.45 - gap) - 1.5 * silent_intro - 1.2 * max(0.0, 0.5 - lead))
         if score > best_s:
             best, best_s = b - drop, score
-    return float(best if best is not None else 0.0)
+    return float(best if best is not None else 0.0), float(best_s if best is not None else -9.0)
 
 
 def bed(tid, dur, drop, start=None):
