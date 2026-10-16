@@ -197,9 +197,7 @@
   }
  ],
  "music": {
-  "bpm": 124,
-  "transpose": 1,
-  "prog": 0,
-  "hats16": true
+  "track": "mixkit:207",
+  "start": 30.45
  }
 }

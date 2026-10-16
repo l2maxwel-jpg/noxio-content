@@ -34,5 +34,9 @@
   {
    "type": "cta"
   }
- ]
+ ],
+ "music": {
+  "track": "mixkit:471",
+  "start": 44.17
+ }
 }

@@ -25,3 +25,9 @@ from the list page below. Kept for the record; not shown on the videos.
 | 1159 | Too Cool Too Crazy | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
 | 913 | Our Ups and Downs | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/edm/ |
 | 627 | Our Nights | Eugenio Mininni | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 58 | Sophisticated | Ahjay Stelino | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 176 | Farewell | Alejandro Magaña (A. M.) | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 836 | Let's Move | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/house/ |
+| 201 | Swish Swed | Arulo | Tech House | https://mixkit.co/free-stock-music/tech-house/ |
+| 942 | Be Happy | Michael Ramir C. | Synthpop | https://mixkit.co/free-stock-music/edm/?page=2 |
+| 930 | The Great Wall | Michael Ramir C. | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |

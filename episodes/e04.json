@@ -170,5 +170,9 @@
    "type": "cta",
    "tag": "Без входа через Facebook — просто по ссылке"
   }
- ]
+ ],
+ "music": {
+  "track": "mixkit:473",
+  "start": 59.68
+ }
 }

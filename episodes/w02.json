@@ -40,5 +40,9 @@
    "type": "follow",
    "tag": "Sekojiet — [padomi tiešraidēm]"
   }
- ]
+ ],
+ "music": {
+  "track": "mixkit:176",
+  "start": 29.55
+ }
 }
