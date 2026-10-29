@@ -13,6 +13,7 @@ soundtrack is timed to the cuts.
 | `episodes/wNN.json` | One warm-up Reel (series `warmup`, Reels tab only) |
 | `episodes/pNN.json` | One Reel for Import produktów PrestaShop (series `import`, feed + Reels) |
 | `episodes/plan.json` | Publishing plan: date, caption, cover frame, video URL and status per episode |
+| `episodes/manual.md`, `scripts/manual_list.py` | Posts over the Metricool free limit (20 a month) that Maxim publishes by hand, generated from plan.json |
 | `scripts/make_episode.sh` | Render one episode end to end into `videos/<id>.mp4` |
 | `scripts/preview_all.sh` | Key-frame contact sheets in `build/` for checking layouts before a full render |
 | `scripts/check_unique.mjs` | Fails when two live episodes share a scene order, cover photo (or photo series), headline, product set, scene head or a recent angle |

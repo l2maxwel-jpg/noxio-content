@@ -149,7 +149,34 @@ All of these are free for business use without credits on screen; never show a s
 5. Add the episodes to `plan.json` (caption in the episode's language, date, offset, url, `status: planned`, plus
    `cover`/`thumbnail`/`aiGenerated` when the episode has a cover, otherwise `coverMs: 3000`), commit and push.
 6. Schedule each as an Instagram REEL + Facebook REEL with `autoPublish: true` (Maxim's decision, 2026-10-15),
-   then set `status: scheduled`.
+   then set `status: scheduled` — but only within the Metricool limit (next section); the rest becomes `manual`.
+
+## Metricool limit and manual posting (Maxim, 2026-10-29)
+
+Metricool stays on the free plan, which publishes only **20 posts per calendar month**; anything over that fails with
+"You have reached your Metricool account limit" (this happened from 22.10.2026). Maxim posts the rest by hand.
+- Per calendar month create at most 20 posts in Metricool, counting the posts already there for that month (drafts
+  don't count). Priority: ads (eNN) and the import series, then Kaja, then warm-ups — each group in date order.
+- Everything else is rendered, committed and listed in plan.json as usual but with `"status": "manual"` and is not
+  created in Metricool (a post already there gets `draft: true`). Then run `scripts/manual_list.py` and commit
+  `episodes/manual.md` — Maxim's list with the time, where to post, video, cover and caption of every manual post.
+- Statuses in plan.json: `planned`, `scheduled` (in Metricool), `manual` (by hand), `published`, `missed` (Metricool
+  failed; listed at the end of manual.md), `spare`, `retired`.
+
+## Kaja — the face of Noxio (HeyGen avatar)
+
+Kaja is Noxio's virtual presenter: an AI photo avatar in HeyGen (avatar group "Kaja", 14 looks, 8 of them vertical;
+HeyGen connector, Creator plan, 600 premium credits a month). Maxim, 2026-10-29: she is a blogger who keeps followers up
+to date on Noxio — what's new, what we're working on, how things work. She is **not** an ad presenter: never make avatar
+videos in the ad format of the other series (hook → feature → offer).
+- One episode a week in PL and one in RU, each with its own topic (never a translation) and its own look. PL uses the
+  avatar's Polish voice; the RU voice is chosen with Maxim.
+- Rubrics: new in Noxio; what we're working on (every such topic approved by Maxim first and clearly marked as not
+  available yet); how it works; your questions (real questions only); a tip.
+- Facts come from Maxim's weekly notes and the safe lists above. She introduces herself as the virtual face of Noxio,
+  never poses as a seller or a customer, gives no testimonials. Instagram `isAiGenerated: true`.
+- Scripts are approved by Maxim before generating (each video spends HeyGen credits), so Kaja episodes are made in a
+  session with him, not by the monthly task. Plan entries carry `"series": "kaja"`.
 
 ## Covers
 
