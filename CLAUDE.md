@@ -161,7 +161,10 @@ Metricool stays on the free plan, which publishes only **20 posts per calendar m
   created in Metricool (a post already there gets `draft: true`). Then run `scripts/manual_list.py` and commit
   `episodes/manual.md` — Maxim's list with the time, where to post, video, cover and caption of every manual post.
 - Statuses in plan.json: `planned`, `scheduled` (in Metricool), `manual` (by hand), `published`, `missed` (Metricool
-  failed; listed at the end of manual.md), `spare`, `retired`.
+  failed; listed at the end of manual.md), `paused`, `spare`, `retired`.
+
+**Publishing is paused (Maxim, 2026-11-02):** every pending post in Metricool was set to `draft: true`, the future
+episodes are `paused` in plan.json and the monthly task is switched off. Schedule nothing until Maxim says to resume.
 
 ## Kaja — the face of Noxio (HeyGen avatar)
 
