@@ -172,14 +172,59 @@ Kaja is Noxio's virtual presenter: an AI photo avatar in HeyGen (avatar group "K
 HeyGen connector, Creator plan, 600 premium credits a month). Maxim, 2026-10-29: she is a blogger who keeps followers up
 to date on Noxio — what's new, what we're working on, how things work. She is **not** an ad presenter: never make avatar
 videos in the ad format of the other series (hook → feature → offer).
-- One episode a week in PL and one in RU, each with its own topic (never a translation) and its own look. PL uses the
-  avatar's Polish voice; the RU voice is chosen with Maxim.
+- Plan until 28.11.2026 (Maxim, 2026-11-07): 28 videos, 14 PL + 14 RU, in 3-day blocks (PL / RU / PL+RU), PL at 18:00
+  and RU at 20:00 (Europe/Warsaw), all the month's HeyGen credits; calendar in the Docs artifact «Ролики с Каей: план до
+  28 ноября». Each topic has its own script (never a translation); the same topic in the other language comes 14+ days
+  later in another format. Scripts go to Maxim in batches of 2–3, two or three days ahead. Maxim posts by hand.
+- Voices: PL `015482a78b9a46ebae74bd0beb17765b` (Bold Kasia - Excited); RU `655364e79506483a8f768ba50199cbb4`
+  (Polina - Bright & Articulate, chosen by Maxim 2026-11-08).
 - Rubrics: new in Noxio; what we're working on (every such topic approved by Maxim first and clearly marked as not
   available yet); how it works; your questions (real questions only); a tip.
-- Facts come from Maxim's weekly notes and the safe lists above. She introduces herself as the virtual face of Noxio,
-  never poses as a seller or a customer, gives no testimonials. Instagram `isAiGenerated: true`.
+- Facts come from Maxim's weekly notes and the safe lists above. She never poses as a seller or a customer and gives
+  no testimonials. **Never say or write that she is virtual, an avatar or AI** — not in her script, on-screen cards and
+  captions, or post texts (Maxim, 2026-11-06: he marks it himself when publishing).
 - Scripts are approved by Maxim before generating (each video spends HeyGen credits), so Kaja episodes are made in a
   session with him, not by the monthly task. Plan entries carry `"series": "kaja"`.
+
+### Stories with Kaja (`episodes/sNN.json`, pilot s01 — 2026-11-06)
+Topic plan: the Docs artifact «Сторис Noxio: от новичка до профи» (24 topics, PL/RU, beginner → pro).
+- Pipeline: script → `create_speech_without_player` (word timestamps → `build/story/sNN/words.json`, on-screen spellings
+  such as `live'ach` for the phonetic `lajwach`) → `create_video_from_avatar` with that `audioUrl`, 9:16, 1080p, Avatar IV,
+  `expressiveness: "medium"` + a `motionPrompt` (Avatar V rejects a motion prompt: the group has no digital twin)
+  → `build/story/sNN/kaja.mp4` → `python3 scripts/story_audio.py episodes/sNN.json` → `node scripts/story_render.mjs
+  preview|full episodes/sNN.json` (template `template/story.*`) → mux with the loudness-normalised mix (−14 LUFS).
+- **No text over Kaja's head or face, ever** (Maxim, 2026-11-06). `kaja.head` is her head box (hair + margin) in the
+  HeyGen frame; `story_render.mjs` moves it with every framing and prints `COVERS KAJA'S HEAD` — it must print nothing.
+  Notification cards sit in the lower third (below the chin in every framing), word captions under them; headroom above
+  her head is too small for text. Stories safe zone for text: y 250–1580.
+- A phrase can be removed from a finished Kaja video by cutting it (`kaja.cut`, cut on a framing change) instead of
+  generating it again. A ~30 s video costs ~20 credits (Creator plan: 600/month).
+- Look `7ac044c8603c4a2b8976659a88c2d41b` (matcha latte, blazer) has a generator's sparkle mark in the corner: never use it.
+- Layout 2 (`"layout": "story2"`, template `template/story2.*`, first used by s02): result-first hook with a stamp,
+  split screen with numbered steps, phrase captions with the spoken word lit, terms chips, teaser card; cut for Reels
+  (text in y 330–1440, clear of the right-hand buttons). `python3 scripts/story_prep.py episodes/sNN.json` first: it cuts
+  long pauses (jump cuts), speeds the take up (`edit.tempo`) and writes `kaja_edit.mp4`, `words.json`, `cuts.json` (put
+  framing changes on the join times). Sound effects come from the episode's own `sfx` cue list. Every episode must
+  differ from the previous ones in hook, layout, captions, look, ending and music — never the same video with new text.
+- Save credits: tighten the voice BEFORE generating — `python3 scripts/story_tts.py episodes/sNN.json` (block `tts`) cuts
+  long pauses and speeds the TTS take up into `voice.mp3` + `words.json`; HeyGen bills by length (s03: 37 s → 31 s). The
+  sandbox cannot reach HeyGen's S3 upload, so the file goes to the orphan branch `media` of the public repo
+  (`voice/sNN.mp3`) and its raw.githubusercontent.com URL is the `audioUrl`. Then no story_prep.py is needed.
+- Layout 3 (`"layout": "story3"`, first used by s03): Kaja keyed off a plain studio wall (`kaja.key`, `python3
+  scripts/story_key.py episodes/sNN.json` → RGBA webp frames; works for the lime/green-wall looks) on our own mint scene;
+  `poses` move her (mid / side / center / close); in `side` she stands right and a left column holds a live-comment feed,
+  a by-hand list or the Noxio card; result card under her chin; white teaser card; big kinetic 1–2-word captions in the
+  bottom band (y 1296–1420).
+- **Result (2026-11-07):** s01, posted by Maxim as a Reel, had 177 views against 4–26 for the template Reels (stock
+  photo + headline) on the same profile grid. The Kaja talking-head format is the one that hooks: give it priority.
+
+## Publishing kit after every finished video (Maxim, 2026-11-06)
+
+Whenever a video is ready, send Maxim everything he needs to post it by hand, without being asked: the caption in the
+episode's language ready to paste (no claims that Kaja is virtual), **5 hashtags at most** (Instagram's cap since
+December 2025; Facebook gets the same), the cover still as a file, and the settings for the Instagram composer
+(poll or prompt if useful, location, share to Facebook on, built-in auto captions off when ours are burned in; the AI
+label is his to set).
 
 ## Covers
 

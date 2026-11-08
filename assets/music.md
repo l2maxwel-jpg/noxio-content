@@ -80,3 +80,4 @@ from the list page below. Kept for the record; not shown on the videos.
 | 782 | Hey | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
 | 623 | Deep Urban | Eugenio Mininni | House | https://mixkit.co/free-stock-music/house/ |
 | 773 | Aquella Tarde en Yelapa | Mauro Urbina | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |
+| 81 | Fight Till the End | Ahjay Stelino | Electropop | https://mixkit.co/free-stock-music/electropop/ |

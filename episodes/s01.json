@@ -1,0 +1,296 @@
+{
+  "id": "s01",
+  "series": "story",
+  "lang": "pl",
+  "topic": 1,
+  "angle": "story-what-is-noxio",
+  "status": "draft",
+  "kaja": {
+    "look": "3654e4a5a4dc491faef8a0ad26fddf02",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "heygen": "f4e5bd48d1ae7e392c0cba3b066a6504",
+    "video": "build/story/s01/kaja_cut.mp4",
+    "words": "build/story/s01/words.json",
+    "face": [
+      540,
+      600
+    ],
+    "source": "build/story/s01/kaja.mp4",
+    "cut": [
+      [
+        5.64,
+        7.32
+      ]
+    ],
+    "head": [
+      260,
+      300,
+      820,
+      840
+    ]
+  },
+  "end": 30.52,
+  "hook": {
+    "until": 2.0,
+    "head": [
+      "Sprzedajesz",
+      "na [live'ach]?"
+    ],
+    "sub": "na Facebooku",
+    "bubbles": [
+      [
+        "Ola K.",
+        "biore czarna M 🖤",
+        50,
+        1075,
+        0.35
+      ],
+      [
+        "Marta",
+        "+1 dla mnie 💚",
+        610,
+        1245,
+        0.7
+      ],
+      [
+        "Iwona",
+        "bezowa L 🙋",
+        70,
+        1415,
+        1.05
+      ]
+    ]
+  },
+  "shots": [
+    [
+      2.0,
+      "wide"
+    ],
+    [
+      4.24,
+      "mid"
+    ],
+    [
+      5.64,
+      "wide"
+    ],
+    [
+      8.22,
+      "ins:comments"
+    ],
+    [
+      14.14,
+      "close"
+    ],
+    [
+      17.94,
+      "ins:orders"
+    ],
+    [
+      21.64,
+      "wide"
+    ],
+    [
+      24.02,
+      "mid"
+    ],
+    [
+      27.27,
+      "summary"
+    ]
+  ],
+  "cards": [
+    [
+      2.15,
+      4.15,
+      "play-circle",
+      "Odcinek 1",
+      "Czym jest Noxio?"
+    ],
+    [
+      4.26,
+      5.56,
+      "user-circle",
+      "Cześć, jestem Kaja",
+      "seria: Noxio od podstaw"
+    ],
+    [
+      5.74,
+      8.17,
+      "chat-circle-dots",
+      "Po transmisji",
+      "masa komentarzy"
+    ],
+    [
+      14.22,
+      17.87,
+      "sparkle",
+      "Noxio czyta komentarze",
+      "po zakończeniu live'a"
+    ],
+    [
+      21.72,
+      23.94,
+      "package",
+      "Ty tylko sprawdzasz",
+      "i pakujesz"
+    ],
+    [
+      24.1,
+      27.22,
+      "arrow-circle-right",
+      "W następnym odcinku",
+      "jak zacząć za darmo"
+    ]
+  ],
+  "comments": {
+    "kicker": "Komentarze pod live'em",
+    "items": [
+      [
+        "Ola K.",
+        "biore czarna M 🖤",
+        8.48
+      ],
+      [
+        "Marta",
+        "dla mnie bezowa L 🙋",
+        9.74
+      ],
+      [
+        "Kasia W.",
+        "+1 tez czarna, M 😍",
+        10.22
+      ],
+      [
+        "Iwona",
+        "bezowa S, 2 szt 🔥",
+        10.62
+      ],
+      [
+        "Ewa",
+        "L czarną poproszę ❤️",
+        10.92
+      ]
+    ],
+    "typos": [
+      [
+        "biore",
+        "biorę"
+      ],
+      [
+        "czarna",
+        "czarna"
+      ],
+      [
+        "bezowa",
+        "beżowa"
+      ],
+      [
+        "tez",
+        "też"
+      ]
+    ],
+    "chips": [
+      [
+        "bez kodów",
+        11.6
+      ],
+      [
+        "literówki",
+        12.29
+      ],
+      [
+        "emotki",
+        13.28
+      ]
+    ]
+  },
+  "orders": {
+    "kicker": "Lista zamówień",
+    "cols": [
+      [
+        "Kupujący",
+        18.24
+      ],
+      [
+        "Produkt",
+        19.07
+      ],
+      [
+        "Rozmiar",
+        19.92
+      ],
+      [
+        "Szt.",
+        20.72
+      ]
+    ],
+    "rows": [
+      [
+        "Ola K.",
+        "Sukienka czarna",
+        "M",
+        "1"
+      ],
+      [
+        "Marta",
+        "Sukienka beżowa",
+        "L",
+        "1"
+      ],
+      [
+        "Kasia W.",
+        "Sukienka czarna",
+        "M",
+        "1"
+      ],
+      [
+        "Iwona",
+        "Sukienka beżowa",
+        "S",
+        "2"
+      ],
+      [
+        "Ewa",
+        "Sukienka czarna",
+        "L",
+        "1"
+      ]
+    ]
+  },
+  "summary": {
+    "kicker": "Zrób screenshot",
+    "head": [
+      "Noxio",
+      "w skrócie"
+    ],
+    "items": [
+      [
+        "chat-circle-dots",
+        "Komentarze",
+        "pod live'em"
+      ],
+      [
+        "smiley",
+        "Bez kodów,",
+        "z emotkami"
+      ],
+      [
+        "list-checks",
+        "Lista zamówień",
+        "po transmisji"
+      ],
+      [
+        "package",
+        "Ty sprawdzasz",
+        "i pakujesz"
+      ]
+    ],
+    "next": "Odcinek 2: jak zacząć za darmo"
+  },
+  "music": {
+    "track": "mixkit:702",
+    "start": 0,
+    "gain_db": -27
+  }
+}

@@ -1,0 +1,115 @@
+/* Kaja episode, third layout (first used by s03): Kaja keyed off her studio wall (scripts/story_key.py) and placed on our
+   own mint scene, so she can step aside for a live-comment feed and come back. Big kinetic word captions in the bottom
+   band. Text stays in the Reels-safe band y 330–1440, x < 950 below y 1000; never over Kaja's head (#khead). */
+@font-face{font-family:'InterFS';font-weight:600;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff2) format('woff2')}
+@font-face{font-family:'InterFS';font-weight:800;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-800-normal.woff2) format('woff2')}
+@font-face{font-family:'InterFS';font-weight:900;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-900-normal.woff2) format('woff2')}
+:root{--ink:#0B1F1A;--muted:#6B7280;--line:#E3E8E6;--em:#11B981;--em2:#059669;--teal:#0098B7;--amber:#F59E0B}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#fff}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;color:var(--ink);font-family:'Inter','InterFS',sans-serif;font-weight:600}
+.ph{display:inline-flex}.ph svg{width:100%;height:100%;fill:currentColor}
+.emo{height:1em;width:auto;vertical-align:-.14em;margin:0 .04em}
+
+/* our scene behind Kaja */
+#bg{position:absolute;inset:0;background:linear-gradient(170deg,#EAF8F2 0%,#F4FBF8 45%,#E3F3F7 100%);overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(60px)}
+.b1{width:760px;height:760px;left:-260px;top:120px;background:rgba(17,185,129,.28)}
+.b2{width:820px;height:820px;right:-320px;top:760px;background:rgba(0,152,183,.22)}
+.b3{width:520px;height:520px;left:300px;top:-260px;background:rgba(17,185,129,.16)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(11,31,26,.07) 2.4px,transparent 2.4px);background-size:44px 44px}
+
+#kwrap{position:absolute;inset:0;z-index:1}
+#kcam{position:absolute;inset:0}
+#kimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:drop-shadow(0 28px 50px rgba(6,42,38,.22))}
+#khead{position:absolute;pointer-events:none}
+
+/* comment card (hook, feed) */
+.cm{display:flex;align-items:center;gap:18px;background:#fff;border-radius:30px;padding:16px 26px 16px 16px;box-shadow:0 14px 34px rgba(6,42,38,.14);border:3px solid transparent}
+.cm .av{flex:none;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:30px}
+.cm .cn{font-weight:800;font-size:24px;color:var(--muted)}
+.cm .ct{font-weight:800;font-size:34px;line-height:1.15;white-space:nowrap}
+.cm.e{border-color:var(--em);background:#F0FDF7}
+.cm.e .cn{color:var(--em2)}
+
+/* hook */
+#hook{position:absolute;inset:0;z-index:4;pointer-events:none}
+#hook .cm{position:absolute;left:60px;width:600px}
+#hook .cm .ct{font-size:38px}
+.pk{position:absolute;left:690px;top:900px;width:210px;height:210px;border-radius:50%;background:#fff;box-shadow:0 20px 46px rgba(6,42,38,.2);display:flex;align-items:center;justify-content:center;opacity:0}
+.pk .ph{width:118px;height:118px;color:var(--ink)}
+.pk .bd{position:absolute;right:-6px;top:-6px;min-width:84px;height:84px;padding:0 18px;border-radius:42px;background:var(--amber);color:#fff;font-weight:900;font-size:54px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+
+/* left column panels (Kaja stands on the right) */
+#feed,#manual,#noxio{position:absolute;left:60px;width:500px;top:340px;z-index:4;pointer-events:none}
+.head{display:inline-flex;align-items:center;gap:12px;height:62px;padding:0 26px 0 18px;border-radius:31px;background:var(--ink);color:#fff;font-weight:800;font-size:28px;white-space:nowrap}
+.head .ph{width:34px;height:34px;color:var(--em)}
+.head .dot{width:14px;height:14px;border-radius:50%;background:var(--em);box-shadow:0 0 0 6px rgba(17,185,129,.25)}
+#feed .cm{position:absolute;left:0;width:500px;height:96px;padding:12px 20px 12px 12px;border-radius:26px}
+#feed .cm .av{width:56px;height:56px;font-size:26px}
+#feed .cm .ct{font-size:33px}
+
+.panel{background:#fff;border-radius:34px;box-shadow:0 18px 44px rgba(6,42,38,.16);padding:24px 26px;margin-top:20px}
+.ptitle{display:flex;align-items:center;gap:14px;font-weight:900;font-size:32px;margin-bottom:10px}
+.ptitle .ph{width:40px;height:40px;color:var(--muted)}
+.mrow{display:flex;align-items:center;gap:16px;height:104px;border-top:2px solid #EEF2F0}
+.mrow .it{flex:1;min-width:0}
+
+.mrow .it b{display:block;font-weight:800;font-size:34px;white-space:nowrap}
+.mrow .it span{display:block;font-weight:700;font-size:25px;color:var(--muted);margin-top:4px}
+.mrow .bx{flex:none;width:66px;height:66px;border-radius:20px;background:#FEF3C7;color:#B45309;display:flex;align-items:center;justify-content:center}
+.mrow .bx .ph{width:40px;height:40px}
+.warn{display:inline-flex;align-items:center;gap:12px;margin-top:22px;padding:14px 26px 14px 18px;border-radius:999px;background:#FEF3C7;color:#92400E;font-weight:900;font-size:32px;white-space:nowrap;box-shadow:0 10px 24px rgba(146,64,14,.15)}
+.warn .ph{width:40px;height:40px;color:var(--amber)}
+
+.nxhead{display:flex;align-items:center;gap:16px}
+.nxhead img{width:64px;height:auto}
+.nxhead b{font-weight:900;font-size:40px;letter-spacing:-.02em}
+.chip{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:28px;color:#047857;background:#ECFDF5;padding:10px 20px 10px 14px;border-radius:999px;white-space:nowrap}
+.chip .ph{width:32px;height:32px;color:var(--em)}
+.scan{position:relative;margin-top:22px;height:420px;border-radius:26px;background:#F4F7F6;overflow:hidden;padding:20px}
+.scan .ln{height:30px;border-radius:15px;background:#DDE5E2;margin-bottom:24px}
+.scan .ln.e{background:#A7F3D0}
+.scan .bar{position:absolute;left:0;right:0;top:0;height:70px;background:linear-gradient(180deg,rgba(17,185,129,0),rgba(17,185,129,.35),rgba(17,185,129,0))}
+.grp{position:absolute;left:0;right:0;top:110px}
+.gmain{background:#fff;border:3px solid var(--em);border-radius:30px;box-shadow:0 18px 40px rgba(6,42,38,.16);padding:18px 24px}
+.gmain .gh{display:flex;align-items:center;gap:14px;font-weight:900;font-size:32px;margin-bottom:6px}
+.gmain .gh .av{width:52px;height:52px;border-radius:50%;background:var(--em);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px}
+.gmain .gi{display:flex;align-items:center;gap:12px;height:64px;border-top:2px solid #EEF2F0;font-weight:800;font-size:32px}
+.gmain .gi .ph{width:32px;height:32px;color:var(--em)}
+.gsm{display:flex;align-items:center;gap:14px;margin-top:16px;background:#fff;border-radius:24px;box-shadow:0 12px 28px rgba(6,42,38,.12);padding:12px 20px 12px 12px;font-weight:800;font-size:31px}
+.gsm .av{width:48px;height:48px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900}
+.gsm span{color:var(--muted);font-weight:700}
+
+/* result: the order card under her chin */
+#order{position:absolute;left:80px;width:840px;top:812px;z-index:4;background:#fff;border-radius:38px;box-shadow:0 26px 60px rgba(6,42,38,.22);padding:26px 32px 24px;opacity:0}
+.oh{display:flex;align-items:center;gap:18px}
+.oh .av{width:76px;height:76px;border-radius:50%;background:var(--em);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:36px}
+.oh b{font-weight:900;font-size:42px;letter-spacing:-.02em;flex:1}
+.oh .chip{font-size:30px;background:var(--em);color:#fff}
+.oh .chip .ph{color:#fff}
+.ocols,.orow{display:grid;grid-template-columns:1fr 130px 90px;align-items:center}
+.ocols{margin-top:18px;height:46px;font-weight:800;font-size:24px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.orow{height:78px;border-top:2px solid #EEF2F0;font-weight:800;font-size:34px}
+.orow .sz{display:inline-flex;justify-content:center;min-width:56px;padding:4px 12px;border-radius:14px;background:#ECFDF5;color:#047857;font-weight:900;font-size:30px}
+.orow .q{display:flex;align-items:center;gap:8px}
+.orow .q .ph{width:30px;height:30px;color:var(--em);opacity:0}
+.ofoot{display:flex;align-items:center;gap:14px;margin-top:14px;font-weight:900;font-size:30px;color:var(--muted)}
+.sticker{position:absolute;right:26px;bottom:-22px;display:flex;align-items:center;gap:14px;padding:16px 30px 16px 20px;border-radius:30px;background:var(--ink);color:#fff;font-weight:900;font-size:44px;
+  box-shadow:0 18px 40px rgba(6,42,38,.35);transform:rotate(-5deg);opacity:0;white-space:nowrap}
+.sticker .ph{width:54px;height:54px;color:var(--em)}
+
+/* teaser */
+#tease{position:absolute;left:90px;width:820px;top:870px;z-index:4;background:#fff;border:6px solid var(--em);border-radius:40px;padding:30px 36px 28px;box-shadow:0 26px 60px rgba(6,42,38,.22);opacity:0}
+.tk{display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:28px;color:#fff;background:var(--ink);padding:10px 22px 10px 14px;border-radius:999px}
+.tk .ph{width:32px;height:32px;color:var(--em)}
+.tt{margin-top:20px;font-weight:900;font-size:52px;line-height:1.1;letter-spacing:-.03em}
+.tb{display:flex;align-items:center;gap:14px;margin-top:22px;font-weight:800;font-size:30px;color:var(--muted)}
+.tb img{width:56px;height:auto}
+
+/* kinetic word captions: one or two words at a time, big, in the bottom band */
+#caps{position:absolute;left:0;right:0;top:0;height:0;z-index:7}
+.kw{position:absolute;left:500px;top:1296px;white-space:nowrap;font-weight:900;font-size:90px;letter-spacing:-.035em;line-height:1.12;color:var(--ink);
+  -webkit-text-stroke:16px #fff;paint-order:stroke fill;opacity:0;text-shadow:0 10px 30px rgba(6,42,38,.18)}
+.kw .k{color:var(--em)}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:9;pointer-events:none}

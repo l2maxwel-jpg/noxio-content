@@ -1,0 +1,472 @@
+{
+  "id": "s03",
+  "series": "story",
+  "layout": "story3",
+  "lang": "pl",
+  "angle": "story-grouped-by-buyer",
+  "kaja": {
+    "look": "8cde279f7f944d2ca7a23de0e54ca26f",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "video": "build/story/s03/kaja.mp4",
+    "words": "build/story/s03/words.json",
+    "key": {
+      "hue": [
+        47,
+        57,
+        100,
+        112
+      ],
+      "sat": [
+        0.22,
+        0.36
+      ],
+      "erode": 1,
+      "soft": 0.8
+    },
+    "face": [
+      545,
+      470
+    ],
+    "head": [
+      240,
+      140,
+      840,
+      720
+    ],
+    "heygen": "6bd326df158fcf633801eeb3cf67b82f",
+    "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s03.mp3"
+  },
+  "tts": {
+    "audio": "build/story/s03/tts.mp3",
+    "raw": "build/story/s03/words_raw.json",
+    "tempo": 1.08,
+    "pause": 0.16,
+    "hold": {
+      "3": 0.5
+    },
+    "show": {
+      "lajwie": "live'ie",
+      "lajwem": "live'em"
+    },
+    "key": [
+      "Trzy",
+      "Jedna",
+      "trzy",
+      "osobne",
+      "grupuje",
+      "kupującej",
+      "jedno",
+      "zamówienie",
+      "jedna",
+      "paczka",
+      "własne",
+      "wtorek"
+    ]
+  },
+  "end": 31.7,
+  "poses": [
+    [
+      0,
+      "mid",
+      0
+    ],
+    [
+      4.15,
+      "side",
+      0.55
+    ],
+    [
+      20.9,
+      "center",
+      0.55
+    ],
+    [
+      25.8,
+      "close",
+      0.5
+    ]
+  ],
+  "hook": {
+    "bubbles": [
+      [
+        "Ewelina K.",
+        "sukienka w groszki M 😍",
+        0.25
+      ],
+      [
+        "Ewelina K.",
+        "i pasek 🙏",
+        0.42
+      ],
+      [
+        "Ewelina K.",
+        "+ czerwona torebka ❤️",
+        0.59
+      ]
+    ],
+    "pack": 1.35,
+    "merge": 2.528,
+    "until": 4.2
+  },
+  "feed": {
+    "title": "Komentarze z live'a",
+    "from": 4.72,
+    "until": 11.95,
+    "items": [
+      [
+        "Ola",
+        "czarna L 🖤",
+        4.86,
+        0
+      ],
+      [
+        "Marta",
+        "a jest M?",
+        5.3,
+        0
+      ],
+      [
+        "Ewelina K.",
+        "sukienka w groszki M 😍",
+        6.18,
+        1
+      ],
+      [
+        "Kasia",
+        "biore 2 szt",
+        7.05,
+        0
+      ],
+      [
+        "Ewelina K.",
+        "i pasek 🙏",
+        8.76,
+        1
+      ],
+      [
+        "Ania",
+        "pasek brązowy dla mnie",
+        9.55,
+        0
+      ],
+      [
+        "Ewelina K.",
+        "+ czerwona torebka ❤️",
+        10.45,
+        1
+      ]
+    ]
+  },
+  "manual": {
+    "title": "Przepisywanie ręczne",
+    "from": 12.0,
+    "until": 16.3,
+    "buyer": "Ewelina K.",
+    "rows": [
+      [
+        "Sukienka w groszki M",
+        12.75
+      ],
+      [
+        "Pasek",
+        13.0
+      ],
+      [
+        "Czerwona torebka",
+        13.25
+      ]
+    ],
+    "packs": 14.91,
+    "warn": [
+      "3 osobne zamówienia",
+      15.7
+    ]
+  },
+  "noxio": {
+    "chip": "po live'ie",
+    "from": 16.4,
+    "scan": [
+      17.7,
+      19.1
+    ],
+    "group": 19.45,
+    "until": 21.0,
+    "main": [
+      "Ewelina K.",
+      [
+        "Sukienka w groszki M",
+        "Pasek",
+        "Czerwona torebka"
+      ]
+    ],
+    "others": [
+      [
+        "Ola",
+        "czarna L",
+        20.1
+      ],
+      [
+        "Kasia",
+        "2 szt.",
+        20.3
+      ],
+      [
+        "Ania",
+        "pasek brązowy",
+        20.5
+      ]
+    ]
+  },
+  "order": {
+    "from": 21.5,
+    "until": 25.75,
+    "buyer": "Ewelina K.",
+    "chip": [
+      "1 zamówienie",
+      22.06
+    ],
+    "cols": [
+      "Produkt",
+      "Rozm.",
+      "Szt."
+    ],
+    "rows": [
+      [
+        "Sukienka w groszki",
+        "M",
+        "1"
+      ],
+      [
+        "Pasek",
+        "–",
+        "1"
+      ],
+      [
+        "Czerwona torebka",
+        "–",
+        "1"
+      ]
+    ],
+    "count": [
+      "3 pozycje",
+      23.39
+    ],
+    "pack": [
+      "1 paczka",
+      24.65
+    ]
+  },
+  "tease": {
+    "from": 25.95,
+    "kicker": "W następnym odcinku · wtorek",
+    "title": "Twoje komentarze pod live'em — trafią na listę?",
+    "at": 29.49
+  },
+  "sfx": [
+    [
+      "pop",
+      0.25,
+      0.16
+    ],
+    [
+      "pop_hi",
+      0.42,
+      0.14
+    ],
+    [
+      "pop",
+      0.59,
+      0.16
+    ],
+    [
+      "click",
+      1.35,
+      0.2
+    ],
+    [
+      "whoosh_down",
+      2.42,
+      0.14
+    ],
+    [
+      "thud",
+      2.528,
+      0.5
+    ],
+    [
+      "whoosh_up",
+      4.15,
+      0.16
+    ],
+    [
+      "pop",
+      4.86,
+      0.08
+    ],
+    [
+      "pop",
+      5.3,
+      0.08
+    ],
+    [
+      "pop_hi",
+      6.18,
+      0.14
+    ],
+    [
+      "pop",
+      7.05,
+      0.08
+    ],
+    [
+      "pop_hi",
+      8.76,
+      0.14
+    ],
+    [
+      "pop",
+      9.55,
+      0.08
+    ],
+    [
+      "pop_hi",
+      10.45,
+      0.14
+    ],
+    [
+      "whoosh_down",
+      11.95,
+      0.12
+    ],
+    [
+      "click",
+      12.75,
+      0.14
+    ],
+    [
+      "click",
+      13.0,
+      0.14
+    ],
+    [
+      "click",
+      13.25,
+      0.14
+    ],
+    [
+      "tick3",
+      14.91,
+      0.18
+    ],
+    [
+      "pop",
+      15.7,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      16.4,
+      0.16
+    ],
+    [
+      "type",
+      17.7,
+      0.12
+    ],
+    [
+      "whoosh_down",
+      19.45,
+      0.14
+    ],
+    [
+      "ding",
+      19.95,
+      0.12
+    ],
+    [
+      "pop",
+      20.1,
+      0.1
+    ],
+    [
+      "pop",
+      20.3,
+      0.1
+    ],
+    [
+      "pop",
+      20.5,
+      0.1
+    ],
+    [
+      "whoosh_up",
+      20.9,
+      0.14
+    ],
+    [
+      "pop_hi",
+      22.06,
+      0.16
+    ],
+    [
+      "click",
+      23.39,
+      0.12
+    ],
+    [
+      "click",
+      23.55,
+      0.12
+    ],
+    [
+      "click",
+      23.71,
+      0.12
+    ],
+    [
+      "thud",
+      24.65,
+      0.4
+    ],
+    [
+      "ding",
+      24.7,
+      0.12
+    ],
+    [
+      "whoosh_down",
+      25.8,
+      0.12
+    ],
+    [
+      "pop",
+      25.95,
+      0.14
+    ],
+    [
+      "ding",
+      29.49,
+      0.12
+    ]
+  ],
+  "music": {
+    "track": "mixkit:81",
+    "start": 11.0,
+    "gain_db": -28
+  },
+  "caption": "Trzy komentarze od jednej klientki. Ile paczek? 📦\n\nNa live'ie Ewelina pisze „sukienka w groszki M”, po chwili „i pasek”, a na koniec „+ czerwona torebka”. Przy ręcznym przepisywaniu łatwo zrobić z tego trzy osobne zamówienia.\n\nNoxio po zakończeniu live'a czyta wszystkie komentarze i grupuje je według kupującej: jedno zamówienie, trzy rzeczy, jedna paczka.\n\nWe wtorek: czy Twoje własne komentarze pod live'em trafiają na listę zamówień? Obserwuj, żeby nie przegapić 💚\n\nSprawdź na noxio.pl: 14 dni za darmo, do 3 transmisji, bez karty.",
+  "hashtags": [
+    "#sprzedażnalive",
+    "#facebooklive",
+    "#butikonline",
+    "#zamówienia",
+    "#noxio"
+  ],
+  "post": {
+    "date": "2026-11-09",
+    "time": "18:00",
+    "cover": "build/story/s03/s03_okladka.jpg",
+    "video": "build/story/s03/s03.mp4",
+    "credits": null
+  }
+}

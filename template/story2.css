@@ -1,0 +1,75 @@
+/* Kaja episode, second layout: result-first hook with a "0 zł" stamp, split screen with numbered steps, phrase captions
+   with the spoken word lit, terms chips and a teaser card. Text stays inside the Reels-safe band y 330–1440, x 60–940
+   in the lower half (the Reels buttons sit on the right). Never over Kaja's head (story_render.mjs checks #khead). */
+@font-face{font-family:'InterFS';font-weight:600;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff2) format('woff2')}
+@font-face{font-family:'InterFS';font-weight:800;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-800-normal.woff2) format('woff2')}
+@font-face{font-family:'InterFS';font-weight:900;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-900-normal.woff2) format('woff2')}
+:root{--bg:#F5F8F7;--line:#E3E8E6;--ink:#111827;--muted:#6B7280;--em:#11B981;--teal:#0098B7;--deep:#062A26}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0b0f14}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#1d2a24;color:var(--ink);font-family:'Inter','InterFS',sans-serif;font-weight:600}
+.ph{display:inline-flex}.ph svg{width:100%;height:100%;fill:currentColor}
+.em{color:var(--em)}
+
+#kwrap{position:absolute;inset:0;overflow:hidden;z-index:1}
+#kcam{position:absolute;inset:0;transform-origin:540px 480px}
+#kimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#khead{position:absolute;pointer-events:none}
+
+/* hook: the finished order list under her chin + the stamp */
+#hook{position:absolute;inset:0;z-index:4;pointer-events:none}
+.hcard{position:absolute;left:110px;top:780px;width:830px;background:#fff;border-radius:34px;box-shadow:0 26px 60px rgba(0,0,0,.28);padding:22px 28px 14px}
+.hkick{display:flex;align-items:center;gap:12px;font-weight:900;font-size:30px;color:var(--ink);margin:2px 0 10px}
+.hkick .ph{width:36px;height:36px;color:var(--em)}
+.hrow{display:grid;grid-template-columns:200px 1fr 90px 60px;align-items:center;height:70px;border-top:2px solid #EEF2F0;font-weight:800;font-size:30px}
+.hrow .p{font-weight:600;color:#374151;font-size:28px}
+.sz{display:inline-flex;justify-content:center;min-width:58px;padding:6px 12px;border-radius:14px;background:#ECFDF5;color:#047857;font-weight:900;font-size:28px}
+.stamp{position:absolute;left:530px;top:820px;padding:10px 34px 16px;border:10px solid var(--em);border-radius:30px;color:var(--em);
+  font-weight:900;font-size:150px;line-height:1;letter-spacing:-.04em;background:rgba(255,255,255,.9);transform:rotate(-12deg);opacity:0;
+  box-shadow:0 18px 40px rgba(17,185,129,.3)}
+
+/* split screen: Kaja on top, a white sheet with the steps below */
+#split{position:absolute;left:0;right:0;top:900px;height:1020px;z-index:3;background:#fff;border-radius:48px 48px 0 0;box-shadow:0 -20px 60px rgba(0,0,0,.25);
+  transform:translateY(1100px);overflow:hidden}
+#split::before{content:'';position:absolute;inset:0;background:radial-gradient(800px 500px at 90% 0%,rgba(17,185,129,.12),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(0,152,183,.10),transparent 60%)}
+#split::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(17,24,39,.06) 2px,transparent 2px);background-size:36px 36px}
+.step{position:absolute;left:60px;right:140px;top:28px;opacity:0;z-index:1}
+.shead{display:flex;align-items:center;gap:22px}
+.num{flex:none;width:96px;height:96px;border-radius:30px;background:linear-gradient(135deg,#11B981,#0098B7);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:56px}
+.stitle{font-weight:900;font-size:54px;letter-spacing:-.025em;line-height:1.05}
+.sbody{position:relative;margin-top:28px;height:378px}
+.url{display:flex;align-items:center;gap:18px;height:108px;border-radius:32px;background:#F1F5F4;border:2px solid var(--line);padding:0 30px;font-weight:800;font-size:44px;white-space:nowrap;overflow:hidden}
+.url .ph{flex:none;width:42px;height:42px;color:#6B7280}
+.caret{display:inline-block;width:4px;height:44px;background:var(--ink);margin-left:2px;vertical-align:-6px}
+.btn{display:inline-flex;align-items:center;gap:14px;height:104px;padding:0 42px;border-radius:32px;background:var(--em);color:#fff;font-weight:900;font-size:42px;white-space:nowrap;box-shadow:0 14px 30px rgba(17,185,129,.35)}
+.btn .ph{width:42px;height:42px}
+.btn.ghost{background:#fff;color:var(--teal);border:3px solid var(--teal);box-shadow:none}
+.chip{display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:36px;color:#047857;background:#ECFDF5;padding:12px 24px 12px 16px;border-radius:999px;white-space:nowrap}
+.chip .ph{width:38px;height:38px;color:var(--em)}
+.chip.y{background:#FEF9C3;color:#854D0E}.chip.y .ph{color:#CA8A04}
+.or{display:flex;align-items:center;gap:18px;color:var(--muted);font-weight:800;font-size:30px;margin:18px 0}
+.or::before,.or::after{content:'';flex:1;height:2px;background:var(--line)}
+.lrow{display:grid;grid-template-columns:220px 1fr 130px;align-items:center;height:74px;border-bottom:2px solid #EEF2F0;font-weight:800;font-size:36px}
+.file{display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:32px;color:#374151;background:#F1F5F4;border-radius:20px;padding:12px 20px}
+.file .ph{width:36px;height:36px;color:var(--em)}
+
+/* terms chips and teaser */
+#terms{position:absolute;left:60px;width:880px;top:960px;z-index:4;display:flex;flex-wrap:wrap;gap:18px;justify-content:center;pointer-events:none}
+#terms .chip{font-size:40px;padding:16px 30px 16px 20px;background:#fff;box-shadow:0 16px 36px rgba(0,0,0,.22)}
+#terms .chip .ph{width:44px;height:44px}
+#tease{position:absolute;left:90px;width:820px;top:800px;z-index:4;background:linear-gradient(160deg,#062A26,#0A1E2E);color:#fff;border-radius:38px;padding:34px 40px 32px;
+  box-shadow:0 26px 60px rgba(0,0,0,.35);opacity:0}
+.tk{display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:30px;color:#fff;background:var(--em);padding:10px 22px;border-radius:999px}
+.tk .ph{width:34px;height:34px}
+.tt{margin-top:22px;font-weight:900;font-size:54px;line-height:1.08;letter-spacing:-.03em}
+.tb{display:flex;align-items:center;gap:16px;margin-top:26px;font-weight:800;font-size:34px;color:rgba(255,255,255,.8)}
+.tb img{width:64px;height:auto}
+
+/* phrase captions: the spoken word lights up */
+#caps{position:absolute;left:0;right:0;top:0;height:0;z-index:6}
+.cl{position:absolute;left:540px;white-space:nowrap;font-weight:900;font-size:62px;letter-spacing:-.025em;line-height:1;padding:18px 30px 22px;border-radius:28px;
+  background:#fff;box-shadow:0 14px 34px rgba(0,0,0,.25);opacity:0}
+.cw{display:inline-block;color:rgba(17,24,39,.35);margin:0 .12em}
+.cw.on{color:var(--ink)}
+.cw.k.on{color:var(--em)}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:9;pointer-events:none}

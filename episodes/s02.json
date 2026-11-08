@@ -1,0 +1,378 @@
+{
+ "id": "s02",
+ "series": "story",
+ "layout": "story2",
+ "lang": "pl",
+ "topic": 2,
+ "angle": "story-start-free",
+ "status": "draft",
+ "kaja": {
+  "look": "6f41200e1fcb4fbe845efd53cdb90835",
+  "voice": "015482a78b9a46ebae74bd0beb17765b",
+  "heygen": "5de1da2f8d381c2828f7e0bf2cb0ef69",
+  "source": "build/story/s02/kaja.mp4",
+  "video": "build/story/s02/kaja_edit.mp4",
+  "words": "build/story/s02/words.json",
+  "face": [
+   540,
+   430
+  ],
+  "head": [
+   290,
+   160,
+   790,
+   650
+  ]
+ },
+ "edit": {
+  "raw": "build/story/s02/words_raw.json",
+  "tempo": 1.08,
+  "pause": 0.16,
+  "keep": [
+   9,
+   29,
+   43
+  ],
+  "show": {
+   "lajwa": "live'a",
+   "lajwie": "live'ie"
+  },
+  "merge": [
+   [
+    20,
+    23,
+    "noxio.pl"
+   ]
+  ],
+  "key": [
+   "zero",
+   "złotych",
+   "trzech",
+   "krokach",
+   "Raz",
+   "noxio.pl",
+   "karty",
+   "Dwa",
+   "link",
+   "Facebooku",
+   "szybciej",
+   "Trzy",
+   "listę",
+   "Excela",
+   "kliknięciem",
+   "czternaście",
+   "dni",
+   "trzy",
+   "transmisje",
+   "ostatnim",
+   "klientka",
+   "komentarzach"
+  ]
+ },
+ "end": 35.3,
+ "shots": [
+  [
+   0,
+   "wide"
+  ],
+  [
+   1.648,
+   "mid"
+  ],
+  [
+   2.489,
+   "close"
+  ],
+  [
+   3.704,
+   "wide"
+  ],
+  [
+   4.907,
+   "mid"
+  ],
+  [
+   7.3,
+   "split"
+  ],
+  [
+   11.241,
+   "splitc"
+  ],
+  [
+   12.056,
+   "split"
+  ],
+  [
+   16.907,
+   "splitc"
+  ],
+  [
+   17.981,
+   "split"
+  ],
+  [
+   22.229,
+   "splitc"
+  ],
+  [
+   23.58,
+   "wide"
+  ],
+  [
+   26.988,
+   "mid"
+  ],
+  [
+   29.136,
+   "wide"
+  ],
+  [
+   30.636,
+   "mid"
+  ]
+ ],
+ "hook": {
+  "until": 6.35,
+  "kicker": "Lista zamówień z live'a",
+  "rows": [
+   [
+    "Natalia",
+    "Sweter kremowy",
+    "M",
+    "1"
+   ],
+   [
+    "Joanna",
+    "Kurtka khaki",
+    "L",
+    "1"
+   ],
+   [
+    "Basia",
+    "Szal w kratę",
+    "uni",
+    "2"
+   ]
+  ],
+  "stamp": [
+   "0 zł",
+   2.489
+  ]
+ },
+ "split": {
+  "from": 7.3,
+  "to": 23.58
+ },
+ "steps": [
+  {
+   "from": 7.3,
+   "n": 1,
+   "title": "Wejdź na noxio.pl",
+   "ui": "url",
+   "type": [
+    "noxio.pl",
+    8.845
+   ],
+   "button": [
+    "Załóż konto",
+    10.352
+   ],
+   "chip": [
+    "bez karty",
+    11.315
+   ]
+  },
+  {
+   "from": 12.03,
+   "n": 2,
+   "title": "Wklej link do live'a",
+   "ui": "link",
+   "placeholder": "Link do zakończonego live'a",
+   "paste": [
+    "facebook.com/…/videos/…",
+    13.13
+   ],
+   "or": "albo",
+   "alt": [
+    "Połącz stronę",
+    14.882
+   ],
+   "chip": [
+    "szybciej",
+    17.352
+   ]
+  },
+  {
+   "from": 17.96,
+   "n": 3,
+   "title": "Noxio układa listę",
+   "ui": "list",
+   "rows": [
+    [
+     "Natalia",
+     "Sweter kremowy",
+     "M"
+    ],
+    [
+     "Joanna",
+     "Kurtka khaki",
+     "L"
+    ],
+    [
+     "Basia",
+     "Szal w kratę",
+     "uni ×2"
+    ]
+   ],
+   "rowsAt": 19.47,
+   "xlsx": [
+    "Pobierz XLSX",
+    21.636
+   ],
+   "click": 22.75,
+   "file": [
+    "zamowienia.xlsx"
+   ]
+  }
+ ],
+ "terms": [
+  [
+   "calendar-check",
+   "14 dni",
+   24.766
+  ],
+  [
+   "broadcast",
+   "3 transmisje",
+   26.0
+  ],
+  [
+   "credit-card",
+   "bez karty",
+   27.062
+  ]
+ ],
+ "tease": {
+  "from": 29.21,
+  "kicker": "W następnym odcinku",
+  "title": "Klientka pisze w 3 komentarzach. Co wtedy?"
+ },
+ "music": {
+  "track": "mixkit:674",
+  "start": 0,
+  "gain_db": -28
+ },
+ "sfx": [
+  [
+   "thud",
+   2.689,
+   0.5
+  ],
+  [
+   "whoosh_up",
+   7.1,
+   0.2
+  ],
+  [
+   "whoosh_down",
+   23.15,
+   0.16
+  ],
+  [
+   "whoosh_down",
+   6.0,
+   0.12
+  ],
+  [
+   "type",
+   8.845,
+   0.14
+  ],
+  [
+   "pop",
+   10.352,
+   0.16
+  ],
+  [
+   "click",
+   10.8,
+   0.16
+  ],
+  [
+   "pop_hi",
+   11.315,
+   0.16
+  ],
+  [
+   "pop",
+   12.03,
+   0.12
+  ],
+  [
+   "click",
+   13.13,
+   0.18
+  ],
+  [
+   "pop",
+   14.882,
+   0.14
+  ],
+  [
+   "pop_hi",
+   17.352,
+   0.16
+  ],
+  [
+   "pop",
+   17.96,
+   0.12
+  ],
+  [
+   "tick3",
+   19.47,
+   0.14
+  ],
+  [
+   "pop",
+   21.636,
+   0.16
+  ],
+  [
+   "click",
+   22.75,
+   0.2
+  ],
+  [
+   "ding",
+   22.9,
+   0.12
+  ],
+  [
+   "pop_hi",
+   24.766,
+   0.16
+  ],
+  [
+   "pop_hi",
+   26.0,
+   0.16
+  ],
+  [
+   "pop_hi",
+   27.062,
+   0.16
+  ],
+  [
+   "whoosh_up",
+   29.1,
+   0.16
+  ],
+  [
+   "pop",
+   7.3,
+   0.12
+  ]
+ ]
+}
