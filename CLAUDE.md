@@ -215,6 +215,13 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   `poses` move her (mid / side / center / close); in `side` she stands right and a left column holds a live-comment feed,
   a by-hand list or the Noxio card; result card under her chin; white teaser card; big kinetic 1–2-word captions in the
   bottom band (y 1296–1420).
+- The RU voice returns no word timestamps: `python3 scripts/story_align.py <tts audio> "<script>" build/story/sNN/words_raw.json`
+  aligns the script to the audio with a local sherpa-onnx Russian model (pip `sherpa-onnx`; model
+  `sherpa-onnx-small-zipformer-ru-2024-09-18` from the k2-fsa/sherpa-onnx GitHub release `asr-models`, unpacked to
+  /home/claude/models or `RU_ASR`). Write "Ноксио" in the TTS text and "Noxio" in the script passed to the aligner.
+- Layout 4 (`"layout": "story4"`, first used by s04): full-frame Kaja (podcast look), comment cards with language chips and
+  a stamp, name tag, a before/after card with a wipe handle (comments → order list), interface-language switch, follow card
+  with the next topic, classic two-line subtitles on a dark bar (`subs` = phrase start indices).
 - **Result (2026-11-07):** s01, posted by Maxim as a Reel, had 177 views against 4–26 for the template Reels (stock
   photo + headline) on the same profile grid. The Kaja talking-head format is the one that hooks: give it priority.
 

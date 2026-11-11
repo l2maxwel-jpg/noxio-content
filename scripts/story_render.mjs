@@ -41,6 +41,7 @@ const WORDS = JSON.parse(readFileSync(path.join(root, ep.kaja.words), 'utf8'));
 const names = new Set(['chat-circle-dots', 'check-circle', 'list-checks', 'camera', 'arrow-circle-right']);
 (ep.cards || []).forEach(c => names.add(c[2]));
 ((ep.summary || {}).items || []).forEach(i => names.add(i[0]));
+if (ep.layout === 'story4') ['check-circle', 'chats-circle', 'list-checks', 'arrows-left-right', 'translate', 'plus-circle'].forEach(n => names.add(n));
 if (ep.layout === 'story3') ['package', 'pencil-simple', 'warning-circle', 'calendar-blank', 'check-circle', 'list-checks'].forEach(n => names.add(n));
 if (ep.layout === 'story2') ['lock-simple', 'user-plus', 'link-simple', 'plugs-connected', 'lightning', 'download-simple', 'file-xls', 'chats-circle'].forEach(n => names.add(n));
 (ep.terms || []).forEach(t => names.add(t[0]));

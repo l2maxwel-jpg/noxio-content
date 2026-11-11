@@ -1,0 +1,88 @@
+/* Kaja episode, fourth layout (first used by s04): full-frame Kaja, a "before / after" card with a wipe handle under her
+   chin (raw comments -> order list), language chips, classic two-line subtitles on a dark bar. Text stays in the
+   Reels-safe band y 330–1440, x < 950 below y 1000; never over Kaja's head (#khead). */
+@font-face{font-family:'InterFS';font-weight:600;src:url(../node_modules/@fontsource/inter/files/inter-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-04FF}
+@font-face{font-family:'InterFS';font-weight:800;src:url(../node_modules/@fontsource/inter/files/inter-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-04FF}
+@font-face{font-family:'InterFS';font-weight:900;src:url(../node_modules/@fontsource/inter/files/inter-cyrillic-900-normal.woff2) format('woff2');unicode-range:U+0400-04FF}
+@font-face{font-family:'InterFS';font-weight:600;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-024F}
+@font-face{font-family:'InterFS';font-weight:800;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-024F}
+@font-face{font-family:'InterFS';font-weight:900;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-900-normal.woff2) format('woff2');unicode-range:U+0100-024F}
+@font-face{font-family:'InterFS';font-weight:600;src:url(../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF}
+@font-face{font-family:'InterFS';font-weight:800;src:url(../node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF}
+@font-face{font-family:'InterFS';font-weight:900;src:url(../node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2) format('woff2');unicode-range:U+0000-00FF}
+:root{--ink:#0B1F1A;--muted:#6B7280;--em:#11B981;--em2:#059669;--teal:#0098B7;--amber:#F59E0B}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;color:var(--ink);font-family:'InterFS','Inter',sans-serif;font-weight:600}
+.ph{display:inline-flex}.ph svg{width:100%;height:100%;fill:currentColor}
+.emo{height:1em;width:auto;vertical-align:-.14em;margin:0 .04em}
+#kwrap{position:absolute;inset:0}
+#kcam{position:absolute;inset:0}
+#kimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#khead{position:absolute;pointer-events:none}
+#shade{position:absolute;left:0;right:0;bottom:0;height:900px;background:linear-gradient(180deg,rgba(6,24,20,0),rgba(6,24,20,.5) 55%,rgba(6,24,20,.72));pointer-events:none}
+
+.cm{display:flex;align-items:center;gap:18px;background:#fff;border-radius:30px;padding:14px 22px 14px 14px;box-shadow:0 14px 34px rgba(0,0,0,.28);border:4px solid transparent}
+.cm .av{flex:none;width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:32px}
+.cm .bd{flex:1;min-width:0}
+.cm .cn{font-weight:800;font-size:25px;color:var(--muted)}
+.cm .ct{font-weight:800;font-size:35px;line-height:1.15;white-space:nowrap}
+.lg{flex:none;display:flex;align-items:center;justify-content:center;min-width:86px;height:58px;padding:0 16px;border-radius:18px;background:var(--ink);color:#fff;font-weight:900;font-size:30px;letter-spacing:.04em}
+.ok{flex:none;width:58px;height:58px;color:var(--em);margin-left:-8px}
+
+#hook{position:absolute;left:60px;width:800px;z-index:4}
+#hook .cm{position:absolute;left:0;width:800px;height:108px}
+.stamp{position:absolute;right:-60px;top:-80px;z-index:2;padding:12px 28px;border:7px solid var(--amber);border-radius:22px;background:#fff;color:#B45309;font-weight:900;font-size:50px;letter-spacing:-.02em;transform:rotate(-7deg);white-space:nowrap;box-shadow:0 14px 30px rgba(0,0,0,.3)}
+
+#tag{position:absolute;left:60px;z-index:4;display:flex;align-items:center;gap:20px;background:#fff;border-radius:34px;padding:18px 34px 18px 20px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+#tag img{width:84px;height:auto}
+#tag b{display:block;font-weight:900;font-size:56px;letter-spacing:-.03em;line-height:1}
+#tag span{display:block;font-weight:800;font-size:28px;color:var(--em2);margin-top:8px}
+
+#ba{position:absolute;left:60px;width:880px;height:424px;z-index:4;border-radius:36px;background:#fff;box-shadow:0 22px 50px rgba(0,0,0,.34);overflow:hidden}
+#ba .ly{position:absolute;inset:0;padding:18px 26px}
+#ba .after{background:#F0FDF7}
+.bt{display:flex;align-items:center;gap:12px;height:56px;font-weight:900;font-size:30px}
+.bt .ph{width:36px;height:36px;color:var(--muted)}
+.after .bt .ph{color:var(--em)}
+.bt .pill{margin-left:auto;font-weight:800;font-size:24px;color:#fff;background:var(--ink);padding:6px 16px;border-radius:999px}
+.after .bt .pill{background:var(--em)}
+.br{display:flex;align-items:center;gap:16px;height:108px;border-top:2px solid #EEF2F0}
+.br .av{flex:none;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:28px}
+.br .bd{flex:1;min-width:0}
+.br .cn{font-weight:800;font-size:23px;color:var(--muted)}
+.br .ct{font-weight:800;font-size:33px;white-space:nowrap}
+.br .ct u{text-decoration:none;border-bottom:5px solid transparent}
+.br .lg{min-width:74px;height:50px;font-size:26px;border-radius:15px}
+.th,.tr{display:grid;grid-template-columns:250px 1fr 150px;align-items:center}
+.th{height:54px;margin-top:2px;font-weight:900;font-size:25px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.th div{justify-self:start;padding:4px 12px;margin-left:-12px;border-radius:12px}
+.tr{height:98px;border-top:2px solid #CFEFE1;font-weight:800;font-size:34px}
+.tr .sz{justify-self:start;min-width:70px;text-align:center;padding:6px 14px;border-radius:16px;background:var(--em);color:#fff;font-weight:900;font-size:34px}
+#ba .hd{position:absolute;top:0;bottom:0;width:8px;margin-left:-4px;background:var(--em);box-shadow:0 0 0 3px rgba(255,255,255,.9)}
+#ba .hd i{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:var(--em);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+#ba .hd i .ph{width:42px;height:42px}
+
+#lang{position:absolute;left:60px;z-index:4;background:#fff;border-radius:36px;padding:24px 28px;box-shadow:0 22px 50px rgba(0,0,0,.34)}
+#lang .lt{display:flex;align-items:center;gap:12px;font-weight:900;font-size:32px;margin-bottom:18px}
+#lang .lt .ph{width:40px;height:40px;color:var(--em)}
+#lang .sw{position:relative;display:flex;gap:10px;background:#EEF2F0;border-radius:26px;padding:10px}
+#lang .sw span{position:relative;z-index:1;width:176px;height:88px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:36px;color:var(--muted)}
+#lang .sw .sel{position:absolute;z-index:0;left:10px;top:10px;width:176px;height:88px;border-radius:20px;background:var(--em);box-shadow:0 8px 18px rgba(17,185,129,.4)}
+
+#follow{position:absolute;left:60px;width:860px;z-index:4;background:#fff;border-radius:38px;padding:26px 30px;box-shadow:0 22px 50px rgba(0,0,0,.34)}
+.fr{display:flex;align-items:center;gap:20px}
+.fr img{width:92px;height:auto}
+.fr .fn{flex:1}
+.fr .fn b{display:block;font-weight:900;font-size:46px;letter-spacing:-.03em;line-height:1}
+.fr .fn span{display:block;font-weight:700;font-size:26px;color:var(--muted);margin-top:8px}
+.fb{display:flex;align-items:center;gap:10px;height:84px;padding:0 30px 0 22px;border-radius:24px;background:var(--em);color:#fff;font-weight:900;font-size:34px}
+.fb .ph{width:38px;height:38px}
+.fx{display:flex;align-items:center;gap:14px;margin-top:22px;padding-top:20px;border-top:2px solid #EEF2F0;font-weight:900;font-size:36px;letter-spacing:-.02em}
+.fx .k{flex:none;font-weight:800;font-size:24px;color:#fff;background:var(--ink);padding:8px 16px;border-radius:999px;letter-spacing:0}
+
+/* classic subtitles: a phrase of up to two lines on a dark bar */
+#caps{position:absolute;left:0;right:0;top:0;height:0;z-index:7}
+.sub{position:absolute;left:500px;top:1290px;max-width:840px;width:max-content;text-align:center;padding:12px 28px 14px;border-radius:24px;background:rgba(8,22,19,.86);color:#fff;font-weight:800;font-size:50px;line-height:1.2;letter-spacing:-.02em;opacity:0}
+.sub .k{color:#6EE7B7}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:9;pointer-events:none}
