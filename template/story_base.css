@@ -1,0 +1,40 @@
+/* Shared base for Kaja layouts from story5 on: fonts, Kaja layer, comment card, subtitle styles. */
+@font-face{font-family:'InterFS';font-weight:600;src:url(../node_modules/@fontsource/inter/files/inter-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-04FF}
+@font-face{font-family:'InterFS';font-weight:800;src:url(../node_modules/@fontsource/inter/files/inter-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-04FF}
+@font-face{font-family:'InterFS';font-weight:900;src:url(../node_modules/@fontsource/inter/files/inter-cyrillic-900-normal.woff2) format('woff2');unicode-range:U+0400-04FF}
+@font-face{font-family:'InterFS';font-weight:600;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-024F}
+@font-face{font-family:'InterFS';font-weight:800;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-024F}
+@font-face{font-family:'InterFS';font-weight:900;src:url(../node_modules/@fontsource/inter/files/inter-latin-ext-900-normal.woff2) format('woff2');unicode-range:U+0100-024F}
+@font-face{font-family:'InterFS';font-weight:600;src:url(../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:'InterFS';font-weight:800;src:url(../node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:'InterFS';font-weight:900;src:url(../node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F}
+:root{--ink:#0B1F1A;--muted:#6B7280;--em:#11B981;--em2:#059669;--teal:#0098B7;--amber:#F59E0B;--red:#E5484D}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;color:var(--ink);font-family:'InterFS','Inter',sans-serif;font-weight:600}
+.ph{display:inline-flex;flex:none}.ph svg{width:100%;height:100%;fill:currentColor}
+.emo{height:1em;width:auto;vertical-align:-.14em;margin:0 .04em}
+#kwrap,#kcam{position:absolute;inset:0}
+#kimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#khead{position:absolute;pointer-events:none}
+#shade{position:absolute;left:0;right:0;bottom:0;height:900px;pointer-events:none}
+#ui{position:absolute;left:60px;width:880px;z-index:4}
+#ui>*{position:absolute;left:0}
+.card{background:#fff;border-radius:34px;box-shadow:0 22px 50px rgba(0,0,0,.32)}
+.cm{display:flex;align-items:center;gap:18px;background:#fff;border-radius:30px;padding:14px 22px 14px 14px;box-shadow:0 14px 34px rgba(0,0,0,.28);border:4px solid transparent}
+.av{flex:none;width:66px;height:66px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:31px}
+.av .ph{width:38px;height:38px}
+.cm .bd{flex:1;min-width:0}
+.cm .cn{display:flex;align-items:center;gap:10px;font-weight:800;font-size:25px;color:var(--muted)}
+.cm .ct{font-weight:800;font-size:35px;line-height:1.15;white-space:nowrap}
+.pill{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:23px;padding:5px 14px;border-radius:999px;background:var(--ink);color:#fff;white-space:nowrap}
+.pill .ph{width:24px;height:24px}
+#caps{position:absolute;left:0;right:0;top:0;height:0;z-index:7}
+.sub{position:absolute;left:500px;top:1290px;max-width:850px;width:max-content;text-align:center;opacity:0}
+/* marker: white caps, key words on an emerald marker box */
+.sub.marker{font-weight:900;font-size:52px;line-height:1.28;letter-spacing:-.01em;text-transform:uppercase;color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.55),0 0 22px rgba(0,0,0,.75)}
+.sub.marker .k{background:var(--em);color:#fff;padding:0 12px;border-radius:12px;text-shadow:none;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+/* paper: dark text on a white bar, key words teal */
+.sub.paper{font-weight:800;font-size:48px;line-height:1.2;letter-spacing:-.02em;color:var(--ink);background:#fff;padding:12px 28px 14px;border-radius:22px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.sub.paper .k{color:var(--teal)}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:9;pointer-events:none}

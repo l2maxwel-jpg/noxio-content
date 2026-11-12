@@ -1,6 +1,6 @@
 """Word timings for a voice track when the TTS call returned none (HeyGen Voice engine, e.g. the RU voice).
 
-python3 scripts/story_align.py <audio> "<script text>" <out words_raw.json>
+python3 scripts/story_align.py <audio> "<script text>" <out words_raw.json> [ru|pl|...]
 Recognises the audio with a local sherpa-onnx Russian zipformer (model from the k2-fsa/sherpa-onnx GitHub release
 "asr-models", unpacked to /home/claude/models/sherpa-onnx-small-zipformer-ru-2024-09-18), builds recognised words with times from
 the token timestamps, then maps the SCRIPT's words onto them (difflib), interpolating where recognition differs.
@@ -14,8 +14,13 @@ audio, text, out = sys.argv[1:4]
 tmp = out + ".16k.wav"
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", audio, "-ac", "1", "-ar", "16000", tmp], check=True)
 w = wave.open(tmp); sm = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32) / 32768; dur = len(sm) / 16000
-rec = sherpa_onnx.OfflineRecognizer.from_transducer(encoder=f"{M}/encoder.onnx", decoder=f"{M}/decoder.onnx", joiner=f"{M}/joiner.onnx",
-                                                    tokens=f"{M}/tokens.txt", num_threads=4, decoding_method="greedy_search")
+if len(sys.argv) > 4 and sys.argv[4] != "ru":   # any other language: multilingual NeMo Parakeet TDT v3 (same GitHub release)
+    M = os.environ.get("ML_ASR", "/home/claude/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8")
+    rec = sherpa_onnx.OfflineRecognizer.from_transducer(encoder=f"{M}/encoder.int8.onnx", decoder=f"{M}/decoder.int8.onnx", joiner=f"{M}/joiner.int8.onnx",
+                                                        tokens=f"{M}/tokens.txt", num_threads=4, model_type="nemo_transducer")
+else:
+    rec = sherpa_onnx.OfflineRecognizer.from_transducer(encoder=f"{M}/encoder.onnx", decoder=f"{M}/decoder.onnx", joiner=f"{M}/joiner.onnx",
+                                                        tokens=f"{M}/tokens.txt", num_threads=4, decoding_method="greedy_search")
 # the model fails on long inputs: decode pause-to-pause chunks of at most ~9 s
 env0 = np.sqrt(np.convolve(sm ** 2, np.ones(800) / 800, "same")); quiet = env0 < 0.03 * env0.max()
 cuts, i, n = [0], 0, len(sm)
@@ -39,7 +44,7 @@ for tok, t in zip(r.tokens, r.timestamps):
     if tok.startswith("▁") or tok.startswith(" ") or not rw: rw.append([tok.strip("▁ "), t])
     else: rw[-1][0] += tok
 rw = [x for x in rw if x[0]]
-norm = lambda s: re.sub(r"[^a-zа-я0-9]", "", s.lower().replace("ё", "е"))
+norm = lambda s: re.sub(r"[^a-zа-я0-9ąćęłńóśźż]", "", s.lower().replace("ё", "е"))
 sw = text.split()
 a, b = [norm(x) for x in sw], [norm(x[0]) for x in rw]
 start = [None] * len(sw)

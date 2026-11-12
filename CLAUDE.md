@@ -222,6 +222,18 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
 - Layout 4 (`"layout": "story4"`, first used by s04): full-frame Kaja (podcast look), comment cards with language chips and
   a stamp, name tag, a before/after card with a wipe handle (comments → order list), interface-language switch, follow card
   with the next topic, classic two-line subtitles on a dark bar (`subs` = phrase start indices).
+- From 2026-11-12 the PL voice returns no word timestamps either: `story_align.py ... words_raw.json pl` (any language
+  other than `ru` uses the multilingual `sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8` from the same GitHub release).
+- Layouts from 5 on share `template/story_base.{css,js}` (fonts, Kaja layer with `ui.frames` {s, x, y} and `ui.top`,
+  comment card, subtitle styles `marker` and `paper`, helpers) and keep their scenes in `data`. Layout 5 (s05): the
+  seller's own comments, a question that turns into the answer, a settings card whose switch is flipped under a zoom ring,
+  the comment list with "skipped" / "order" tags, teaser; marker subtitles. Layout 6 (s06): a claim card "МИФ?" that stays,
+  three test comments that get order results, note chips, a verdict stamp, teaser; paper subtitles; look
+  `78db2c61…` is framed at s ≥ 1.42, x −40 so the neon sign is out of frame.
+- Teasers never name a weekday ("в следующем выпуске / w następnym odcinku"): the posting days shift.
+- Old music may come back after 14+ days with another part (s05: 661 from 80 s, s06: 468 from 58 s).
+- **Views on 2026-11-12:** Kaja with on-screen graphics 313 (s03), 213 (s02), 195 (s01), 177 (s04 overnight); a Kaja
+  video without graphics 27; template Reels 6–8. Open every episode with a question and comments in the first frame.
 - **Result (2026-11-07):** s01, posted by Maxim as a Reel, had 177 views against 4–26 for the template Reels (stock
   photo + headline) on the same profile grid. The Kaja talking-head format is the one that hooks: give it priority.
 

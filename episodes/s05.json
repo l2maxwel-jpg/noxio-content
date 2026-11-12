@@ -1,0 +1,312 @@
+{
+  "id": "s05",
+  "series": "story",
+  "layout": "story5",
+  "lang": "pl",
+  "angle": "story-own-comments-skipped",
+  "kaja": {
+    "look": "7f4bfb59a8804585a20644ed829664f8",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "video": "build/story/s05/kaja.mp4",
+    "words": "build/story/s05/words.json",
+    "face": [
+      540,
+      540
+    ],
+    "head": [
+      225,
+      190,
+      875,
+      905
+    ],
+    "heygen": "13e063d1b98b4761f480a8e502d9d53f",
+    "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s05.mp3"
+  },
+  "tts": {
+    "audio": "build/story/s05/tts.wav",
+    "raw": "build/story/s05/words_raw.json",
+    "tempo": 1.06,
+    "pause": 0.18,
+    "show": {
+      "lajwem": "live'em"
+    },
+    "key": [
+      "swoim",
+      "ostatnia",
+      "sztuka",
+      "listę",
+      "zamówień",
+      "Nie",
+      "musi",
+      "jedną",
+      "opcję",
+      "pomijaj",
+      "sprzedawcy",
+      "administratorów",
+      "tylko",
+      "klientek",
+      "Excelu",
+      "jednym"
+    ]
+  },
+  "end": 24.4,
+  "ui": {
+    "top": 838,
+    "frames": {
+      "wide": {
+        "s": 1.08,
+        "y": -110
+      },
+      "mid": {
+        "s": 1.13,
+        "y": -145
+      }
+    }
+  },
+  "shots": [
+    [
+      0,
+      "mid"
+    ],
+    [
+      4.25,
+      "wide"
+    ],
+    [
+      8.86,
+      "mid"
+    ],
+    [
+      14.81,
+      "wide"
+    ],
+    [
+      20.14,
+      "mid"
+    ]
+  ],
+  "subs": [
+    0,
+    4,
+    10,
+    13,
+    19,
+    21,
+    25,
+    28,
+    31,
+    33,
+    37,
+    40,
+    44,
+    47,
+    50,
+    54
+  ],
+  "data": {
+    "hook": {
+      "shop": "Butik Lena",
+      "badge": "sprzedawca",
+      "items": [
+        [
+          "Jeszcze są rozmiary S i M 👇",
+          0.4
+        ],
+        [
+          "Ostatnia sztuka! 🔥",
+          4.6
+        ]
+      ],
+      "q": [
+        "Trafi na listę zamówień?",
+        6.32
+      ],
+      "a": [
+        "Nie musi.",
+        8.11
+      ],
+      "until": 8.8
+    },
+    "set": {
+      "from": 8.86,
+      "title": "Ustawienia skanu",
+      "pill": "przed skanem",
+      "other": "Oczekiwane kody, kolory, rozmiary",
+      "opt": "Pomijaj komentarze sprzedawcy i administratorów",
+      "zoom": 11.2,
+      "on": 11.9,
+      "until": 14.75
+    },
+    "res": {
+      "from": 14.81,
+      "until": 20.08,
+      "title": "Komentarze pod live'em",
+      "pill": [
+        "Na liście: 2 zamówienia",
+        19.42
+      ],
+      "skip": "pominięty",
+      "ord": "zamówienie",
+      "rows": [
+        [
+          1,
+          "",
+          "Jeszcze są rozmiary S i M 👇",
+          15.27
+        ],
+        [
+          0,
+          "Kasia W.",
+          "biorę beżowy M 🤎",
+          18.59
+        ],
+        [
+          1,
+          "",
+          "Ostatnia sztuka! 🔥",
+          15.94
+        ],
+        [
+          0,
+          "Dorota",
+          "dla mnie szary S",
+          18.81
+        ]
+      ]
+    },
+    "tease": {
+      "from": 20.14,
+      "kicker": "W następnym odcinku",
+      "title": "Cała lista w Excelu",
+      "at": 20.7,
+      "sub": [
+        "jednym kliknięciem",
+        22.78
+      ]
+    }
+  },
+  "sfx": [
+    [
+      "pop",
+      0.4,
+      0.16
+    ],
+    [
+      "pop",
+      4.6,
+      0.16
+    ],
+    [
+      "whoosh_up",
+      6.32,
+      0.14
+    ],
+    [
+      "thud",
+      8.11,
+      0.45
+    ],
+    [
+      "ding",
+      8.15,
+      0.12
+    ],
+    [
+      "whoosh_down",
+      8.6,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      8.86,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      11.2,
+      0.14
+    ],
+    [
+      "click",
+      11.9,
+      0.3
+    ],
+    [
+      "ding",
+      12.0,
+      0.12
+    ],
+    [
+      "whoosh_down",
+      14.55,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      14.81,
+      0.14
+    ],
+    [
+      "pop",
+      15.27,
+      0.12
+    ],
+    [
+      "pop",
+      15.94,
+      0.12
+    ],
+    [
+      "pop_hi",
+      18.59,
+      0.14
+    ],
+    [
+      "pop_hi",
+      18.81,
+      0.14
+    ],
+    [
+      "ding",
+      19.42,
+      0.12
+    ],
+    [
+      "whoosh_down",
+      19.9,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      20.14,
+      0.14
+    ],
+    [
+      "pop",
+      20.7,
+      0.14
+    ],
+    [
+      "click",
+      22.78,
+      0.22
+    ]
+  ],
+  "music": {
+    "track": "mixkit:661",
+    "start": 80.0,
+    "gain_db": -28
+  },
+  "caption": "Piszesz pod swoim live'em „jeszcze są rozmiary S i M” albo „ostatnia sztuka!”. Czy to trafi na listę zamówień? 🤔\n\nNie musi. Przed skanem w Noxio zaznaczasz jedną opcję: pomijaj komentarze sprzedawcy i administratorów.\n\nTwoje odpowiedzi i przypomnienia zostają pod live'em, a na liście są tylko zamówienia klientek.\n\nW następnym odcinku: cała lista w Excelu, jednym kliknięciem. Obserwuj, żeby nie przegapić 💚\n\nSprawdź na noxio.pl: 14 dni za darmo, do 3 transmisji, bez karty.",
+  "hashtags": [
+    "#sprzedażnalive",
+    "#livesprzedażowy",
+    "#sklepinternetowy",
+    "#zamówieniazkomentarzy",
+    "#noxio"
+  ],
+  "post": {
+    "video": "build/story/s05/s05.mp4",
+    "cover": "build/story/s05/s05_okladka.jpg"
+  }
+}

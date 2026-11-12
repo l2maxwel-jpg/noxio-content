@@ -1,0 +1,23 @@
+/* Layout 6 (first used by s06): "myth or truth" — a claim card that stays on screen, three test comments that each get
+   an order result, two note chips, a verdict stamp slammed on the claim, teaser. Paper subtitles. */
+#shade{background:linear-gradient(180deg,rgba(18,6,34,0),rgba(18,6,34,.55) 50%,rgba(18,6,34,.8))}
+#claim{top:0;width:880px;height:132px;display:flex;align-items:center;gap:20px;padding:0 28px 0 22px}
+#claim .lb{flex:none;display:flex;align-items:center;gap:10px;height:76px;padding:0 22px 0 14px;border-radius:22px;background:var(--amber);color:#fff;font-weight:900;font-size:38px}
+#claim .lb .ph{width:46px;height:46px}
+#claim .q{position:relative;font-weight:900;font-size:40px;line-height:1.1;letter-spacing:-.02em}
+#claim .q s{position:absolute;left:-6px;right:-6px;top:50%;height:7px;margin-top:-3px;background:var(--red);border-radius:4px;transform-origin:0 50%}
+#stamp{top:8px;left:auto!important;right:14px;padding:6px 26px;border:9px solid var(--red);border-radius:20px;background:#fff;color:var(--red);font-weight:900;font-size:76px;letter-spacing:.04em;line-height:1.1;box-shadow:0 14px 30px rgba(0,0,0,.35);transform-origin:50% 0%}
+.t6{display:flex;align-items:center;gap:14px;width:880px;height:84px;padding:0 14px 0 12px;background:#fff;border-radius:26px;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.t6 .av{width:58px;height:58px;font-size:27px}
+.t6 .bd{flex:1;min-width:0}
+.t6 .cn{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;color:var(--muted);height:28px}
+.t6 .cn .pill{font-size:19px;padding:3px 11px;background:#FEF3C7;color:#92400E}
+.t6 .ct{font-weight:800;font-size:31px;white-space:nowrap}
+.t6 .rs{flex:none;display:flex;align-items:center;gap:8px;height:58px;padding:0 18px 0 12px;border-radius:18px;background:var(--em);color:#fff;font-weight:900;font-size:28px;white-space:nowrap}
+.t6 .rs .ph{width:32px;height:32px}
+.n6{display:flex;align-items:center;gap:16px;height:98px;padding:0 34px 0 22px;border-radius:30px;background:#fff;font-weight:900;font-size:42px;letter-spacing:-.02em;white-space:nowrap;box-shadow:0 14px 34px rgba(0,0,0,.32)}
+.n6 .ph{width:54px;height:54px;color:var(--em)}
+.n6.b .ph{color:var(--teal)}
+#ts6{top:152px;width:860px;padding:24px 30px 26px;border:6px solid var(--em)}
+#ts6 .pill{font-size:27px;padding:9px 20px}
+#ts6 .tt{margin-top:16px;font-weight:900;font-size:54px;line-height:1.1;letter-spacing:-.03em}

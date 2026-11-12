@@ -1,0 +1,39 @@
+/* Layout 5 (first used by s05): "one switch, close up" — the seller's own comments, a settings card whose switch is
+   flipped under a zoom ring, the comment list with skipped / order tags, teaser. Marker subtitles. */
+#shade{background:linear-gradient(180deg,rgba(20,12,4,0),rgba(20,12,4,.55) 50%,rgba(20,12,4,.8))}
+.sell{background:var(--ink)!important}
+.pill.s{background:#FEF3C7;color:#92400E}
+#hk .cm{position:absolute;left:0;width:800px;height:108px}
+#q{top:254px;display:flex;align-items:center;gap:16px;height:112px;padding:0 34px 0 22px;border-radius:32px;background:var(--ink);color:#fff;font-weight:900;font-size:44px;letter-spacing:-.02em;white-space:nowrap;box-shadow:0 18px 40px rgba(0,0,0,.4)}
+#q .ph{width:60px;height:60px;color:var(--amber)}
+#q .a{display:none}
+#set{top:20px;width:880px;padding:22px 28px 14px;transform-origin:0% 100%}
+.st{display:flex;align-items:center;gap:14px;font-weight:900;font-size:34px;height:60px}
+.st .ph{width:42px;height:42px;color:var(--muted)}
+.st .pill{margin-left:auto;font-size:25px;padding:7px 18px}
+.sr{display:flex;align-items:center;gap:18px;border-top:2px solid #EEF2F0;position:relative}
+.sr.a{height:92px;font-weight:800;font-size:30px;color:var(--muted)}
+.sr.a .ph{width:34px;height:34px;margin-left:auto}
+.sr.b{height:150px;font-weight:900;font-size:36px;line-height:1.16;letter-spacing:-.02em}
+.sr.b .tx{flex:1}
+.tg{flex:none;position:relative;width:132px;height:74px;border-radius:37px;background:#D5DBD9}
+.tg i{position:absolute;left:7px;top:7px;width:60px;height:60px;border-radius:50%;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.25)}
+.ring{position:absolute;right:-22px;top:50%;width:176px;height:176px;margin-top:-88px;border-radius:50%;border:8px solid var(--em);box-shadow:0 0 0 10px rgba(17,185,129,.25);opacity:0}
+#res{top:0;width:880px;padding:16px 26px 10px}
+.rt{display:flex;align-items:center;gap:12px;height:58px;font-weight:900;font-size:31px}
+.rt .ph{width:38px;height:38px;color:var(--muted)}
+.rt .pill{margin-left:auto;font-size:25px;padding:7px 18px;background:var(--em)}
+.rr{display:flex;align-items:center;gap:14px;height:86px;border-top:2px solid #EEF2F0}
+.rr .av{width:54px;height:54px;font-size:26px}.rr .av .ph{width:30px;height:30px}
+.rr .bd{flex:1;min-width:0}
+.rr .cn{font-weight:800;font-size:21px;color:var(--muted)}
+.rr .ct{font-weight:800;font-size:31px;white-space:nowrap}
+.rr .tag{flex:none;display:flex;align-items:center;gap:8px;font-weight:900;font-size:25px;padding:8px 16px;border-radius:14px}
+.rr .tag .ph{width:28px;height:28px}
+.rr .tag.skip{background:#EEF2F0;color:var(--muted)}
+.rr .tag.ord{background:var(--em);color:#fff}
+#ts{top:30px;width:860px;padding:26px 32px 28px;border:6px solid var(--em)}
+#ts .pill{font-size:27px;padding:9px 20px}
+#ts .tt{margin-top:18px;font-weight:900;font-size:58px;line-height:1.08;letter-spacing:-.03em}
+#ts .t2{display:flex;align-items:center;gap:14px;margin-top:14px;font-weight:900;font-size:40px;color:var(--em2)}
+#ts .t2 .ph{width:48px;height:48px}
