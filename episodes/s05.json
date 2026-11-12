@@ -5,21 +5,21 @@
   "lang": "pl",
   "angle": "story-own-comments-skipped",
   "kaja": {
-    "look": "7f4bfb59a8804585a20644ed829664f8",
+    "look": "3654e4a5a4dc491faef8a0ad26fddf02",
     "voice": "015482a78b9a46ebae74bd0beb17765b",
     "video": "build/story/s05/kaja.mp4",
     "words": "build/story/s05/words.json",
     "face": [
       540,
-      540
+      583
     ],
     "head": [
-      225,
-      190,
-      875,
-      905
+      300,
+      310,
+      780,
+      815
     ],
-    "heygen": "13e063d1b98b4761f480a8e502d9d53f",
+    "heygen": "9db8497bd926b934d9fb81de89b32465",
     "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s05.mp3"
   },
   "tts": {
@@ -54,12 +54,12 @@
     "top": 838,
     "frames": {
       "wide": {
-        "s": 1.08,
-        "y": -110
+        "s": 1.25,
+        "y": -60
       },
       "mid": {
-        "s": 1.13,
-        "y": -145
+        "s": 1.35,
+        "y": -85
       }
     }
   },
@@ -312,11 +312,11 @@
   "cover": {
     "t": 3.0,
     "frame": {
-      "s": 1.13,
-      "y": -145
+      "s": 1.35,
+      "y": -85
     },
     "top": 842,
-    "tint": "24,14,6",
+    "tint": "10,24,30",
     "kicker": "Odcinek 4",
     "head": [
       "Twój komentarz",

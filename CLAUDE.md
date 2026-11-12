@@ -235,6 +235,12 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   kicker chip, a hooking headline of 2–3 lines under her chin (`*emerald*`, `_white_`, `~amber~` boxes), a sub line. The
   headline is a question or a claim about the episode, never its plain topic. The script fails if the text leaves
   y 330–1440 / x 64–1016 or touches her head.
+- **The cover is also the first frame of the video** (Maxim, 2026-11-12): finish every episode with
+  `scripts/story_finish.sh sNN` (loudness, the title card on the first 0.27 s of the picture, mux) instead of muxing by hand.
+- **No looks where Kaja holds or touches an object** (Maxim, 2026-11-12): in s05 the matcha cup hung in the air while she
+  talked, and the video was generated again. The matcha looks (`7f4bfb59…`, `7ac044c8…`) are out; usable vertical looks:
+  beige sweater / office `3654e4a5…`, orange tee `6f41200e…`, white hoodie `8cde279f…`, podcast microphone on a stand
+  `9a7ba7fc…` and `78db2c61…`. Say "empty hands, touches no objects" in the motion prompt.
 - Teasers never name a weekday ("в следующем выпуске / w następnym odcinku"): the posting days shift.
 - Old music may come back after 14+ days with another part (s05: 661 from 80 s, s06: 468 from 58 s).
 - **Views on 2026-11-12:** Kaja with on-screen graphics 313 (s03), 213 (s02), 195 (s01), 177 (s04 overnight); a Kaja

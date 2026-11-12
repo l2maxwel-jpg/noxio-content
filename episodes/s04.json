@@ -380,6 +380,23 @@
   ],
   "post": {
     "video": "build/story/s04/s04.mp4",
-    "cover": "build/story/s04/s04_oblozhka.jpg"
+    "cover": "build/story/s04/s04_cover.jpg"
+  },
+  "cover": {
+    "t": 9.0,
+    "frame": {
+      "s": 1.3,
+      "y": -60
+    },
+    "top": 838,
+    "tint": "14,10,40",
+    "kicker": "Выпуск 1",
+    "head": [
+      "3 комментария,",
+      "3 языка,",
+      "*0 кодов*"
+    ],
+    "size": 112,
+    "sub": "И всё это заказы в одном списке"
   }
 }

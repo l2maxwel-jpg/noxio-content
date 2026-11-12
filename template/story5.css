@@ -1,6 +1,6 @@
 /* Layout 5 (first used by s05): "one switch, close up" — the seller's own comments, a settings card whose switch is
    flipped under a zoom ring, the comment list with skipped / order tags, teaser. Marker subtitles. */
-#shade{background:linear-gradient(180deg,rgba(20,12,4,0),rgba(20,12,4,.55) 50%,rgba(20,12,4,.8))}
+#shade{background:linear-gradient(180deg,rgba(10,20,24,0),rgba(10,20,24,.55) 50%,rgba(10,20,24,.8))}
 .sell{background:var(--ink)!important}
 .pill.s{background:#FEF3C7;color:#92400E}
 #hk .cm{position:absolute;left:0;width:800px;height:108px}

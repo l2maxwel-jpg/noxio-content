@@ -465,8 +465,25 @@
   "post": {
     "date": "2026-11-09",
     "time": "18:00",
-    "cover": "build/story/s03/s03_okladka.jpg",
+    "cover": "build/story/s03/s03_cover.jpg",
     "video": "build/story/s03/s03.mp4",
     "credits": null
+  },
+  "cover": {
+    "t": 1.0,
+    "frame": {
+      "s": 1.25,
+      "y": 60
+    },
+    "top": 872,
+    "tint": "8,40,30",
+    "kicker": "Odcinek 3",
+    "head": [
+      "3 komentarze,",
+      "1 klientka.",
+      "*Ile paczek?*"
+    ],
+    "size": 112,
+    "sub": "Jak nie zrobić z tego trzech zamówień"
   }
 }
