@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Noxio story cover</title>
+<link rel="stylesheet" href="story_base.css">
+<style>
+/* Title card for a Kaja episode (Maxim, 2026-11-12): not a video frame but a poster — a clean still of Kaja, the episode
+   kicker and a hooking headline under her chin. The profile grid shows the middle 3:4 (y 240–1680), the feed 4:5. */
+#bg{position:absolute;inset:0;overflow:hidden}
+#bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#grad{position:absolute;left:0;right:0;bottom:0}
+#blk{position:absolute;left:64px;right:64px}
+.kk{display:flex;align-items:center;gap:16px}
+.kk img{width:74px;height:auto;filter:drop-shadow(0 4px 10px rgba(0,0,0,.4))}
+.kk .ch{display:inline-flex;align-items:center;height:64px;padding:0 26px;border-radius:32px;background:var(--em);color:#fff;font-weight:900;font-size:34px;letter-spacing:.06em;text-transform:uppercase}
+.kk .nx{font-weight:900;font-size:36px;color:#fff;letter-spacing:-.02em;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+h1{margin-top:26px;font-weight:900;color:#fff;letter-spacing:-.035em;line-height:1.06;text-shadow:0 4px 24px rgba(0,0,0,.55)}
+h1 div{white-space:nowrap}
+h1 mark{background:var(--em);color:#fff;padding:0 18px 4px;margin:0 -6px;border-radius:20px;text-shadow:none;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+h1 mark.w{background:#fff;color:var(--ink)}
+h1 mark.r{background:var(--amber)}
+.sb{margin-top:26px;font-weight:800;font-size:40px;color:rgba(255,255,255,.92);letter-spacing:-.01em;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bg"><img id="still" alt=""></div>
+  <div id="grad"></div>
+  <div id="blk"><div class="kk"><img src="../assets/logo.png" alt=""><span class="nx">Noxio</span><span class="ch" id="kick"></span></div><h1 id="head"></h1><div class="sb" id="sub"></div></div>
+</div>
+<script>
+(() => {
+  const C = window.EP.cover, K = window.EP.kaja, f = C.frame || { s: 1, x: 0, y: 0 };
+  const im = document.getElementById('still');
+  im.src = window.STILL;
+  im.style.transformOrigin = `${K.face[0]}px ${K.face[1]}px`;
+  im.style.transform = `translate(${f.x || 0}px, ${f.y || 0}px) scale(${f.s})`;
+  const g = document.getElementById('grad'), tint = C.tint || '6,24,20';
+  g.style.height = (1920 - C.top + 260) + 'px';
+  g.style.background = `linear-gradient(180deg, rgba(${tint},0), rgba(${tint},.86) 36%, rgba(${tint},.96))`;
+  document.getElementById('blk').style.top = C.top + 'px';
+  document.getElementById('kick').textContent = C.kicker;
+  const h = document.getElementById('head');
+  h.style.fontSize = (C.size || 112) + 'px';
+  h.innerHTML = C.head.map(l => `<div>${l.replace(/\*([^*]+)\*/g, '<mark>$1</mark>').replace(/_([^_]+)_/g, '<mark class="w">$1</mark>').replace(/~([^~]+)~/g, '<mark class="r">$1</mark>')}</div>`).join('');
+  document.getElementById('sub').textContent = C.sub || '';
+  window.ready = Promise.all([document.fonts.ready, im.decode()]).then(() => {
+    const r = document.getElementById('blk').getBoundingClientRect();
+    const wide = [...h.children].map(d => d.getBoundingClientRect().right);
+    return { top: r.top, bottom: r.bottom, right: Math.max(...wide) };
+  });
+})();
+</script>
+</body>
+</html>

@@ -271,6 +271,24 @@
   ],
   "post": {
     "video": "build/story/s06/s06.mp4",
-    "cover": "build/story/s06/s06_oblozhka.jpg"
+    "cover": "build/story/s06/s06_cover.jpg"
+  },
+  "cover": {
+    "t": 15.0,
+    "frame": {
+      "s": 1.42,
+      "x": -40,
+      "y": -70
+    },
+    "top": 872,
+    "tint": "20,8,38",
+    "kicker": "Миф или правда",
+    "head": [
+      "Без кодов",
+      "заказы",
+      "~не разобрать?~"
+    ],
+    "size": 112,
+    "sub": "Проверяем на трёх комментариях"
   }
 }

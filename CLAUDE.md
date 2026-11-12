@@ -230,6 +230,11 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   the comment list with "skipped" / "order" tags, teaser; marker subtitles. Layout 6 (s06): a claim card "МИФ?" that stays,
   three test comments that get order results, note chips, a verdict stamp, teaser; paper subtitles; look
   `78db2c61…` is framed at s ≥ 1.42, x −40 so the neon sign is out of frame.
+- **Covers are title cards, not video frames** (Maxim, 2026-11-12): `node scripts/story_cover.mjs episodes/sNN.json` →
+  `build/story/sNN/sNN_cover.jpg` from the episode's `cover` block — a clean smiling still of Kaja (`t`, `frame`), logo +
+  kicker chip, a hooking headline of 2–3 lines under her chin (`*emerald*`, `_white_`, `~amber~` boxes), a sub line. The
+  headline is a question or a claim about the episode, never its plain topic. The script fails if the text leaves
+  y 330–1440 / x 64–1016 or touches her head.
 - Teasers never name a weekday ("в следующем выпуске / w następnym odcinku"): the posting days shift.
 - Old music may come back after 14+ days with another part (s05: 661 from 80 s, s06: 468 from 58 s).
 - **Views on 2026-11-12:** Kaja with on-screen graphics 313 (s03), 213 (s02), 195 (s01), 177 (s04 overnight); a Kaja

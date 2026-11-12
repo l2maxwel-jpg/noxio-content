@@ -307,6 +307,23 @@
   ],
   "post": {
     "video": "build/story/s05/s05.mp4",
-    "cover": "build/story/s05/s05_okladka.jpg"
+    "cover": "build/story/s05/s05_cover.jpg"
+  },
+  "cover": {
+    "t": 3.0,
+    "frame": {
+      "s": 1.13,
+      "y": -145
+    },
+    "top": 842,
+    "tint": "24,14,6",
+    "kicker": "Odcinek 4",
+    "head": [
+      "Twój komentarz",
+      "trafi na *listę*",
+      "*zamówień?*"
+    ],
+    "size": 112,
+    "sub": "Jedna opcja przed skanem i problem znika"
   }
 }
