@@ -47,6 +47,7 @@ if (ep.layout === 'story4') ['check-circle', 'chats-circle', 'list-checks', 'arr
 if (ep.layout === 'story3') ['package', 'pencil-simple', 'warning-circle', 'calendar-blank', 'check-circle', 'list-checks'].forEach(n => names.add(n));
 if (ep.layout === 'story2') ['lock-simple', 'user-plus', 'link-simple', 'plugs-connected', 'lightning', 'download-simple', 'file-xls', 'chats-circle'].forEach(n => names.add(n));
 (ep.terms || []).forEach(t => names.add(t[0]));
+(ep.icons || []).forEach(n => names.add(n));
 const PH = {};
 for (const n of names) {
   const f = path.join(root, 'node_modules/@phosphor-icons/core/assets/fill', `${n}-fill.svg`);

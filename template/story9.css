@@ -1,0 +1,36 @@
+/* Layout 9 (first used by s09): a claim strip that stays on screen ("MIT?" -> "NIE" -> verdict stamp) above a changing
+   panel: comments that keep changing during the live, a live -> end-of-live timeline with the scan button, two ways in
+   and the ready orders, teaser. Bar subtitles. */
+#shade{background:linear-gradient(180deg,rgba(8,8,30,0),rgba(8,8,30,.55) 50%,rgba(8,8,30,.82))}
+#cl9{top:0;width:880px;height:120px;display:flex;align-items:center;gap:18px;padding:0 24px 0 18px}
+#cl9 .lb{flex:none;display:flex;align-items:center;justify-content:center;min-width:150px;height:76px;padding:0 20px;border-radius:22px;background:var(--amber);color:#fff;font-weight:900;font-size:40px}
+#cl9 .q{position:relative;font-weight:900;font-size:35px;line-height:1.12;letter-spacing:-.02em}
+#st9{top:6px;left:auto!important;right:10px;padding:4px 26px;border:9px solid var(--red);border-radius:20px;background:#fff;color:var(--red);font-weight:900;font-size:76px;letter-spacing:.04em;line-height:1.1;box-shadow:0 14px 30px rgba(0,0,0,.4);transform-origin:50% 0%}
+#gd9{top:140px;display:flex;align-items:center;gap:14px;height:92px;padding:0 34px 0 22px;border-radius:30px;background:var(--em);color:#fff;font-weight:900;font-size:46px;box-shadow:0 14px 30px rgba(0,0,0,.35)}
+#gd9 .ph{width:54px;height:54px}
+.p9{top:138px!important;width:880px;height:290px;padding:14px 24px}
+.p9 .hd{display:flex;align-items:center;gap:12px;height:48px;font-weight:900;font-size:29px}
+.p9 .hd .dot{width:18px;height:18px;border-radius:50%;background:var(--red);box-shadow:0 0 0 7px rgba(229,72,77,.22)}
+.p9 .hd .ph{width:36px;height:36px;color:var(--em)}
+.c9{display:flex;align-items:center;gap:12px;height:56px;font-weight:800;font-size:30px;white-space:nowrap}
+.c9 .av{width:42px;height:42px;font-size:21px}
+.c9 b{font-weight:800;color:var(--muted);font-size:24px}
+.c9 .tg{margin-left:auto;font-weight:900;font-size:22px;padding:4px 12px;border-radius:12px;background:#FEF3C7;color:#92400E}
+.trk{position:relative;height:30px;border-radius:15px;background:#E5E7EB;margin:62px 0 0}
+.trk .fill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:15px;background:linear-gradient(90deg,#F87171,#E5484D)}
+.trk .a,.trk .b{position:absolute;top:-52px;font-weight:900;font-size:27px;white-space:nowrap}
+.trk .a{left:0;color:var(--red)}.trk .b{right:0;color:var(--ink);display:flex;align-items:center;gap:8px}
+.trk .b .ph{width:32px;height:32px}
+.row9{display:flex;align-items:center;gap:16px;margin-top:30px}
+.scan9{display:flex;align-items:center;gap:12px;height:92px;padding:0 34px 0 24px;border-radius:26px;background:#D1D5DB;color:#fff;font-weight:900;font-size:40px}
+.scan9 .ph{width:46px;height:46px}
+.ok9{display:flex;align-items:center;gap:10px;height:72px;padding:0 24px 0 16px;border-radius:22px;background:#ECFDF5;color:#047857;font-weight:900;font-size:30px;white-space:nowrap}
+.ok9 .ph{width:36px;height:36px;color:var(--em)}
+.w9{display:flex;align-items:center;gap:14px;height:104px;padding:0 30px 0 22px;border-radius:30px;background:#fff;font-weight:900;font-size:40px;white-space:nowrap;box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.w9 .ph{width:52px;height:52px;color:var(--teal)}
+.w9.a{top:138px!important}.w9.b{top:138px!important;left:430px!important}
+#rd9{top:262px;width:880px;height:150px;display:flex;align-items:center;gap:20px;padding:0 30px;background:var(--em);color:#fff;font-weight:900;font-size:52px;letter-spacing:-.02em}
+#rd9 .ph{width:84px;height:84px}
+#ts9{top:138px;width:860px;padding:22px 30px 26px;border:6px solid var(--em)}
+#ts9 .pill{font-size:27px;padding:9px 20px}
+#ts9 .tt{margin-top:16px;font-weight:900;font-size:58px;line-height:1.08;letter-spacing:-.03em}

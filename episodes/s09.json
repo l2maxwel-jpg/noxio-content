@@ -1,0 +1,331 @@
+{
+  "id": "s09",
+  "series": "story",
+  "layout": "story9",
+  "lang": "pl",
+  "angle": "story-scan-after-live",
+  "kaja": {
+    "look": "9a7ba7fc4d234e06bd2e769701c44414",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "video": "build/story/s09/kaja.mp4",
+    "words": "build/story/s09/words.json",
+    "face": [
+      538,
+      580
+    ],
+    "head": [
+      285,
+      295,
+      835,
+      795
+    ],
+    "heygen": "55d400c2b65177b40a0434442f439792",
+    "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s09.mp3"
+  },
+  "tts": {
+    "audio": "build/story/s09/tts.wav",
+    "raw": "build/story/s09/words_raw.json",
+    "tempo": 1.06,
+    "pause": 0.18,
+    "show": {
+      "lajwa": "live'a"
+    },
+    "key": [
+      "Mit",
+      "trakcie",
+      "Nie",
+      "dobrze",
+      "zmieniają",
+      "dopisują",
+      "pytają",
+      "po",
+      "zakończeniu",
+      "kompletne",
+      "link",
+      "listy",
+      "gotowe",
+      "Werdykt",
+      "mit",
+      "przed"
+    ]
+  },
+  "end": 23.6,
+  "icons": [
+    "thumbs-up",
+    "timer",
+    "flag-checkered",
+    "scan",
+    "check-circle",
+    "link-simple",
+    "list-bullets",
+    "calendar-blank"
+  ],
+  "ui": {
+    "top": 850,
+    "subTop": 1298,
+    "frames": {
+      "wide": {
+        "s": 1.15,
+        "y": -40
+      },
+      "mid": {
+        "s": 1.3,
+        "y": -60
+      }
+    }
+  },
+  "shots": [
+    [
+      0,
+      "mid"
+    ],
+    [
+      4.22,
+      "wide"
+    ],
+    [
+      9.64,
+      "mid"
+    ],
+    [
+      14.59,
+      "wide"
+    ],
+    [
+      18.98,
+      "mid"
+    ]
+  ],
+  "subs": [
+    0,
+    4,
+    7,
+    10,
+    13,
+    16,
+    18,
+    21,
+    24,
+    27,
+    29,
+    32,
+    35,
+    39,
+    42,
+    45,
+    47,
+    50
+  ],
+  "data": {
+    "claim": {
+      "from": 0.15,
+      "label": "MIT?",
+      "text": "Noxio liczy zamówienia w trakcie live'a",
+      "no": [
+        "NIE",
+        3.12
+      ],
+      "good": [
+        "I dobrze",
+        3.6
+      ],
+      "verdict": [
+        "MIT",
+        19.59
+      ]
+    },
+    "live": {
+      "from": 4.22,
+      "title": "LIVE · trwa",
+      "rows": [
+        [
+          "Ola",
+          "biorę rudy M 🧡",
+          "",
+          4.9
+        ],
+        [
+          "Ola",
+          "jednak L!",
+          "zmiana zdania",
+          6.1
+        ],
+        [
+          "Kinga",
+          "+ rozmiar 38",
+          "dopisek",
+          7.1
+        ],
+        [
+          "Iza",
+          "a jest czarny?",
+          "pytanie",
+          8.37
+        ]
+      ]
+    },
+    "time": {
+      "from": 9.64,
+      "end": 11.4,
+      "title": "Kiedy skan?",
+      "a": "LIVE",
+      "b": "Koniec live'a",
+      "btn": "Skan",
+      "ok": [
+        "Komentarze kompletne",
+        13.6
+      ]
+    },
+    "ways": {
+      "from": 14.59,
+      "a": [
+        "Wklej link",
+        15.2
+      ],
+      "b": [
+        "Wybierz z listy",
+        15.79
+      ],
+      "ready": [
+        "Zamówienia gotowe",
+        17.76
+      ]
+    },
+    "tease": {
+      "from": 20.14,
+      "kicker": "W następnym odcinku",
+      "title": "Co ustawić przed skanem?"
+    }
+  },
+  "sfx": [
+    [
+      "whoosh_up",
+      0.15,
+      0.16
+    ],
+    [
+      "thud",
+      3.12,
+      0.5
+    ],
+    [
+      "pop_hi",
+      3.6,
+      0.16
+    ],
+    [
+      "whoosh_up",
+      4.22,
+      0.14
+    ],
+    [
+      "pop",
+      4.9,
+      0.14
+    ],
+    [
+      "pop",
+      6.1,
+      0.14
+    ],
+    [
+      "pop",
+      7.1,
+      0.14
+    ],
+    [
+      "pop",
+      8.37,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      9.64,
+      0.14
+    ],
+    [
+      "tick3",
+      10.3,
+      0.12
+    ],
+    [
+      "ding",
+      11.4,
+      0.16
+    ],
+    [
+      "pop_hi",
+      13.6,
+      0.14
+    ],
+    [
+      "whoosh_down",
+      14.4,
+      0.12
+    ],
+    [
+      "pop",
+      15.2,
+      0.16
+    ],
+    [
+      "pop",
+      15.79,
+      0.16
+    ],
+    [
+      "ding",
+      17.76,
+      0.16
+    ],
+    [
+      "whoosh_down",
+      18.6,
+      0.12
+    ],
+    [
+      "thud",
+      19.81,
+      0.6
+    ],
+    [
+      "whoosh_up",
+      20.14,
+      0.14
+    ]
+  ],
+  "music": {
+    "track": "mixkit:201",
+    "start": 80.0,
+    "gain_db": -28
+  },
+  "cover": {
+    "t": 4.5,
+    "frame": {
+      "s": 1.3,
+      "y": -60
+    },
+    "top": 840,
+    "tint": "12,10,40",
+    "kicker": "Mit czy prawda",
+    "head": [
+      "Noxio liczy",
+      "zamówienia",
+      "~w trakcie live'a?~"
+    ],
+    "size": 104,
+    "sub": "Kiedy naprawdę warto zrobić skan"
+  },
+  "caption": "Mit: Noxio liczy zamówienia w trakcie live'a. Nie. I dobrze 😉\n\nW trakcie transmisji klientki zmieniają zdanie, dopisują rozmiar, pytają o kolor. Dlatego skan robisz po zakończeniu live'a, kiedy komentarze są już kompletne.\n\nWklejasz link albo wybierasz transmisję z listy i po chwili masz gotowe zamówienia.\n\nW następnym odcinku: co ustawić przed skanem. Obserwuj, żeby nie przegapić 💚\n\nSprawdź na noxio.pl: 14 dni za darmo, do 3 transmisji, bez karty.",
+  "hashtags": [
+    "#sprzedażnalive",
+    "#livesprzedażowy",
+    "#sklepinternetowy",
+    "#zamówieniazkomentarzy",
+    "#noxio"
+  ],
+  "post": {
+    "video": "build/story/s09/s09.mp4",
+    "cover": "build/story/s09/s09_cover.jpg"
+  }
+}

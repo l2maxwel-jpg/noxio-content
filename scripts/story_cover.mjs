@@ -15,6 +15,15 @@ const out = path.join(root, 'build', 'story', ep.id);
 const still = path.join(out, 'cover_still.png');
 execFileSync('ffmpeg', ['-v', 'error', '-y', '-ss', String(ep.cover.t), '-i', path.join(root, ep.cover.video || ep.kaja.video), '-frames:v', '1',
   '-vf', 'scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920', still]);
+if (ep.kaja.key) {   // keyed look: cut Kaja off the studio wall, the template puts her on the episode's scene colours
+  execFileSync('python3', ['-c', `
+import sys, json
+sys.path.insert(0, ${JSON.stringify(path.join(root, 'scripts'))})
+from PIL import Image
+from story_key import key_frame
+key_frame(Image.open(${JSON.stringify(still)}), json.loads(${JSON.stringify(JSON.stringify(ep.kaja.key))})).save(${JSON.stringify(still)})
+`]);
+}
 const browser = await puppeteer.launch({
   args: [...chromium.args, '--allow-file-access-from-files', '--font-render-hinting=none'],
   executablePath: await chromium.executablePath(), headless: true,

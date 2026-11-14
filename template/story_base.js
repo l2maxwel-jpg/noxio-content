@@ -16,13 +16,17 @@ window.SB = (() => {
     Object.assign($('#khead').style, { left: x1 + 'px', top: y1 + 'px', width: (x2 - x1) + 'px', height: (y2 - y1) + 'px' });
     $('#kcam').style.transformOrigin = `${FX}px ${FY}px`;
     $('#ui').style.top = EP.ui.top + 'px';
+    if (EP.kaja.key) document.getElementById('stage').classList.add('keyed');
+    const bg = $('#bg'); if (bg) { bg.innerHTML = '<div class="bl a"></div><div class="bl b"></div><div class="gr"></div>'; Object.entries(EP.ui.scene || {}).forEach(([k, v]) => bg.style.setProperty('--' + k, v)); }
   }
   // framings: hard cuts on phrase starts, a slow push-in inside each shot
   function shots(tl) {
     EP.shots.forEach(([t, k], i) => {
       const f = FR[k], end = EP.shots[i + 1] ? EP.shots[i + 1][0] : EP.end;
-      tl.set('#kcam', { scale: f.s, x: f.x || 0, y: f.y || 0 }, t);
-      tl.to('#kcam', { scale: f.s * 1.025, duration: end - t, ease: 'none' }, t);
+      const d = EP.shots[i][2] || 0;
+      if (d) tl.to('#kcam', { scale: f.s, x: f.x || 0, y: f.y || 0, duration: d, ease: 'power3.inOut' }, t);
+      else tl.set('#kcam', { scale: f.s, x: f.x || 0, y: f.y || 0 }, t);
+      if (!EP.ui.still) tl.to('#kcam', { scale: f.s * 1.025, duration: Math.max(0.1, end - t - d), ease: 'none' }, t + d);
     });
   }
   function subsLayout(style) {

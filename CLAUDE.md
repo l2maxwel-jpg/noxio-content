@@ -241,6 +241,16 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   talked, and the video was generated again. The matcha looks (`7f4bfb59…`, `7ac044c8…`) are out; usable vertical looks:
   beige sweater / office `3654e4a5…`, orange tee `6f41200e…`, white hoodie `8cde279f…`, podcast microphone on a stand
   `9a7ba7fc…` and `78db2c61…`. Say "empty hands, touches no objects" in the motion prompt.
+- Layouts 7–9 (2026-11-14, all on `story_base`; icons come from the episode's `icons` list; a keyed Kaja gets `<div id="bg">`
+  with `ui.scene` colours, and `shots` entries `[t, frame, duration]` move her smoothly). Layout 7 (s07): one board under
+  her chin — notebook page → big export button → order table, export click, file chip → two tiles → two "bez…" chips →
+  teaser; `glow` subtitles; orange-tee look keyed with `hue [95,108,150,165]`. Layout 8 (s08): an unclear comment with
+  question marks, "неясный" flag, "Проверить" tab, an editor card typed by hand and saved, the finished list; `chips`
+  subtitles; white hoodie on a lavender scene. Layout 9 (s09): a claim strip (MIT? → NIE → stamp) above a changing panel
+  (live comments that keep changing, live → end timeline with the scan button, two ways in, ready orders); `bar` subtitles.
+  `story_cover.mjs` keys the still and uses the scene colours when the episode has `kaja.key`.
+- After a container reset: `npm ci`, `pip install sherpa-onnx numpy pillow`, the two ASR models into /home/claude/models,
+  music through `fetch_music.ensure(id, page_for(id))`; Kaja takes are downloaded again with `get_video` (`kaja.heygen`).
 - Teasers never name a weekday ("в следующем выпуске / w następnym odcinku"): the posting days shift.
 - Old music may come back after 14+ days with another part (s05: 661 from 80 s, s06: 468 from 58 s).
 - **Views on 2026-11-12:** Kaja with on-screen graphics 313 (s03), 213 (s02), 195 (s01), 177 (s04 overnight); a Kaja

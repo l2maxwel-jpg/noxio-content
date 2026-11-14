@@ -1,0 +1,41 @@
+/* Layout 7 (first used by s07): keyed Kaja on a warm scene; one board under her chin goes notebook page -> big export
+   button -> order table with an export click and a file chip -> two "what next" tiles -> two "no more" chips -> teaser.
+   Glow subtitles. */
+#shade{display:none}
+#ui>.pane{width:880px;top:0}
+.nb{height:440px;padding:20px 30px 0 96px;background:repeating-linear-gradient(180deg,#FFFDF4 0,#FFFDF4 71px,#C9DDEE 71px,#C9DDEE 73px);border-radius:26px;box-shadow:0 22px 50px rgba(60,40,10,.28);overflow:hidden}
+.nb:before{content:"";position:absolute;left:74px;top:0;bottom:0;width:3px;background:#F3A6A6}
+.nb .h{font-weight:900;font-size:34px;color:var(--ink);height:53px}
+.nb .r{height:73px;display:flex;align-items:flex-end;padding-bottom:6px;font-style:italic;font-weight:800;font-size:40px;color:#1E3A8A;letter-spacing:-.01em;white-space:nowrap;transform-origin:0 100%}
+.nb .r s{color:#9CA3AF;margin:0 10px}
+.nb .clk{position:absolute;right:22px;top:16px;display:flex;align-items:center;gap:10px;padding:8px 18px 8px 12px;border-radius:999px;background:#FEF3C7;color:#92400E;font-weight:900;font-size:28px;font-style:normal}
+.nb .clk .ph{width:34px;height:34px;color:var(--amber)}
+#big{left:190px!important;top:150px!important;display:flex;align-items:center;gap:18px;height:150px;padding:0 54px 0 40px;border-radius:44px;background:var(--em);color:#fff;font-weight:900;font-size:66px;letter-spacing:-.02em;box-shadow:0 24px 50px rgba(5,150,105,.45)}
+#big .ph{width:80px;height:80px}
+#cur{left:600px!important;top:330px!important;width:86px;height:86px;color:var(--ink);filter:drop-shadow(0 4px 8px rgba(0,0,0,.3))}
+#cur .ph{width:86px;height:86px}
+.tb{padding:18px 28px 20px}
+.tb .th0{display:flex;align-items:center;gap:14px;font-weight:900;font-size:32px;height:54px}
+.tb .th0 img{width:50px}
+.tb .th0 .ex{margin-left:auto;display:flex;align-items:center;gap:10px;height:58px;padding:0 22px 0 16px;border-radius:18px;background:var(--em);color:#fff;font-size:28px}
+.tb .th0 .ex .ph{width:34px;height:34px}
+.g{display:grid;grid-template-columns:210px 1fr 150px 90px;align-items:center}
+.g.hd{height:50px;margin-top:8px;font-weight:900;font-size:24px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.g.hd div{justify-self:start;padding:3px 12px;margin-left:-12px;border-radius:12px}
+.g.rw{height:76px;border-top:2px solid #EEF2F0;font-weight:800;font-size:33px}
+.g.rw .sz{justify-self:start;min-width:56px;text-align:center;padding:3px 12px;border-radius:14px;background:#ECFDF5;color:#047857;font-weight:900}
+.file{display:flex;align-items:center;gap:16px;height:96px;padding:0 30px 0 20px;border-radius:28px;background:#fff;box-shadow:0 16px 36px rgba(6,42,38,.25);font-weight:900;font-size:36px;white-space:nowrap}
+.file .ic{width:64px;height:64px;border-radius:18px;background:#107C41;color:#fff;display:flex;align-items:center;justify-content:center}
+.file .ic .ph{width:42px;height:42px}
+.file small{display:block;font-weight:700;font-size:23px;color:var(--muted)}
+#file{left:120px!important;top:330px!important}
+#file2{top:0}
+.tile{top:124px!important;width:428px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;font-weight:900;font-size:38px;line-height:1.12;letter-spacing:-.02em;padding:0 20px}
+.tile .ph{width:110px;height:110px;color:var(--em)}
+.tile.b{left:452px!important}.tile.b .ph{color:var(--teal)}
+.no{display:flex;align-items:center;gap:18px;height:120px;padding:0 40px 0 26px;border-radius:36px;background:#fff;font-weight:900;font-size:50px;letter-spacing:-.02em;white-space:nowrap;box-shadow:0 18px 40px rgba(6,42,38,.25)}
+.no .ph{width:70px;height:70px;color:var(--red)}
+.no.a{top:60px!important}.no.b{top:214px!important;left:60px!important}
+#ts{top:60px!important;width:860px;padding:26px 32px 30px;border:6px solid var(--em)}
+#ts .pill{font-size:27px;padding:9px 20px}
+#ts .tt{margin-top:18px;font-weight:900;font-size:60px;line-height:1.08;letter-spacing:-.03em}

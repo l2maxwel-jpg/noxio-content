@@ -36,6 +36,8 @@ h1 mark.r{background:var(--amber)}
   im.src = window.STILL;
   im.style.transformOrigin = `${K.face[0]}px ${K.face[1]}px`;
   im.style.transform = `translate(${f.x || 0}px, ${f.y || 0}px) scale(${f.s})`;
+  const sc = (window.EP.ui || {}).scene;
+  if (window.EP.kaja.key && sc) document.getElementById('bg').style.background = `linear-gradient(168deg, ${sc.s1}, ${sc.s2} 48%, ${sc.s3})`;
   const g = document.getElementById('grad'), tint = C.tint || '6,24,20';
   g.style.height = (1920 - C.top + 260) + 'px';
   g.style.background = `linear-gradient(180deg, rgba(${tint},0), rgba(${tint},.86) 36%, rgba(${tint},.96))`;

@@ -1,0 +1,416 @@
+{
+  "id": "s07",
+  "series": "story",
+  "layout": "story7",
+  "lang": "pl",
+  "angle": "story-excel-one-click",
+  "kaja": {
+    "look": "6f41200e1fcb4fbe845efd53cdb90835",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "video": "build/story/s07/kaja.mp4",
+    "words": "build/story/s07/words.json",
+    "key": {
+      "hue": [
+        95,
+        108,
+        150,
+        165
+      ],
+      "sat": [
+        0.14,
+        0.26
+      ],
+      "erode": 1,
+      "soft": 0.8
+    },
+    "face": [
+      540,
+      400
+    ],
+    "head": [
+      285,
+      165,
+      795,
+      660
+    ],
+    "heygen": "c72e308c5cbed4976b2d6c7fc7a0096d",
+    "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s07.mp3"
+  },
+  "tts": {
+    "audio": "build/story/s07/tts.wav",
+    "raw": "build/story/s07/words_raw.json",
+    "tempo": 1.06,
+    "pause": 0.18,
+    "show": {
+      "lajwa": "live'a"
+    },
+    "key": [
+      "Zeszyt",
+      "długopis",
+      "wieczór",
+      "jedno",
+      "kliknięcie",
+      "gotową",
+      "listę",
+      "Eksport",
+      "Excel",
+      "wydrukować",
+      "wysłać",
+      "Bez",
+      "literówek",
+      "kiedy"
+    ]
+  },
+  "end": 22.9,
+  "icons": [
+    "clock",
+    "file-xls",
+    "cursor-click",
+    "printer",
+    "paper-plane-tilt",
+    "x-circle",
+    "calendar-blank"
+  ],
+  "ui": {
+    "top": 815,
+    "still": 0,
+    "frames": {
+      "a": {
+        "s": 1.0,
+        "y": 130
+      },
+      "b": {
+        "s": 1.06,
+        "y": 112
+      }
+    },
+    "scene": {
+      "s1": "#FFF3DD",
+      "s2": "#FFFAF0",
+      "s3": "#E6F6EE",
+      "b1": "rgba(245,158,11,.24)",
+      "b2": "rgba(17,185,129,.22)"
+    }
+  },
+  "shots": [
+    [
+      0,
+      "a"
+    ],
+    [
+      4.01,
+      "b",
+      0.4
+    ],
+    [
+      5.51,
+      "a",
+      0.4
+    ],
+    [
+      10.79,
+      "b",
+      0.4
+    ],
+    [
+      13.25,
+      "a",
+      0.4
+    ],
+    [
+      16.72,
+      "b",
+      0.4
+    ],
+    [
+      19.74,
+      "a",
+      0.4
+    ]
+  ],
+  "subs": [
+    0,
+    2,
+    5,
+    6,
+    9,
+    12,
+    15,
+    17,
+    19,
+    22,
+    24,
+    28,
+    31,
+    33,
+    36,
+    38,
+    41,
+    43,
+    46
+  ],
+  "data": {
+    "nb": {
+      "from": 0.3,
+      "title": "Zamówienia z live'a",
+      "rows": [
+        [
+          "Monika — bluza <s>S</s> M",
+          0.6
+        ],
+        [
+          "Ewa P. — legginsy ×2 ?",
+          1.4
+        ],
+        [
+          "Sylwia — kurtka L, szara",
+          2.3
+        ],
+        [
+          "Ola — bluza… jaka?",
+          3.1
+        ]
+      ],
+      "clock": [
+        "cały wieczór",
+        2.29
+      ]
+    },
+    "big": [
+      "Eksport",
+      4.01,
+      4.75
+    ],
+    "table": {
+      "from": 5.51,
+      "title": "Lista zamówień",
+      "btn": "Eksport",
+      "cols": [
+        "Kto",
+        "Co",
+        "Rozmiar",
+        "Szt."
+      ],
+      "rows": [
+        [
+          "Monika",
+          "Bluza oversize",
+          "M",
+          "1"
+        ],
+        [
+          "Ewa P.",
+          "Legginsy",
+          "S",
+          "2"
+        ],
+        [
+          "Sylwia",
+          "Kurtka pikowana",
+          "L",
+          "1"
+        ]
+      ],
+      "colsAt": [
+        8.07,
+        8.68,
+        9.28,
+        9.88
+      ],
+      "click": 11.4
+    },
+    "file": {
+      "name": "zamowienia_live.xlsx",
+      "note": "plik Excel",
+      "at": 12.3
+    },
+    "opts": {
+      "from": 13.25,
+      "a": [
+        "Wydruk do pakowania",
+        13.78
+      ],
+      "b": [
+        "Wyślij wspólniczce",
+        15.36
+      ]
+    },
+    "no": {
+      "from": 16.72,
+      "a": [
+        "Bez przepisywania",
+        17.02
+      ],
+      "b": [
+        "Bez literówek",
+        18.23
+      ]
+    },
+    "tease": {
+      "from": 19.74,
+      "kicker": "W następnym odcinku",
+      "title": "Kiedy najlepiej zrobić skan?"
+    }
+  },
+  "sfx": [
+    [
+      "whoosh_up",
+      0.3,
+      0.14
+    ],
+    [
+      "type",
+      0.6,
+      0.1
+    ],
+    [
+      "type",
+      1.4,
+      0.1
+    ],
+    [
+      "type",
+      2.3,
+      0.1
+    ],
+    [
+      "pop",
+      2.29,
+      0.12
+    ],
+    [
+      "type",
+      3.1,
+      0.1
+    ],
+    [
+      "whoosh_up",
+      4.01,
+      0.16
+    ],
+    [
+      "click",
+      4.75,
+      0.35
+    ],
+    [
+      "ding",
+      4.85,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      5.51,
+      0.14
+    ],
+    [
+      "click",
+      8.07,
+      0.12
+    ],
+    [
+      "click",
+      8.68,
+      0.12
+    ],
+    [
+      "click",
+      9.28,
+      0.12
+    ],
+    [
+      "click",
+      9.88,
+      0.12
+    ],
+    [
+      "click",
+      11.4,
+      0.3
+    ],
+    [
+      "thud",
+      12.6,
+      0.35
+    ],
+    [
+      "ding",
+      12.65,
+      0.12
+    ],
+    [
+      "whoosh_down",
+      13.05,
+      0.12
+    ],
+    [
+      "pop",
+      13.78,
+      0.16
+    ],
+    [
+      "pop",
+      15.36,
+      0.16
+    ],
+    [
+      "whoosh_down",
+      16.5,
+      0.12
+    ],
+    [
+      "pop_hi",
+      17.02,
+      0.16
+    ],
+    [
+      "pop_hi",
+      18.23,
+      0.16
+    ],
+    [
+      "whoosh_up",
+      19.74,
+      0.14
+    ],
+    [
+      "ding",
+      21.02,
+      0.1
+    ]
+  ],
+  "music": {
+    "track": "mixkit:942",
+    "start": 20.0,
+    "gain_db": -28
+  },
+  "cover": {
+    "t": 13.0,
+    "frame": {
+      "s": 1.2,
+      "y": 150
+    },
+    "top": 882,
+    "tint": "40,24,6",
+    "kicker": "Odcinek 5",
+    "head": [
+      "Cały wieczór",
+      "przepisywania?",
+      "*Jedno kliknięcie*"
+    ],
+    "size": 100,
+    "sub": "Lista zamówień z live'a prosto do Excela"
+  },
+  "caption": "Zeszyt, długopis i cały wieczór przepisywania zamówień z live'a? Albo jedno kliknięcie 🖱️\n\nPo skanie live'a masz w Noxio gotową listę: kto, co, rozmiar, ile sztuk. Klikasz „Eksport” i pobierasz plik Excel. Możesz go wydrukować do pakowania albo wysłać wspólniczce.\n\nBez przepisywania i bez literówek z pośpiechu.\n\nW następnym odcinku: kiedy najlepiej zrobić skan? Obserwuj, żeby nie przegapić 💚\n\nSprawdź na noxio.pl: 14 dni za darmo, do 3 transmisji, bez karty.",
+  "hashtags": [
+    "#sprzedażnalive",
+    "#facebooklive",
+    "#butikonline",
+    "#excel",
+    "#noxio"
+  ],
+  "post": {
+    "video": "build/story/s07/s07.mp4",
+    "cover": "build/story/s07/s07_cover.jpg"
+  }
+}

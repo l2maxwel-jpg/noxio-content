@@ -38,3 +38,21 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
 .sub.paper{font-weight:800;font-size:48px;line-height:1.2;letter-spacing:-.02em;color:var(--ink);background:#fff;padding:12px 28px 14px;border-radius:22px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
 .sub.paper .k{color:var(--teal)}
 #flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:9;pointer-events:none}
+
+/* scene behind a keyed Kaja (layouts with "kaja.key"): colours come from --s1..--s3, --b1, --b2 on #bg */
+#bg{position:absolute;inset:0;overflow:hidden;background:linear-gradient(168deg,var(--s1,#EAF8F2),var(--s2,#F4FBF8) 48%,var(--s3,#E3F3F7))}
+#bg .bl{position:absolute;border-radius:50%;filter:blur(70px)}
+#bg .bl.a{width:780px;height:780px;left:-280px;top:80px;background:var(--b1,rgba(17,185,129,.28))}
+#bg .bl.b{width:860px;height:860px;right:-340px;top:820px;background:var(--b2,rgba(0,152,183,.22))}
+#bg .gr{position:absolute;inset:0;background-image:linear-gradient(rgba(11,31,26,.045) 2px,transparent 2px),linear-gradient(90deg,rgba(11,31,26,.045) 2px,transparent 2px);background-size:72px 72px}
+.keyed #kimg{filter:drop-shadow(0 26px 46px rgba(6,42,38,.2))}
+/* glow: lower-case white words with an emerald glow, key words amber */
+.sub.glow{font-weight:900;font-size:58px;line-height:1.2;letter-spacing:-.01em;color:var(--ink);text-shadow:-5px -5px 0 #fff,-5px -3px 0 #fff,-5px 0px 0 #fff,-5px 3px 0 #fff,-5px 5px 0 #fff,-3px -5px 0 #fff,-3px -3px 0 #fff,-3px 0px 0 #fff,-3px 3px 0 #fff,-3px 5px 0 #fff,0px -5px 0 #fff,0px -3px 0 #fff,0px 3px 0 #fff,0px 5px 0 #fff,3px -5px 0 #fff,3px -3px 0 #fff,3px 0px 0 #fff,3px 3px 0 #fff,3px 5px 0 #fff,5px -5px 0 #fff,5px -3px 0 #fff,5px 0px 0 #fff,5px 3px 0 #fff,5px 5px 0 #fff,0 10px 22px rgba(6,42,38,.3)}
+.sub.glow .k{color:var(--em2)}
+/* chips: every word is its own chip, key words emerald */
+.sub.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 10px;max-width:860px}
+.sub.chips span{display:inline-block;padding:6px 18px 8px;border-radius:16px;background:#fff;color:var(--ink);font-weight:900;font-size:46px;letter-spacing:-.02em;line-height:1.1;box-shadow:0 8px 20px rgba(6,24,40,.22)}
+.sub.chips .k{background:var(--em);color:#fff}
+/* bar: text on a blurred dark plate with an emerald bar on the left */
+.sub.bar{font-weight:800;font-size:48px;line-height:1.2;letter-spacing:-.02em;color:#fff;background:rgba(10,14,30,.84);padding:12px 28px 14px 34px;border-radius:14px;border-left:10px solid var(--em);text-align:left}
+.sub.bar .k{color:#FCD34D}
