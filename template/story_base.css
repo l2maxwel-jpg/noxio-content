@@ -56,3 +56,6 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
 /* bar: text on a blurred dark plate with an emerald bar on the left */
 .sub.bar{font-weight:800;font-size:48px;line-height:1.2;letter-spacing:-.02em;color:#fff;background:rgba(10,14,30,.84);padding:12px 28px 14px 34px;border-radius:14px;border-left:10px solid var(--em);text-align:left}
 .sub.bar .k{color:#FCD34D}
+/* line: white words with a soft dark halo, key words get an emerald underline */
+.sub.line{font-weight:900;font-size:54px;line-height:1.25;letter-spacing:-.02em;color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.5),0 0 26px rgba(0,0,0,.8),0 0 10px rgba(0,0,0,.6)}
+.sub.line .k{box-shadow:inset 0 -12px 0 var(--em);padding:0 4px}

@@ -249,6 +249,9 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   subtitles; white hoodie on a lavender scene. Layout 9 (s09): a claim strip (MIT? → NIE → stamp) above a changing panel
   (live comments that keep changing, live → end timeline with the scan button, two ways in, ready orders); `bar` subtitles.
   `story_cover.mjs` keys the still and uses the scene colours when the episode has `kaja.key`.
+- Layout 10 (s10, RU, 2026-11-16): three live cards in a row (own list, the same buyer, one item each), ticked one by one,
+  a "merge" button, one list with the buyer's items together and a "1 посылка" sticker, teaser; `line` subtitles; beige
+  sweater look (frames s 1.25 / 1.35).
 - After a container reset: `npm ci`, `pip install sherpa-onnx numpy pillow`, the two ASR models into /home/claude/models,
   music through `fetch_music.ensure(id, page_for(id))`; Kaja takes are downloaded again with `get_video` (`kaja.heygen`).
 - Teasers never name a weekday ("в следующем выпуске / w następnym odcinku"): the posting days shift.
