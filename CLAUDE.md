@@ -269,6 +269,10 @@ December 2025; Facebook gets the same), the cover still as a file, and the setti
 (poll or prompt if useful, location, share to Facebook on, built-in auto captions off when ours are burned in; the AI
 label is his to set).
 
+**Captions are at most 500 characters including the hashtags** (Maxim, 2026-11-16: the same text is posted to Threads,
+which caps a post at 500). Count with `len()` before sending; drop the teaser line first, keep the hook, the feature and
+the trial line.
+
 ## Covers
 
 **No marks of other companies anywhere in the visuals** — no tool badges (moda.app or any other), no stock-site credits,
