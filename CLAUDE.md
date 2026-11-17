@@ -252,6 +252,14 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
 - Layout 10 (s10, RU, 2026-11-16): three live cards in a row (own list, the same buyer, one item each), ticked one by one,
   a "merge" button, one list with the buyer's items together and a "1 посылка" sticker, teaser; `line` subtitles; beige
   sweater look (frames s 1.25 / 1.35).
+- **Avatar in motion:** Cinematic Avatar (`create_video_from_cinematic_avatar`) needs HeyGen Pro; on the Creator plan it
+  returns 403 and charges nothing (2026-11-17). Motion is made in the template instead: the keyed Kaja slides in, shrinks
+  into a circle and comes back.
+- Layout 11 (s11, PL, one minute, 2026-11-17): studio intro with chips and a title card → Kaja shrinks into a circle in the
+  lower left (`data.pip` from/to, `shots` "pip" frame) while a big step panel (KROK n/5 chip, progress bar, title, demo:
+  link field, skip switch, comments → orders, unclear → fixed by hand, Excel export, Messenger message) fills the screen
+  → back to the studio with a "save it" card. Chip subtitles sit right of the circle (`.sub.pip`, `ui.subChars`).
+  The head check flags one subtitle during the shrink because it does not know the circle clip; the frame is fine.
 - After a container reset: `npm ci`, `pip install sherpa-onnx numpy pillow`, the two ASR models into /home/claude/models,
   music through `fetch_music.ensure(id, page_for(id))`; Kaja takes are downloaded again with `get_video` (`kaja.heygen`).
 - Teasers never name a weekday ("в следующем выпуске / w następnym odcinku"): the posting days shift.

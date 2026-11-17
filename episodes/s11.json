@@ -1,0 +1,533 @@
+{
+  "id": "s11",
+  "series": "story",
+  "layout": "story11",
+  "lang": "pl",
+  "angle": "story-five-steps-after-live",
+  "kaja": {
+    "look": "6f41200e1fcb4fbe845efd53cdb90835",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "video": "build/story/s11/kaja.mp4",
+    "words": "build/story/s11/words.json",
+    "key": {
+      "hue": [
+        95,
+        108,
+        150,
+        165
+      ],
+      "sat": [
+        0.14,
+        0.26
+      ],
+      "erode": 1,
+      "soft": 0.8
+    },
+    "face": [
+      540,
+      400
+    ],
+    "head": [
+      285,
+      165,
+      795,
+      660
+    ],
+    "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s11.mp3",
+    "heygen": "54220ac0d20a1da63c0c414164eebb36"
+  },
+  "tts": {
+    "audio": "build/story/s11/tts.wav",
+    "raw": "build/story/s11/words_raw.json",
+    "tempo": 1.0,
+    "pause": 0.3,
+    "show": {},
+    "key": [
+      "skończony",
+      "setki",
+      "dość",
+      "minutę",
+      "listy",
+      "zamówień",
+      "pierwszy",
+      "link",
+      "listy",
+      "drugi",
+      "pominąć",
+      "własne",
+      "trzeci",
+      "Bez",
+      "kodów",
+      "literówkami",
+      "emotkami",
+      "kupującej",
+      "czwarty",
+      "niejasne",
+      "ręcznie",
+      "piąty",
+      "jedno",
+      "Excelu",
+      "potwierdzenie",
+      "Messengerze",
+      "Zapisz"
+    ]
+  },
+  "end": 45.2,
+  "icons": [
+    "storefront",
+    "link-simple",
+    "video-camera",
+    "check-circle",
+    "pencil-simple",
+    "file-xls",
+    "plugs-connected",
+    "chats-circle",
+    "bookmark-simple"
+  ],
+  "ui": {
+    "top": 815,
+    "still": true,
+    "subChars": 20,
+    "frames": {
+      "studio": {
+        "s": 1.0,
+        "y": 130
+      },
+      "pip": {
+        "s": 0.6,
+        "x": -310,
+        "y": 858
+      }
+    },
+    "scene": {
+      "s1": "#E4EEF2",
+      "s2": "#F5F9FA",
+      "s3": "#DCEFE8",
+      "b1": "rgba(0,152,183,.2)",
+      "b2": "rgba(17,185,129,.22)"
+    }
+  },
+  "shots": [
+    [
+      0,
+      "studio"
+    ],
+    [
+      9.0,
+      "pip",
+      0.55
+    ],
+    [
+      40.75,
+      "studio",
+      0.55
+    ]
+  ],
+  "data": {
+    "pip": {
+      "from": 9.0,
+      "to": 40.75
+    },
+    "intro": {
+      "live": [
+        "Live skończony",
+        0.45
+      ],
+      "many": [
+        "komentarze…",
+        1.69
+      ],
+      "title": [
+        "Od komentarzy do listy zamówień",
+        4.21
+      ],
+      "pill": "5 kroków · 1 minuta"
+    },
+    "outro": {
+      "from": 41.2,
+      "title": "Zapisz na następny live",
+      "sub": "Noxio · noxio.pl"
+    },
+    "steps": [
+      {
+        "from": 9.1,
+        "until": 13.4,
+        "chip": "KROK 1 / 5",
+        "n": 1,
+        "title": "Wklej link albo wybierz transmisję",
+        "kind": "link",
+        "url": "facebook.com/…/videos/…",
+        "or": "albo",
+        "lives": [
+          "Live · sobota 18:00",
+          "Live · czwartek 19:30"
+        ],
+        "t": [
+          10.0,
+          11.6,
+          12.6
+        ]
+      },
+      {
+        "from": 13.4,
+        "until": 17.6,
+        "chip": "KROK 2 / 5",
+        "n": 2,
+        "title": "Pomiń własne komentarze",
+        "kind": "skip",
+        "opt": "Pomijaj komentarze sprzedawcy i administratorów",
+        "shop": "Twój sklep",
+        "own": "Zostały ostatnie sztuki 🔥",
+        "tag": "pominięty",
+        "t": [
+          14.1,
+          15.0,
+          15.9
+        ]
+      },
+      {
+        "from": 17.6,
+        "until": 26.6,
+        "chip": "KROK 3 / 5",
+        "n": 3,
+        "title": "Noxio czyta komentarze",
+        "kind": "read",
+        "comments": [
+          [
+            "Ania",
+            "biore ten bezowy kardigan M 🤎",
+            "bez kodu",
+            20.5
+          ],
+          [
+            "Ania",
+            "i jeszcze spudnice S",
+            "literówka",
+            21.7
+          ],
+          [
+            "Julia",
+            "golf czarny L poproszę 🙏",
+            "emotka",
+            22.9
+          ]
+        ],
+        "orders": [
+          [
+            "Ania",
+            [
+              "Kardigan beżowy · M",
+              "Spódnica · S"
+            ],
+            "2 komentarze"
+          ],
+          [
+            "Julia",
+            [
+              "Golf czarny · L"
+            ],
+            "1 komentarz"
+          ]
+        ],
+        "t": [
+          18.9,
+          24.1
+        ]
+      },
+      {
+        "from": 26.6,
+        "until": 32.7,
+        "chip": "KROK 4 / 5",
+        "n": 4,
+        "title": "Sprawdź niejasne",
+        "kind": "fix",
+        "c": [
+          "Marta",
+          "to samo co ostatnio 🙏"
+        ],
+        "tag": "niejasny",
+        "fixed": "Spodnie czarne · M",
+        "done": "poprawione ręcznie",
+        "t": [
+          27.86,
+          30.26,
+          31.2,
+          32.1
+        ]
+      },
+      {
+        "from": 32.7,
+        "until": 36.55,
+        "chip": "KROK 5 / 5",
+        "n": 5,
+        "title": "Lista w Excelu",
+        "kind": "excel",
+        "btn": "Eksport",
+        "file": "zamowienia.xlsx",
+        "note": "plik Excel",
+        "t": [
+          33.5,
+          34.4,
+          35.5
+        ]
+      },
+      {
+        "from": 36.55,
+        "until": 40.9,
+        "chip": "PLUS",
+        "n": 0,
+        "title": "Potwierdzenie dla klientki",
+        "kind": "msg",
+        "from_": "Twój sklep · Messenger",
+        "text": "Dziękujemy! Zamówienie: Kardigan beżowy M, Spódnica S ✅",
+        "note": "po podłączeniu strony",
+        "noteTop": 270,
+        "t": [
+          37.4,
+          39.45
+        ]
+      }
+    ]
+  },
+  "sfx": [
+    [
+      "whoosh_up",
+      0.0,
+      0.16
+    ],
+    [
+      "pop",
+      0.45,
+      0.14
+    ],
+    [
+      "pop",
+      1.69,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      4.21,
+      0.14
+    ],
+    [
+      "whoosh_down",
+      9.0,
+      0.2
+    ],
+    [
+      "pop_hi",
+      9.3,
+      0.14
+    ],
+    [
+      "type",
+      10.2,
+      0.12
+    ],
+    [
+      "pop",
+      11.6,
+      0.12
+    ],
+    [
+      "click",
+      12.6,
+      0.2
+    ],
+    [
+      "whoosh_up",
+      13.4,
+      0.12
+    ],
+    [
+      "pop_hi",
+      13.5,
+      0.14
+    ],
+    [
+      "click",
+      15.0,
+      0.3
+    ],
+    [
+      "pop",
+      15.9,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      17.6,
+      0.12
+    ],
+    [
+      "pop_hi",
+      17.7,
+      0.14
+    ],
+    [
+      "pop",
+      18.9,
+      0.1
+    ],
+    [
+      "pop",
+      19.15,
+      0.1
+    ],
+    [
+      "pop",
+      19.4,
+      0.1
+    ],
+    [
+      "click",
+      20.5,
+      0.14
+    ],
+    [
+      "click",
+      21.7,
+      0.14
+    ],
+    [
+      "click",
+      22.9,
+      0.14
+    ],
+    [
+      "whoosh_down",
+      23.8,
+      0.14
+    ],
+    [
+      "thud",
+      24.2,
+      0.3
+    ],
+    [
+      "pop",
+      24.6,
+      0.1
+    ],
+    [
+      "pop",
+      24.9,
+      0.1
+    ],
+    [
+      "whoosh_up",
+      26.6,
+      0.12
+    ],
+    [
+      "pop_hi",
+      26.7,
+      0.14
+    ],
+    [
+      "thud",
+      28.2,
+      0.3
+    ],
+    [
+      "pop",
+      30.26,
+      0.12
+    ],
+    [
+      "type",
+      31.2,
+      0.12
+    ],
+    [
+      "ding",
+      32.1,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      32.7,
+      0.12
+    ],
+    [
+      "pop_hi",
+      32.8,
+      0.14
+    ],
+    [
+      "click",
+      34.4,
+      0.35
+    ],
+    [
+      "thud",
+      35.8,
+      0.35
+    ],
+    [
+      "ding",
+      35.85,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      36.55,
+      0.12
+    ],
+    [
+      "pop",
+      37.4,
+      0.16
+    ],
+    [
+      "pop",
+      39.45,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      40.75,
+      0.2
+    ],
+    [
+      "ding",
+      41.5,
+      0.14
+    ]
+  ],
+  "music": {
+    "track": "mixkit:836",
+    "start": 38.0,
+    "gain_db": -28
+  },
+  "cover": {
+    "t": 20.0,
+    "frame": {
+      "s": 1.2,
+      "y": 150
+    },
+    "top": 882,
+    "tint": "8,30,40",
+    "kicker": "Odcinek 7",
+    "head": [
+      "Live skończony.",
+      "Co teraz?",
+      "*5 kroków do listy*"
+    ],
+    "size": 100,
+    "sub": "Od komentarzy do zamówień w jedną minutę"
+  },
+  "caption": "Live skończony, komentarzy setki. Co teraz? 5 kroków do gotowej listy zamówień 👇\n\n1. Wklej link albo wybierz transmisję.\n2. Pomiń własne komentarze.\n3. Noxio czyta komentarze: bez kodów, z literówkami i emotkami.\n4. Sprawdź niejasne i popraw ręcznie.\n5. Jedno kliknięcie i masz listę w Excelu.\n\nZapisz na następny live 💚 noxio.pl: 14 dni za darmo, bez karty.",
+  "hashtags": [
+    "#sprzedażnalive",
+    "#facebooklive",
+    "#butikonline",
+    "#zamówienia",
+    "#noxio"
+  ],
+  "post": {
+    "video": "build/story/s11/s11.mp4",
+    "cover": "build/story/s11/s11_cover.jpg"
+  }
+}

@@ -33,7 +33,7 @@ window.SB = (() => {
     const ph = []; let cur = null;
     W.forEach((w, i) => {
       const prev = W[i - 1];
-      if (EP.subs ? EP.subs.includes(i) : (!cur || (prev && prev[4]) || cur.chars + w[0].length > 30)) { cur = { words: [], chars: 0 }; ph.push(cur); }
+      if (EP.subs ? EP.subs.includes(i) : (!cur || (prev && prev[4]) || cur.chars + w[0].length > (EP.ui.subChars || 30))) { cur = { words: [], chars: 0 }; ph.push(cur); }
       cur.words.push(i); cur.chars += w[0].length + 1;
     });
     window.PHR = ph;

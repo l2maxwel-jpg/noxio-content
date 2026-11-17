@@ -1,0 +1,65 @@
+/* Layout 11 (first used by s11, a one-minute episode): keyed Kaja in a light studio for the intro and the ending; for the
+   explanation she shrinks into a circle in the lower left corner while a big step panel (step chip, progress, title,
+   demo) fills the screen above; subtitles sit to the right of the circle. Chip subtitles. */
+#shade{display:none}
+#kwrap{z-index:5}
+#kdisc{position:absolute;inset:0;background:radial-gradient(circle at 230px 1258px,#C9F2E1 0,#8EDFC2 190px,#8EDFC2 100%);opacity:0}
+#kring{position:absolute;left:30px;top:1058px;width:400px;height:400px;border-radius:50%;border:10px solid #fff;box-shadow:0 18px 40px rgba(6,42,38,.28),inset 0 0 0 3px var(--em);z-index:6;opacity:0;pointer-events:none}
+#ui{z-index:6}
+#panel{position:absolute;left:60px;top:350px;width:960px;height:680px;z-index:3;border-radius:44px;background:#fff;box-shadow:0 26px 60px rgba(6,42,38,.2);padding:30px 36px;opacity:0;overflow:hidden}
+.ph0{display:flex;align-items:center;gap:18px;height:64px}
+.ph0 .st{display:flex;align-items:center;height:64px;padding:0 26px;border-radius:32px;background:var(--em);color:#fff;font-weight:900;font-size:34px;letter-spacing:.04em;white-space:nowrap}
+.ph0 .pr{flex:1;display:flex;gap:10px}
+.ph0 .pr i{flex:1;height:14px;border-radius:7px;background:#E5E9E8}
+.ptl{margin-top:20px;height:124px;font-weight:900;font-size:54px;line-height:1.1;letter-spacing:-.03em;display:flex;align-items:center}
+.body{position:absolute;left:36px;right:36px;top:248px;bottom:30px}
+.body>*{position:absolute;left:0}
+.fld{width:888px;height:100px;border:5px solid #D9DEE8;border-radius:26px;display:flex;align-items:center;gap:16px;padding:0 26px;font-weight:800;font-size:36px;white-space:nowrap}
+.fld .ph{width:46px;height:46px;color:var(--teal)}
+.fld i.car{display:inline-block;width:4px;height:44px;background:var(--ink)}
+.or{top:122px;left:380px!important;font-weight:900;font-size:30px;color:var(--muted)}
+.lvr{width:888px;height:92px;border-radius:24px;background:#F4F7F6;display:flex;align-items:center;gap:16px;padding:0 24px;font-weight:800;font-size:34px;border:5px solid transparent}
+.lvr .ph{width:42px;height:42px;color:var(--red)}
+.lvr .ok{margin-left:auto;color:var(--em);opacity:0}
+.tgl{width:888px;height:150px;border-radius:30px;border:5px solid var(--em);display:flex;align-items:center;gap:20px;padding:0 28px;font-weight:900;font-size:40px;line-height:1.14;letter-spacing:-.02em}
+.tgl .tx{flex:1}
+.sw{flex:none;position:relative;width:140px;height:78px;border-radius:39px;background:#D5DBD9}
+.sw i{position:absolute;left:8px;top:8px;width:62px;height:62px;border-radius:50%;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.25)}
+.cmr{width:888px;height:104px;border-radius:26px;background:#F4F7F6;display:flex;align-items:center;gap:16px;padding:0 20px;border:5px solid transparent}
+.cmr .av{width:64px;height:64px;font-size:30px}.cmr .av .ph{width:36px;height:36px}
+.cmr .bd{flex:1;min-width:0}
+.cmr .cn{font-weight:800;font-size:23px;color:var(--muted)}
+.cmr .ct{font-weight:800;font-size:34px;white-space:nowrap}
+.cmr .tg{flex:none;font-weight:900;font-size:24px;padding:6px 14px;border-radius:14px;background:#FEF3C7;color:#92400E;white-space:nowrap}
+.cmr .tg.g{background:#EEF2F0;color:var(--muted)}
+.ord{width:888px;border-radius:28px;border:5px solid var(--em);background:#F0FDF7;padding:16px 24px}
+.ord .oh{display:flex;align-items:center;gap:14px;font-weight:900;font-size:36px}
+.ord .oh .av{width:56px;height:56px;font-size:27px}
+.ord .oh .pill{margin-left:auto;background:var(--em);font-size:24px;padding:6px 16px}
+.ord .oi{display:flex;gap:12px;margin-top:12px}
+.ord .oi span{padding:8px 18px;border-radius:16px;background:#fff;border:3px solid #CFEFE1;font-weight:900;font-size:31px;white-space:nowrap}
+.big{left:250px!important;display:flex;align-items:center;gap:18px;height:140px;padding:0 50px 0 38px;border-radius:42px;background:var(--em);color:#fff;font-weight:900;font-size:60px;box-shadow:0 22px 46px rgba(5,150,105,.4)}
+.big .ph{width:74px;height:74px}
+.fil{left:150px!important;display:flex;align-items:center;gap:18px;height:120px;padding:0 36px 0 24px;border-radius:32px;background:#fff;border:4px solid #E5E9E8;box-shadow:0 16px 36px rgba(6,42,38,.2);font-weight:900;font-size:40px;white-space:nowrap}
+.fil .ic{width:76px;height:76px;border-radius:20px;background:#107C41;color:#fff;display:flex;align-items:center;justify-content:center}
+.fil .ic .ph{width:48px;height:48px}
+.fil small{display:block;font-weight:700;font-size:25px;color:var(--muted)}
+.msg{width:760px;padding:22px 28px;border-radius:34px 34px 34px 8px;background:#EAF3FF;font-weight:800;font-size:36px;line-height:1.25}
+.msg b{display:block;font-weight:900;font-size:26px;color:var(--teal);margin-bottom:6px}
+.note{display:flex;align-items:center;gap:12px;font-weight:900;font-size:30px;color:#92400E;background:#FEF3C7;padding:12px 24px 12px 16px;border-radius:999px;white-space:nowrap}
+.note .ph{width:36px;height:36px;color:var(--amber)}
+/* studio cards under her chin */
+.s11{display:flex;align-items:center;gap:14px;height:92px;padding:0 32px 0 22px;border-radius:28px;background:#fff;font-weight:900;font-size:40px;white-space:nowrap;box-shadow:0 16px 36px rgba(6,42,38,.22)}
+.s11 .dot{width:22px;height:22px;border-radius:50%;background:#9CA3AF}
+.s11 .ph{width:48px;height:48px;color:var(--teal)}
+#ti{top:120px;width:880px;padding:26px 32px 28px;border:6px solid var(--em)}
+#ti .tt{font-weight:900;font-size:62px;line-height:1.06;letter-spacing:-.03em}
+#ti .pill{margin-top:18px;font-size:30px;padding:10px 22px;background:var(--em)}
+#sv{top:20px;width:880px;display:flex;align-items:center;gap:24px;padding:28px 32px;border:6px solid var(--em)}
+#sv .ic{flex:none;width:120px;height:120px;border-radius:32px;background:var(--em);color:#fff;display:flex;align-items:center;justify-content:center}
+#sv .ic .ph{width:76px;height:76px}
+#sv .tt{font-weight:900;font-size:54px;line-height:1.08;letter-spacing:-.03em}
+#sv .sb{display:flex;align-items:center;gap:10px;margin-top:12px;font-weight:800;font-size:30px;color:var(--muted)}
+#sv .sb img{width:44px}
+.sub.pip{left:686px;top:1150px;max-width:490px}
+.sub.pip.chips span{font-size:42px;padding:5px 15px 7px}
