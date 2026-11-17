@@ -1,0 +1,759 @@
+{
+  "id": "s12",
+  "series": "story",
+  "layout": "story12",
+  "lang": "pl",
+  "angle": "story-import-all-features",
+  "kaja": {
+    "look": "image:kaja_shirt (beige office look, sweater replaced by a blue shirt)",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "video": "build/story/s12/kaja.mp4",
+    "words": "build/story/s12/words_full.json",
+    "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s12.mp3",
+    "image": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/img/kaja_shirt.jpg",
+    "face": [
+      540,
+      600
+    ],
+    "head": [
+      250,
+      250,
+      830,
+      1010
+    ],
+    "heygen": "f4c0ad4c28e9f681bc2ad50724328252",
+    "motion": {
+      "intro": "d8dae140690a48e7a4759c3aa85c3fdd",
+      "outro": "357fc2b1e02b45e7b53ab8f1023e257e",
+      "t0": 3.0,
+      "outroLen": 4.8
+    }
+  },
+  "tts": {
+    "audio": "build/story/s12/tts.wav",
+    "raw": "build/story/s12/words_raw.json",
+    "tempo": 1.08,
+    "pause": 0.16,
+    "show": {},
+    "key": [
+      "ręcznie",
+      "każdym",
+      "Import",
+      "produktów",
+      "zdjęcie",
+      "AI",
+      "kartę",
+      "nazwę",
+      "opis",
+      "kategorię",
+      "kolor",
+      "rozmiary",
+      "skład",
+      "warianty",
+      "wiele",
+      "naraz",
+      "metkę",
+      "kod",
+      "cenę",
+      "duplikaty",
+      "dwa",
+      "dostawcy",
+      "Ceny",
+      "stany",
+      "SKU",
+      "rabaty",
+      "SEO",
+      "historia",
+      "eksport",
+      "jedno",
+      "kliknięcie",
+      "Narzędzia",
+      "Czternaście",
+      "darmo",
+      "karty"
+    ]
+  },
+  "end": 62.7,
+  "ui": {
+    "top": 1035,
+    "still": false,
+    "subChars": 22,
+    "frames": {
+      "full": {
+        "s": 1.0,
+        "y": 0
+      },
+      "pip": {
+        "s": 0.62,
+        "x": -310,
+        "y": 690
+      }
+    },
+    "scene": {
+      "s1": "#E3EEF7",
+      "s2": "#F5F9FC",
+      "s3": "#E2F2EE",
+      "b1": "rgba(0,152,183,.22)",
+      "b2": "rgba(17,185,129,.18)"
+    },
+    "subTop": 1362
+  },
+  "shots": [
+    [
+      0,
+      "full"
+    ],
+    [
+      14.35,
+      "pip",
+      0.55
+    ],
+    [
+      51.3,
+      "full",
+      0.55
+    ]
+  ],
+  "data": {
+    "tool": "Import produktów",
+    "pip": {
+      "from": 14.35,
+      "to": 51.3
+    },
+    "hook": {
+      "from": 0.35,
+      "until": 3.1,
+      "title": "Dodajesz produkty ręcznie?",
+      "sub": "Zdjęcie, opis, kategoria, rozmiary… przy każdym produkcie"
+    },
+    "manual": {
+      "fields": [
+        [
+          "Zdjęcie",
+          6.3
+        ],
+        [
+          "Opis",
+          7.26
+        ],
+        [
+          "Kategoria",
+          7.93
+        ],
+        [
+          "Rozmiary",
+          8.89
+        ]
+      ],
+      "rep": [
+        "× każdy produkt",
+        10.45
+      ]
+    },
+    "title": {
+      "from": 13.08,
+      "name": "Import produktów",
+      "sub": "od Noxio · dla sklepów na PrestaShop"
+    },
+    "steps": [
+      {
+        "from": 14.45,
+        "until": 21.3,
+        "n": 1,
+        "title": "AI pisze kartę produktu",
+        "kind": "card",
+        "color": "#7C9CC8",
+        "icon": "dress",
+        "t": [
+          14.59,
+          15.85
+        ],
+        "fields": [
+          [
+            "Nazwa",
+            "Sukienka midi lniana",
+            17.4
+          ],
+          [
+            "Opis",
+            "",
+            17.99
+          ],
+          [
+            "Kategoria",
+            "Sukienki › Midi",
+            18.59
+          ],
+          [
+            "Kolor",
+            "niebieski",
+            19.48
+          ],
+          [
+            "Rozmiary",
+            "S · M · L",
+            20.07
+          ],
+          [
+            "Skład",
+            "100% len",
+            20.74
+          ]
+        ]
+      },
+      {
+        "from": 21.3,
+        "until": 23.9,
+        "n": 2,
+        "title": "Warianty od razu",
+        "kind": "variants",
+        "lc": "Kolory",
+        "ls": "Rozmiary",
+        "colors": [
+          [
+            "niebieski",
+            "#7C9CC8"
+          ],
+          [
+            "beżowy",
+            "#D8C3A5"
+          ]
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "t": [
+          21.56,
+          22.0,
+          22.89
+        ]
+      },
+      {
+        "from": 23.9,
+        "until": 28.35,
+        "n": 3,
+        "title": "Wiele zdjęć naraz",
+        "kind": "batch",
+        "photos": [
+          [
+            "#7C9CC8",
+            "dress"
+          ],
+          [
+            "#D8C3A5",
+            "t-shirt"
+          ],
+          [
+            "#9BB59A",
+            "hoodie"
+          ],
+          [
+            "#C98F8F",
+            "pants"
+          ],
+          [
+            "#8E8FB7",
+            "dress"
+          ],
+          [
+            "#C9B27C",
+            "t-shirt"
+          ]
+        ],
+        "rows": [
+          "Koszula oversize",
+          "Bluza z kapturem",
+          "Spodnie szerokie"
+        ],
+        "t": [
+          25.65,
+          26.91
+        ]
+      },
+      {
+        "from": 28.35,
+        "until": 32.85,
+        "n": 4,
+        "title": "Skan metki",
+        "kind": "scan",
+        "tag": [
+          "KOD 4471-BL",
+          "129,00 zł",
+          "80% bawełna",
+          "20% poliester"
+        ],
+        "fields": [
+          [
+            "Kod",
+            "4471-BL",
+            30.26
+          ],
+          [
+            "Cena",
+            "129,00 zł",
+            30.7
+          ],
+          [
+            "Skład",
+            "80% bawełna, 20% poliester",
+            31.29
+          ]
+        ],
+        "t": [
+          29.59
+        ]
+      },
+      {
+        "from": 32.85,
+        "until": 38.75,
+        "n": 5,
+        "title": "Duplikaty przed publikacją",
+        "kind": "dupe",
+        "color": "#9BB59A",
+        "icon": "hoodie",
+        "name": "Bluza z kapturem, zielona",
+        "now": "nowy import",
+        "newP": "nowy",
+        "old": "już jest w sklepie",
+        "oldP": "w sklepie",
+        "warn": "Ten produkt już jest w sklepie",
+        "upd": "Aktualizuj zamiast kopii",
+        "t": [
+          34.48,
+          35.52,
+          37.66
+        ]
+      },
+      {
+        "from": 38.75,
+        "until": 42.8,
+        "n": 6,
+        "title": "Plik od dostawcy",
+        "kind": "sync",
+        "file": "dostawca_listopad.csv",
+        "cols": [
+          "SKU",
+          "Produkt",
+          "Cena",
+          "Stan"
+        ],
+        "rows": [
+          [
+            "4471-BL",
+            "Koszula oversize",
+            "129 zł",
+            "119 zł",
+            "4",
+            "12"
+          ],
+          [
+            "5120-GR",
+            "Bluza z kapturem",
+            "189 zł",
+            "179 zł",
+            "0",
+            "8"
+          ],
+          [
+            "6033-BE",
+            "Spodnie szerokie",
+            "159 zł",
+            "149 zł",
+            "7",
+            "3"
+          ]
+        ],
+        "t": [
+          40.02,
+          40.62,
+          42.02
+        ]
+      },
+      {
+        "from": 42.8,
+        "until": 48.2,
+        "n": 10,
+        "title": "I jeszcze więcej",
+        "kind": "extras",
+        "items": [
+          [
+            "Rabaty ilościowe",
+            "percent",
+            43.28
+          ],
+          [
+            "Pola SEO",
+            "magnifying-glass",
+            44.62
+          ],
+          [
+            "Historia importu",
+            "clock-counter-clockwise",
+            45.69
+          ],
+          [
+            "Eksport katalogu",
+            "export",
+            47.03
+          ]
+        ]
+      },
+      {
+        "from": 48.2,
+        "until": 51.4,
+        "n": 10,
+        "title": "Publikacja w sklepie",
+        "kind": "publish",
+        "btn": "Opublikuj",
+        "done": "Produkt jest w sklepie",
+        "t": [
+          49.32,
+          50.95
+        ]
+      }
+    ],
+    "offer": {
+      "from": 51.6,
+      "name": "Import produktów",
+      "path": [
+        "noxio.pl → Narzędzia",
+        53.14
+      ],
+      "pills": [
+        [
+          "14 dni za darmo",
+          55.51
+        ],
+        [
+          "bez karty",
+          56.99
+        ],
+        [
+          "149,99 zł / mies.",
+          57.4
+        ]
+      ],
+      "clip": 57.9
+    }
+  },
+  "icons": [],
+  "music": {
+    "track": "mixkit:774",
+    "start": 30.0,
+    "gain_db": -28
+  },
+  "sfx": [
+    [
+      "whoosh_up",
+      0.35,
+      0.16
+    ],
+    [
+      "pop",
+      0.9,
+      0.1
+    ],
+    [
+      "whoosh_down",
+      3.0,
+      0.14
+    ],
+    [
+      "pop",
+      6.3,
+      0.12
+    ],
+    [
+      "pop",
+      7.26,
+      0.12
+    ],
+    [
+      "pop",
+      7.93,
+      0.12
+    ],
+    [
+      "pop",
+      8.89,
+      0.12
+    ],
+    [
+      "thud",
+      10.45,
+      0.4
+    ],
+    [
+      "whoosh_up",
+      13.08,
+      0.14
+    ],
+    [
+      "whoosh_down",
+      14.35,
+      0.2
+    ],
+    [
+      "pop",
+      14.59,
+      0.14
+    ],
+    [
+      "pop_hi",
+      15.85,
+      0.14
+    ],
+    [
+      "click",
+      17.4,
+      0.1
+    ],
+    [
+      "click",
+      17.99,
+      0.1
+    ],
+    [
+      "click",
+      18.59,
+      0.1
+    ],
+    [
+      "click",
+      19.48,
+      0.1
+    ],
+    [
+      "click",
+      20.07,
+      0.1
+    ],
+    [
+      "click",
+      20.74,
+      0.1
+    ],
+    [
+      "whoosh_up",
+      21.3,
+      0.12
+    ],
+    [
+      "pop",
+      21.56,
+      0.12
+    ],
+    [
+      "pop",
+      22.0,
+      0.12
+    ],
+    [
+      "tick3",
+      22.89,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      23.9,
+      0.12
+    ],
+    [
+      "pop",
+      25.65,
+      0.08
+    ],
+    [
+      "pop",
+      25.77,
+      0.08
+    ],
+    [
+      "pop",
+      25.89,
+      0.08
+    ],
+    [
+      "pop",
+      26.01,
+      0.08
+    ],
+    [
+      "pop",
+      26.13,
+      0.08
+    ],
+    [
+      "pop",
+      26.25,
+      0.08
+    ],
+    [
+      "type",
+      26.91,
+      0.1
+    ],
+    [
+      "whoosh_up",
+      28.35,
+      0.12
+    ],
+    [
+      "tick3",
+      29.59,
+      0.12
+    ],
+    [
+      "click",
+      30.26,
+      0.12
+    ],
+    [
+      "click",
+      30.7,
+      0.12
+    ],
+    [
+      "click",
+      31.29,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      32.85,
+      0.12
+    ],
+    [
+      "pop",
+      34.48,
+      0.12
+    ],
+    [
+      "thud",
+      35.52,
+      0.35
+    ],
+    [
+      "ding",
+      37.66,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      38.75,
+      0.12
+    ],
+    [
+      "click",
+      40.02,
+      0.12
+    ],
+    [
+      "click",
+      40.62,
+      0.12
+    ],
+    [
+      "ding",
+      42.02,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      42.8,
+      0.12
+    ],
+    [
+      "pop_hi",
+      43.28,
+      0.12
+    ],
+    [
+      "pop_hi",
+      44.62,
+      0.12
+    ],
+    [
+      "pop_hi",
+      45.69,
+      0.12
+    ],
+    [
+      "pop_hi",
+      47.03,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      48.2,
+      0.12
+    ],
+    [
+      "click",
+      49.32,
+      0.35
+    ],
+    [
+      "ding",
+      50.95,
+      0.16
+    ],
+    [
+      "whoosh_up",
+      51.3,
+      0.2
+    ],
+    [
+      "pop",
+      53.14,
+      0.12
+    ],
+    [
+      "pop_hi",
+      55.51,
+      0.14
+    ],
+    [
+      "pop_hi",
+      56.99,
+      0.14
+    ],
+    [
+      "pop_hi",
+      57.4,
+      0.14
+    ]
+  ],
+  "caption": "Dodajesz produkty do sklepu na PrestaShop ręcznie? Zobacz, co potrafi Import produktów od Noxio 👇\n\n✅ AI pisze kartę ze zdjęcia\n✅ warianty kolorów i rozmiarów\n✅ wiele zdjęć naraz\n✅ skan metki\n✅ wykrywanie duplikatów\n✅ ceny i stany z pliku dostawcy\n✅ rabaty, SEO, historia, eksport\n\nnoxio.pl → Narzędzia. 149,99 zł/mies., 14 dni za darmo, bez karty.",
+  "hashtags": [
+    "#prestashop",
+    "#sklepinternetowy",
+    "#ecommerce",
+    "#importproduktow",
+    "#noxio"
+  ],
+  "post": {
+    "video": "build/story/s12/s12.mp4",
+    "cover": "build/story/s12/s12_cover.jpg"
+  },
+  "cover": {
+    "t": 23.0,
+    "frame": {
+      "s": 0.82,
+      "y": -150
+    },
+    "top": 800,
+    "tint": "8,24,40",
+    "kicker": "Import produktów",
+    "head": [
+      "Karta produktu",
+      "ze zdjęcia?",
+      "*10 możliwości*"
+    ],
+    "size": 96,
+    "sub": "Wszystko, co potrafi Import od Noxio"
+  }
+}

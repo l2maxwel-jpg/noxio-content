@@ -41,6 +41,7 @@ const WORDS = JSON.parse(readFileSync(path.join(root, ep.kaja.words), 'utf8'));
 const names = new Set(['chat-circle-dots', 'check-circle', 'list-checks', 'camera', 'arrow-circle-right']);
 (ep.cards || []).forEach(c => names.add(c[2]));
 ((ep.summary || {}).items || []).forEach(i => names.add(i[0]));
+if (ep.layout === 'story12') ['dress','t-shirt','hoodie','sparkle','arrow-right','check-circle','copy','arrows-clockwise','file-csv','percent','magnifying-glass','clock-counter-clockwise','export','cloud-arrow-up','repeat','compass','tag','pants'].forEach(n => names.add(n));
 if (ep.layout === 'story5') ['storefront', 'question', 'sliders-horizontal', 'caret-right', 'chats-circle', 'eye-slash', 'check-circle', 'calendar-blank', 'cursor-click'].forEach(n => names.add(n));
 if (ep.layout === 'story6') ['seal-question', 'check-circle', 'x-circle', 'barcode', 'target', 'calendar-blank', 'magnifying-glass', 'arrow-right'].forEach(n => names.add(n));
 if (ep.layout === 'story4') ['check-circle', 'chats-circle', 'list-checks', 'arrows-left-right', 'translate', 'plus-circle'].forEach(n => names.add(n));

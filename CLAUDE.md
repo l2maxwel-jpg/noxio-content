@@ -260,6 +260,17 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   link field, skip switch, comments → orders, unclear → fixed by hand, Excel export, Messenger message) fills the screen
   → back to the studio with a "save it" card. Chip subtitles sit right of the circle (`.sub.pip`, `ui.subChars`).
   The head check flags one subtitle during the shrink because it does not know the circle clip; the frame is fine.
+- **Real motion on the Creator plan** (2026-11-17): `image_to_video` (HeyGen Video 1) animates a still of Kaja — she walks
+  towards the camera, waves, turns and walks away — about 4 credits per 5 s at 1080p; it cannot lip-sync, so these clips
+  carry no speech (hook card or offer card on top). `create_image` (nano-banana-2.1, edit of a look still) changes her outfit
+  while keeping face and place (s12: beige sweater → blue shirt, Maxim asked for no sweater), and
+  `create_video_from_image` with our `audioUrl` makes her talk from that still, so all clips match. The still and the voice
+  go on the `media` branch (`img/`, `voice/`). Join intro + talk + outro with ffmpeg into `kaja.mp4`, shift the words by
+  the intro length (`words_full.json`), see `kaja.motion` in s12.
+- Layout 12 (s12, PL, Import produktów, 62.7 s): motion intro with a hook card → talking in the office with a "by hand"
+  form → Kaja in a circle while a feature panel with a "n / 10" counter shows each capability (card from a photo,
+  variants, batch, label scan, duplicates, supplier file, extras, publish) → back to full frame with the offer card →
+  motion outro (wave, walk away). Marker subtitles; dark ones beside the circle.
 - After a container reset: `npm ci`, `pip install sherpa-onnx numpy pillow`, the two ASR models into /home/claude/models,
   music through `fetch_music.ensure(id, page_for(id))`; Kaja takes are downloaded again with `get_video` (`kaja.heygen`).
 - Teasers never name a weekday ("в следующем выпуске / w następnym odcinku"): the posting days shift.
