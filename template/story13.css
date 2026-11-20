@@ -1,0 +1,59 @@
+/* Layout 13 (first used by s13): a live comment that "waits", turns into an order row, a Messenger-style chat card with the
+   confirmation bubble (colour and size chips light up), a send panel (all at once / one by one) with a progress bar, a rule
+   card (1 reply, 7 days, dots filling), two benefit chips, teaser. Ticket subtitles. */
+#shade{background:linear-gradient(180deg,rgba(8,26,20,0),rgba(8,26,20,.5) 45%,rgba(8,26,20,.8))}
+#cmt{top:20px;width:880px}
+#cmt .ct{font-size:40px}
+#wt{top:150px;left:auto!important;right:0;display:flex;align-items:center;gap:12px;padding:12px 24px;border-radius:999px;background:#FEF3C7;color:#92400E;font-weight:900;font-size:34px;box-shadow:0 12px 28px rgba(0,0,0,.3)}
+#wt .ph{width:38px;height:38px}
+#wt .dots{display:inline-flex;gap:6px}#wt .dots b{width:10px;height:10px;border-radius:50%;background:#92400E}
+#ord{top:20px;width:880px;padding:20px 26px}
+#ord .t{display:flex;align-items:center;gap:12px;font-weight:900;font-size:30px;color:var(--muted)}
+#ord .t .ph{width:36px;height:36px;color:var(--em)}
+#ord .t .pill{margin-left:auto;background:var(--em)}
+#ord .r{display:flex;align-items:center;gap:16px;margin-top:14px}
+#ord .r b{font-weight:900;font-size:42px}
+#ord .r .it{margin-left:auto;display:flex;gap:10px}
+#ord .r .it span{padding:6px 16px;border-radius:14px;background:#ECFDF5;color:#047857;font-weight:900;font-size:32px}
+#pg{top:190px;left:auto!important;right:0;display:flex;align-items:center;gap:12px;padding:12px 26px;border-radius:999px;background:var(--ink);color:#fff;font-weight:900;font-size:32px;box-shadow:0 12px 28px rgba(0,0,0,.35)}
+#pg .ph{width:36px;height:36px;color:var(--em)}
+#chat{top:0;width:880px;padding:0;overflow:hidden}
+#chat .hd{display:flex;align-items:center;gap:14px;padding:18px 24px;background:linear-gradient(90deg,#0098B7,#11B981);color:#fff;font-weight:900;font-size:32px}
+#chat .hd .ph{width:42px;height:42px}
+#chat .hd small{margin-left:auto;font-weight:800;font-size:24px;opacity:.85}
+#chat .bd{padding:22px 24px 26px;background:#F6FAF9}
+#chat .bb{max-width:700px;padding:18px 24px;border-radius:28px 28px 28px 8px;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.08);font-weight:800;font-size:34px;line-height:1.3}
+#chat .bb .c{display:inline-block;padding:0 6px;margin:0 -2px;border-radius:10px;transition:none}
+#chat .ok{display:flex;align-items:center;gap:8px;margin-top:12px;font-weight:800;font-size:24px;color:var(--em2)}
+#chat .ok .ph{width:28px;height:28px}
+#snd{top:0;width:880px;padding:24px 26px 28px}
+#snd .t{font-weight:900;font-size:34px;display:flex;align-items:center;gap:12px}
+#snd .t .ph{width:40px;height:40px;color:var(--teal)}
+#snd .bs{display:flex;gap:16px;margin-top:18px}
+#snd .b{flex:1;display:flex;align-items:center;justify-content:center;gap:12px;height:96px;border-radius:26px;font-weight:900;font-size:36px;border:5px solid transparent}
+#snd .b .ph{width:44px;height:44px}
+#snd .b.a{background:var(--em);color:#fff;box-shadow:0 14px 30px rgba(5,150,105,.4)}
+#snd .b.a em{font-style:normal;background:#fff;color:var(--em2);border-radius:999px;padding:2px 14px;font-size:28px}
+#snd .b.o{background:#fff;color:var(--ink);border-color:#CBD5E1}
+#snd .pr{margin-top:20px;height:22px;border-radius:999px;background:#E5E7EB;overflow:hidden}
+#snd .pr i{display:block;height:100%;width:100%;background:var(--em);transform-origin:0 50%;transform:scaleX(0)}
+#snd .pc{margin-top:10px;font-weight:900;font-size:28px;color:var(--em2)}
+#rl{top:0;width:880px;padding:24px 28px 28px;border:6px solid var(--amber)}
+#rl .t{display:flex;align-items:center;gap:12px;font-weight:900;font-size:32px;color:#92400E}
+#rl .t .ph{width:40px;height:40px}
+#rl .row{display:flex;gap:18px;margin-top:18px}
+#rl .bx{flex:1;padding:16px 20px;border-radius:24px;background:#FFFBEB}
+#rl .bx b{display:block;font-weight:900;font-size:64px;letter-spacing:-.03em;line-height:1}
+#rl .bx span{font-weight:800;font-size:28px;color:#78350F}
+#rl .dots{display:flex;gap:10px;margin-top:12px}
+#rl .dots i{width:30px;height:30px;border-radius:9px;background:#FDE68A}
+#wk{top:296px;left:auto!important;right:-10px;padding:14px 28px;border-radius:22px;background:var(--ink);color:#fff;font-weight:900;font-size:40px;box-shadow:0 16px 34px rgba(0,0,0,.4);white-space:nowrap}
+#bn{top:40px;width:880px;display:flex;flex-direction:column;gap:18px}
+#bn .c{display:flex;align-items:center;gap:16px;width:max-content;padding:18px 30px 18px 22px;border-radius:28px;background:#fff;font-weight:900;font-size:44px;box-shadow:0 16px 36px rgba(0,0,0,.3)}
+#bn .c .ph{width:52px;height:52px;color:var(--em)}
+#ts{top:40px;width:860px;padding:26px 32px 30px;border:6px solid var(--teal)}
+#ts .pill{font-size:27px;padding:9px 20px;background:var(--teal)}
+#ts .tt{margin-top:18px;font-weight:900;font-size:56px;line-height:1.08;letter-spacing:-.03em}
+/* ticket: white words on an emerald plate, key words in dark ink on small white boxes */
+.sub.ticket{font-weight:900;font-size:44px;line-height:1.3;letter-spacing:-.02em;color:#fff;background:var(--em2);padding:10px 26px 12px;border-radius:20px;box-shadow:0 12px 28px rgba(0,0,0,.35)}
+.sub.ticket .k{background:#fff;color:var(--ink);padding:0 10px;border-radius:10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}

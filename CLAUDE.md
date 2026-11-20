@@ -271,6 +271,10 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   form → Kaja in a circle while a feature panel with a "n / 10" counter shows each capability (card from a photo,
   variants, batch, label scan, duplicates, supplier file, extras, publish) → back to full frame with the offer card →
   motion outro (wave, walk away). Marker subtitles; dark ones beside the circle.
+- Layout 13 (s13, RU, Messenger confirmation, 37.3 s): Kaja talking from an edited still (emerald blouse, boutique
+  background, `img/kaja_emerald.jpg`) — a waiting comment → order row → Messenger-style chat card with colour/size chips →
+  send panel (all at once with a progress bar / one by one) → rule card "1 ответ · 7 дней" with dots → benefit chips →
+  teaser; `ticket` subtitles. Pick cover stills with open eyes (check a crop of the face first).
 - After a container reset: `npm ci`, `pip install sherpa-onnx numpy pillow`, the two ASR models into /home/claude/models,
   music through `fetch_music.ensure(id, page_for(id))`; Kaja takes are downloaded again with `get_video` (`kaja.heygen`).
 - Teasers never name a weekday ("в следующем выпуске / w następnym odcinku"): the posting days shift.
