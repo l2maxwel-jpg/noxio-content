@@ -292,6 +292,12 @@ December 2025; Facebook gets the same), the cover still as a file, and the setti
 (poll or prompt if useful, location, share to Facebook on, built-in auto captions off when ours are burned in; the AI
 label is his to set).
 
+**YouTube too (Maxim, 2026-11-21):** every finished Kaja video also goes to the Noxio YouTube channel as a Short, so the kit
+gets a separate YouTube block: title ≤ 70 characters in the episode's language (question or claim, no "AI"), description
+(hook, what the video shows, noxio.pl, trial line, 3 hashtags at the end — the first three show above the title), tags
+for the tags field, and the settings (Short, first frame = our cover, playlist by language PL/RU, not made for kids,
+category Science & Technology, comments on; the altered/synthetic content switch is Maxim's, like the AI label).
+
 **Captions are at most 500 characters including the hashtags** (Maxim, 2026-11-16: the same text is posted to Threads,
 which caps a post at 500). Count with `len()` before sending; drop the teaser line first, keep the hook, the feature and
 the trial line.

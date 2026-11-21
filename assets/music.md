@@ -35,7 +35,6 @@ from the list page below. Kept for the record; not shown on the videos.
 | 1168 | Coffee or Tea | Michael Ramir C. | Electronica | https://mixkit.co/free-stock-music/electronic/ |
 | 179 | Solitude | Alejandro Magaña (A. M.) | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |
 | 555 | South Waves | Eugenio Mininni | Synthpop | https://mixkit.co/free-stock-music/electropop/ |
-| 439 | Tides Turning | Arulo | Electropop | https://mixkit.co/free-stock-music/electropop/ |
 | 704 | Pop 11 | Grigoriy Nuzhny | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |
 | 173 | Better Times are Coming | Alejandro Magaña (A. M.) | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |
 | 106 | Deep Techno | Alejandro Magaña (A. M.) | House | https://mixkit.co/free-stock-music/house/ |
@@ -82,3 +81,4 @@ from the list page below. Kept for the record; not shown on the videos.
 | 773 | Aquella Tarde en Yelapa | Mauro Urbina | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |
 | 81 | Fight Till the End | Ahjay Stelino | Electropop | https://mixkit.co/free-stock-music/electropop/ |
 | 1210 | Can't Get You Off My Mind | Michael Ramir C. | Future Bass | https://mixkit.co/free-stock-music/future-bass/ |
+| 439 | Tides Turning | Arulo | Electropop | https://mixkit.co/free-stock-music/electropop/ |
