@@ -275,6 +275,12 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   background, `img/kaja_emerald.jpg`) — a waiting comment → order row → Messenger-style chat card with colour/size chips →
   send panel (all at once with a progress bar / one by one) → rule card "1 ответ · 7 дней" with dots → benefit chips →
   teaser; `ticket` subtitles. Pick cover stills with open eyes (check a crop of the face first).
+- **Pronunciation** (2026-11-21): the TTS call takes `pronunciationDictionary` from `assets/pronunciation.json` (the
+  episode's language), so scripts may write "Noxio" instead of "Ноксио". Videos made straight from a script get
+  `brandGlossaryId: "ac0669fd98184eff8a42718205296550"` (glossary "Noxio", PL respellings for all languages + RU ones).
+- **Kaja's looks** (2026-11-21): new outfits/places are made as real looks in the "Kaja" group
+  (`0352157f1b9c4fb3a28830702970897a`) through the `create_avatar_looks` card, which Maxim starts himself; then a video
+  is one call with the look id. List them with `list_avatar_looks` before picking.
 - After a container reset: `npm ci`, `pip install sherpa-onnx numpy pillow`, the two ASR models into /home/claude/models,
   music through `fetch_music.ensure(id, page_for(id))`; Kaja takes are downloaded again with `get_video` (`kaja.heygen`).
 - Teasers never name a weekday ("в следующем выпуске / w następnym odcinku"): the posting days shift.
