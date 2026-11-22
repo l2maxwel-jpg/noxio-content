@@ -275,6 +275,10 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   background, `img/kaja_emerald.jpg`) — a waiting comment → order row → Messenger-style chat card with colour/size chips →
   send panel (all at once with a progress bar / one by one) → rule card "1 ответ · 7 дней" with dots → benefit chips →
   teaser; `ticket` subtitles. Pick cover stills with open eyes (check a crop of the face first).
+- Layout 14 (s14, RU, setup before the scan, 41.2 s): edited still (white linen shirt, studio with an emerald wall,
+  `img/kaja_white_studio.jpg`; frames s ≥ 1.26 so the softbox on the right stays out) — hook question card → settings
+  sheet whose code/colour/size rows fill with chips → a comment that becomes an order with the matching chips lit →
+  skip switch striking out the seller's comment → "codes optional" card → teaser; `lit` subtitles (words light up as spoken).
 - **Pronunciation** (2026-11-21): the TTS call takes `pronunciationDictionary` from `assets/pronunciation.json` (the
   episode's language), so scripts may write "Noxio" instead of "Ноксио". Videos made straight from a script get
   `brandGlossaryId: "ac0669fd98184eff8a42718205296550"` (glossary "Noxio", PL respellings for all languages + RU ones).

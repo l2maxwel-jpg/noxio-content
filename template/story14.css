@@ -1,0 +1,48 @@
+/* Layout 14 (first used by s14): a "before the scan" settings sheet whose three rows (codes, colours, sizes) fill with
+   chips as they are named, a comment that becomes an order with the matching chips lit, a skip switch that strikes out
+   the seller's own comment, a "codes optional" card with two result rows, teaser. "lit" subtitles: words light up as spoken. */
+#shade{background:linear-gradient(180deg,rgba(6,30,24,0),rgba(6,30,24,.45) 45%,rgba(6,30,24,.8))}
+#q{top:10px;width:880px;padding:22px 28px;display:flex;align-items:center;gap:18px}
+#q .ph{width:60px;height:60px;color:var(--em)}
+#q b{font-weight:900;font-size:46px;line-height:1.1;letter-spacing:-.02em}
+#st{top:0;width:900px;padding:22px 26px 24px}
+#st .t{display:flex;align-items:center;gap:12px;font-weight:900;font-size:32px}
+#st .t .ph{width:40px;height:40px;color:var(--teal)}
+#st .t .pill{margin-left:auto;background:var(--teal);font-size:24px}
+#st .rw{display:flex;align-items:center;gap:14px;margin-top:14px;padding:12px 16px;border-radius:20px;background:#F3F7F6;min-height:78px}
+#st .rw .lb{width:170px;flex:none;font-weight:900;font-size:28px;color:var(--muted)}
+#st .rw .cs{display:flex;gap:10px;flex-wrap:wrap}
+#st .ch{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:14px;background:#fff;border:3px solid #D5E2DE;font-weight:900;font-size:32px}
+#st .ch i{width:22px;height:22px;border-radius:50%;display:inline-block;border:2px solid rgba(0,0,0,.15)}
+#st .ch.on{background:var(--em);border-color:var(--em);color:#fff}
+#cm2{top:292px;width:880px}
+#res{top:292px;width:880px;padding:18px 24px;display:flex;align-items:center;gap:14px;border:5px solid var(--em)}
+#res b{font-weight:900;font-size:40px}
+#res .it{margin-left:auto;display:flex;gap:10px}
+#res .it span{padding:6px 16px;border-radius:14px;background:#ECFDF5;color:#047857;font-weight:900;font-size:32px}
+#res .ok{width:52px;height:52px;color:var(--em)}
+#sk{top:0;width:880px;padding:24px 26px}
+#sk .t{display:flex;align-items:center;gap:16px;font-weight:900;font-size:34px;line-height:1.15}
+#sk .sw{margin-left:auto;flex:none;width:112px;height:62px;border-radius:999px;background:#CBD5E1;position:relative}
+#sk .sw i{position:absolute;top:7px;left:7px;width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 3px 8px rgba(0,0,0,.25)}
+#sk .own{margin-top:18px;display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:20px;background:#F8FAFC;position:relative}
+#sk .own .av{width:62px;height:62px;font-size:28px}
+#sk .own .tx{font-weight:800;font-size:32px}
+#sk .own .tx small{display:block;font-size:22px;color:var(--muted)}
+#sk .own .ln{position:absolute;left:96px;right:200px;top:50%;height:5px;background:#EF4444;transform-origin:0 50%;transform:scaleX(0)}
+#sk .own .tg{margin-left:auto;padding:6px 16px;border-radius:12px;background:#FEE2E2;color:#B91C1C;font-weight:900;font-size:26px}
+#op{top:0;width:880px;padding:24px 28px 26px}
+#op .h{font-weight:900;font-size:50px;letter-spacing:-.03em;line-height:1.05}
+#op .h em{font-style:normal;color:var(--em2)}
+#op .r{display:flex;align-items:center;gap:14px;margin-top:16px;padding:14px 18px;border-radius:20px;background:#F3F7F6;font-weight:900;font-size:34px}
+#op .r .ph{width:44px;height:44px;color:var(--em)}
+#op .r .st{margin-left:auto;display:flex;gap:4px}
+#op .r .st .ph{width:38px;height:38px;color:#F59E0B}
+#ts{top:30px;width:860px;padding:26px 32px 30px;border:6px solid var(--em)}
+#ts .pill{font-size:27px;padding:9px 20px}
+#ts .tt{margin-top:18px;font-weight:900;font-size:56px;line-height:1.08;letter-spacing:-.03em}
+/* lit: spoken words light up one by one; key words turn amber */
+.sub.lit{font-weight:900;font-size:50px;line-height:1.25;letter-spacing:-.02em;color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.45),0 0 24px rgba(0,0,0,.75)}
+.sub.lit span{opacity:.38}
+.sub.lit .k{color:#FCD34D}
+#sk .t .ph{width:52px;height:52px;flex:none;color:var(--em)}
