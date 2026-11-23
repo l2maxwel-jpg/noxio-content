@@ -279,6 +279,10 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   `img/kaja_white_studio.jpg`; frames s ≥ 1.26 so the softbox on the right stays out) — hook question card → settings
   sheet whose code/colour/size rows fill with chips → a comment that becomes an order with the matching chips lit →
   skip switch striking out the seller's comment → "codes optional" card → teaser; `lit` subtitles (words light up as spoken).
+- Layout 15 (s15, PL, lives + videos + posts, 31.4 s): edited still (pastel-pink blouse, window showroom,
+  `img/kaja_pink_showroom.jpg`) — "Tylko live?" chip + "Nie tylko!" stamp → three source tiles → the connected page's
+  list with a cursor picking a post → the post's comments get "zamówienie" tags + "bez kodów" chip → orders by buyer →
+  morning → evening strip → teaser; `halo` subtitles (teal glow, key words on teal pills).
 - **Pronunciation** (2026-11-21): the TTS call takes `pronunciationDictionary` from `assets/pronunciation.json` (the
   episode's language), so scripts may write "Noxio" instead of "Ноксио". Videos made straight from a script get
   `brandGlossaryId: "ac0669fd98184eff8a42718205296550"` (glossary "Noxio", PL respellings for all languages + RU ones).

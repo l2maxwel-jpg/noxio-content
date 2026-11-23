@@ -1,0 +1,53 @@
+/* Layout 15 (first used by s15): "Tylko live?" chip with a "Nie tylko!" stamp, three source tiles (live / film / post),
+   the connected page's list with a cursor picking a post, the post's comments turning into orders grouped by buyer,
+   a morning → evening strip, teaser. "halo" subtitles: white words with a teal halo, key words on teal pills. */
+#shade{background:linear-gradient(180deg,rgba(20,24,40,0),rgba(20,24,40,.42) 45%,rgba(20,24,40,.78))}
+#hk{top:20px;width:880px;height:150px}
+#hk .q{position:absolute;left:0;top:20px;padding:20px 32px;border-radius:26px;background:#fff;font-weight:900;font-size:56px;letter-spacing:-.03em;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+#hk .s{position:absolute;right:20px;top:0;padding:16px 30px;border-radius:20px;border:7px solid #fff;background:var(--em);color:#fff;font-weight:900;font-size:62px;letter-spacing:-.03em;transform:rotate(-7deg);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+#tl{top:190px;width:900px;display:flex;gap:18px}
+#tl .t{flex:1;padding:20px 10px 18px;border-radius:26px;background:#fff;text-align:center;font-weight:900;font-size:36px;box-shadow:0 14px 30px rgba(0,0,0,.25);border:5px solid transparent}
+#tl .t .ph{display:block;margin:0 auto 8px;width:64px;height:64px;color:var(--muted)}
+#tl .t.on{border-color:var(--em)}
+#tl .t.on .ph{color:var(--em)}
+#pg{top:0;width:880px;padding:0;overflow:hidden}
+#pg .hd{display:flex;align-items:center;gap:14px;padding:18px 24px;border-bottom:2px solid #EEF2F1;font-weight:900;font-size:32px}
+#pg .hd .ph{width:42px;height:42px;color:var(--teal)}
+#pg .hd .ok{margin-left:auto;display:flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;background:#ECFDF5;color:#047857;font-size:26px}
+#pg .hd .ok .ph{width:30px;height:30px;color:#047857}
+#pg .it{display:flex;align-items:center;gap:16px;padding:16px 24px;border-bottom:2px solid #F3F5F5;font-weight:800;font-size:32px;position:relative}
+#pg .it .ph{width:44px;height:44px;color:var(--muted)}
+#pg .it small{margin-left:auto;font-size:24px;color:var(--muted)}
+#pg .it.on{background:#ECFDF5}
+#pg .it.on .ph{color:var(--em)}
+#cur{position:absolute;width:56px;height:56px;color:var(--ink);filter:drop-shadow(0 4px 6px rgba(0,0,0,.3))}
+#po{top:0;width:880px;padding:20px 24px}
+#po .t{display:flex;align-items:center;gap:12px;font-weight:900;font-size:30px;color:var(--muted)}
+#po .t .ph{width:36px;height:36px;color:var(--teal)}
+#po .c{display:flex;align-items:center;gap:14px;margin-top:12px;padding:10px 14px;border-radius:18px;background:#F6F8F8}
+#po .c .av{width:56px;height:56px;font-size:26px}
+#po .c .tx{font-weight:800;font-size:32px}
+#po .c .tx small{display:block;font-size:22px;color:var(--muted)}
+#po .c .o{margin-left:auto;padding:6px 14px;border-radius:12px;background:var(--em);color:#fff;font-weight:900;font-size:26px}
+#bk{top:330px;left:auto!important;right:0;padding:12px 26px;border-radius:999px;background:var(--ink);color:#fff;font-weight:900;font-size:34px;box-shadow:0 12px 28px rgba(0,0,0,.35)}
+#gr{top:0;width:880px;padding:20px 24px}
+#gr .t{display:flex;align-items:center;gap:12px;font-weight:900;font-size:32px}
+#gr .t .ph{width:40px;height:40px;color:var(--em)}
+#gr .b{display:flex;align-items:center;gap:14px;margin-top:12px;padding:12px 16px;border-radius:18px;background:#F3F7F6}
+#gr .b b{font-weight:900;font-size:36px}
+#gr .b .its{margin-left:auto;display:flex;gap:8px}
+#gr .b .its span{padding:5px 14px;border-radius:12px;background:#ECFDF5;color:#047857;font-weight:900;font-size:28px}
+#dy{top:20px;width:900px;display:flex;align-items:center;gap:16px}
+#dy .h{flex:1;padding:22px 20px;border-radius:26px;background:#fff;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+#dy .h .ph{width:56px;height:56px}
+#dy .h b{display:block;margin-top:6px;font-weight:900;font-size:40px;letter-spacing:-.02em}
+#dy .h span{font-weight:800;font-size:28px;color:var(--muted)}
+#dy .a{flex:none;width:60px;height:60px;color:#fff}
+#dy .h1 .ph{color:#F59E0B}
+#dy .h2 .ph{color:#6366F1}
+#dy .h2{border:5px solid var(--em)}
+#ts{top:30px;width:860px;padding:26px 32px 30px;border:6px solid var(--teal)}
+#ts .pill{font-size:27px;padding:9px 20px;background:var(--teal)}
+#ts .tt{margin-top:18px;font-weight:900;font-size:56px;line-height:1.08;letter-spacing:-.03em}
+.sub.halo{font-weight:900;font-size:50px;line-height:1.3;letter-spacing:-.02em;color:#fff;text-shadow:0 0 18px rgba(0,152,183,.95),0 0 6px rgba(0,152,183,.9),0 3px 0 rgba(0,0,0,.35)}
+.sub.halo .k{background:var(--teal);padding:0 12px;border-radius:12px;text-shadow:none;box-decoration-break:clone;-webkit-box-decoration-break:clone}

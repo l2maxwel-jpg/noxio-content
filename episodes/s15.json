@@ -1,0 +1,371 @@
+{
+  "id": "s15",
+  "series": "story",
+  "layout": "story15",
+  "lang": "pl",
+  "angle": "story-videos-and-posts-too",
+  "kaja": {
+    "still": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/img/kaja_pink_showroom.jpg",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "video": "build/story/s15/kaja.mp4",
+    "words": "build/story/s15/words.json",
+    "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s15.mp3",
+    "face": [
+      548,
+      600
+    ],
+    "head": [
+      260,
+      300,
+      840,
+      830
+    ],
+    "heygen": "6532287e089c246a2094aa85321c32d1"
+  },
+  "tts": {
+    "audio": "build/story/s15/tts.wav",
+    "raw": "build/story/s15/words_raw.json",
+    "tempo": 1.06,
+    "pause": 0.16,
+    "key": [
+      "live'ami",
+      "Nie",
+      "tylko",
+      "filmem",
+      "postem",
+      "raz",
+      "listy",
+      "live",
+      "film",
+      "post",
+      "bez",
+      "kodów",
+      "kupujących",
+      "Rano",
+      "wieczorem",
+      "gotowa",
+      "lista",
+      "znaleźć",
+      "poprawić"
+    ]
+  },
+  "end": 31.4,
+  "icons": [
+    "storefront",
+    "check-circle",
+    "cursor",
+    "image-square",
+    "users-three",
+    "sun",
+    "moon-stars",
+    "arrow-right",
+    "calendar-blank",
+    "broadcast",
+    "film-strip"
+  ],
+  "subs": [
+    0,
+    7,
+    9,
+    14,
+    17,
+    21,
+    26,
+    33,
+    38,
+    41,
+    43,
+    46,
+    51,
+    56,
+    60,
+    64,
+    68
+  ],
+  "data": {
+    "hook": {
+      "from": 0.25,
+      "q": "Tylko live?",
+      "stampAt": 3.12,
+      "stamp": "Nie tylko!"
+    },
+    "src": {
+      "items": [
+        [
+          "Live",
+          "broadcast",
+          2.29
+        ],
+        [
+          "Film",
+          "film-strip",
+          6.72
+        ],
+        [
+          "Post",
+          "image-square",
+          7.4
+        ]
+      ]
+    },
+    "page": {
+      "from": 8.73,
+      "title": "Twoja strona",
+      "ok": "Połączono",
+      "okAt": 10.39,
+      "listAt": 12.2,
+      "items": [
+        [
+          "Live · nowości",
+          "broadcast",
+          "wczoraj"
+        ],
+        [
+          "Film · przymiarka",
+          "film-strip",
+          "pon."
+        ],
+        [
+          "Post · swetry",
+          "image-square",
+          "dziś 9:00"
+        ]
+      ],
+      "pick": [
+        13.41,
+        13.94,
+        14.77
+      ]
+    },
+    "post": {
+      "from": 15.38,
+      "title": "Post · swetry, nowa kolekcja",
+      "tag": "zamówienie",
+      "orderAt": 17.72,
+      "cm": [
+        [
+          "Ewa",
+          "biorę beżowy M 😍",
+          "#EC4899"
+        ],
+        [
+          "Kasia",
+          "dla mnie szary, L proszę",
+          "#8B5CF6"
+        ],
+        [
+          "Ewa",
+          "i jeszcze czapkę 🙏",
+          "#EC4899"
+        ]
+      ],
+      "chip": [
+        "bez kodów ✓",
+        18.63
+      ]
+    },
+    "group": {
+      "from": 19.38,
+      "title": "Według kupujących",
+      "rows": [
+        [
+          "Ewa",
+          [
+            "sweter beż M",
+            "czapka"
+          ],
+          "#EC4899"
+        ],
+        [
+          "Kasia",
+          [
+            "sweter szary L"
+          ],
+          "#8B5CF6"
+        ]
+      ]
+    },
+    "day": {
+      "from": 21.25,
+      "a": [
+        "Rano",
+        "post z kolekcją"
+      ],
+      "b": [
+        "Wieczorem",
+        "gotowa lista ✓",
+        22.98
+      ]
+    },
+    "tease": {
+      "from": 24.87,
+      "kicker": "W następnym odcinku",
+      "title": "Jak szybko znaleźć kupującego i poprawić zamówienie"
+    }
+  },
+  "sfx": [
+    [
+      "pop",
+      0.25,
+      0.16
+    ],
+    [
+      "thud",
+      3.12,
+      0.4
+    ],
+    [
+      "pop",
+      2.29,
+      0.12
+    ],
+    [
+      "pop",
+      6.72,
+      0.12
+    ],
+    [
+      "pop",
+      7.4,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      8.73,
+      0.14
+    ],
+    [
+      "ding",
+      10.39,
+      0.12
+    ],
+    [
+      "click",
+      13.41,
+      0.14
+    ],
+    [
+      "click",
+      13.94,
+      0.14
+    ],
+    [
+      "click",
+      14.87,
+      0.22
+    ],
+    [
+      "whoosh_up",
+      15.38,
+      0.14
+    ],
+    [
+      "pop",
+      17.72,
+      0.12
+    ],
+    [
+      "pop",
+      17.86,
+      0.12
+    ],
+    [
+      "pop",
+      18.0,
+      0.12
+    ],
+    [
+      "pop_hi",
+      18.63,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      19.38,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      21.25,
+      0.14
+    ],
+    [
+      "ding",
+      22.98,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      24.87,
+      0.14
+    ]
+  ],
+  "music": {
+    "track": "mixkit:1168",
+    "start": 70.0
+  },
+  "ui": {
+    "top": 850,
+    "subTop": 1300,
+    "frames": {
+      "wide": {
+        "s": 1.18,
+        "y": -45
+      },
+      "mid": {
+        "s": 1.32,
+        "y": -85
+      }
+    }
+  },
+  "shots": [
+    [
+      0,
+      "mid"
+    ],
+    [
+      8.73,
+      "wide"
+    ],
+    [
+      15.38,
+      "mid"
+    ],
+    [
+      21.25,
+      "wide"
+    ],
+    [
+      24.87,
+      "mid"
+    ]
+  ],
+  "cover": {
+    "t": 8.6,
+    "frame": {
+      "s": 1.32,
+      "y": -85
+    },
+    "top": 842,
+    "tint": "20,24,40",
+    "kicker": "Odcinek 8",
+    "head": [
+      "Tylko live?",
+      "*Nie tylko!*"
+    ],
+    "size": 104,
+    "sub": "Zamówienia także z filmów i postów"
+  },
+  "caption": "Myślisz, że Noxio działa tylko z live'ami? Nie tylko! 👀\n\nZamówienia zbierzesz też z komentarzy pod zwykłym filmem i pod postem sprzedażowym. Podłączasz stronę na Facebooku raz i wybierasz z listy: live, film albo post. Noxio rozpoznaje zamówienia, także bez kodów, i układa je według kupujących.\n\nRano post z kolekcją, wieczorem gotowa lista.\n\nnoxio.pl — 14 dni za darmo, bez karty.",
+  "hashtags": [
+    "#sprzedażnalive",
+    "#facebooklive",
+    "#zamówieniazkomentarzy",
+    "#sklepinternetowy",
+    "#noxio"
+  ],
+  "post": {
+    "video": "build/story/s15/s15.mp4",
+    "cover": "build/story/s15/s15_cover.jpg"
+  }
+}
