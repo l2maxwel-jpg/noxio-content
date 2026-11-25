@@ -1,0 +1,45 @@
+/* Layout 16 (first used by s16): a buyer's change request in a chat bubble with a "where is it?" chip, a search bar that
+   types the name and shows her orders, an edit card where the size M is struck and L typed, "Zapisz" + "Gotowe" stamp,
+   add/remove chips, the Excel file tile marked updated, teaser. "tape" subtitles: dark words on a cream tape strip. */
+#shade{background:linear-gradient(180deg,rgba(40,26,14,0),rgba(40,26,14,.4) 45%,rgba(40,26,14,.78))}
+#ms{top:10px;width:880px;display:flex;align-items:flex-end;gap:14px}
+#ms .bb{padding:18px 26px;border-radius:30px 30px 30px 8px;background:#fff;font-weight:800;font-size:40px;box-shadow:0 14px 30px rgba(0,0,0,.28)}
+#ms .bb small{display:block;font-size:24px;color:var(--muted);font-weight:800}
+#wq{top:150px;left:auto!important;right:0;display:flex;align-items:center;gap:10px;padding:12px 24px;border-radius:999px;background:#FEF3C7;color:#92400E;font-weight:900;font-size:34px;box-shadow:0 12px 28px rgba(0,0,0,.3)}
+#wq .ph{width:38px;height:38px}
+#sr{top:0;width:880px;padding:20px 22px}
+#sr .bar{display:flex;align-items:center;gap:14px;padding:14px 20px;border-radius:20px;border:4px solid var(--teal);background:#F7FBFC;font-weight:800;font-size:38px}
+#sr .bar .ph{width:44px;height:44px;color:var(--teal)}
+#sr .bar .cur{display:inline-block;width:4px;height:42px;background:var(--ink);margin-left:2px;vertical-align:middle}
+#sr .r{display:flex;align-items:center;gap:14px;margin-top:12px;padding:12px 16px;border-radius:18px;background:#F3F7F6;font-weight:800;font-size:32px}
+#sr .r .av{width:54px;height:54px;font-size:26px}
+#sr .r span{margin-left:auto;padding:5px 14px;border-radius:12px;background:#ECFDF5;color:#047857;font-weight:900;font-size:28px}
+#ed{top:0;width:880px;padding:22px 24px 24px}
+#ed .t{display:flex;align-items:center;gap:12px;font-weight:900;font-size:30px;color:var(--muted)}
+#ed .t .ph{width:36px;height:36px;color:var(--teal)}
+#ed .it{display:flex;align-items:center;gap:16px;margin-top:14px;padding:14px 18px;border-radius:20px;background:#F3F7F6}
+#ed .it b{font-weight:900;font-size:38px}
+#ed .sz{margin-left:auto;display:flex;align-items:center;gap:10px;font-weight:900;font-size:30px;color:var(--muted)}
+#ed .sz .f{position:relative;min-width:110px;height:72px;border-radius:16px;border:4px solid #CBD5E1;background:#fff;display:flex;align-items:center;justify-content:center;gap:12px;font-size:42px;color:var(--ink)}
+#ed .sz .m{position:relative}
+#ed .sz .m i{position:absolute;left:-6px;right:-6px;top:50%;height:5px;background:#EF4444;transform-origin:0 50%;transform:scaleX(0)}
+#ed .sz .l{color:var(--em2)}
+#ed .bt{display:flex;justify-content:flex-end;margin-top:16px}
+#ed .bt span{padding:14px 34px;border-radius:18px;background:var(--em);color:#fff;font-weight:900;font-size:34px;box-shadow:0 10px 22px rgba(5,150,105,.35)}
+#ok{top:165px;left:20px!important;padding:14px 30px;border-radius:20px;border:6px solid #fff;background:var(--em);color:#fff;font-weight:900;font-size:52px;transform:rotate(-6deg);box-shadow:0 16px 34px rgba(0,0,0,.35)}
+#ac{top:330px;width:880px;display:flex;gap:16px}
+#ac span{display:flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;background:#fff;font-weight:900;font-size:36px;box-shadow:0 12px 26px rgba(0,0,0,.28)}
+#ac span .ph{width:40px;height:40px}
+#ac .a .ph{color:var(--em)}#ac .d .ph{color:#EF4444}
+#xl{top:20px;width:880px;padding:24px 26px;display:flex;align-items:center;gap:22px}
+#xl .ic{flex:none;width:120px;height:140px;border-radius:18px;background:#E8F7EF;display:flex;align-items:center;justify-content:center}
+#xl .ic .ph{width:84px;height:84px;color:#15803D}
+#xl b{display:block;font-weight:900;font-size:42px;letter-spacing:-.02em}
+#xl small{display:block;margin-top:6px;font-weight:800;font-size:28px;color:var(--muted)}
+#xl .up{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:8px 18px;border-radius:999px;background:var(--em);color:#fff;font-weight:900;font-size:28px}
+#xl .up .ph{width:30px;height:30px;color:#fff}
+#ts{top:30px;width:860px;padding:26px 32px 30px;border:6px solid var(--teal)}
+#ts .pill{font-size:27px;padding:9px 20px;background:var(--teal)}
+#ts .tt{margin-top:18px;font-weight:900;font-size:56px;line-height:1.08;letter-spacing:-.03em}
+.sub.tape{font-weight:900;font-size:44px;line-height:1.3;letter-spacing:-.02em;color:#2B2117;background:#FFF6DC;padding:10px 28px 12px;border-radius:6px;transform:rotate(-1.5deg);box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.sub.tape .k{color:var(--em2);text-decoration:underline;text-decoration-thickness:5px;text-underline-offset:6px}

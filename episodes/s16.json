@@ -1,0 +1,312 @@
+{
+  "id": "s16",
+  "series": "story",
+  "layout": "story16",
+  "lang": "pl",
+  "angle": "story-search-and-edit",
+  "kaja": {
+    "still": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/img/kaja_cream_workspace.jpg",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "video": "build/story/s16/kaja.mp4",
+    "words": "build/story/s16/words.json",
+    "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s16.mp3",
+    "face": [
+      548,
+      600
+    ],
+    "head": [
+      260,
+      300,
+      840,
+      830
+    ],
+    "heygen": "34d0a54f0f4af88348b81ed65037b14c"
+  },
+  "tts": {
+    "audio": "build/story/s16/tts.wav",
+    "raw": "build/story/s16/words_raw.json",
+    "tempo": 1.06,
+    "pause": 0.16,
+    "key": [
+      "L",
+      "Gdzie",
+      "imię",
+      "wyszukiwarkę",
+      "wszystkie",
+      "M",
+      "zapisujesz",
+      "Gotowe",
+      "dopiszesz",
+      "usuniesz",
+      "aktualna",
+      "Excelu",
+      "poprawione",
+      "kody",
+      "obowiązkowe"
+    ]
+  },
+  "end": 27.7,
+  "icons": [
+    "magnifying-glass",
+    "pencil-simple",
+    "plus-circle",
+    "trash",
+    "file-xls",
+    "check-circle",
+    "calendar-blank"
+  ],
+  "subs": [
+    0,
+    4,
+    8,
+    13,
+    16,
+    19,
+    23,
+    26,
+    28,
+    34,
+    35,
+    40,
+    43,
+    46,
+    49,
+    53,
+    57,
+    60
+  ],
+  "data": {
+    "msg": {
+      "from": 0.4,
+      "name": "Natalia",
+      "when": "po live",
+      "text": "jednak zamieniam na L 🙈",
+      "q": [
+        "Gdzie jej zamówienie?",
+        3.94
+      ]
+    },
+    "search": {
+      "from": 5.82,
+      "query": "Natalia",
+      "typeAt": 6.85,
+      "typeEnd": 7.75,
+      "rowsAt": 8.16,
+      "all": 9.14,
+      "rows": [
+        [
+          "Sukienka zielona",
+          "M"
+        ],
+        [
+          "Pasek skórzany",
+          "1 szt."
+        ]
+      ]
+    },
+    "edit": {
+      "from": 10.45,
+      "title": "Edycja zamówienia · Natalia",
+      "item": "Sukienka zielona",
+      "label": "Rozmiar",
+      "m": 12.38,
+      "l": 12.83,
+      "save": [
+        "Zapisz",
+        13.36
+      ],
+      "done": [
+        "Gotowe ✓",
+        14.19
+      ]
+    },
+    "acts": {
+      "from": 14.79,
+      "add": [
+        "+ produkt",
+        15.24
+      ],
+      "del": [
+        "usuń pomyłkę",
+        16.98
+      ]
+    },
+    "xls": {
+      "from": 18.25,
+      "name": "zamowienia.xlsx",
+      "sub": [
+        "Lista zawsze aktualna",
+        19.15
+      ],
+      "up": [
+        "poprawione",
+        21.04
+      ]
+    },
+    "tease": {
+      "from": 22.27,
+      "kicker": "W następnym odcinku",
+      "title": "Dlaczego kody produktów nie są obowiązkowe?"
+    }
+  },
+  "sfx": [
+    [
+      "pop",
+      0.4,
+      0.16
+    ],
+    [
+      "pop_hi",
+      3.94,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      5.82,
+      0.14
+    ],
+    [
+      "click",
+      6.9,
+      0.08
+    ],
+    [
+      "click",
+      7.2,
+      0.08
+    ],
+    [
+      "click",
+      7.5,
+      0.08
+    ],
+    [
+      "pop",
+      8.16,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      10.45,
+      0.14
+    ],
+    [
+      "thud",
+      12.38,
+      0.25
+    ],
+    [
+      "pop_hi",
+      12.83,
+      0.14
+    ],
+    [
+      "click",
+      13.36,
+      0.25
+    ],
+    [
+      "ding",
+      14.19,
+      0.14
+    ],
+    [
+      "pop",
+      15.24,
+      0.14
+    ],
+    [
+      "pop",
+      16.98,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      18.25,
+      0.14
+    ],
+    [
+      "ding",
+      21.04,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      22.27,
+      0.14
+    ]
+  ],
+  "music": {
+    "track": "mixkit:555",
+    "start": 60.0
+  },
+  "ui": {
+    "top": 850,
+    "subTop": 1290,
+    "frames": {
+      "wide": {
+        "s": 1.18,
+        "y": -45
+      },
+      "mid": {
+        "s": 1.32,
+        "y": -85
+      }
+    }
+  },
+  "shots": [
+    [
+      0,
+      "mid"
+    ],
+    [
+      5.82,
+      "wide"
+    ],
+    [
+      10.45,
+      "mid"
+    ],
+    [
+      14.79,
+      "wide"
+    ],
+    [
+      18.25,
+      "mid"
+    ],
+    [
+      22.27,
+      "wide"
+    ]
+  ],
+  "cover": {
+    "t": 27.0,
+    "frame": {
+      "s": 1.32,
+      "y": -85
+    },
+    "top": 842,
+    "tint": "40,26,14",
+    "kicker": "Odcinek 9",
+    "head": [
+      "Klientka zmienia",
+      "rozmiar po live?",
+      "*Popraw w chwilę*"
+    ],
+    "size": 92,
+    "sub": "Wyszukiwarka i edycja zamówień w Noxio"
+  },
+  "caption": "Kupująca pisze po live: „jednak zamieniam na L”. I co teraz? 🙈\n\nW Noxio wpisujesz imię w wyszukiwarkę i od razu widzisz wszystkie jej zamówienia. Klikasz pozycję, zmieniasz M na L, zapisujesz — gotowe. Tak samo dopiszesz brakujący produkt albo usuniesz pomyłkę, a eksport do Excela pokaże już poprawioną listę.\n\nnoxio.pl — 14 dni za darmo, bez karty.",
+  "hashtags": [
+    "#sprzedażnalive",
+    "#facebooklive",
+    "#zamówieniazkomentarzy",
+    "#sklepinternetowy",
+    "#noxio"
+  ],
+  "post": {
+    "video": "build/story/s16/s16.mp4",
+    "cover": "build/story/s16/s16_cover.jpg"
+  }
+}
