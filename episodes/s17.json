@@ -1,0 +1,329 @@
+{
+  "id": "s17",
+  "series": "story",
+  "layout": "story17",
+  "lang": "pl",
+  "angle": "story-pl-no-codes-test",
+  "kaja": {
+    "still": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/img/kaja_greyblue_studio.jpg",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "video": "build/story/s17/kaja.mp4",
+    "words": "build/story/s17/words.json",
+    "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s17.mp3",
+    "face": [
+      548,
+      600
+    ],
+    "head": [
+      260,
+      300,
+      840,
+      830
+    ],
+    "heygen": "5c0d055baac44d9f001bfa7e3ff31e15"
+  },
+  "tts": {
+    "audio": "build/story/s17/tts.wav",
+    "raw": "build/story/s17/words_raw.json",
+    "tempo": 1.07,
+    "pause": 0.16,
+    "key": [
+      "kodu",
+      "nazwy",
+      "zapisać",
+      "Sprawdźmy",
+      "literówkami",
+      "emotkami",
+      "kodów",
+      "zwykły",
+      "język",
+      "zamówienia",
+      "sprawdzenia",
+      "Ty",
+      "Kody",
+      "obowiązkowe",
+      "dokładniejszy",
+      "najtrudniejszy",
+      "Napisz"
+    ]
+  },
+  "end": 32.9,
+  "icons": [
+    "question",
+    "check",
+    "chat-teardrop-dots",
+    "paper-plane-right",
+    "check-circle",
+    "checks"
+  ],
+  "subs": [
+    0,
+    6,
+    10,
+    14,
+    19,
+    21,
+    27,
+    32,
+    35,
+    39,
+    43,
+    48,
+    53,
+    56,
+    59,
+    61,
+    65,
+    69,
+    73,
+    77,
+    79,
+    81,
+    84
+  ],
+  "data": {
+    "win": {
+      "open": 2.45,
+      "list": 1.95
+    },
+    "cm": {
+      "order": "zamówienie",
+      "check": "do sprawdzenia",
+      "sticker": [
+        "bez kodu? 🤔",
+        0.95
+      ],
+      "rows": [
+        [
+          "Ola",
+          "dla mnie czarna eska 🖤",
+          "#111827",
+          0
+        ],
+        [
+          "Marta",
+          "ta w kratke L plis",
+          "#8B5CF6",
+          0
+        ],
+        [
+          "Iza",
+          "zielona M biore!!",
+          "#10B981",
+          0
+        ],
+        [
+          "Ania",
+          "2x beżowa S 😍",
+          "#D97706",
+          0
+        ],
+        [
+          "Kinga",
+          "ta co wczoraj 🙈",
+          "#EC4899",
+          1
+        ]
+      ],
+      "at": [
+        0.4,
+        9.87,
+        11.44,
+        12.82,
+        17.75
+      ],
+      "orderAt": 16.63,
+      "checkAt": 19.02,
+      "click": 21.24
+    },
+    "codes": {
+      "from": 22.06,
+      "head": "Kody — <em>nieobowiązkowe</em>",
+      "rows": [
+        [
+          "Bez kodów",
+          "działa ✓",
+          "check-circle",
+          22.81
+        ],
+        [
+          "Z kodami",
+          "dokładniej ✓✓",
+          "checks",
+          26.26
+        ]
+      ]
+    },
+    "ask": {
+      "from": 27.22,
+      "q": "Jaki komentarz Twoich klientek jest najtrudniejszy?",
+      "ph": "Napisz komentarz…",
+      "write": 29.91
+    }
+  },
+  "sfx": [
+    [
+      "pop",
+      0.05,
+      0.12
+    ],
+    [
+      "pop",
+      0.25,
+      0.1
+    ],
+    [
+      "pop_hi",
+      2.64,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      2.2,
+      0.16
+    ],
+    [
+      "whoosh_up",
+      5.1,
+      0.12
+    ],
+    [
+      "pop",
+      9.87,
+      0.1
+    ],
+    [
+      "pop",
+      11.44,
+      0.1
+    ],
+    [
+      "pop",
+      12.82,
+      0.1
+    ],
+    [
+      "pop",
+      16.63,
+      0.12
+    ],
+    [
+      "pop",
+      16.77,
+      0.12
+    ],
+    [
+      "pop",
+      16.91,
+      0.12
+    ],
+    [
+      "pop",
+      17.05,
+      0.12
+    ],
+    [
+      "pop_hi",
+      19.02,
+      0.14
+    ],
+    [
+      "click",
+      21.24,
+      0.25
+    ],
+    [
+      "ding",
+      21.4,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      22.06,
+      0.14
+    ],
+    [
+      "pop",
+      22.81,
+      0.12
+    ],
+    [
+      "pop",
+      26.26,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      27.22,
+      0.14
+    ],
+    [
+      "click",
+      29.91,
+      0.15
+    ]
+  ],
+  "music": {
+    "track": "mixkit:179",
+    "start": 20.0
+  },
+  "ui": {
+    "top": 0,
+    "subTop": 842,
+    "scene": {
+      "s1": "#F1F5F9",
+      "s2": "#F8FAFC",
+      "s3": "#E6F4F1",
+      "b1": "rgba(0,152,183,.18)",
+      "b2": "rgba(17,185,129,.2)"
+    },
+    "frames": {
+      "hide": {
+        "s": 0.92,
+        "y": -2600
+      },
+      "win": {
+        "s": 0.92,
+        "y": -45
+      }
+    }
+  },
+  "shots": [
+    [
+      0,
+      "hide"
+    ],
+    [
+      2.4,
+      "win"
+    ]
+  ],
+  "cover": {
+    "t": 32.1,
+    "frame": {
+      "s": 1.3,
+      "y": -80
+    },
+    "top": 842,
+    "tint": "30,41,59",
+    "kicker": "Odcinek 10",
+    "head": [
+      "„Czarna eska 🖤”",
+      "*bez kodu?*"
+    ],
+    "size": 100,
+    "sub": "Test na komentarzach jak z live'a"
+  },
+  "caption": "„Dla mnie czarna eska 🖤” — bez kodu, bez nazwy. Da się to zapisać? 🤔\n\nSprawdzamy na komentarzach jak z live'a: z literówkami, emotkami i bez kodów. Noxio rozumie zwykły język, więc to już są zamówienia. A te niejasne trafiają do sprawdzenia — tam decydujesz jednym kliknięciem.\n\nJaki komentarz Twoich klientek jest najtrudniejszy? Napisz 👇\n\nnoxio.pl — 14 dni za darmo, bez karty.",
+  "hashtags": [
+    "#sprzedażnalive",
+    "#facebooklive",
+    "#zamówieniazkomentarzy",
+    "#sklepinternetowy",
+    "#noxio"
+  ],
+  "post": {
+    "video": "build/story/s17/s17.mp4",
+    "cover": "build/story/s17/s17_cover.jpg"
+  }
+}

@@ -1,0 +1,31 @@
+/* Layout 17 (first used by s17): "reaction" format. The first frame is a wall of buyers' comments on a light scene; then Kaja
+   opens in a rounded window at the top while the comments slide into a list below; quoted comments light up, orders get
+   tags, one goes to "do sprawdzenia" and is approved by a click; a "codes optional" card; a question to the viewers with a
+   comment field. "react" subtitles: one line on an ink pill between the window and the list. */
+#shade,#kring{display:none}
+#kwrap{z-index:4}
+#kwin{position:absolute;left:80px;top:300px;width:920px;height:530px;border-radius:44px;border:9px solid #fff;box-shadow:0 22px 50px rgba(6,42,38,.25);z-index:5;opacity:0;pointer-events:none}
+#ui{z-index:6}
+.rw{position:absolute;left:0;width:940px;height:96px;display:flex;align-items:center;gap:16px;padding:0 20px;border-radius:26px;background:#fff;box-shadow:0 12px 28px rgba(6,42,38,.16);border:4px solid transparent;transform-origin:0 50%}
+.rw .av{width:60px;height:60px;font-size:28px;flex:none}
+.rw .tx{flex:1;min-width:0;font-weight:800;font-size:36px;white-space:nowrap}
+.rw .tx small{display:block;font-size:22px;color:var(--muted);font-weight:800}
+.rw .tg{flex:none;padding:7px 16px;border-radius:14px;font-weight:900;font-size:26px;color:#fff;background:var(--em);display:flex;align-items:center;gap:6px}
+.rw .tg.am{background:#F59E0B}
+.rw .tg .ph{width:28px;height:28px;color:#fff}
+.rw.on{border-color:var(--em);box-shadow:0 12px 30px rgba(17,185,129,.35)}
+#st1{position:absolute;padding:10px 22px;border-radius:999px;background:#FEF3C7;color:#92400E;font-weight:900;font-size:34px;box-shadow:0 12px 28px rgba(0,0,0,.2);transform:rotate(-4deg)}
+#cd{position:absolute;left:0;top:900px;width:940px;padding:24px 28px 26px}
+#cd .h{font-weight:900;font-size:48px;letter-spacing:-.03em;line-height:1.05}
+#cd .h em{font-style:normal;color:var(--em2)}
+#cd .r{display:flex;align-items:center;gap:14px;margin-top:16px;padding:14px 18px;border-radius:20px;background:#F3F7F6;font-weight:900;font-size:34px}
+#cd .r .ph{width:44px;height:44px;color:var(--em)}
+#cd .r b{margin-left:auto;color:var(--em2)}
+#qq{position:absolute;left:0;top:900px;width:940px;padding:24px 28px 28px}
+#qq .h{display:flex;align-items:center;gap:14px;font-weight:900;font-size:44px;line-height:1.1;letter-spacing:-.02em}
+#qq .h .ph{width:60px;height:60px;color:var(--teal);flex:none}
+#qq .in{display:flex;align-items:center;gap:12px;margin-top:20px;padding:16px 22px;border-radius:999px;border:4px solid #CBD5E1;background:#F8FAFC;font-weight:800;font-size:32px;color:var(--muted)}
+#qq .in i{display:inline-block;width:4px;height:38px;background:var(--ink)}
+#qq .in .snd{margin-left:auto;width:48px;height:48px;color:var(--teal)}
+.sub.react{font-weight:900;font-size:42px;line-height:1.25;letter-spacing:-.01em;color:#fff;background:var(--ink);padding:10px 26px 12px;border-radius:999px;box-shadow:0 10px 24px rgba(6,42,38,.3);white-space:nowrap}
+.sub.react .k{color:#6EE7B7}

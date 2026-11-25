@@ -287,6 +287,13 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   `img/kaja_cream_workspace.jpg`) — buyer's change request bubble + "where?" chip → search bar typing the name, her orders
   → edit card (M struck, L typed, Zapisz, "Gotowe" stamp) → add/remove chips → xlsx tile marked updated → teaser;
   `tape` subtitles. No invented numbers on covers either ("10 sekund" was replaced).
+- Layout 17 (s17, PL, "reaction" format, 32.9 s; first after Maxim's grid analysis 2026-11-25: hooks that quote a buyer
+  or a seller's pain got 180–270 views, abstract feature hooks 18–39): the first frame is a wall of buyers' comments on a
+  light scene, Kaja hidden (`shots` "hide" frame off-screen); the comments slide into a list, then Kaja opens in a rounded
+  window at the top (`#kwrap` clip-path inset, `#kwin` border); quoted rows light up, order tags, one row "do sprawdzenia"
+  approved by a click, "codes optional" card, a question to viewers with a comment field; `react` one-line subtitles at
+  y 842 between window and list (keep phrases short). Edited still: grey-blue shirt, minimal white studio. Don't call test
+  comments "prawdziwe/real".
 - **Pronunciation** (2026-11-21): the TTS call takes `pronunciationDictionary` from `assets/pronunciation.json` (the
   episode's language), so scripts may write "Noxio" instead of "Ноксио". Videos made straight from a script get
   `brandGlossaryId: "ac0669fd98184eff8a42718205296550"` (glossary "Noxio", PL respellings for all languages + RU ones).
