@@ -1,0 +1,52 @@
+/* Layout 18 (first used by s18): the manual way vs Noxio. A board with a chat column and hangers whose paper tags get a
+   code and a name; "ручная работа": tags shuffle, a slow queue of messages to each buyer, a parcel; then Noxio's list by
+   buyer (one row from a comment without a code), a Messenger "send to all" with bubbles flying out, three benefit chips,
+   an offer card and a question with answer chips. "glass" subtitles: white words on a dark frosted strip with an emerald edge. */
+#shade{background:linear-gradient(180deg,rgba(30,36,24,0),rgba(30,36,24,.42) 45%,rgba(30,36,24,.8))}
+#bd{top:0;width:940px;height:290px;padding:18px 20px;display:flex;gap:16px}
+#bd .ch{width:330px;flex:none;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+#bd .ch .m{padding:10px 14px;border-radius:16px 16px 16px 4px;background:#F3F5F7;font-weight:800;font-size:26px;line-height:1.2}
+#bd .ch .m small{display:block;font-size:19px;color:var(--muted)}
+#bd .rl{flex:1;position:relative}
+#bd .rl .bar{position:absolute;left:0;right:0;top:20px;height:10px;border-radius:5px;background:#94A3B8}
+.hg{position:absolute;top:22px;width:170px;height:250px}
+.hg svg{position:absolute;left:0;top:0;width:170px;height:130px}
+.hg .tg{position:absolute;left:28px;top:120px;width:120px;padding:12px 8px;border-radius:10px;background:#FFF8E1;border:3px dashed #D6B25E;text-align:center;font-weight:900;font-size:30px;color:#3F2D10;transform:rotate(-6deg);box-shadow:0 8px 16px rgba(0,0,0,.18)}
+.hg .tg b{display:block;font-size:34px;min-height:40px}
+.hg .tg span{display:block;font-size:26px;min-height:32px}
+#hd{top:384px;display:flex;align-items:center;gap:10px;padding:12px 26px;border-radius:999px;background:#FEE2E2;color:#B91C1C;font-weight:900;font-size:36px;box-shadow:0 12px 28px rgba(0,0,0,.3)}
+#hd .ph{width:40px;height:40px}
+#q{top:300px;width:940px;padding:14px 20px;display:flex;align-items:center;gap:12px;font-weight:800;font-size:28px;color:var(--muted)}
+#q .ph{width:34px;height:34px;color:var(--teal)}
+#q .n{padding:6px 14px;border-radius:12px;background:#F1F5F9;color:var(--ink);font-weight:900}
+#q .pk{margin-left:auto;width:48px;height:48px;color:#B45309}
+#ls{top:0;width:940px;padding:20px 22px}
+#ls .t{display:flex;align-items:center;gap:12px;font-weight:900;font-size:32px}
+#ls .t .ph{width:40px;height:40px;color:var(--em)}
+#ls .t .pill{margin-left:auto;background:var(--em);font-size:24px}
+#ls .r{display:flex;align-items:center;gap:14px;margin-top:12px;padding:12px 16px;border-radius:18px;background:#F3F7F6}
+#ls .r b{font-weight:900;font-size:36px;width:170px}
+#ls .r .it{display:flex;gap:8px;flex-wrap:wrap}
+#ls .r .it span{padding:5px 12px;border-radius:12px;background:#ECFDF5;color:#047857;font-weight:900;font-size:28px}
+#ls .r .nc{margin-left:auto;padding:5px 12px;border-radius:12px;background:var(--ink);color:#fff;font-weight:900;font-size:24px}
+#ms{top:0;width:940px;padding:0;overflow:hidden}
+#ms .hd2{display:flex;align-items:center;gap:12px;padding:16px 22px;background:linear-gradient(90deg,#0098B7,#11B981);color:#fff;font-weight:900;font-size:30px}
+#ms .hd2 .ph{width:38px;height:38px}
+#ms .bd2{position:relative;height:250px;padding:20px 22px;background:#F6FAF9}
+#ms .bt{position:absolute;left:22px;top:24px;display:flex;align-items:center;gap:12px;padding:18px 30px;border-radius:22px;background:var(--em);color:#fff;font-weight:900;font-size:36px;box-shadow:0 12px 26px rgba(5,150,105,.35)}
+#ms .bt .ph{width:42px;height:42px}
+#ms .bb{position:absolute;right:22px;padding:10px 18px;border-radius:18px 18px 4px 18px;background:#fff;box-shadow:0 6px 14px rgba(0,0,0,.1);font-weight:800;font-size:26px;display:flex;align-items:center;gap:8px}
+#ms .bb .ph{width:28px;height:28px;color:var(--em)}
+#ms .pg{position:absolute;left:22px;bottom:20px;display:flex;align-items:center;gap:8px;font-weight:800;font-size:24px;color:var(--muted)}
+#ms .pg .ph{width:28px;height:28px;color:var(--em)}
+#bn{top:40px;width:940px;display:flex;flex-direction:column;gap:16px}
+#bn .c{display:flex;align-items:center;gap:14px;width:max-content;padding:16px 28px 16px 20px;border-radius:26px;background:#fff;font-weight:900;font-size:42px;box-shadow:0 14px 32px rgba(0,0,0,.3)}
+#bn .c .ph{width:48px;height:48px;color:var(--em)}
+#of{top:0;width:940px;padding:26px 30px 28px;border:6px solid var(--em)}
+#of .h{font-weight:900;font-size:58px;letter-spacing:-.03em;line-height:1.02}
+#of .h em{font-style:normal;color:var(--em2)}
+#of .p{margin-top:12px;font-weight:800;font-size:30px;color:var(--muted)}
+#of .o{display:flex;gap:12px;margin-top:18px}
+#of .o span{padding:10px 20px;border-radius:999px;background:#F1F5F9;font-weight:900;font-size:30px}
+.sub.glass{font-weight:900;font-size:44px;line-height:1.24;letter-spacing:-.02em;color:#fff;background:rgba(15,23,42,.62);backdrop-filter:blur(10px);padding:10px 26px 12px;border-radius:16px;border-left:8px solid var(--em);box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.sub.glass .k{color:#86EFAC}

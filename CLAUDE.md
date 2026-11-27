@@ -294,6 +294,13 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   approved by a click, "codes optional" card, a question to viewers with a comment field; `react` one-line subtitles at
   y 842 between window and list (keep phrases short). Edited still: grey-blue shirt, minimal white studio. Don't call test
   comments "prawdziwe/real".
+- Layout 18 (s18, RU, how sellers work without a program, 41.7 s; Maxim's description 2026-11-27: during the live they
+  watch the chat, set items aside on hangers with a paper tag "code + buyer's name", after the live sort it all, write to
+  every buyer, then ship — speak to the seller as "ты", Kaja never poses as a seller): board with a chat column and
+  hangers whose tags get code + name → "Ручная работа" chip, tags shuffle, a slow "Написать: Ане… Оле…" queue, parcel →
+  Noxio list by buyer ("без кода ✓" on one row) → Messenger "Отправить всем" with bubbles → three benefit chips →
+  "14 дней бесплатно" card with answer chips; `glass` subtitles. Edited still: olive shirt, stockroom with plain boxes.
+  Never claim Noxio removes setting items aside during the live (no real-time processing).
 - **Pronunciation** (2026-11-21): the TTS call takes `pronunciationDictionary` from `assets/pronunciation.json` (the
   episode's language), so scripts may write "Noxio" instead of "Ноксио". Videos made straight from a script get
   `brandGlossaryId: "ac0669fd98184eff8a42718205296550"` (glossary "Noxio", PL respellings for all languages + RU ones).
