@@ -13,14 +13,16 @@ Noxio (noxio.pl) turns comments under Facebook live streams, videos and sale pos
 - before a scan the seller can set expected codes, colours and sizes and ignore comments from the seller and admins;
 - orders grouped by buyer, search and manual edits, a check of unclear orders, several lives **and posts** merged into one
   list (Maxim, 2026-11-27: posts and lives can be merged together);
-- a warehouse in Noxio works (Maxim, 2026-11-27) — confirm with Maxim what exactly it does before showing details;
+- warehouse (Maxim, 2026-11-27): stock and availability; a buyer's order by comment under a live or a post deducts the
+  item from stock; out of stock or an unknown code → the order goes to the reserve; a bot replies under the comment —
+  "order accepted" when in stock, or a warning that the item is in the reserve;
 - one-click Excel (XLSX) export;
 - order confirmation to buyers in Messenger when the page is connected (Facebook allows one reply per comment within 7 days);
 - interface in English, Polish, Latvian and Russian;
 - trial: 14 days free, up to 3 streams, no card. Plans (confirmed on noxio.pl 2026-10-15): week 89,99 zł / 7 days,
   month 219,99 zł, year 1999,99 zł (166,67 zł/month, save 24%); fixed price, no percentage of sales.
 
-Never present these as available: real-time scanning or a bot during the live, auto-replies, Instagram or TikTok
+Never present these as available (except the warehouse bot replies above, Maxim 2026-11-27): real-time scanning, Instagram or TikTok
 integration, payments, courier labels, invoices, a buyer app, CRM integrations (the warehouse works since 2026-11-27).
 If a roadmap item must be mentioned, label it clearly as planned ("тестируем / wkrótce / скоро").
 Never use invented numbers (only real results with the seller's permission), competitor names, logos or screenshots
@@ -303,6 +305,13 @@ Topic plan: the Docs artifact «Сторис Noxio: от новичка до п�
   Noxio list by buyer ("без кода ✓" on one row) → Messenger "Отправить всем" with bubbles → three benefit chips →
   "14 дней бесплатно" card with answer chips; `glass` subtitles. Edited still: olive shirt, stockroom with plain boxes.
   Never claim Noxio removes setting items aside during the live (no real-time processing).
+- Batch 2026-11-27 (Maxim's real selling scenarios, spares for December): s19 RU Excel (layout 19: notebook flips into a
+  table, export button, file → print/helper/own sheet, "1 клик vs вечер", `uline` subtitles); s20 RU sale posts (layout 20:
+  post + comment avalanche, magnifier re-reading, hand-filled baskets → baskets by buyer, `bubble`); s21 RU day of posts
+  and lives (layout 21: day strip, basket piece by piece, checklist + "Объединить" → one list with source chips, `frame`);
+  s22 RU warehouse (layout 22: stock chip, counting in the head, warehouse card, −1 deduction, reserve, bot replies,
+  `bullet`); s23 PL sale posts (layout 23: sticky notes dragged into buyer columns, `caps`); s24 PL hangers (layout 24:
+  one paper tag, manual road with a walking dot, list + Messenger notifications, `ribbon`). PL ones publish from 7.12/11.12.
 - **Pronunciation** (2026-11-21): the TTS call takes `pronunciationDictionary` from `assets/pronunciation.json` (the
   episode's language), so scripts may write "Noxio" instead of "Ноксио". Videos made straight from a script get
   `brandGlossaryId: "ac0669fd98184eff8a42718205296550"` (glossary "Noxio", PL respellings for all languages + RU ones).

@@ -1,0 +1,393 @@
+{
+  "id": "s24",
+  "series": "story",
+  "layout": "story24",
+  "lang": "pl",
+  "angle": "story-pl-hangers-and-tags",
+  "kaja": {
+    "still": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/img/kaja_teal_atelier.jpg",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "video": "build/story/s24/kaja.mp4",
+    "words": "build/story/s24/words.json",
+    "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s24.mp3",
+    "face": [
+      548,
+      600
+    ],
+    "head": [
+      260,
+      300,
+      840,
+      830
+    ],
+    "heygen": "572b89b090c98842a86d8c8160572dac"
+  },
+  "tts": {
+    "audio": "build/story/s24/tts.wav",
+    "raw": "build/story/s24/words_raw.json",
+    "tempo": 1.08,
+    "pause": 0.16,
+    "key": [
+      "czacie",
+      "wieszakach",
+      "karteczka",
+      "ręczna",
+      "robota",
+      "posortować",
+      "napisać",
+      "gotową",
+      "listę",
+      "kupujących",
+      "kodu",
+      "Messengerze",
+      "naraz",
+      "karteczek",
+      "czasu",
+      "Napisz"
+    ]
+  },
+  "end": 31.8,
+  "icons": [
+    "list-checks",
+    "chat-circle-dots",
+    "check-circle",
+    "chat-teardrop-dots",
+    "note-blank",
+    "clock"
+  ],
+  "subs": [
+    0,
+    2,
+    8,
+    11,
+    12,
+    15,
+    21,
+    22,
+    23,
+    27,
+    30,
+    37,
+    40,
+    45,
+    50,
+    56,
+    58,
+    61,
+    65,
+    67,
+    72,
+    76
+  ],
+  "data": {
+    "tag": {
+      "from": 0.4,
+      "chatAt": 1.5,
+      "cardAt": 3.51,
+      "code": "212",
+      "codeAt": 5.21,
+      "name": "Magda",
+      "nameAt": 5.73,
+      "chat": [
+        [
+          "Magda",
+          "biorę tę zieloną M 💚"
+        ],
+        [
+          "Ola",
+          "ja 212 L"
+        ],
+        [
+          "Ewa",
+          "czarną S dla mnie"
+        ]
+      ]
+    },
+    "road": {
+      "from": 7.05,
+      "nodes": [
+        [
+          "rozłożyć",
+          9.12
+        ],
+        [
+          "posortować",
+          10.01
+        ],
+        [
+          "napisać",
+          11.76
+        ],
+        [
+          "wysyłka",
+          12.94
+        ]
+      ]
+    },
+    "list": {
+      "from": 13.68,
+      "title": "Gotowa lista",
+      "rowsAt": 15.68,
+      "nc": [
+        "bez kodu ✓",
+        20.3
+      ],
+      "rows": [
+        [
+          "Magda",
+          [
+            "sukienka",
+            "zielona",
+            "M"
+          ]
+        ],
+        [
+          "Ola",
+          [
+            "212",
+            "czarna",
+            "L"
+          ]
+        ],
+        [
+          "Ewa",
+          [
+            "bluzka",
+            "czarna",
+            "S"
+          ]
+        ]
+      ]
+    },
+    "notes": {
+      "from": 20.69,
+      "title": "Messenger · potwierdzenie",
+      "to": [
+        "do: Magda",
+        "do: Ola",
+        "do: Ewa"
+      ],
+      "sent": "wysłano ✓",
+      "all": 24.24,
+      "page": [
+        "strona podłączona",
+        26.09
+      ]
+    },
+    "outc": {
+      "from": 26.84,
+      "items": [
+        [
+          "mniej karteczek",
+          "note-blank",
+          27.29
+        ],
+        [
+          "więcej czasu",
+          "clock",
+          28.54
+        ]
+      ]
+    },
+    "ask": {
+      "from": 29.95,
+      "q": "Jak Ty to robisz?"
+    }
+  },
+  "sfx": [
+    [
+      "pop",
+      0.4,
+      0.14
+    ],
+    [
+      "pop",
+      1.5,
+      0.1
+    ],
+    [
+      "pop",
+      1.9,
+      0.1
+    ],
+    [
+      "pop",
+      2.3,
+      0.1
+    ],
+    [
+      "whoosh_up",
+      3.51,
+      0.12
+    ],
+    [
+      "click",
+      5.21,
+      0.08
+    ],
+    [
+      "click",
+      5.73,
+      0.08
+    ],
+    [
+      "whoosh_up",
+      7.05,
+      0.12
+    ],
+    [
+      "pop",
+      9.12,
+      0.1
+    ],
+    [
+      "pop",
+      10.01,
+      0.1
+    ],
+    [
+      "pop",
+      11.76,
+      0.1
+    ],
+    [
+      "pop",
+      12.94,
+      0.1
+    ],
+    [
+      "whoosh_up",
+      13.68,
+      0.14
+    ],
+    [
+      "pop",
+      15.68,
+      0.1
+    ],
+    [
+      "pop",
+      15.86,
+      0.1
+    ],
+    [
+      "pop",
+      16.04,
+      0.1
+    ],
+    [
+      "thud",
+      20.3,
+      0.3
+    ],
+    [
+      "whoosh_up",
+      20.69,
+      0.12
+    ],
+    [
+      "ding",
+      24.24,
+      0.14
+    ],
+    [
+      "ding",
+      24.34,
+      0.1
+    ],
+    [
+      "ding",
+      24.44,
+      0.1
+    ],
+    [
+      "pop",
+      26.09,
+      0.1
+    ],
+    [
+      "pop",
+      27.29,
+      0.12
+    ],
+    [
+      "pop",
+      28.54,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      29.95,
+      0.14
+    ]
+  ],
+  "music": {
+    "track": "mixkit:181",
+    "start": 30.0
+  },
+  "ui": {
+    "top": 850,
+    "subTop": 1300,
+    "frames": {
+      "wide": {
+        "s": 1.18,
+        "y": -45
+      },
+      "mid": {
+        "s": 1.32,
+        "y": -85
+      }
+    }
+  },
+  "shots": [
+    [
+      0,
+      "mid"
+    ],
+    [
+      7.05,
+      "wide"
+    ],
+    [
+      13.68,
+      "mid"
+    ],
+    [
+      20.69,
+      "wide"
+    ],
+    [
+      26.84,
+      "mid"
+    ]
+  ],
+  "cover": {
+    "t": 31.3,
+    "frame": {
+      "s": 1.32,
+      "y": -85
+    },
+    "top": 842,
+    "tint": "8,32,36",
+    "kicker": "Odcinek 12",
+    "head": [
+      "Karteczki na",
+      "wieszakach?",
+      "*Jest prościej*"
+    ],
+    "size": 96,
+    "sub": "Jak sprzedawać na live bez ręcznej roboty"
+  },
+  "caption": "Live trwa, a Ty jednym okiem w czacie, drugim przy wieszakach: karteczka, kod, imię klientki… A po live ręczna robota: rozłożyć, posortować, do każdej napisać 😮‍💨\n\nZ Noxio po live masz gotową listę zamówień według kupujących, a potwierdzenie idzie do wszystkich klientek na Messengerze naraz.\n\nJak Ty to robisz? Napisz 👇\n\nnoxio.pl — 14 dni za darmo, bez karty.",
+  "hashtags": [
+    "#sprzedażnalive",
+    "#facebooklive",
+    "#zamówieniazkomentarzy",
+    "#sklepinternetowy",
+    "#noxio"
+  ],
+  "post": {
+    "video": "build/story/s24/s24.mp4",
+    "cover": "build/story/s24/s24_cover.jpg"
+  }
+}

@@ -1,0 +1,42 @@
+/* Layout 22 (first used by s22): warehouse. A stock chip "осталось 3" with more buyers than items; the manual way as a
+   thought cloud counting in the head and a paper reserve list with question marks; then Noxio's warehouse card (stock and
+   availability), comments that deduct stock with "−1", an out-of-stock item and an unknown code going to "резерв", the
+   bot's replies under the comments, three "берёт на себя" chips, a question. "bullet" subtitles: white words on slate
+   with an emerald square in front. */
+#shade{background:linear-gradient(180deg,rgba(40,10,16,0),rgba(40,10,16,.42) 45%,rgba(40,10,16,.8))}
+#hk{top:0;width:940px;padding:20px 24px;display:flex;align-items:center;gap:18px}
+#hk .ic{flex:none;width:96px;height:96px;border-radius:22px;background:linear-gradient(150deg,#86EFAC,#10B981);display:flex;align-items:center;justify-content:center}
+#hk .ic .ph{width:60px;height:60px;color:#fff}
+#hk b{font-weight:900;font-size:38px}
+#hk .n{display:inline-block;margin-left:8px;padding:2px 16px;border-radius:12px;background:#FEE2E2;color:#B91C1C;font-weight:900}
+#hk .av2{display:flex;margin-top:10px}
+#hk .av2 .av{width:52px;height:52px;font-size:24px;margin-right:-10px;border:3px solid #fff}
+#mn{top:180px;width:940px;display:flex;gap:16px;align-items:stretch}
+#mn .th{flex:1;padding:18px 22px;border-radius:40px;background:#fff;font-weight:900;font-size:44px;text-align:center;box-shadow:0 12px 26px rgba(0,0,0,.25);color:#475569}
+#mn .rs{flex:1;padding:14px 20px;border-radius:14px;background:#FFFDF5 repeating-linear-gradient(180deg,transparent 0 40px,#DCE7F3 40px 42px);font-style:italic;font-weight:700;font-size:28px;color:#1E3A8A;box-shadow:0 12px 26px rgba(0,0,0,.25)}
+#mn .rs b{display:block;font-style:normal;font-size:24px;color:#B91C1C}
+#wh{top:0;width:940px;padding:16px 20px}
+#wh .t{display:flex;align-items:center;gap:10px;font-weight:900;font-size:30px}
+#wh .t .ph{width:38px;height:38px;color:var(--em)}
+#wh .t .pill{margin-left:auto;background:var(--em);font-size:24px}
+#wh .r{display:flex;align-items:center;gap:12px;margin-top:8px;padding:10px 16px;border-radius:16px;background:#F3F7F6;font-weight:800;font-size:30px;position:relative}
+#wh .r .q{margin-left:auto;min-width:64px;text-align:center;padding:4px 12px;border-radius:12px;background:#fff;font-weight:900;font-size:32px}
+#wh .r .av3{padding:4px 12px;border-radius:12px;font-weight:900;font-size:22px;background:#ECFDF5;color:#047857}
+#wh .r .av3.no{background:#FEE2E2;color:#B91C1C}
+#wh .r .mn1{position:absolute;right:20px;top:-8px;font-weight:900;font-size:34px;color:#DC2626}
+#cs{top:168px;width:940px;display:flex;flex-direction:column;gap:8px}
+#cs .c{display:flex;flex-wrap:wrap;align-items:center;gap:2px 12px;padding:6px 14px;border-radius:18px;background:#fff;box-shadow:0 8px 18px rgba(0,0,0,.2);font-weight:800;font-size:26px}
+#cs .c .av{width:46px;height:46px;font-size:22px}
+#cs .c .bg{margin-left:auto;padding:4px 12px;border-radius:12px;font-weight:900;font-size:22px;color:#fff;background:var(--em)}
+#cs .c .bg.rz{background:#F59E0B}
+#cs .bt{flex-basis:100%;margin-left:58px;display:flex;align-items:center;gap:8px;font-weight:800;font-size:22px;color:#0369A1}
+#cs .bt .ph{width:24px;height:24px;color:#0284C7}
+#tk{top:30px;width:940px;display:flex;gap:14px}
+#tk span{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;padding:20px 10px;border-radius:24px;background:#fff;font-weight:900;font-size:34px;box-shadow:0 12px 28px rgba(0,0,0,.28)}
+#tk span .ph{width:40px;height:40px;color:var(--em)}
+#qq{top:20px;width:940px;padding:24px 28px}
+#qq .h{font-weight:900;font-size:46px;letter-spacing:-.02em}
+#qq .o{display:flex;gap:12px;margin-top:16px}
+#qq .o span{padding:12px 22px;border-radius:999px;background:#FEF2F2;color:#9F1239;font-weight:900;font-size:32px}
+.sub.bullet{font-weight:900;font-size:42px;line-height:1.26;letter-spacing:-.02em;color:#fff;background:#1E293B;padding:10px 26px 12px 54px;border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.3);background-image:linear-gradient(var(--em),var(--em));background-size:16px 16px;background-position:22px 50%;background-repeat:no-repeat}
+.sub.bullet .k{color:#6EE7B7}

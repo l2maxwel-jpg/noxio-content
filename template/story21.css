@@ -1,0 +1,50 @@
+/* Layout 21 (first used by s21): a day strip of posts and lives; next morning a buyer's basket is filled piece by piece
+   from different sources; then Noxio: a checklist of the day's posts and lives, an "Объединить" button, one common list
+   by buyer with source chips; "утро → упаковка" vs struck "переписывание"; a question with answer chips.
+   "frame" subtitles: white words inside a white outline box on a dark tint, key words on emerald. */
+#shade{background:linear-gradient(180deg,rgba(40,30,8,0),rgba(40,30,8,.42) 45%,rgba(40,30,8,.8))}
+#dy{top:0;width:940px;padding:18px 20px}
+#dy .t{display:flex;align-items:center;gap:10px;font-weight:900;font-size:30px;color:var(--muted)}
+#dy .t .ph{width:36px;height:36px;color:#D97706}
+#dy .st{display:flex;gap:10px;margin-top:14px}
+#dy .e{flex:1;padding:12px 6px;border-radius:18px;background:#F8FAFC;text-align:center;font-weight:900;font-size:24px}
+#dy .e .ph{display:block;margin:0 auto 4px;width:44px;height:44px;color:#7C3AED}
+#dy .e.lv .ph{color:#DC2626}
+#dy .e small{display:block;font-size:22px;color:var(--muted)}
+#pz{top:200px;width:940px;padding:16px 20px;display:flex;align-items:center;gap:16px}
+#pz .bk{flex:none;width:140px;height:110px;border-radius:20px;border:4px dashed #CBD5E1;display:flex;align-items:center;justify-content:center;position:relative}
+#pz .bk .ph{width:64px;height:64px;color:#94A3B8}
+#pz .ps{flex:1;display:flex;gap:10px;flex-wrap:wrap}
+#pz .p{padding:8px 14px;border-radius:14px;background:#FEF3C7;font-weight:900;font-size:26px;color:#78350F}
+#pz .p small{font-weight:800;color:#B45309}
+#ck{top:0;width:940px;padding:18px 20px}
+#ck .t{display:flex;align-items:center;gap:10px;font-weight:900;font-size:30px}
+#ck .t .ph{width:36px;height:36px;color:var(--teal)}
+#ck .g{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+#ck .i{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:16px;background:#F3F7F6;font-weight:800;font-size:27px}
+#ck .i .bx{width:32px;height:32px;border-radius:9px;border:3px solid #CBD5E1;flex:none;display:flex;align-items:center;justify-content:center}
+#ck .i .bx .ph{width:24px;height:24px;color:#fff;opacity:0}
+#ck .i.on .bx{background:var(--em);border-color:var(--em)}
+#ck .i.on .bx .ph{opacity:1}
+#mb{top:320px;left:auto!important;right:0;display:flex;align-items:center;gap:10px;padding:16px 30px;border-radius:22px;background:var(--em);color:#fff;font-weight:900;font-size:36px;box-shadow:0 12px 26px rgba(5,150,105,.4)}
+#mb .ph{width:42px;height:42px}
+#ml{top:0;width:940px;padding:18px 20px}
+#ml .t{display:flex;align-items:center;gap:10px;font-weight:900;font-size:30px}
+#ml .t .ph{width:36px;height:36px;color:var(--em)}
+#ml .t .pill{margin-left:auto;background:var(--em);font-size:24px}
+#ml .r{display:flex;align-items:center;gap:12px;margin-top:10px;padding:12px 16px;border-radius:18px;background:#F3F7F6}
+#ml .r b{font-weight:900;font-size:34px;width:130px}
+#ml .r .it{display:flex;gap:8px;flex-wrap:wrap}
+#ml .r .it span{padding:4px 12px;border-radius:12px;background:#ECFDF5;color:#047857;font-weight:900;font-size:24px}
+#ml .r .it span.s{background:#EDE9FE;color:#6D28D9}
+#mo{top:30px;width:940px;display:flex;align-items:center;gap:18px}
+#mo .a{flex:1;display:flex;align-items:center;gap:14px;padding:22px;border-radius:26px;background:#fff;font-weight:900;font-size:40px;box-shadow:0 14px 30px rgba(0,0,0,.28)}
+#mo .a .ph{width:56px;height:56px;color:#D97706}
+#mo .b{flex:1;padding:22px;border-radius:26px;background:rgba(255,255,255,.85);text-align:center;font-weight:900;font-size:34px;color:#64748B;position:relative}
+#mo .b i{position:absolute;left:18px;right:18px;top:50%;height:6px;background:#DC2626;transform-origin:0 50%;transform:scaleX(0)}
+#qq{top:20px;width:940px;padding:24px 28px}
+#qq .h{font-weight:900;font-size:46px;letter-spacing:-.02em}
+#qq .o{display:flex;gap:12px;margin-top:16px}
+#qq .o span{padding:12px 24px;border-radius:999px;background:#FEF3C7;color:#78350F;font-weight:900;font-size:34px}
+.sub.frame{font-weight:900;font-size:44px;line-height:1.26;letter-spacing:-.02em;color:#fff;padding:10px 24px 12px;border:4px solid #fff;border-radius:18px;background:rgba(0,0,0,.28);text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.sub.frame .k{background:var(--em);padding:0 10px;border-radius:10px;text-shadow:none;box-decoration-break:clone;-webkit-box-decoration-break:clone}

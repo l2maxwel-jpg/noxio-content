@@ -1,0 +1,315 @@
+{
+  "id": "s23",
+  "series": "story",
+  "layout": "story23",
+  "lang": "pl",
+  "angle": "story-pl-sale-posts",
+  "kaja": {
+    "still": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/img/kaja_coral_boutique.jpg",
+    "voice": "015482a78b9a46ebae74bd0beb17765b",
+    "video": "build/story/s23/kaja.mp4",
+    "words": "build/story/s23/words.json",
+    "audio": "https://raw.githubusercontent.com/l2maxwel-jpg/noxio-content/media/voice/s23.mp3",
+    "face": [
+      548,
+      600
+    ],
+    "head": [
+      260,
+      300,
+      840,
+      830
+    ],
+    "heygen": "36cce07fcfcb3b0e776c46943b79a645"
+  },
+  "tts": {
+    "audio": "build/story/s23/tts.wav",
+    "raw": "build/story/s23/words_raw.json",
+    "tempo": 1.08,
+    "pause": 0.16,
+    "key": [
+      "post",
+      "kilka",
+      "koszyk",
+      "listy",
+      "pogrupowane",
+      "kupujących",
+      "sprawdzenia",
+      "spakować",
+      "wysłać",
+      "Napisz"
+    ]
+  },
+  "end": 24.0,
+  "icons": [
+    "t-shirt",
+    "check-circle",
+    "hand-grabbing",
+    "package",
+    "truck",
+    "image-square",
+    "broadcast"
+  ],
+  "subs": [
+    0,
+    4,
+    10,
+    11,
+    14,
+    20,
+    22,
+    25,
+    28,
+    31,
+    34,
+    37,
+    41,
+    45,
+    48,
+    52,
+    56,
+    63
+  ],
+  "data": {
+    "post": {
+      "from": 0.4,
+      "title": "Nowa kolekcja 🍂",
+      "sub": "post · swetry i koszule",
+      "sel": [
+        "post z listy",
+        13.8
+      ]
+    },
+    "board": {
+      "from": 6.67,
+      "drag": 9.85,
+      "fly": 15.28,
+      "unclear": 18.09,
+      "cols": [
+        "Ola",
+        "Ewa",
+        "Do sprawdzenia"
+      ],
+      "notes": [
+        [
+          "Ola",
+          "biorę 😍"
+        ],
+        [
+          "Ewa",
+          "M dla mnie"
+        ],
+        [
+          "Ola",
+          "i beżową S"
+        ],
+        [
+          "Ewa",
+          "2 szt. proszę"
+        ],
+        [
+          "Kasia",
+          "a ta w kratkę jeszcze jest?"
+        ]
+      ],
+      "pop": [
+        3.75,
+        4.34,
+        5.6,
+        6.0,
+        5.23
+      ],
+      "target": [
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      "slot": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "done": [
+        [
+          "spakować",
+          "package",
+          19.2
+        ],
+        [
+          "wysłać",
+          "truck",
+          20.09
+        ]
+      ]
+    },
+    "ask": {
+      "from": 20.8,
+      "q": "Sprzedajesz bardziej przez…",
+      "opts": [
+        [
+          "posty",
+          "image-square"
+        ],
+        [
+          "live",
+          "broadcast"
+        ]
+      ]
+    }
+  },
+  "sfx": [
+    [
+      "pop",
+      0.4,
+      0.14
+    ],
+    [
+      "pop",
+      3.75,
+      0.1
+    ],
+    [
+      "pop",
+      4.34,
+      0.1
+    ],
+    [
+      "pop",
+      5.23,
+      0.1
+    ],
+    [
+      "pop",
+      5.6,
+      0.1
+    ],
+    [
+      "pop",
+      6.0,
+      0.1
+    ],
+    [
+      "whoosh_up",
+      6.67,
+      0.12
+    ],
+    [
+      "whoosh_up",
+      9.85,
+      0.08
+    ],
+    [
+      "pop_hi",
+      13.8,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      15.28,
+      0.16
+    ],
+    [
+      "pop",
+      15.4,
+      0.1
+    ],
+    [
+      "pop",
+      15.56,
+      0.1
+    ],
+    [
+      "pop_hi",
+      18.09,
+      0.14
+    ],
+    [
+      "pop",
+      19.2,
+      0.12
+    ],
+    [
+      "ding",
+      20.09,
+      0.14
+    ],
+    [
+      "whoosh_up",
+      20.8,
+      0.14
+    ]
+  ],
+  "music": {
+    "track": "mixkit:931",
+    "start": 30.0
+  },
+  "ui": {
+    "top": 850,
+    "subTop": 1310,
+    "frames": {
+      "wide": {
+        "s": 1.18,
+        "y": -45
+      },
+      "mid": {
+        "s": 1.32,
+        "y": -85
+      }
+    }
+  },
+  "shots": [
+    [
+      0,
+      "mid"
+    ],
+    [
+      6.67,
+      "wide"
+    ],
+    [
+      12.32,
+      "mid"
+    ],
+    [
+      18.76,
+      "wide"
+    ],
+    [
+      20.8,
+      "mid"
+    ]
+  ],
+  "cover": {
+    "t": 23.6,
+    "frame": {
+      "s": 1.32,
+      "y": -85
+    },
+    "top": 842,
+    "tint": "50,20,20",
+    "kicker": "Odcinek 11",
+    "head": [
+      "Post poszedł,",
+      "a pod nim lawina?",
+      "*Koszyki gotowe*"
+    ],
+    "size": 92,
+    "sub": "Zamówienia z postów według kupujących"
+  },
+  "caption": "Nowa kolekcja na zdjęciach, post poszedł — a pod nim: „biorę”, „M dla mnie”, „a ta w kratkę jeszcze jest?” 🙈\n\nBez programu czytasz każdy komentarz po kilka razy i ręcznie składasz koszyk każdej klientki. Z Noxio wybierasz post z listy i zamówienia są już pogrupowane według kupujących. Niejasne trafiają do sprawdzenia.\n\nSprzedajesz bardziej przez posty czy przez live? 👇\n\nnoxio.pl — 14 dni za darmo, bez karty.",
+  "hashtags": [
+    "#sprzedażnalive",
+    "#postsprzedażowy",
+    "#zamówieniazkomentarzy",
+    "#sklepinternetowy",
+    "#noxio"
+  ],
+  "post": {
+    "video": "build/story/s23/s23.mp4",
+    "cover": "build/story/s23/s23_cover.jpg"
+  }
+}
