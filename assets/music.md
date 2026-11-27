@@ -15,7 +15,6 @@ from the list page below. Kept for the record; not shown on the videos.
 | 471 | Rising Forest | Diego Nava | House | https://mixkit.co/free-stock-music/house/ |
 | 931 | On a Breezy Day | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/edm/?page=2 |
 | 1010 | Super Strong  | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/edm/ |
-| 972 | One More Time | Michael Ramir C. | House | https://mixkit.co/free-stock-music/house/?page=2 |
 | 1061 | Forbidden | Michael Ramir C. | House | https://mixkit.co/free-stock-music/house/?page=2 |
 | 207 | Winter Breeze | Arulo | House | https://mixkit.co/free-stock-music/house/ |
 | 1183 | Karma | Michael Ramir C. | EDM | https://mixkit.co/free-stock-music/edm/ |
@@ -31,10 +30,6 @@ from the list page below. Kept for the record; not shown on the videos.
 | 201 | Swish Swed | Arulo | Tech House | https://mixkit.co/free-stock-music/tech-house/ |
 | 942 | Be Happy | Michael Ramir C. | Synthpop | https://mixkit.co/free-stock-music/edm/?page=2 |
 | 930 | The Great Wall | Michael Ramir C. | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |
-| 629 | Skeeomaver Sound | Eugenio Mininni | EDM | https://mixkit.co/free-stock-music/edm/ |
-| 1168 | Coffee or Tea | Michael Ramir C. | Electronica | https://mixkit.co/free-stock-music/electronic/ |
-| 179 | Solitude | Alejandro Magaña (A. M.) | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |
-| 555 | South Waves | Eugenio Mininni | Synthpop | https://mixkit.co/free-stock-music/electropop/ |
 | 704 | Pop 11 | Grigoriy Nuzhny | Electronica | https://mixkit.co/free-stock-music/electronica/?page=2 |
 | 173 | Better Times are Coming | Alejandro Magaña (A. M.) | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |
 | 106 | Deep Techno | Alejandro Magaña (A. M.) | House | https://mixkit.co/free-stock-music/house/ |
@@ -82,3 +77,8 @@ from the list page below. Kept for the record; not shown on the videos.
 | 81 | Fight Till the End | Ahjay Stelino | Electropop | https://mixkit.co/free-stock-music/electropop/ |
 | 1210 | Can't Get You Off My Mind | Michael Ramir C. | Future Bass | https://mixkit.co/free-stock-music/future-bass/ |
 | 439 | Tides Turning | Arulo | Electropop | https://mixkit.co/free-stock-music/electropop/ |
+| 629 | Skeeomaver Sound | Eugenio Mininni | EDM | https://mixkit.co/free-stock-music/edm/ |
+| 1168 | Coffee or Tea | Michael Ramir C. | Electronica | https://mixkit.co/free-stock-music/electronic/ |
+| 555 | South Waves | Eugenio Mininni | Synthpop | https://mixkit.co/free-stock-music/electropop/ |
+| 179 | Solitude | Alejandro Magaña (A. M.) | Synthpop | https://mixkit.co/free-stock-music/synthpop/ |
+| 972 | One More Time | Michael Ramir C. | House | https://mixkit.co/free-stock-music/house/?page=2 |

@@ -11,7 +11,9 @@ Noxio (noxio.pl) turns comments under Facebook live streams, videos and sale pos
 - two ways in: paste a link to the video, without logging in through Facebook (slower), **or** connect the Facebook
   business page once and pick videos from a list (faster); works with finished lives, regular videos and sale posts;
 - before a scan the seller can set expected codes, colours and sizes and ignore comments from the seller and admins;
-- orders grouped by buyer, search and manual edits, a check of unclear orders, several lives merged into one list;
+- orders grouped by buyer, search and manual edits, a check of unclear orders, several lives **and posts** merged into one
+  list (Maxim, 2026-11-27: posts and lives can be merged together);
+- a warehouse in Noxio works (Maxim, 2026-11-27) — confirm with Maxim what exactly it does before showing details;
 - one-click Excel (XLSX) export;
 - order confirmation to buyers in Messenger when the page is connected (Facebook allows one reply per comment within 7 days);
 - interface in English, Polish, Latvian and Russian;
@@ -19,7 +21,7 @@ Noxio (noxio.pl) turns comments under Facebook live streams, videos and sale pos
   month 219,99 zł, year 1999,99 zł (166,67 zł/month, save 24%); fixed price, no percentage of sales.
 
 Never present these as available: real-time scanning or a bot during the live, auto-replies, Instagram or TikTok
-integration, payments, courier labels, invoices, a warehouse or reservations, a buyer app, CRM integrations.
+integration, payments, courier labels, invoices, a buyer app, CRM integrations (the warehouse works since 2026-11-27).
 If a roadmap item must be mentioned, label it clearly as planned ("тестируем / wkrótce / скоро").
 Never use invented numbers (only real results with the seller's permission), competitor names, logos or screenshots
 (say "other systems" / "systems that take a percentage"), fake customers or testimonials. Buyer names on screen are
@@ -38,7 +40,7 @@ test data. Brand: emerald #11B981, teal #0098B7, Inter, plenty of white; don't b
 - **K5 "The live is over, the work begins"**, **K6 "Buyers get the confirmation in Messenger"** (page connected).
 - Feature angles with their own scenes: `setup` (expected codes / colours / sizes before the scan, the seller's own comments
   skipped), `group` (one buyer's comments → one order), `review` (an unclear comment flagged for a check and fixed by hand),
-  `merge` (several lives → one list — lives only; don't show videos or posts merged), `excel` (one-click XLSX export).
+  `merge` (several lives and posts → one list), `excel` (one-click XLSX export).
 Show "without codes" on comments instead of just claiming it. Every ad ends with the logo and the offer
 "14 days free, up to 3 streams, no card" (warm-ups end with the follow card instead). Everything readable must stay inside y 330–1440 of the 1920 frame:
 Facebook and Instagram show Reels in the feed cropped to 4:5 (y 285–1635) and the Reels player covers the bottom
